@@ -47,13 +47,13 @@
   --accent: #d8a797;
   --accent-foreground: #2a1f17;
   --border: #d8c4b3;
-  --ring: oklch(0.55 0.1 30);
+  --ring: #8e6e60;
 
-  --clay-light: oklch(0.82 0.055 50);
-  --clay: oklch(0.74 0.06 45);
-  --clay-dark: oklch(0.62 0.04 40);
-  --clay-deep: oklch(0.55 0.05 35);
-  --brand-red: oklch(0.5 0.18 25);
+  --clay-light: #d8a797;
+  --clay: #c89684;
+  --clay-dark: #8e6e60;
+  --clay-deep: #6b5347;
+  --brand-red: #b04b3a;
 }
 
 @font-face {
