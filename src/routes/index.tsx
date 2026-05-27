@@ -78,6 +78,12 @@ function Index() {
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"
+        style={{
+          maskImage:
+            "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+        }}
       >
         <img
           src={logoImage}
@@ -85,6 +91,7 @@ function Index() {
           className="w-[90vw] max-w-[1300px] opacity-[0.12]"
         />
       </div>
+
 
       <div className="relative z-10">
         {/* HERO full-bleed */}
