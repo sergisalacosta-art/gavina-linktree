@@ -147,11 +147,12 @@ function Index() {
         </section>
 
         {/* Separator with logo */}
-        <div className="mx-auto flex max-w-md items-center gap-4 px-6">
+        <div className="mx-auto flex max-w-3xl items-center gap-6 px-6">
           <div className="h-px flex-1 bg-[#c89684]/50" />
-          <img src={logoImage} alt="" className="h-10 w-10 rounded-full object-cover" />
+          <img src={logoImage} alt="" className="h-10 w-10 object-contain" />
           <div className="h-px flex-1 bg-[#c89684]/50" />
         </div>
+
 
         {/* BUTTONS */}
         <nav className="mx-auto mt-10 flex max-w-[720px] flex-col gap-5 px-6 pb-16">
