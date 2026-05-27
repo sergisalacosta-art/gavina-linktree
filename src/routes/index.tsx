@@ -92,7 +92,7 @@ function Index() {
           <img
             src={heroImage}
             alt="Cercle de dones sota un arbre"
-            className="h-[42vh] min-h-[280px] w-full object-cover sm:h-[60vh]"
+            className="block w-full h-auto"
           />
           <div
             aria-hidden
