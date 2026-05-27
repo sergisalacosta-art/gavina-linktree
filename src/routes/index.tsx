@@ -108,18 +108,19 @@ function Index() {
         {/* INTRO */}
         <section className="mx-auto max-w-5xl px-6 pt-4 pb-12 sm:pt-8 sm:pb-16">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[260px_1fr] md:gap-12">
-            <div className="flex flex-col items-center md:items-start">
+            <div className="flex flex-col items-center">
               <div className="relative">
                 <img
                   src={portraitImage}
                   alt="Retrat de la Gavina"
-                  className="h-44 w-44 rounded-full object-cover shadow-md ring-1 ring-[#d8c4b3] sm:h-52 sm:w-52"
+                  className="h-44 w-44 rounded-full object-cover object-[center_25%] shadow-md ring-1 ring-[#d8c4b3] sm:h-52 sm:w-52"
                 />
               </div>
-              <p className="mt-4 text-center text-2xl italic text-[#6b5347] md:text-left">
+              <p className="mt-4 text-center text-2xl italic text-[#6b5347]">
                 Soc la Gavina
               </p>
             </div>
+
 
             <div className="space-y-5 text-[1.15rem] leading-relaxed sm:text-[1.2rem]">
               <p>
