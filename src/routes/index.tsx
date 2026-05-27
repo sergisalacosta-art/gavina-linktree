@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/gavina-hero.jpg";
 import portraitImage from "@/assets/gavina-portrait.jpg";
-import logoImage from "@/assets/gavina-logo.jpg";
+import logoImage from "@/assets/gavina-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
