@@ -100,17 +100,16 @@ function Index() {
             src={heroImage}
             alt="Cercle de dones sota un arbre"
             className="block w-full h-auto"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-32 sm:h-48"
             style={{
-              background:
-                "linear-gradient(to bottom, rgba(244,235,224,0) 0%, #f4ebe0 100%)",
+              maskImage:
+                "linear-gradient(to bottom, black 70%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 70%, transparent 100%)",
             }}
           />
           <h1 className="sr-only">La Gavina — Salut femenina ginecològica</h1>
         </section>
+
 
         {/* INTRO */}
         <section className="mx-auto max-w-5xl px-6 pt-4 pb-12 sm:pt-8 sm:pb-16">
