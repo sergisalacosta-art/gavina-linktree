@@ -166,8 +166,9 @@ function Index() {
           <img
             src={logoImage}
             alt=""
-            className="h-12 w-12 rounded-full object-cover opacity-80"
+            className="h-12 w-12 object-contain opacity-80"
           />
+
           <p className="text-center text-sm italic text-[#6b5347]">
             Gavina Freixa Rius · Salut Cíclica Femenina
           </p>
