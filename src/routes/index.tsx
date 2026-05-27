@@ -77,13 +77,14 @@ function Index() {
       {/* Watermark layer */}
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 z-0 opacity-[0.13] mix-blend-multiply"
-        style={{
-          backgroundImage: `url(${logoImage})`,
-          backgroundRepeat: "repeat",
-          backgroundSize: "320px auto",
-        }}
-      />
+        className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"
+      >
+        <img
+          src={logoImage}
+          alt=""
+          className="w-[55vw] max-w-[520px] opacity-[0.12]"
+        />
+      </div>
 
       <div className="relative z-10">
         {/* HERO full-bleed */}
