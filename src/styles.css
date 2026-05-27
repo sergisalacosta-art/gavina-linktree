@@ -34,19 +34,19 @@
 
 :root {
   --radius: 1rem;
-  --background: oklch(0.985 0.005 80);
-  --foreground: oklch(0.2 0.02 40);
-  --card: oklch(0.99 0.005 80);
-  --card-foreground: oklch(0.2 0.02 40);
-  --primary: oklch(0.45 0.12 30);
-  --primary-foreground: oklch(0.99 0.005 80);
-  --secondary: oklch(0.92 0.02 60);
-  --secondary-foreground: oklch(0.25 0.03 40);
-  --muted: oklch(0.95 0.01 70);
-  --muted-foreground: oklch(0.5 0.03 40);
-  --accent: oklch(0.82 0.06 50);
-  --accent-foreground: oklch(0.2 0.02 40);
-  --border: oklch(0.88 0.02 60);
+  --background: #f4ebe0;
+  --foreground: #2a1f17;
+  --card: #f4ebe0;
+  --card-foreground: #2a1f17;
+  --primary: #8e6e60;
+  --primary-foreground: #f4ebe0;
+  --secondary: #d8a797;
+  --secondary-foreground: #2a1f17;
+  --muted: #ece0d2;
+  --muted-foreground: #6b5347;
+  --accent: #d8a797;
+  --accent-foreground: #2a1f17;
+  --border: #d8c4b3;
   --ring: oklch(0.55 0.1 30);
 
   --clay-light: oklch(0.82 0.055 50);
