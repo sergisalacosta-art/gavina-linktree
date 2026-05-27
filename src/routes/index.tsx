@@ -82,7 +82,7 @@ function Index() {
         <img
           src={logoImage}
           alt=""
-          className="w-[55vw] max-w-[520px] opacity-[0.12]"
+          className="w-[90vw] max-w-[1300px] opacity-[0.12]"
         />
       </div>
 
