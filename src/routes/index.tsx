@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/gavina-hero.jpg";
-import bgImage from "@/assets/gavina-bg.png";
+import portraitImage from "@/assets/gavina-portrait.jpg";
+import logoImage from "@/assets/gavina-logo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,111 +26,187 @@ export const Route = createFileRoute("/")({
 
 type LinkCard = {
   title: string;
-  titleClassName?: string;
-  lines?: { text: string; className?: string }[];
+  subtitle?: string;
+  subtitle2?: string;
   href: string;
-  variant: "light" | "dark";
-  underline?: boolean;
+  variant: "coral" | "brown";
+  featured?: boolean;
+  icon?: boolean;
 };
 
 const links: LinkCard[] = [
   {
     title: "Recurs gratuït",
-    lines: [
-      { text: "“Com restaurar i mantenir la salut femenina ginecològica”" },
-      { text: "Vídeo 30 minuts", className: "text-white" },
-    ],
+    subtitle: "“Com restaurar i mantenir la salut femenina ginecològica”",
+    subtitle2: "Vídeo · 30 minuts",
     href: "#recurs",
-    variant: "light",
+    variant: "coral",
+    featured: true,
   },
   {
     title: "Matrius en Cercle",
-    titleClassName: "text-black",
-    lines: [{ text: "Espai grupal mensual (online)" }],
+    subtitle: "Espai grupal mensual (online)",
     href: "#matrius",
-    variant: "dark",
+    variant: "brown",
   },
   {
     title: "Cures de Matriu",
-    lines: [
-      { text: "Retir d’1 dia. Octubre 2026", className: "text-white" },
-      { text: "(Ben aviat: informació detallada)", className: "text-white italic" },
-    ],
+    subtitle: "Retir d’1 dia · Octubre 2026",
+    subtitle2: "Ben aviat: informació detallada",
     href: "#cures",
-    variant: "light",
+    variant: "coral",
   },
   {
     title: "Acompanyament Individual",
+    subtitle: "Sessions personalitzades, 1 a 1",
     href: "#individual",
-    variant: "dark",
+    variant: "brown",
   },
   {
-    title: "Contacta’m per WhatsApp",
+    title: "Contacta’m",
+    subtitle: "per WhatsApp",
     href: "https://wa.me/",
-    variant: "light",
+    variant: "coral",
+    icon: true,
   },
 ];
 
 function Index() {
   return (
-    <main className="relative min-h-screen bg-background">
-      <div className="relative mx-auto max-w-xl px-4 pb-16">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[center_top] bg-repeat-y bg-contain opacity-10"
-          style={{ backgroundImage: `url(${bgImage})` }}
-        />
-        <div className="overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden bg-background font-serif text-foreground">
+      {/* Watermark layer */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.13] mix-blend-multiply"
+        style={{
+          backgroundImage: `url(${logoImage})`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "320px auto",
+        }}
+      />
+
+      <div className="relative z-10">
+        {/* HERO full-bleed */}
+        <section className="relative w-full">
           <img
             src={heroImage}
             alt="Cercle de dones sota un arbre"
-            className="w-full h-64 sm:h-80 object-cover"
+            className="h-[42vh] min-h-[280px] w-full object-cover sm:h-[60vh]"
           />
-        </div>
-
-        <div className="relative mt-6 px-6 py-8 sm:px-10 sm:py-10">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-32 sm:h-48"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(244,235,224,0) 0%, #f4ebe0 100%)",
+            }}
+          />
           <h1 className="sr-only">La Gavina — Salut femenina ginecològica</h1>
+        </section>
 
-          <p className="text-[17px] leading-relaxed text-foreground font-serif text-center sm:text-lg">
-            Soc la Gavina, acompanyant de dones que tenen ganes de <strong>cuidar i millorar</strong> la seva <strong>salut femenina ginecològica</strong> aplicant rutines bàsiques d’<strong>autocura i pautes de prevenció reals i naturals, lluny de fàrmacs i intervencions quirúrgiques</strong>. Uns recursos que són les bases de la salut femenina i que han sostingut, i sostenen, les <strong>dones en diferents tradicions mil·lenàries d’arreu del món</strong>.
-          </p>
+        {/* INTRO */}
+        <section className="mx-auto max-w-5xl px-6 pt-4 pb-12 sm:pt-8 sm:pb-16">
+          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[260px_1fr] md:gap-12">
+            <div className="flex flex-col items-center md:items-start">
+              <div className="relative">
+                <img
+                  src={portraitImage}
+                  alt="Retrat de la Gavina"
+                  className="h-44 w-44 rounded-full object-cover shadow-md ring-1 ring-[#d8c4b3] sm:h-52 sm:w-52"
+                />
+              </div>
+              <p className="mt-4 text-center text-2xl italic text-[#6b5347] md:text-left">
+                Soc la Gavina
+              </p>
+            </div>
 
-          <nav className="mt-8 flex flex-col gap-4">
-            {links.map((link) => (
-              <LinkButton key={link.title} {...link} />
-            ))}
-          </nav>
+            <div className="space-y-5 text-[1.15rem] leading-relaxed sm:text-[1.2rem]">
+              <p>
+                Acompanyo dones que tenen ganes de{" "}
+                <strong className="font-semibold">cuidar i millorar</strong> la seva{" "}
+                <strong className="font-semibold">salut femenina ginecològica</strong>{" "}
+                aplicant rutines bàsiques d’
+                <strong className="font-semibold">
+                  autocura i pautes de prevenció reals i naturals, lluny de fàrmacs i
+                  intervencions quirúrgiques
+                </strong>
+                .
+              </p>
+              <p>
+                Uns recursos que són les bases de la salut femenina i que han sostingut, i
+                sostenen, les{" "}
+                <strong className="font-semibold">
+                  dones en diferents tradicions mil·lenàries d’arreu del món
+                </strong>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Separator with logo */}
+        <div className="mx-auto flex max-w-md items-center gap-4 px-6">
+          <div className="h-px flex-1 bg-[#c89684]/50" />
+          <img src={logoImage} alt="" className="h-10 w-10 rounded-full object-cover" />
+          <div className="h-px flex-1 bg-[#c89684]/50" />
         </div>
 
+        {/* BUTTONS */}
+        <nav className="mx-auto mt-10 flex max-w-[720px] flex-col gap-5 px-6 pb-16">
+          {links.map((link) => (
+            <LinkButton key={link.title} {...link} />
+          ))}
+        </nav>
+
+        {/* FOOTER */}
+        <footer className="mx-auto flex max-w-md flex-col items-center gap-3 px-6 pb-10">
+          <img
+            src={logoImage}
+            alt=""
+            className="h-12 w-12 rounded-full object-cover opacity-80"
+          />
+          <p className="text-center text-sm italic text-[#6b5347]">
+            Gavina Freixa Rius · Salut Cíclica Femenina
+          </p>
+        </footer>
       </div>
     </main>
   );
 }
 
-function LinkButton({ title, titleClassName, lines, href, variant, underline }: LinkCard) {
+function LinkButton({ title, subtitle, subtitle2, href, variant, featured, icon }: LinkCard) {
   const bg =
-    variant === "dark"
-      ? "bg-[var(--clay-dark)] text-primary-foreground"
-      : "bg-[var(--clay-light)] text-foreground";
+    variant === "brown"
+      ? "bg-[#8e6e60] text-[#f4ebe0]"
+      : "bg-[#d8a797] text-[#2a1f17]";
 
-  const lineClass = underline ? "underline underline-offset-4" : "";
+  const titleSize = featured
+    ? "text-xl sm:text-2xl"
+    : "text-lg sm:text-xl";
+
+  const padding = featured ? "px-8 py-7 sm:py-9" : "px-8 py-5 sm:py-6";
 
   return (
     <a
       href={href}
-      className={`block rounded-full px-6 py-5 text-center font-serif transition-transform hover:scale-[1.01] ${bg}`}
+      className={`group block rounded-full text-center font-serif shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${bg} ${padding}`}
     >
-      <div className={`text-base sm:text-lg tracking-[0.18em] ${lineClass} ${titleClassName ?? ""}`}>
-        {title}
+      <div
+        className={`flex items-center justify-center gap-2 font-medium tracking-[0.18em] ${titleSize}`}
+      >
+        {icon && <MessageCircle className="h-5 w-5" />}
+        <span>{title}</span>
       </div>
-      {lines?.map((l, i) => (
-        <div
-          key={i}
-          className={`mt-1 text-sm sm:text-base tracking-[0.15em] ${lineClass} ${l.className ?? ""}`}
-        >
-          {l.text}
+      {subtitle && (
+        <div className="mt-2 text-sm italic tracking-[0.05em] opacity-90 sm:text-base">
+          {subtitle}
         </div>
-      ))}
+      )}
+      {subtitle2 && (
+        <div className="mt-1 text-xs italic tracking-[0.05em] opacity-80 sm:text-sm">
+          {subtitle2}
+        </div>
+      )}
     </a>
   );
 }
