@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RecursRouteImport } from './routes/recurs'
+import { Route as MatriusRouteImport } from './routes/matrius'
+import { Route as IndividualRouteImport } from './routes/individual'
+import { Route as CuresRouteImport } from './routes/cures'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RecursRoute = RecursRouteImport.update({
+  id: '/recurs',
+  path: '/recurs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatriusRoute = MatriusRouteImport.update({
+  id: '/matrius',
+  path: '/matrius',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndividualRoute = IndividualRouteImport.update({
+  id: '/individual',
+  path: '/individual',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CuresRoute = CuresRouteImport.update({
+  id: '/cures',
+  path: '/cures',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cures': typeof CuresRoute
+  '/individual': typeof IndividualRoute
+  '/matrius': typeof MatriusRoute
+  '/recurs': typeof RecursRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cures': typeof CuresRoute
+  '/individual': typeof IndividualRoute
+  '/matrius': typeof MatriusRoute
+  '/recurs': typeof RecursRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cures': typeof CuresRoute
+  '/individual': typeof IndividualRoute
+  '/matrius': typeof MatriusRoute
+  '/recurs': typeof RecursRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/cures' | '/individual' | '/matrius' | '/recurs'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/cures' | '/individual' | '/matrius' | '/recurs'
+  id: '__root__' | '/' | '/cures' | '/individual' | '/matrius' | '/recurs'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CuresRoute: typeof CuresRoute
+  IndividualRoute: typeof IndividualRoute
+  MatriusRoute: typeof MatriusRoute
+  RecursRoute: typeof RecursRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/recurs': {
+      id: '/recurs'
+      path: '/recurs'
+      fullPath: '/recurs'
+      preLoaderRoute: typeof RecursRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matrius': {
+      id: '/matrius'
+      path: '/matrius'
+      fullPath: '/matrius'
+      preLoaderRoute: typeof MatriusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/individual': {
+      id: '/individual'
+      path: '/individual'
+      fullPath: '/individual'
+      preLoaderRoute: typeof IndividualRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cures': {
+      id: '/cures'
+      path: '/cures'
+      fullPath: '/cures'
+      preLoaderRoute: typeof CuresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CuresRoute: CuresRoute,
+  IndividualRoute: IndividualRoute,
+  MatriusRoute: MatriusRoute,
+  RecursRoute: RecursRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
