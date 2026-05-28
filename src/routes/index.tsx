@@ -12,8 +12,9 @@ type LinkCard = {
   title: string;
   subtitle?: string;
   subtitle2?: string;
-  href: string;
+  href?: string;
   external?: boolean;
+  disabled?: boolean;
   variant: "coral" | "brown";
   featured?: boolean;
   icon?: boolean;
@@ -44,13 +45,13 @@ const links: LinkCard[] = [
   {
     title: "Acompanyament Individual",
     subtitle: "Sessions personalitzades, 1 a 1",
-    href: "/individual",
     variant: "brown",
+    disabled: true,
   },
   {
     title: "Contacta'm",
     subtitle: "per WhatsApp",
-    href: "https://wa.me/",
+    href: "https://wa.me/34616351536",
     external: true,
     variant: "coral",
     icon: true,
@@ -165,7 +166,7 @@ function Index() {
   );
 }
 
-function LinkButton({ title, subtitle, subtitle2, href, external, variant, featured, icon }: LinkCard) {
+function LinkButton({ title, subtitle, subtitle2, href, external, disabled, variant, featured, icon }: LinkCard) {
   const bg =
     variant === "brown"
       ? "bg-[#8e6e60] text-[#f4ebe0]"
@@ -174,7 +175,9 @@ function LinkButton({ title, subtitle, subtitle2, href, external, variant, featu
   const titleSize = featured ? "text-xl sm:text-2xl" : "text-lg sm:text-xl";
   const padding = featured ? "px-8 py-7 sm:py-9" : "px-8 py-5 sm:py-6";
 
-  const className = `group block rounded-full text-center font-serif shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${bg} ${padding}`;
+  const baseClass = `block rounded-full text-center font-serif shadow-sm ${bg} ${padding}`;
+  const activeClass = `${baseClass} transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md`;
+  const disabledClass = `${baseClass} opacity-50 cursor-not-allowed`;
 
   const inner = (
     <>
@@ -195,16 +198,20 @@ function LinkButton({ title, subtitle, subtitle2, href, external, variant, featu
     </>
   );
 
+  if (disabled) {
+    return <div className={disabledClass}>{inner}</div>;
+  }
+
   if (external) {
     return (
-      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+      <a href={href} className={activeClass} target="_blank" rel="noopener noreferrer">
         {inner}
       </a>
     );
   }
 
   return (
-    <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual"} className={className}>
+    <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual"} className={activeClass}>
       {inner}
     </Link>
   );
