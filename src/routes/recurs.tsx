@@ -60,7 +60,8 @@ function RecursPage() {
             img={handsImg}
             alt="Mà sostenint una flor de calèndula"
             title="Acompanyament Individual"
-            disabled
+            href="https://gavinafreixarius.my.canva.site/landpage-acompanyament-video?v=1"
+            external
           />
           <ProposalCard
             img={focdonesImg}
@@ -103,7 +104,7 @@ function RecursPage() {
 }
 
 function ProposalCard({
-  img, alt, title, subtitle, href, imgPosition, disabled,
+  img, alt, title, subtitle, href, imgPosition, external,
 }: {
   img: string;
   alt: string;
@@ -111,7 +112,7 @@ function ProposalCard({
   subtitle?: string;
   href?: string;
   imgPosition?: string;
-  disabled?: boolean;
+  external?: boolean;
 }) {
   const inner = (
     <>
@@ -135,8 +136,12 @@ function ProposalCard({
     </>
   );
 
-  if (disabled) {
-    return <div className="group block opacity-60 cursor-not-allowed">{inner}</div>;
+  if (href && external) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className="group block">
+        {inner}
+      </a>
+    );
   }
 
   if (href) {
