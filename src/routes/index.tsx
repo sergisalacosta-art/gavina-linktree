@@ -1,26 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/gavina-hero.jpg";
 import portraitImage from "@/assets/gavina-portrait.jpg";
 import logoImage from "@/assets/gavina-logo.png";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "La Gavina — Salut femenina ginecològica" },
-      {
-        name: "description",
-        content:
-          "Acompanyament a dones per cuidar i millorar la salut femenina ginecològica amb rutines d'autocura i prevenció natural.",
-      },
-      { property: "og:title", content: "La Gavina — Salut femenina ginecològica" },
-      {
-        property: "og:description",
-        content:
-          "Acompanyament a dones per cuidar la salut femenina amb autocura i prevenció natural.",
-      },
-    ],
-  }),
   component: Index,
 });
 
@@ -28,7 +12,9 @@ type LinkCard = {
   title: string;
   subtitle?: string;
   subtitle2?: string;
-  href: string;
+  href?: string;
+  external?: boolean;
+  disabled?: boolean;
   variant: "coral" | "brown";
   featured?: boolean;
   icon?: boolean;
@@ -37,35 +23,36 @@ type LinkCard = {
 const links: LinkCard[] = [
   {
     title: "Recurs gratuït",
-    subtitle: "“Com restaurar i mantenir la salut femenina ginecològica”",
+    subtitle: "\u201cCom restaurar i mantenir la salut femenina ginecològica\u201d",
     subtitle2: "Vídeo · 30 minuts",
-    href: "#recurs",
+    href: "/recurs",
     variant: "coral",
     featured: true,
   },
   {
     title: "Matrius en Cercle",
     subtitle: "Espai grupal mensual (online)",
-    href: "#matrius",
+    href: "/matrius",
     variant: "brown",
   },
   {
     title: "Cures de Matriu",
-    subtitle: "Retir d’1 dia · Octubre 2026",
+    subtitle: "Retir d'1 dia · Octubre 2026",
     subtitle2: "Ben aviat: informació detallada",
-    href: "#cures",
+    href: "/cures",
     variant: "coral",
   },
   {
     title: "Acompanyament Individual",
     subtitle: "Sessions personalitzades, 1 a 1",
-    href: "#individual",
     variant: "brown",
+    disabled: true,
   },
   {
-    title: "Contacta’m",
+    title: "Contacta'm",
     subtitle: "per WhatsApp",
-    href: "https://wa.me/",
+    href: "https://wa.me/34616351536",
+    external: true,
     variant: "coral",
     icon: true,
   },
@@ -92,7 +79,6 @@ function Index() {
         />
       </div>
 
-
       <div className="relative z-10">
         {/* HERO full-bleed */}
         <section className="relative w-full">
@@ -110,7 +96,6 @@ function Index() {
           <h1 className="sr-only">La Gavina — Salut femenina ginecològica</h1>
         </section>
 
-
         {/* INTRO */}
         <section className="mx-auto max-w-5xl px-6 pt-4 pb-12 sm:pt-8 sm:pb-16">
           <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[260px_1fr] md:gap-12">
@@ -127,13 +112,12 @@ function Index() {
               </p>
             </div>
 
-
             <div className="space-y-5 text-[1.15rem] leading-relaxed sm:text-[1.2rem]">
               <p>
                 Acompanyo dones que tenen ganes de{" "}
                 <strong className="font-semibold">cuidar i millorar</strong> la seva{" "}
                 <strong className="font-semibold">salut femenina ginecològica</strong>{" "}
-                aplicant rutines bàsiques d’
+                aplicant rutines bàsiques d'
                 <strong className="font-semibold">
                   autocura i pautes de prevenció reals i naturals, lluny de fàrmacs i
                   intervencions quirúrgiques
@@ -144,7 +128,7 @@ function Index() {
                 Uns recursos que són les bases de la salut femenina i que han sostingut, i
                 sostenen, les{" "}
                 <strong className="font-semibold">
-                  dones en diferents tradicions mil·lenàries d’arreu del món
+                  dones en diferents tradicions mil·lenàries d'arreu del món
                 </strong>
                 .
               </p>
@@ -158,7 +142,6 @@ function Index() {
           <img src={logoImage} alt="" className="h-10 w-10 object-contain" />
           <div className="h-px flex-1 bg-[#c89684]/50" />
         </div>
-
 
         {/* BUTTONS */}
         <nav className="mx-auto mt-10 flex max-w-[720px] flex-col gap-5 px-6 pb-16">
@@ -174,7 +157,6 @@ function Index() {
             alt=""
             className="h-12 w-12 object-contain opacity-80"
           />
-
           <p className="text-center text-sm italic text-[#6b5347]">
             Gavina Freixa Rius · Salut Cíclica Femenina
           </p>
@@ -184,26 +166,22 @@ function Index() {
   );
 }
 
-function LinkButton({ title, subtitle, subtitle2, href, variant, featured, icon }: LinkCard) {
+function LinkButton({ title, subtitle, subtitle2, href, external, disabled, variant, featured, icon }: LinkCard) {
   const bg =
     variant === "brown"
       ? "bg-[#8e6e60] text-[#f4ebe0]"
       : "bg-[#d8a797] text-[#2a1f17]";
 
-  const titleSize = featured
-    ? "text-xl sm:text-2xl"
-    : "text-lg sm:text-xl";
-
+  const titleSize = featured ? "text-xl sm:text-2xl" : "text-lg sm:text-xl";
   const padding = featured ? "px-8 py-7 sm:py-9" : "px-8 py-5 sm:py-6";
 
-  return (
-    <a
-      href={href}
-      className={`group block rounded-full text-center font-serif shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md ${bg} ${padding}`}
-    >
-      <div
-        className={`flex items-center justify-center gap-2 font-medium tracking-[0.18em] ${titleSize}`}
-      >
+  const baseClass = `block rounded-full text-center font-serif shadow-sm ${bg} ${padding}`;
+  const activeClass = `${baseClass} transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md`;
+  const disabledClass = `${baseClass} opacity-50 cursor-not-allowed`;
+
+  const inner = (
+    <>
+      <div className={`flex items-center justify-center gap-2 font-medium tracking-[0.18em] ${titleSize}`}>
         {icon && <MessageCircle className="h-5 w-5" />}
         <span>{title}</span>
       </div>
@@ -217,6 +195,24 @@ function LinkButton({ title, subtitle, subtitle2, href, variant, featured, icon 
           {subtitle2}
         </div>
       )}
-    </a>
+    </>
+  );
+
+  if (disabled) {
+    return <div className={disabledClass}>{inner}</div>;
+  }
+
+  if (external) {
+    return (
+      <a href={href} className={activeClass} target="_blank" rel="noopener noreferrer">
+        {inner}
+      </a>
+    );
+  }
+
+  return (
+    <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual"} className={activeClass}>
+      {inner}
+    </Link>
   );
 }
