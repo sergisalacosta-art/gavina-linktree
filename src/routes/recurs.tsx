@@ -60,8 +60,7 @@ function RecursPage() {
             img={handsImg}
             alt="Mà sostenint una flor de calèndula"
             title="Acompanyament Individual"
-            href="https://gavinafreixarius.my.canva.site/landpage-acompanyament-video?v=1"
-            external
+            href="/individual"
           />
           <ProposalCard
             img={focdonesImg}
