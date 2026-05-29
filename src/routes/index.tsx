@@ -51,7 +51,7 @@ const links: LinkCard[] = [
   {
     title: "Contacta'm",
     subtitle: "per WhatsApp",
-    href: "https://wa.me/34616351536",
+    href: "https://wa.me/34616351534",
     external: true,
     variant: "coral",
     icon: true,

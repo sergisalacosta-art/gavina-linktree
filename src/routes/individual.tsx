@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const WA_URL = "https://wa.me/34616351536";
+const WA_URL = "https://wa.me/34616351534";
 const VIDEO_ID = "r_Qh0WJ6OCM";
 
 export const Route = createFileRoute("/individual")({
@@ -334,21 +334,24 @@ const css = `
   .ai .sobre-inner {
     max-width: var(--max);
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 3.5rem;
+    display: flex;
+    gap: 3rem;
     align-items: center;
   }
   @media (max-width: 720px) {
-    .ai .sobre-inner { grid-template-columns: 1fr; }
+    .ai .sobre-inner { flex-direction: column; }
     .ai .sobre-img { order: -1; }
+  }
+  .ai .sobre-img {
+    flex: 0 0 auto;
+    width: clamp(160px, 25%, 260px);
   }
   .ai .sobre-img img {
     width: 100%;
-    border-radius: 1.4rem;
+    border-radius: 1.2rem;
     object-fit: cover;
     aspect-ratio: 3/4;
-    box-shadow: 0 10px 40px -15px rgba(90,40,20,.2);
+    box-shadow: 0 8px 28px -10px rgba(90,40,20,.2);
   }
   .ai .sobre-text p { font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
   .ai .sobre-text strong { color: var(--terra-fosc); font-weight: 600; }
@@ -457,7 +460,7 @@ function IndividualPage() {
           <div className="wa-card">
             <p>Reserva la teva <strong>videotrucada gratuïta de 30 min</strong>, enviant-me un WhatsApp.<br />Valorem juntes el teu cas. Sense compromís.</p>
             <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="wa-btn">
-              <WaIcon /> 616 351 536
+              <WaIcon /> 616 351 534
             </a>
           </div>
         </div>
@@ -503,7 +506,7 @@ function IndividualPage() {
             <p className="fase-note" style={{ marginTop: ".5rem" }}>✅ <strong>Última setmana del Mes 4:</strong> Sessió online 1h30min. Revisió i valoració</p>
           </div>
           <div className="fases-img">
-            <img src="/matrius/assets/ritual-nou.png" alt="Gavina en un bosc" loading="lazy" />
+            <img src="/individual/calendula.jpg" alt="Mà amb flors de calèndula" loading="lazy" />
           </div>
         </div>
       </section>

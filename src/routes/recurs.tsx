@@ -4,7 +4,7 @@ import focdonesImg from "@/assets/matrius-cercle.jpg";
 import curesImg from "@/assets/cures-matriu.jpg";
 import logoMark from "@/assets/logo-mark.png";
 
-const WA_URL = "https://wa.me/34616351536";
+const WA_URL = "https://wa.me/34616351534";
 
 export const Route = createFileRoute("/recurs")({
   component: RecursPage,
@@ -91,7 +91,7 @@ function RecursPage() {
           className="mt-6 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:brightness-105"
         >
           <WhatsAppIcon className="h-6 w-6" />
-          <span>616 351 536</span>
+          <span>616 351 534</span>
         </a>
       </section>
 
@@ -145,7 +145,7 @@ function ProposalCard({
 
   if (href) {
     return (
-      <Link to={href as "/matrius" | "/cures"} className="group block">
+      <Link to={href as "/matrius" | "/cures" | "/individual"} className="group block">
         {inner}
       </Link>
     );

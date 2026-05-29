@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-const WA_URL = "https://wa.me/34616351536";
+const WA_URL = "https://wa.me/34616351534";
 
 export const Route = createFileRoute("/matrius")({
   component: MatriusPage,
