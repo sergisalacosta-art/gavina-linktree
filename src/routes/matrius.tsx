@@ -112,7 +112,7 @@ const css = `
   .mp .btn:hover{transform:translateY(-2px)}
   .mp .btn-primary{background:var(--mel); color:#221a14}
   .mp .btn-ghost{border-color:rgba(255,255,255,.55); color:white; background:rgba(255,255,255,.08); backdrop-filter:blur(6px)}
-  .mp section{padding:clamp(4.5rem, 8vw, 7.5rem) 0; position:relative; z-index:1;}
+  .mp section{padding:clamp(2.8rem, 5vw, 5rem) 0; position:relative; z-index:1;}
   .mp .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto;}
   .mp .section-title{display:flex; flex-direction:column; gap:.65rem; margin-bottom:2rem;}
   .mp .eyebrow{
@@ -121,10 +121,10 @@ const css = `
     text-transform:uppercase;
     letter-spacing:.12em;
     font-weight:700;
-    text-decoration:underline;
-    text-decoration-thickness:1px;
-    text-underline-offset:5px;
     font-size:1rem;
+    display:block;
+    padding-bottom:.5rem;
+    border-bottom:1.5px solid var(--terra);
   }
   .mp h2{font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance;}
   .mp h3{font-size:clamp(1.15rem, 2.1vw, 1.83rem); color:var(--terra-fosc);}
@@ -155,7 +155,8 @@ const css = `
   .mp .details-stack{max-width:960px; margin:2.8rem auto 0; display:grid; gap:1.4rem;}
   .mp .single-detail{margin-top:0;}
   .mp .detail-card{padding:clamp(1.6rem, 3vw, 2.4rem); background:rgba(255,253,248,.88); color:var(--text); text-align:left;}
-  .mp .detail-card .eyebrow{display:inline-block; margin-bottom:.85rem;}
+  .mp .detail-card .eyebrow{margin-bottom:.85rem;}
+  .mp .price-block .eyebrow{border-bottom-color:rgba(241,210,163,.45);}
   .mp .detail-card h3{margin-bottom:1rem;}
   .mp .detail-card p{margin:.75rem 0 0;}
   .mp .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #f7ead3 0%, #fff5e4 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10); color:var(--text);}
@@ -193,7 +194,7 @@ const css = `
   @media(max-width:560px){
     .mp{font-size:16px}
     .mp .hero-inner,.mp .wrap{width:min(100% - 28px, var(--max))}
-    .mp section{padding:3.8rem 0}
+    .mp section{padding:2.4rem 0}
     .mp .btn{width:100%}
     .mp h1{font-size:2.7rem}
     .mp .text-card,.mp .include{padding:1.35rem}
@@ -324,7 +325,7 @@ function MatriusPage() {
                 <li>20% descompte per al Retir d&apos;1 dia de l&apos;octubre</li>
               </ul>
               <p className="price-number" style={{ textAlign: "left", marginTop: "1.4rem" }}>38€/mes</p>
-              <p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: ".95rem", fontStyle: "italic", lineHeight: "1.5" }}>
+              <p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: ".95rem", fontWeight: 800, lineHeight: "1.5" }}>
                 Si t&apos;hi apuntes abans de l&apos;1 de juliol, reps una guia regal sobre &ldquo;Tres maneres per començar a recol·lectar la teva sang menstrual&rdquo;
               </p>
             </article>
