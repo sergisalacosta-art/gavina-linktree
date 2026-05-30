@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
 
@@ -29,15 +30,6 @@ const css = `
     overflow-x:hidden;
     min-height:100vh;
     position:relative;
-  }
-  .mp::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:0;
-    pointer-events:none;
-    background:url("/matrius/assets/logo-watermark.png") center 58% / 720px auto no-repeat;
-    opacity:.18;
   }
   .mp img{max-width:100%;display:block}
   .mp a{color:inherit;text-decoration:none}
@@ -212,6 +204,22 @@ function MatriusPage() {
   return (
     <div className="mp">
       <style dangerouslySetInnerHTML={{ __html: css }} />
+      <div
+        aria-hidden
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 9999,
+          pointerEvents: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+        }}
+      >
+        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
+      </div>
 
       <header className="hero">
         <div className="hero-inner">

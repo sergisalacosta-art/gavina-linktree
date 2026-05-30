@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import handsImg from "@/assets/acompanyament.jpg";
 import focdonesImg from "@/assets/matrius-cercle.jpg";
 import curesImg from "@/assets/cures-matriu.jpg";
+import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
 
@@ -12,13 +13,17 @@ export const Route = createFileRoute("/recurs")({
 function RecursPage() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-background">
-      <img
-        src="/matrius/assets/logo-watermark.png"
-        alt=""
+      <div
         aria-hidden
-        className="pointer-events-none fixed left-1/2 top-1/3 w-[40rem] -translate-x-1/2"
-        style={{ opacity: 0.08, zIndex: 9999, mixBlendMode: "multiply" }}
-      />
+        className="pointer-events-none fixed inset-0 flex items-center justify-center"
+        style={{
+          zIndex: 9999,
+          maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+        }}
+      >
+        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
+      </div>
 
       <div className="mx-auto max-w-5xl px-6 pt-10 pb-12">
         <Link

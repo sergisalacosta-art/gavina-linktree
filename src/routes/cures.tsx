@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
 
@@ -70,16 +71,6 @@ const styles = `
       radial-gradient(circle at 85% 18%, oklch(0.92 0.03 63 / 0.55), transparent 26%),
       var(--retreat-cream);
     z-index: -3;
-  }
-  .retreat-page::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background: url("/matrius/assets/logo-watermark.png") center 56% / min(760px, 68vw) auto no-repeat;
-    opacity: 0.1;
-    filter: sepia(1) saturate(0.55) hue-rotate(18deg) brightness(0.95);
-    z-index: -2;
   }
   .retreat-page * { box-sizing: border-box; }
   .retreat-page img { display: block; width: 100%; max-width: 100%; }
@@ -196,7 +187,6 @@ const styles = `
     .retreat-grid, .retreat-grid--reverse, .retreat-investment, .retreat-bio, .retreat-cta, .retreat-testimonials-grid { grid-template-columns: 1fr; }
     .retreat-mini-grid { grid-template-columns: 1fr; }
     .retreat-hero { min-height: 78vh; }
-    .retreat-page::after { background-size: min(500px, 82vw); opacity: 0.08; }
   }
   @media (max-width: 640px) {
     .retreat-shell, .retreat-hero-inner { width: min(100% - 28px, 1160px); }
@@ -212,6 +202,22 @@ function CuresPage() {
   return (
     <div className="retreat-page">
       <style dangerouslySetInnerHTML={{ __html: styles }} />
+      <div
+        aria-hidden
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 9999,
+          pointerEvents: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+        }}
+      >
+        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
+      </div>
 
       <header className="retreat-hero">
         <div className="retreat-hero-inner">

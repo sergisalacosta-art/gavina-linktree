@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
 const VIDEO_ID = "r_Qh0WJ6OCM";
@@ -542,24 +543,22 @@ function IndividualPage() {
     <div className="ai">
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
-      {/* Watermark logo — fixed overlay, above sections but barely visible */}
-      <img
-        src="/matrius/assets/logo-watermark.png"
-        alt=""
+      <div
         aria-hidden
         style={{
           position: "fixed",
-          left: "50%",
-          top: "40%",
-          transform: "translate(-50%, -50%)",
-          width: "600px",
-          maxWidth: "80vw",
-          opacity: 0.08,
-          pointerEvents: "none",
+          inset: 0,
           zIndex: 9999,
-          mixBlendMode: "multiply",
+          pointerEvents: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
         }}
-      />
+      >
+        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
+      </div>
 
       <Link to="/recurs" className="back-link">← Tornar</Link>
 
