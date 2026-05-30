@@ -29,18 +29,7 @@ const css = `
     font-size: 16px;
     overflow-x: hidden;
     min-height: 100vh;
-    position: relative;
   }
-  .ai::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background: url("/matrius/assets/logo-watermark.png") center 40% / 600px auto no-repeat;
-    opacity: .07;
-  }
-  .ai > * { position: relative; z-index: 1; }
   .ai a { color: inherit; text-decoration: none; }
   .ai img { max-width: 100%; display: block; }
 
@@ -54,6 +43,8 @@ const css = `
     color: var(--terra);
     padding: 1.5rem 1.5rem 0;
     transition: color .2s;
+    position: relative;
+    z-index: 1;
   }
   .ai .back-link:hover { color: var(--terra-fosc); }
 
@@ -67,7 +58,7 @@ const css = `
   }
 
   /* Intro */
-  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; }
+  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; position: relative; z-index: 1; }
   .ai .intro-title {
     font-family: "Fraunces", Georgia, serif;
     font-size: clamp(1.4rem, 3vw, 2rem);
@@ -115,14 +106,14 @@ const css = `
   .ai .hero-hint { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); font-style: italic; }
 
   /* Per a qui */
-  .ai .per-qui { background: var(--crema-2); padding: 4rem 1.5rem; }
+  .ai .per-qui { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .per-qui-inner {
     max-width: var(--max);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    align-items: start;
+    align-items: center;
   }
   @media (max-width: 720px) { .ai .per-qui-inner { grid-template-columns: 1fr; } }
   .ai .per-qui-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
@@ -167,7 +158,7 @@ const css = `
   .ai .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
 
   /* Fases */
-  .ai .fases { background: var(--blanc); padding: 4rem 1.5rem; }
+  .ai .fases { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .fases-inner {
     max-width: var(--max);
     margin: 0 auto;
@@ -219,13 +210,13 @@ const css = `
     width: 100%;
     border-radius: 1.4rem;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
     aspect-ratio: 3/4;
     box-shadow: 0 10px 40px -15px rgba(90,40,20,.2);
   }
 
-  /* Inclou */
-  .ai .inclou { background: var(--crema-2); padding: 4rem 1.5rem; }
+  /* Inclou — single column */
+  .ai .inclou { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .inclou-inner { max-width: var(--max); margin: 0 auto; }
   .ai .inclou-title {
     font-family: "Fraunces", Georgia, serif;
@@ -235,13 +226,7 @@ const css = `
     margin-bottom: 2.5rem;
     line-height: 1.3;
   }
-  .ai .inclou-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
-  @media (max-width: 660px) { .ai .inclou-cols { grid-template-columns: 1fr; gap: 2rem; } }
+  .ai .inclou-col { width: 100%; }
   .ai .inclou-col h4 {
     font-size: .72rem;
     letter-spacing: .18em;
@@ -265,9 +250,10 @@ const css = `
   .ai .inclou-col ul.no li::before { content: "✗"; position: absolute; left: 0; color: #b04b3a; }
   .ai .nota { font-size: .85rem; font-style: italic; color: var(--muted); margin-top: .25rem; }
   .ai .destacat { font-size: .85rem; font-weight: 700; color: var(--terra-fosc); margin-top: .25rem; }
+  .ai .inclou-sep { height: 1px; background: rgba(138,75,52,.2); margin: 2.5rem 0; }
 
   /* FAQ accordion */
-  .ai .faq { background: var(--blanc); padding: 4rem 1.5rem; }
+  .ai .faq { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .faq-inner { max-width: var(--max); margin: 0 auto; }
   .ai .faq-list { border-top: 1px solid rgba(138,75,52,.15); }
   .ai .faq-item { border-bottom: 1px solid rgba(138,75,52,.15); }
@@ -305,26 +291,66 @@ const css = `
   }
   .ai .faq-body strong { color: var(--text); font-weight: 600; }
 
-  /* Testimonials */
-  .ai .testi { background: var(--crema-2); padding: 4rem 1.5rem; }
+  /* Testimonials carousel */
+  .ai .testi { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .testi-inner { max-width: var(--max); margin: 0 auto; }
-  .ai .testi-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+  .ai .testi-carousel {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
   }
-  @media (max-width: 660px) { .ai .testi-grid { grid-template-columns: 1fr; } }
+  .ai .testi-track { flex: 1; overflow: hidden; }
   .ai .testi-card {
     background: var(--blanc);
     border-radius: 1.2rem;
-    padding: 1.8rem;
+    padding: 2rem 2.2rem;
     box-shadow: 0 4px 20px -8px rgba(90,40,20,.1);
   }
-  .ai .testi-card p { font-size: .95rem; color: var(--muted); line-height: 1.65; font-style: italic; margin-bottom: .9rem; }
-  .ai .testi-card cite { font-style: normal; font-weight: 700; font-size: .85rem; color: var(--terra); }
+  .ai .testi-card p {
+    font-size: .98rem;
+    color: var(--muted);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  .ai .testi-card cite { font-style: normal; font-weight: 700; font-size: .88rem; color: var(--terra); }
+  .ai .testi-arrow {
+    flex-shrink: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--terra);
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s, transform .15s;
+  }
+  .ai .testi-arrow:hover { background: var(--terra-fosc); transform: scale(1.08); }
+  .ai .testi-dots {
+    display: flex;
+    justify-content: center;
+    gap: .55rem;
+    margin-top: 1.4rem;
+  }
+  .ai .testi-dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background: var(--rosa);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background .2s, transform .2s;
+  }
+  .ai .testi-dot.active { background: var(--terra); transform: scale(1.3); }
 
   /* Sobre */
-  .ai .sobre { background: var(--blanc); padding: 4rem 1.5rem; }
+  .ai .sobre { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .sobre-inner {
     max-width: var(--max);
     margin: 0 auto;
@@ -339,14 +365,16 @@ const css = `
   .ai .sobre-img {
     flex: 0 0 auto;
     width: clamp(150px, 22%, 240px);
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 28px -10px rgba(90,40,20,.2);
   }
   .ai .sobre-img img {
     width: 100%;
-    border-radius: 1.2rem;
+    height: 100%;
     object-fit: cover;
     object-position: top center;
-    aspect-ratio: 3/4;
-    box-shadow: 0 8px 28px -10px rgba(90,40,20,.2);
   }
   .ai .sobre-text p { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
   .ai .sobre-text strong { color: var(--terra-fosc); font-weight: 600; }
@@ -357,6 +385,8 @@ const css = `
     padding: 4.5rem 1.5rem;
     text-align: center;
     color: #fff;
+    position: relative;
+    z-index: 1;
   }
   .ai .cta-final h2 {
     font-family: "Fraunces", Georgia, serif;
@@ -386,6 +416,8 @@ const css = `
     text-align: center;
     font-size: .75rem;
     color: rgba(255,255,255,.7);
+    position: relative;
+    z-index: 1;
   }
 `;
 
@@ -472,10 +504,62 @@ function FaqAccordion() {
   );
 }
 
+function TestimonialCarousel() {
+  const [idx, setIdx] = useState(0);
+  const n = testimonials.length;
+  const prev = () => setIdx(i => (i - 1 + n) % n);
+  const next = () => setIdx(i => (i + 1) % n);
+  const { text, name } = testimonials[idx];
+
+  return (
+    <div>
+      <div className="testi-carousel">
+        <button className="testi-arrow" onClick={prev} aria-label="Anterior">‹</button>
+        <div className="testi-track">
+          <div className="testi-card">
+            <p>&ldquo;{text}&rdquo;</p>
+            <cite>{name}</cite>
+          </div>
+        </div>
+        <button className="testi-arrow" onClick={next} aria-label="Següent">›</button>
+      </div>
+      <div className="testi-dots">
+        {testimonials.map((_, i) => (
+          <button
+            key={i}
+            className={`testi-dot${i === idx ? " active" : ""}`}
+            onClick={() => setIdx(i)}
+            aria-label={`Testimoni ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function IndividualPage() {
   return (
     <div className="ai">
       <style dangerouslySetInnerHTML={{ __html: css }} />
+
+      {/* Watermark logo — fixed overlay, above sections but barely visible */}
+      <img
+        src="/matrius/assets/logo-watermark.png"
+        alt=""
+        aria-hidden
+        style={{
+          position: "fixed",
+          left: "50%",
+          top: "40%",
+          transform: "translate(-50%, -50%)",
+          width: "600px",
+          maxWidth: "80vw",
+          opacity: 0.08,
+          pointerEvents: "none",
+          zIndex: 9999,
+          mixBlendMode: "multiply",
+        }}
+      />
 
       <Link to="/recurs" className="back-link">← Tornar</Link>
 
@@ -578,31 +662,30 @@ function IndividualPage() {
         </div>
       </section>
 
-      {/* Inclou / No inclou */}
+      {/* Inclou / No inclou — single column */}
       <section className="inclou">
         <div className="inclou-inner">
           <h2 className="inclou-title">
             Resumidament...<br />
             Aquest acompanyament individual de 4 mesos...
           </h2>
-          <div className="inclou-cols">
-            <div className="inclou-col">
-              <h4>Inclou</h4>
-              <ul className="si">
-                <li>2 sessions online amb mi: la primera (de valoració i revisió del teu cas) i l&apos;última (de valoració, revisió i tancament de procés).</li>
-                <li>4 vídeos explicatius: alimentació fisiològica, desparasitació amb plantes, vaporitzacions, automassatge pits i exercicis Moviment Pèlvic Uterí.<p className="nota">Accés fins al final dels 4 mesos. No es podran baixar.</p></li>
-                <li>5 guies resum (Rutines, Alimentació Fisiològica, Desparasitació amb Plantes, Vaporitzacions i Autocura Pits)</li>
-                <li>Àudio &ldquo;La nostra Ciclicitat&rdquo; + Àudio meditació &ldquo;Connecta amb la teva matriu&rdquo;<p className="destacat">Àudios i guies resum es podran baixar.</p></li>
-                <li>Seguiment amb resolució de dubtes directa via WhatsApp o correu durant els 4 mesos.</li>
-              </ul>
-            </div>
-            <div className="inclou-col">
-              <h4>No inclou</h4>
-              <ul className="no">
-                <li>Els massatges (matriu, òrgans, articulacions)</li>
-                <li>La garantia que el teu desequilibri es resolgui en el temps que dura l&apos;acompanyament</li>
-              </ul>
-            </div>
+          <div className="inclou-col">
+            <h4>Inclou</h4>
+            <ul className="si">
+              <li>2 sessions online amb mi: la primera (de valoració i revisió del teu cas) i l&apos;última (de valoració, revisió i tancament de procés).</li>
+              <li>4 vídeos explicatius: alimentació fisiològica, desparasitació amb plantes, vaporitzacions, automassatge pits i exercicis Moviment Pèlvic Uterí.<p className="nota">Accés fins al final dels 4 mesos. No es podran baixar.</p></li>
+              <li>5 guies resum (Rutines, Alimentació Fisiològica, Desparasitació amb Plantes, Vaporitzacions i Autocura Pits)</li>
+              <li>Àudio &ldquo;La nostra Ciclicitat&rdquo; + Àudio meditació &ldquo;Connecta amb la teva matriu&rdquo;<p className="destacat">Àudios i guies resum es podran baixar.</p></li>
+              <li>Seguiment amb resolució de dubtes directa via WhatsApp o correu durant els 4 mesos.</li>
+            </ul>
+          </div>
+          <div className="inclou-sep" />
+          <div className="inclou-col">
+            <h4>No inclou</h4>
+            <ul className="no">
+              <li>Els massatges (matriu, òrgans, articulacions)</li>
+              <li>La garantia que el teu desequilibri es resolgui en el temps que dura l&apos;acompanyament</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -615,18 +698,11 @@ function IndividualPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials carousel */}
       <section className="testi">
         <div className="testi-inner">
           <h2 className="s-heading">Algunes dones diuen...</h2>
-          <div className="testi-grid">
-            {testimonials.map(({ text, name }) => (
-              <div className="testi-card" key={name}>
-                <p>&ldquo;{text}&rdquo;</p>
-                <cite>{name}</cite>
-              </div>
-            ))}
-          </div>
+          <TestimonialCarousel />
         </div>
       </section>
 
