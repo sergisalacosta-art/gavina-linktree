@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 
 const WA_URL = "https://wa.me/34616351534";
 const VIDEO_ID = "r_Qh0WJ6OCM";
@@ -28,15 +29,27 @@ const css = `
     font-size: 16px;
     overflow-x: hidden;
     min-height: 100vh;
+    position: relative;
   }
+  .ai::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: url("/matrius/assets/logo-watermark.png") center 40% / 600px auto no-repeat;
+    opacity: .07;
+  }
+  .ai > * { position: relative; z-index: 1; }
   .ai a { color: inherit; text-decoration: none; }
   .ai img { max-width: 100%; display: block; }
 
+  /* Back link */
   .ai .back-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.85rem;
+    gap: .4rem;
+    font-size: .85rem;
     font-style: italic;
     color: var(--terra);
     padding: 1.5rem 1.5rem 0;
@@ -44,23 +57,28 @@ const css = `
   }
   .ai .back-link:hover { color: var(--terra-fosc); }
 
-  /* Intro */
-  .ai .intro {
-    background: var(--blanc);
-    text-align: center;
-    padding: 2.5rem 1.5rem 3rem;
+  /* Section heading */
+  .ai .s-heading {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--terra);
+    font-style: italic;
+    margin-bottom: 2rem;
   }
+
+  /* Intro */
+  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; }
   .ai .intro-title {
     font-family: "Fraunces", Georgia, serif;
     font-size: clamp(1.4rem, 3vw, 2rem);
     color: var(--terra-fosc);
     max-width: 620px;
-    margin: 0 auto 0.6rem;
+    margin: 0 auto .6rem;
     line-height: 1.25;
   }
   .ai .intro-title em { font-style: normal; color: var(--terra); }
   .ai .intro-link {
-    font-size: 0.9rem;
+    font-size: .9rem;
     color: var(--terra);
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -83,7 +101,7 @@ const css = `
     color: var(--terra-fosc);
     line-height: 1.1;
     letter-spacing: .04em;
-    margin-bottom: 0.3rem;
+    margin-bottom: .3rem;
   }
   .ai .hero-tag span {
     display: block;
@@ -92,14 +110,9 @@ const css = `
     text-transform: uppercase;
     letter-spacing: .08em;
   }
-  .ai .hero-sub {
-    max-width: 560px;
-    margin: 1.2rem auto 0;
-    font-size: 1.05rem;
-    color: var(--muted);
-  }
+  .ai .hero-sub { max-width: 560px; margin: 1.2rem auto 0; font-size: 1.05rem; color: var(--muted); }
   .ai .hero-sub strong { color: var(--terra-fosc); font-weight: 700; }
-  .ai .hero-hint { margin-top: 1.4rem; font-size: 0.9rem; color: var(--muted); font-style: italic; }
+  .ai .hero-hint { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); font-style: italic; }
 
   /* Per a qui */
   .ai .per-qui { background: var(--crema-2); padding: 4rem 1.5rem; }
@@ -112,39 +125,21 @@ const css = `
     align-items: start;
   }
   @media (max-width: 720px) { .ai .per-qui-inner { grid-template-columns: 1fr; } }
-  .ai .section-label {
-    font-size: 0.7rem;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: var(--terra);
-    font-weight: 600;
-    border-bottom: 1px solid rgba(138,75,52,.3);
-    padding-bottom: .3rem;
-    display: inline-block;
-    margin-bottom: 1.2rem;
-  }
-  .ai .per-qui-title {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
-    color: var(--terra-fosc);
-    line-height: 1.25;
-    margin-bottom: 1.5rem;
-  }
-  .ai .per-qui-list { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
+  .ai .per-qui-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
   .ai .per-qui-list li {
-    padding-left: 1.2rem;
+    padding-left: 1.3rem;
     position: relative;
-    font-size: .95rem;
+    font-size: 1rem;
     color: var(--muted);
-    line-height: 1.55;
+    line-height: 1.6;
   }
   .ai .per-qui-list li::before {
     content: "·";
     position: absolute;
     left: 0;
     color: var(--terra);
-    font-size: 1.4rem;
-    line-height: 1;
+    font-size: 1.5rem;
+    line-height: .9;
   }
   .ai .per-qui-list li strong { color: var(--text); font-weight: 600; }
   .ai .wa-card {
@@ -154,7 +149,7 @@ const css = `
     color: #fff;
     text-align: center;
   }
-  .ai .wa-card p { font-size: .95rem; line-height: 1.55; margin-bottom: 1.4rem; opacity: .93; }
+  .ai .wa-card p { font-size: 1rem; line-height: 1.55; margin-bottom: 1.4rem; opacity: .93; }
   .ai .wa-card strong { font-weight: 700; }
   .ai .wa-btn {
     display: inline-flex;
@@ -179,18 +174,17 @@ const css = `
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 3.5rem;
-    align-items: start;
+    align-items: center;
   }
   @media (max-width: 720px) {
     .ai .fases-inner { grid-template-columns: 1fr; }
     .ai .fases-img { order: -1; }
   }
   .ai .fases-intro {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: 1.05rem;
     color: var(--muted);
     margin-bottom: 1.8rem;
-    line-height: 1.45;
+    line-height: 1.55;
   }
   .ai .fases-intro strong { color: var(--terra-fosc); }
   .ai .fase-item {
@@ -199,31 +193,33 @@ const css = `
     border-left: 3px solid var(--rosa);
   }
   .ai .fase-item h4 {
-    font-size: .88rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--terra);
-    margin-bottom: .5rem;
+    margin-bottom: .6rem;
   }
-  .ai .fase-item ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .2rem; }
+  .ai .fase-item ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .3rem; }
   .ai .fase-item ul li {
-    font-size: .84rem;
+    font-size: 1rem;
     color: var(--muted);
-    padding-left: .9rem;
+    padding-left: 1rem;
     position: relative;
+    line-height: 1.5;
   }
   .ai .fase-item ul li::before { content: "–"; position: absolute; left: 0; color: var(--rosa); }
   .ai .fase-note {
-    font-size: .88rem;
+    font-size: 1rem;
     color: var(--muted);
     margin-top: .6rem;
     padding-left: 1rem;
     border-left: 3px solid var(--rosa);
-    line-height: 1.45;
+    line-height: 1.5;
   }
   .ai .fases-img img {
     width: 100%;
     border-radius: 1.4rem;
     object-fit: cover;
+    object-position: center top;
     aspect-ratio: 3/4;
     box-shadow: 0 10px 40px -15px rgba(90,40,20,.2);
   }
@@ -236,84 +232,82 @@ const css = `
     font-size: clamp(1.3rem, 3vw, 1.9rem);
     color: var(--terra-fosc);
     text-align: center;
-    margin-bottom: .3rem;
-  }
-  .ai .inclou-sub {
-    text-align: center;
-    color: var(--terra);
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: .06em;
-    text-transform: uppercase;
     margin-bottom: 2.5rem;
+    line-height: 1.3;
   }
-  .ai .inclou-grid {
+  .ai .inclou-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
+    align-items: start;
   }
-  @media (max-width: 660px) { .ai .inclou-grid { grid-template-columns: 1fr; } }
-  .ai .inclou-box {
-    background: var(--blanc);
-    border-radius: 1.2rem;
-    padding: 2rem 1.8rem;
-    box-shadow: 0 4px 20px -8px rgba(90,40,20,.1);
-  }
-  .ai .inclou-box h4 {
-    font-size: .7rem;
+  @media (max-width: 660px) { .ai .inclou-cols { grid-template-columns: 1fr; gap: 2rem; } }
+  .ai .inclou-col h4 {
+    font-size: .72rem;
     letter-spacing: .18em;
     text-transform: uppercase;
     color: var(--terra);
     font-weight: 600;
-    border-bottom: 1px solid rgba(138,75,52,.25);
-    padding-bottom: .4rem;
+    border-bottom: 1px solid rgba(138,75,52,.3);
+    padding-bottom: .35rem;
     margin-bottom: 1.2rem;
+    display: inline-block;
   }
-  .ai .inclou-box ul { list-style: none; display: flex; flex-direction: column; gap: .8rem; }
-  .ai .inclou-box ul li {
-    font-size: .88rem;
+  .ai .inclou-col ul { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
+  .ai .inclou-col ul li {
+    font-size: 1rem;
     color: var(--muted);
-    padding-left: 1.2rem;
+    padding-left: 1.3rem;
     position: relative;
-    line-height: 1.5;
+    line-height: 1.55;
   }
-  .ai .inclou-box ul.si li::before { content: "✓"; position: absolute; left: 0; color: var(--terra); }
-  .ai .inclou-box ul.no li::before { content: "✗"; position: absolute; left: 0; color: #b04b3a; }
-  .ai .nota { font-size: .8rem; font-style: italic; color: var(--muted); margin-top: .25rem; }
-  .ai .destacat { font-size: .8rem; font-weight: 700; color: var(--terra-fosc); margin-top: .25rem; }
+  .ai .inclou-col ul.si li::before { content: "✓"; position: absolute; left: 0; color: var(--terra); }
+  .ai .inclou-col ul.no li::before { content: "✗"; position: absolute; left: 0; color: #b04b3a; }
+  .ai .nota { font-size: .85rem; font-style: italic; color: var(--muted); margin-top: .25rem; }
+  .ai .destacat { font-size: .85rem; font-weight: 700; color: var(--terra-fosc); margin-top: .25rem; }
 
-  /* FAQ */
+  /* FAQ accordion */
   .ai .faq { background: var(--blanc); padding: 4rem 1.5rem; }
   .ai .faq-inner { max-width: var(--max); margin: 0 auto; }
-  .ai .faq-title {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
+  .ai .faq-list { border-top: 1px solid rgba(138,75,52,.15); }
+  .ai .faq-item { border-bottom: 1px solid rgba(138,75,52,.15); }
+  .ai .faq-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.3rem 0;
+    text-align: left;
+    font-family: inherit;
+    color: var(--terra-fosc);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .ai .faq-btn:hover { color: var(--terra); }
+  .ai .faq-arrow {
+    flex-shrink: 0;
+    font-size: .75rem;
     color: var(--terra);
-    font-style: italic;
-    margin-bottom: 2.5rem;
-    text-align: center;
+    margin-top: .15rem;
+    transition: transform .25s;
   }
-  .ai .faq-item {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(138,75,52,.12);
+  .ai .faq-arrow.open { transform: rotate(180deg); }
+  .ai .faq-body {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.7;
+    padding-bottom: 1.4rem;
   }
-  .ai .faq-item:last-child { border-bottom: none; margin-bottom: 0; }
-  .ai .faq-q { font-weight: 700; color: var(--terra-fosc); margin-bottom: .6rem; font-size: .95rem; line-height: 1.4; }
-  .ai .faq-a { font-size: .9rem; color: var(--muted); line-height: 1.7; }
-  .ai .faq-a strong { color: var(--text); font-weight: 600; }
+  .ai .faq-body strong { color: var(--text); font-weight: 600; }
 
   /* Testimonials */
   .ai .testi { background: var(--crema-2); padding: 4rem 1.5rem; }
   .ai .testi-inner { max-width: var(--max); margin: 0 auto; }
-  .ai .testi-title {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    color: var(--terra);
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
   .ai .testi-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -326,8 +320,8 @@ const css = `
     padding: 1.8rem;
     box-shadow: 0 4px 20px -8px rgba(90,40,20,.1);
   }
-  .ai .testi-card p { font-size: .88rem; color: var(--muted); line-height: 1.65; font-style: italic; margin-bottom: .9rem; }
-  .ai .testi-card cite { font-style: normal; font-weight: 700; font-size: .82rem; color: var(--terra); }
+  .ai .testi-card p { font-size: .95rem; color: var(--muted); line-height: 1.65; font-style: italic; margin-bottom: .9rem; }
+  .ai .testi-card cite { font-style: normal; font-weight: 700; font-size: .85rem; color: var(--terra); }
 
   /* Sobre */
   .ai .sobre { background: var(--blanc); padding: 4rem 1.5rem; }
@@ -344,19 +338,20 @@ const css = `
   }
   .ai .sobre-img {
     flex: 0 0 auto;
-    width: clamp(160px, 25%, 260px);
+    width: clamp(150px, 22%, 240px);
   }
   .ai .sobre-img img {
     width: 100%;
     border-radius: 1.2rem;
     object-fit: cover;
+    object-position: top center;
     aspect-ratio: 3/4;
     box-shadow: 0 8px 28px -10px rgba(90,40,20,.2);
   }
-  .ai .sobre-text p { font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+  .ai .sobre-text p { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
   .ai .sobre-text strong { color: var(--terra-fosc); font-weight: 600; }
 
-  /* CTA final */
+  /* CTA */
   .ai .cta-final {
     background: var(--terra);
     padding: 4.5rem 1.5rem;
@@ -394,11 +389,86 @@ const css = `
   }
 `;
 
+const faqItems = [
+  {
+    q: "Segueixo una dieta vegetariana, em pots acompanyar?",
+    a: "L'acompanyament que ofereixo està basat en una alimentació fisiològica i regenerativa, és a dir, basada en la nutrició real que necessiten les cèl·lules i que ha permès el desenvolupament i l'evolució de l'espècie humana. Basada en l'observació dels nutrients que han format part de l'alimentació de tantes cultures ancestrals d'arreu del món. Els desequilibris que viuen avui moltes dones venen en gran part d'una manca de nutrició real. Sabem que les dietes vegetariana i vegana tenen una incidència desfavorable en la salut hormonal de la dona. Si vols saber-ne els motius i estàs oberta a implementar canvis a favor de la teva salut, et puc acompanyar.",
+  },
+  {
+    q: "He tingut una pèrdua gestacional, i em sento molt desconnectada de la meva matriu.",
+    a: "Aquest és un cas massa habitual avui i que acostuma a estar relacionat amb una vida molt activa, el no permetre's el descans real. T'acompanyaré a revisar rutines que t'ajudaran en aquests moments, així com a revisar la teva alimentació perquè el teu cos recuperi els nutrients, una desparasitació amb plantes adequades per tu i també un protocol de vapors per netejar el teu úter. I també et recomanaria el ritual de la Cerrada. Tot això, pas a pas.",
+  },
+  {
+    q: "No sento desig sexual i tampoc plaer en la penetració. Tinc 45 anys.",
+    a: "La desconnexió del plaer està relacionada amb la desconnexió de la vida. És molt important anar revisant tots els àmbits de la nostra vida. Cosa innegociable, si no ho has fet abans, en els primers anys de Climateri. La sexualitat es ressignifica i agafa nous matisos. Estàs vivint la vida que realment vols viure? I, paral·lelament, t'acompanyaré posant èmfasi en l'alimentació que no pot faltar i les rutines que cal implementar, així com els massatges de matriu i la introducció del treball físic i energètic específic per a aquesta preciosa etapa.",
+  },
+  {
+    q: "Com són els tractaments que apliques?",
+    a: "En primer lloc, no soc metge ni ginecòloga, per tant no et recomanaré ni hormones sintètiques, ni intervencions quirúrgiques ni fàrmacs. I t'explicaré el per què, perquè puguis decidir des de la informació i no sota pressió. Tot el que he après i aplico ve de tradicions de Llatinoamèrica. Els tractaments estan basats en la medicina natural i ancestral; això vol dir que les bases que us ensenyo i recomano són: una alimentació regenerativa; unes rutines que no hauríem d'haver perdut mai i que segons la situació i el cas de cada dona intentem adaptar perquè sigui fàcil i sostenible en el temps (és important el compromís amb una mateixa); desparasitació amb plantes, un altre recurs de prevenció que cal recuperar i mantenir; moviment pelvicuterí bàsic i treball específic per a dones a partir dels 40; massatge de matriu i òrgans, massatge amb rebozos i ritual la Cerrada.",
+  },
+  {
+    q: "En principi no tinc cap desequilibri ginecològic però sento la necessitat de connectar amb la meva matriu i amb la meva feminitat.",
+    a: "Cuidar-nos com a dones té a veure en com ens nodrim en tots els sentits: i ens podem nodrir de moltes maneres (que sovint no són com ens han ensenyat; i ja ens n'anem adonant, anem despertant…) i a totes ens agraden coses diferents, però hi han unes bases que ens donen autonomia i que ens mantenen en salut si ens comprometem amb nosaltres. Són aquells recursos/medicines que han sostingut les dones en tantes cultures ancestrals. Bàsiques, senzilles, sostenibles. Això és el que us ensenyo en els acompanyaments.",
+  },
+  {
+    q: "Em pots garantir que el meu desequilibri s'haurà resolt en 3-4 mesos?",
+    a: "Cada procés és únic i el teu estat després de 3-4 mesos dependrà de molts factors, entre els quals, el teu compromís amb tu. El meu compromís és acompanyar-te a restaurar i mantenir la teva salut. Et guiaré pas a pas perquè integris bé les bases i juntes anirem valorant el teu procés per introduir les eines més adequades per tu perquè vagis recuperant teva salut i sigui sostenible en el temps. En cap cas et puc garantir que obtindràs els resultats que busques amb el tractament.",
+  },
+  {
+    q: "Com puc saber si em podries acompanyar en el meu cas?",
+    a: "Escriu-me un WhatsApp i valorem juntes si aquest acompanyament s'adapta al que necessites.",
+  },
+];
+
+const testimonials = [
+  {
+    text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important",
+    name: "Alba",
+  },
+  {
+    text: "El Massatge Ritual Matriu amb la Gavina va ser molt màgic. Des del primer moment em vaig sentir acompanyada. Un acompanyament dolç, present, conscient, tant el dia del ritual com en la revisió prèvia, on em vaig qüestionar coses molt necessàries i sobretot m'ha permès connectar amb la meva matriu",
+    name: "Raquel",
+  },
+  {
+    text: "Vam iniciar les sessions amb la Gavina perquè la meva filla Laia, de 13 anys, tenia molts dolors durant la menstruació. A la Laia li van anar molt bé les sessions presencials perquè eren un espai on es relaxava i connectava, i a mi també. Durant tot el procés ens vam sentir molt còmodes i la Laia va expressar amb tranquil·litat allò que sentia en un clima de molta confiança. Va aprendre a conèixer com funciona el seu cicle, ubicar el seu úter i ovaris. Els massatges matriu, també, fets amb molta delicadesa i tendresa ens van fer sentir molt a gust. Hem fet un aprenentatge, mare i filla, que ens servirà per sempre. Seguint les pautes de la Gavina, la Laia ha millorat molt.",
+    name: "Teresa",
+  },
+  {
+    text: "Feia temps que tenia problemes menstruals, amenorrea, sagnats intermenstruals i ja m'havien visitat diferents professionals (endocrina ginecòlegs, metges i fins i tot nutricionista sense gaire èxit). Vaig decidir començar amb la Gavina perquè volia provar una altra mirada, buscar l'arrel del problema des d'una perspectiva més natural i entenent el llenguatge del meu cos. La Gavina em va ensenyar a mirar-me com mai, a posar-me al centre i escoltar el meu cos. A donar-li descans i la pausa que necessitava per tenir energia suficient per ovular. També gràcies als seus coneixements, de manera paral·lela, vaig poder obtenir més respostes dels metges. Em van trobar un càncer a l'úter, que no m'haguessin diagnosticat tan a temps si ella no m'hagués assessorat. La Gavina em va ajudar moltíssim a decidir el meu tractament amb tota la informació. Tan de bo hagués trobat una mirada com la de la Gavina anys enrere.",
+    name: "Lorena",
+  },
+  {
+    text: "La Gavina em transmet molta confiança cap a una mirada més connectada amb la natura i la meva intuïció femenina. Sento que gran part dels missatges cap als canvis, el cos i la salut es miren molt des de la por i una visió molt medicalitzada. Ancestralment les dones s'acompanyaven entre elles, des de la seva saviesa i coneixements. Sento molta curiositat per provar l'acompanyament amb una dona sensible i empàtica com ella. Tenir a la Gavina és tot un regal!",
+    name: "Brenda",
+  },
+];
+
 function WaIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden style={{ width: "1.2em", height: "1.2em", flexShrink: 0 }}>
       <path d="M19.05 4.91A10 10 0 0 0 12 2a10 10 0 0 0-8.66 15l-1.3 4.74 4.86-1.27A10 10 0 1 0 19.05 4.91Zm-7.05 15.4a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.88.75.77-2.81-.2-.31A8.31 8.31 0 1 1 20.3 12a8.34 8.34 0 0 1-8.3 8.31Zm4.55-6.22c-.25-.13-1.48-.73-1.71-.81s-.4-.13-.56.13-.65.81-.79.97-.29.18-.54.06a6.78 6.78 0 0 1-2-1.23 7.56 7.56 0 0 1-1.4-1.74c-.14-.25 0-.38.11-.51s.25-.29.37-.43a1.62 1.62 0 0 0 .25-.41.46.46 0 0 0 0-.44c-.06-.13-.56-1.34-.76-1.83s-.4-.42-.56-.43h-.48a.93.93 0 0 0-.67.31 2.81 2.81 0 0 0-.88 2.1 4.91 4.91 0 0 0 1 2.59 11.16 11.16 0 0 0 4.27 3.77 14.43 14.43 0 0 0 1.42.52 3.43 3.43 0 0 0 1.57.1 2.58 2.58 0 0 0 1.69-1.19 2.1 2.1 0 0 0 .14-1.19c-.06-.1-.22-.16-.47-.28Z" />
     </svg>
+  );
+}
+
+function FaqAccordion() {
+  const [open, setOpen] = useState<number | null>(null);
+  return (
+    <div className="faq-list">
+      {faqItems.map((item, i) => (
+        <div className="faq-item" key={i}>
+          <button
+            className="faq-btn"
+            onClick={() => setOpen(open === i ? null : i)}
+            aria-expanded={open === i}
+          >
+            <span>{item.q}</span>
+            <span className={`faq-arrow${open === i ? " open" : ""}`}>▼</span>
+          </button>
+          {open === i && <p className="faq-body">{item.a}</p>}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -444,10 +514,7 @@ function IndividualPage() {
       <section className="per-qui">
         <div className="per-qui-inner">
           <div>
-            <span className="section-label">Per a qui és</span>
-            <h2 className="per-qui-title">
-              Aquest acompanyament és per tu si t&apos;identifiques amb algun d&apos;aquests casos...
-            </h2>
+            <h2 className="s-heading">Per a qui és</h2>
             <ul className="per-qui-list">
               <li>Tens <strong>dolors menstruals, cicles irregulars, sagnats abundants, amenorrea, infertilitat…</strong> i no vols prendre hormones.</li>
               <li>Tens un <strong>mioma, un pòlip o un quiste</strong>, l&apos;única opció que et donen és passar per quiròfan, i vols una opció respectuosa amb el teu cos.</li>
@@ -470,7 +537,7 @@ function IndividualPage() {
       <section className="fases">
         <div className="fases-inner">
           <div>
-            <span className="section-label">Com funciona</span>
+            <h2 className="s-heading">Com funciona</h2>
             <p className="fases-intro">
               Primer de tot, farem una <strong>sessió online (1h30min)</strong> per revisar el teu cas en la teva realitat quotidiana. I tot seguit, aniràs integrant, mes a mes, cada una de les fases:
             </p>
@@ -514,10 +581,12 @@ function IndividualPage() {
       {/* Inclou / No inclou */}
       <section className="inclou">
         <div className="inclou-inner">
-          <p className="inclou-title">Resumidament...<br />Aquest acompanyament individual de 4 mesos...</p>
-          <p className="inclou-sub">Inclou:</p>
-          <div className="inclou-grid">
-            <div className="inclou-box">
+          <h2 className="inclou-title">
+            Resumidament...<br />
+            Aquest acompanyament individual de 4 mesos...
+          </h2>
+          <div className="inclou-cols">
+            <div className="inclou-col">
               <h4>Inclou</h4>
               <ul className="si">
                 <li>2 sessions online amb mi: la primera (de valoració i revisió del teu cas) i l&apos;última (de valoració, revisió i tancament de procés).</li>
@@ -527,7 +596,7 @@ function IndividualPage() {
                 <li>Seguiment amb resolució de dubtes directa via WhatsApp o correu durant els 4 mesos.</li>
               </ul>
             </div>
-            <div className="inclou-box">
+            <div className="inclou-col">
               <h4>No inclou</h4>
               <ul className="no">
                 <li>Els massatges (matriu, òrgans, articulacions)</li>
@@ -541,56 +610,17 @@ function IndividualPage() {
       {/* FAQ */}
       <section className="faq">
         <div className="faq-inner">
-          <h2 className="faq-title">Preguntes freqüents</h2>
-          {[
-            {
-              q: "Segueixo una dieta vegetariana, em pots acompanyar?",
-              a: "L'acompanyament que ofereixo està basat en una alimentació fisiològica i regenerativa, és a dir, basada en la nutrició real que necessiten les cèl·lules i que ha permès el desenvolupament i l'evolució de l'espècie humana. Els desequilibris que viuen avui moltes dones venen en gran part d'una manca de nutrició real. Sabem que les dietes vegetariana i vegana tenen una incidència desfavorable en la salut hormonal de la dona. Si vols saber-ne els motius i estàs oberta a implementar canvis a favor de la teva salut, et puc acompanyar.",
-            },
-            {
-              q: "He tingut una pèrdua gestacional, i em sento molt desconnectada de la meva matriu.",
-              a: "Aquest és un cas massa habitual avui i que acostuma a estar relacionat amb una vida molt activa, el no permetre's el descans real. T'acompanyaré a revisar rutines, la teva alimentació, una desparasitació amb plantes adequades per tu i un protocol de vapors per netejar el teu úter. I també et recomanaria el ritual de la Cerrada. Tot això, pas a pas.",
-            },
-            {
-              q: "No sento desig sexual i tampoc plaer en la penetració. Tinc 45 anys.",
-              a: "La desconnexió del plaer està relacionada amb la desconnexió de la vida. La sexualitat es ressignifica i agafa nous matisos en el Climateri. T'acompanyaré posant èmfasi en l'alimentació, les rutines, els massatges de matriu i la introducció del treball físic i energètic específic per a aquesta preciosa etapa.",
-            },
-            {
-              q: "Com són els tractaments que apliques?",
-              a: "No soc metge ni ginecòloga. No recomanaré hormones sintètiques, intervencions quirúrgiques ni fàrmacs. Tot el que he après i aplico ve de tradicions de Llatinoamèrica, basat en medicina natural i ancestral: alimentació regenerativa, rutines, desparasitació amb plantes, moviment pelvicuterí, massatge de matriu i òrgans, massatge amb rebozos i ritual la Cerrada.",
-            },
-            {
-              q: "En principi no tinc cap desequilibri ginecològic però sento la necessitat de connectar amb la meva matriu i amb la meva feminitat.",
-              a: "Cuidar-nos com a dones té a veure en com ens nodrim en tots els sentits. Hi han unes bases que ens donen autonomia i que ens mantenen en salut. Són aquells recursos/medicines que han sostingut les dones en tantes cultures ancestrals. Bàsiques, senzilles, sostenibles. Això és el que us ensenyo en els acompanyaments.",
-            },
-            {
-              q: "Em pots garantir que el meu desequilibri s'haurà resolt en 3-4 mesos?",
-              a: "Cada procés és únic. El meu compromís és acompanyar-te a restaurar i mantenir la teva salut. Et guiaré pas a pas. En cap cas et puc garantir que obtindràs els resultats que busques.",
-            },
-            {
-              q: "Com puc saber si em podries acompanyar en el meu cas?",
-              a: "Escriu-me un WhatsApp i valorem juntes si aquest acompanyament s'adapta al que necessites.",
-            },
-          ].map(({ q, a }) => (
-            <div className="faq-item" key={q}>
-              <p className="faq-q">{q}</p>
-              <p className="faq-a">{a}</p>
-            </div>
-          ))}
+          <h2 className="s-heading">Preguntes freqüents</h2>
+          <FaqAccordion />
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="testi">
         <div className="testi-inner">
-          <h2 className="testi-title">Algunes dones diuen...</h2>
+          <h2 className="s-heading">Algunes dones diuen...</h2>
           <div className="testi-grid">
-            {[
-              { text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.", name: "Alba" },
-              { text: "El Massatge Ritual Matriu amb la Gavina va ser molt màgic. Des del primer moment em vaig sentir acompanyada. Un acompanyament dolç, present, conscient. Sobretot m'ha permès connectar amb la meva matriu.", name: "Raquel" },
-              { text: "Vam iniciar les sessions perquè la meva filla Laia, de 13 anys, tenia molts dolors durant la menstruació. Durant tot el procés ens vam sentir molt còmodes. Hem fet un aprenentatge, mare i filla, que ens servirà per sempre. Seguint les pautes de la Gavina, la Laia ha millorat molt.", name: "Teresa" },
-              { text: "La Gavina em va ensenyar a mirar-me com mai, a posar-me al centre i escoltar el meu cos. Em van trobar un càncer a l'úter que no m'haguessin diagnosticat tan a temps si ella no m'hagués assessorat. La Gavina em va ajudar moltíssim a decidir el meu tractament amb tota la informació.", name: "Lorena" },
-            ].map(({ text, name }) => (
+            {testimonials.map(({ text, name }) => (
               <div className="testi-card" key={name}>
                 <p>&ldquo;{text}&rdquo;</p>
                 <cite>{name}</cite>
@@ -618,7 +648,7 @@ function IndividualPage() {
         <h2>Estàs preparada<br />per iniciar<br />aquest camí?</h2>
         <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="cta-wa">
           <WaIcon />
-          Reserva Videotrucada Gratuïta · WhatsApp
+          Reserva videotrucada gratuïta · WhatsApp
         </a>
       </section>
 
