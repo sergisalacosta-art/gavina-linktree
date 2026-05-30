@@ -561,7 +561,7 @@ function IndividualPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
-      <Link to="/recurs" className="back-link">← Tornar</Link>
+      <Link to="/" className="back-link">← Tornar</Link>
 
       {/* Intro + vídeo */}
       <section className="intro">
