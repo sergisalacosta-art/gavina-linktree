@@ -59,7 +59,7 @@ const css = `
   }
 
   /* Intro */
-  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; position: relative; z-index: 1; }
+  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; position: relative; z-index: 10001; }
   .ai .intro-title {
     font-family: "Fraunces", Georgia, serif;
     font-size: clamp(1.4rem, 3vw, 2rem);
