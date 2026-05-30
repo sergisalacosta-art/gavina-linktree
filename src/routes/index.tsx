@@ -12,6 +12,7 @@ type LinkCard = {
   title: string;
   subtitle?: string;
   subtitle2?: string;
+  note?: string;
   href?: string;
   external?: boolean;
   disabled?: boolean;
@@ -38,15 +39,14 @@ const links: LinkCard[] = [
   {
     title: "Cures de Matriu",
     subtitle: "Retir d'1 dia · Octubre 2026",
-    subtitle2: "Ben aviat: informació detallada",
-    href: "/cures",
+    note: "Ben aviat informació detallada",
     variant: "coral",
   },
   {
     title: "Acompanyament Individual",
     subtitle: "Sessions personalitzades, 1 a 1",
+    href: "/individual",
     variant: "brown",
-    disabled: true,
   },
   {
     title: "Contacta'm",
@@ -166,7 +166,7 @@ function Index() {
   );
 }
 
-function LinkButton({ title, subtitle, subtitle2, href, external, disabled, variant, featured, icon }: LinkCard) {
+function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled, variant, featured, icon }: LinkCard) {
   const bg =
     variant === "brown"
       ? "bg-[#8e6e60] text-[#f4ebe0]"
@@ -195,6 +195,11 @@ function LinkButton({ title, subtitle, subtitle2, href, external, disabled, vari
           {subtitle2}
         </div>
       )}
+      {note && (
+        <div className="mt-1 text-xs font-bold not-italic tracking-[0.05em] opacity-90 sm:text-sm">
+          {note}
+        </div>
+      )}
     </>
   );
 
@@ -210,9 +215,13 @@ function LinkButton({ title, subtitle, subtitle2, href, external, disabled, vari
     );
   }
 
-  return (
-    <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual"} className={activeClass}>
-      {inner}
-    </Link>
-  );
+  if (href) {
+    return (
+      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual"} className={activeClass}>
+        {inner}
+      </Link>
+    );
+  }
+
+  return <div className={`${baseClass} cursor-default`}>{inner}</div>;
 }
