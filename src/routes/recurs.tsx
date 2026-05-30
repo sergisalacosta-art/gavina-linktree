@@ -74,7 +74,7 @@ function RecursPage() {
             alt="Cures de matriu, cercle de dones a l’aire lliure"
             title="Cures de Matriu"
             subtitle="Retir d’1 dia · Octubre 2026"
-            href="/cures"
+            note="Informació disponible ben aviat"
             imgPosition="center 35%"
           />
         </div>
@@ -103,16 +103,18 @@ function RecursPage() {
 }
 
 function ProposalCard({
-  img, alt, title, subtitle, href, imgPosition, external,
+  img, alt, title, subtitle, note, href, imgPosition, external,
 }: {
   img: string;
   alt: string;
   title: string;
   subtitle?: string;
+  note?: string;
   href?: string;
   imgPosition?: string;
   external?: boolean;
 }) {
+  const isClickable = !!href;
   const inner = (
     <>
       <div className="overflow-hidden rounded-3xl shadow-soft">
@@ -121,7 +123,7 @@ function ProposalCard({
             src={img}
             alt={alt}
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className={`h-full w-full object-cover transition-transform duration-500${isClickable ? " group-hover:scale-[1.03]" : ""}`}
             style={{ objectPosition: imgPosition ?? "center" }}
           />
         </div>
@@ -130,6 +132,9 @@ function ProposalCard({
         <h3 className="font-serif text-xl font-semibold text-primary md:text-2xl">{title}</h3>
         {subtitle && (
           <p className="mt-1.5 font-serif text-[15px] italic text-terracotta/85">{subtitle}</p>
+        )}
+        {note && (
+          <p className="mt-1.5 text-[15px] font-bold not-italic text-primary/70">{note}</p>
         )}
       </div>
     </>
@@ -145,13 +150,13 @@ function ProposalCard({
 
   if (href) {
     return (
-      <Link to={href as "/matrius" | "/cures" | "/individual"} className="group block">
+      <Link to={href as "/matrius" | "/individual"} className="group block">
         {inner}
       </Link>
     );
   }
 
-  return <div className="group block">{inner}</div>;
+  return <div className="block">{inner}</div>;
 }
 
 function WhatsAppIcon({ className }: { className?: string }) {
