@@ -134,8 +134,8 @@ const css = `
     text-underline-offset:5px;
     font-size:1rem;
   }
-  .mp h2{font-size:clamp(2rem, 4.7vw, 4rem); color:var(--terra); text-wrap:balance;}
-  .mp h3{font-size:clamp(1.35rem, 2.5vw, 2.15rem); color:var(--terra-fosc);}
+  .mp h2{font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance;}
+  .mp h3{font-size:clamp(1.15rem, 2.1vw, 1.83rem); color:var(--terra-fosc);}
   .mp .lead{font-size:clamp(1.08rem, 2vw, 1.28rem); max-width:780px; color:var(--muted);}
   .mp .grid-2{display:grid; grid-template-columns:minmax(0,1.06fr) minmax(310px,.94fr); gap:clamp(2rem,5vw,5rem); align-items:center;}
   .mp .card{background:rgba(255,253,248,.78); border:1px solid rgba(138,75,52,.12); border-radius:2rem; box-shadow:0 20px 60px rgba(84,54,34,.08); backdrop-filter:blur(8px);}
@@ -144,7 +144,7 @@ const css = `
   .mp .soft-img img{aspect-ratio:4/3; width:100%; object-fit:cover;}
   .mp .soft-img-vertical img{aspect-ratio:3/4; object-position:center top;}
   .mp .bullets{list-style:none; padding:0; margin:1.5rem 0 0; display:grid; gap:1.05rem;}
-  .mp .bullets li{position:relative; padding-left:1.45rem;}
+  .mp .bullets li{position:relative; padding-left:1.45rem; color:var(--text);}
   .mp .bullets li:before{content:""; position:absolute; left:0; top:.72em; width:.46rem; height:.46rem; border-radius:50%; background:var(--terra);}
   .mp strong{font-weight:800; color:#1f1d1a}
   .mp .section-note{margin:2.1rem 0 0; font-style:italic; color:var(--muted);}
@@ -299,8 +299,8 @@ function MatriusPage() {
           <div className="wrap details-stack single-detail">
             <article className="card detail-card">
               <span className="eyebrow">Dates a recordar</span>
-              <h3>Ens trobem un diumenge al mes</h3>
-              <p>El primer cercle serà <strong>diumenge 26 de juliol</strong>. Ens trobem l'últim diumenge de cada mes, de <strong>16.00 a 17.30 h</strong>.</p>
+              <h3>Ens trobem un dimecres al mes</h3>
+              <p>El primer cercle serà <strong>dimecres 29 de juliol</strong>. Ens trobem l'últim dimecres de cada mes, de <strong>17.45 a 19.15 h</strong>.</p>
             </article>
           </div>
         </section>
@@ -309,27 +309,15 @@ function MatriusPage() {
           <div className="wrap details-stack single-detail">
             <article className="pricing-card">
               <span className="eyebrow">Inversió</span>
-              <div className="pricing-options">
-                <div className="price-option monthly">
-                  <h3>Quota mensual</h3>
-                  <p className="price-number">35€/mes</p>
-                  <ul className="price-list">
-                    <li>Una sessió mensual cada mes en directe</li>
-                    <li>Contingut de valor cada trimestre</li>
-                  </ul>
-                  <p className="price-launch-note">(Preu de llançament.<br />A partir de setembre, el preu s'incrementa.<br />Si t'hi inscrius abans del setembre el preu se't mantindrà)</p>
-                </div>
-                <div className="price-option annual">
-                  <h3>Quota trimestral</h3>
-                  <p className="price-number">105€/trimestre</p>
-                  <ul className="price-list">
-                    <li>Una sessió mensual cada mes en directe</li>
-                    <li>Contingut de valor cada trimestre</li>
-                    <li>Si tries aquesta quota abans l'octubre, t'inclou una plaça per al Retir d'1 dia a l'octubre (el Retir té un valor de 120€ i tu t'estalvies 40€). El trimestre següent, la quota trimestral ja seria de 105€.</li>
-                  </ul>
-                  <p className="price-launch-note">(Preu de llançament.<br />A partir de setembre, el preu s'incrementa.<br />Si t'hi inscrius abans del setembre el preu se't mantindrà)</p>
-                </div>
-              </div>
+              <ul className="price-list" style={{ margin: "1.4rem 0 0", maxWidth: "none" }}>
+                <li>Una sessió mensual cada mes en directe</li>
+                <li>Contingut de valor al final de cada trimestre</li>
+                <li>20% descompte per al Retir d&apos;1 dia de l&apos;octubre</li>
+              </ul>
+              <p className="price-number" style={{ textAlign: "left", marginTop: "1.4rem" }}>38€/mes</p>
+              <p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: ".95rem", fontStyle: "italic", lineHeight: "1.5" }}>
+                Si t&apos;hi apuntes abans de l&apos;1 de juliol, reps una guia regal sobre &ldquo;Tres maneres per començar a recol·lectar la teva sang menstrual&rdquo;
+              </p>
             </article>
           </div>
         </section>
