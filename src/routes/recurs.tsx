@@ -25,13 +25,13 @@ function RecursPage() {
       </div>
 
       <div className="relative z-10">
-        <div className="mx-auto max-w-5xl px-6 pt-10 pb-12">
-          <Link
-            to="/"
-            className="mb-8 inline-flex items-center gap-2 text-sm italic text-[#8e6e60] hover:text-[#6b5347] transition-colors"
-          >
-            ← Tornar
-          </Link>
+        <button
+          onClick={() => window.history.back()}
+          className="inline-flex items-center gap-1.5 px-6 pt-6 pb-0 text-sm italic text-[#8e6e60] hover:text-[#6b5347] transition-colors bg-transparent border-0 cursor-pointer"
+        >
+          ← Tornar
+        </button>
+        <div className="mx-auto max-w-5xl px-6 pt-6 pb-12">
 
           {/* Video */}
           <div className="overflow-hidden rounded-3xl bg-[oklch(0.22_0.03_40)] shadow-soft">

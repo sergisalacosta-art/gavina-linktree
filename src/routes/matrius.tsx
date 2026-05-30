@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
@@ -177,8 +177,8 @@ const css = `
   .mp .price-block ul{margin:.8rem 0 0}
   .mp .price-block li{margin:.55rem 0}
   .mp footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
-  .mp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:rgba(255,255,255,.7); margin-bottom:1.2rem;}
-  .mp .back-link:hover{color:white;}
+  .mp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
+  .mp .back-link:hover{color:var(--terra-fosc);}
   #inclou{padding-bottom:0!important}
   #dates{padding-top:0!important;margin-top:.6rem!important}
   #dates .details-stack{margin-top:0!important}
@@ -221,9 +221,10 @@ function MatriusPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
+      <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
+
       <header className="hero">
         <div className="hero-inner">
-          <Link to="/" className="back-link">← Tornar</Link>
           <p className="kicker">Espai online entre dones</p>
           <h1>Matrius en Cercle</h1>
           <p className="subtitle">Un espai mensual per parlar i compartir sobre salut femenina, sexualitat i recursos naturals d'autocura i prevenció.</p>

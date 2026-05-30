@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
@@ -181,8 +181,8 @@ const styles = `
   .retreat-cta .retreat-eyebrow { text-decoration-color: rgba(255,255,255,.45); }
   .retreat-cta .retreat-copy { color: rgba(255,255,255,.84); max-width: 38rem; }
   .retreat-footer { background: oklch(0.26 0.022 60); color: rgba(255,255,255,.78); padding: 2.5rem 0; text-align: center; font-size: 0.95rem; }
-  .retreat-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-style: italic; color: var(--retreat-muted); text-decoration: none; padding: 1rem 0 0; font-family: ui-sans-serif, system-ui, sans-serif; }
-  .retreat-back:hover { color: var(--retreat-earth); }
+  .retreat-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-style: italic; color: var(--retreat-earth); padding: 1.5rem 1.5rem 0; background: none; border: none; cursor: pointer; transition: color 0.2s; font-family: ui-sans-serif, system-ui, sans-serif; position: relative; z-index: 1; }
+  .retreat-back:hover { color: var(--retreat-earth-deep); }
   @media (max-width: 980px) {
     .retreat-grid, .retreat-grid--reverse, .retreat-investment, .retreat-bio, .retreat-cta, .retreat-testimonials-grid { grid-template-columns: 1fr; }
     .retreat-mini-grid { grid-template-columns: 1fr; }
@@ -219,9 +219,10 @@ function CuresPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
+      <button onClick={() => window.history.back()} className="retreat-back">← Tornar</button>
+
       <header className="retreat-hero">
         <div className="retreat-hero-inner">
-          <Link to="/" className="retreat-back">← Tornar</Link>
           <h1 className="retreat-title">Cures de Matriu</h1>
           <span className="retreat-kicker retreat-kicker--under">Retir d'un dia entre dones</span>
           <p className="retreat-subtitle">

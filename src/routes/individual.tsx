@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import logoImage from "@/assets/gavina-logo.png";
 
@@ -561,7 +561,7 @@ function IndividualPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
-      <Link to="/" className="back-link">← Tornar</Link>
+      <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
 
       {/* Intro + vídeo */}
       <section className="intro">
