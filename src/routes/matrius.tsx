@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
@@ -142,10 +143,6 @@ const css = `
   .mp .section-note{margin:2.1rem 0 0; font-style:italic; color:var(--muted);}
   .mp .cream{background:linear-gradient(180deg, rgba(244,234,215,.55), rgba(255,253,248,.9))}
   .mp .testimonials{background:linear-gradient(180deg, rgba(255,248,234,.82), rgba(244,234,215,.38));}
-  .mp .testimonials-grid{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1.4rem; margin-top:2rem;}
-  .mp .testimonial-card{padding:1.8rem; border-radius:1.7rem; background:rgba(255,253,248,.84); border:1px solid rgba(138,75,52,.14); box-shadow:0 18px 50px rgba(84,54,34,.08); display:flex; flex-direction:column; gap:1rem; min-height:100%;}
-  .mp .testimonial-quote{margin:0; color:var(--text); line-height:1.72; font-size:1rem;}
-  .mp .testimonial-author{margin-top:auto; font-weight:800; color:var(--terra); letter-spacing:.01em;}
   .mp .split{display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-top:2rem;}
   .mp .mini{padding:1.25rem 1.3rem; border-left:3px solid var(--mel); background:rgba(255,255,255,.68); border-radius:1rem;}
   .mp .mini p{margin:.4rem 0 0; color:var(--muted)}
@@ -177,6 +174,16 @@ const css = `
   .mp .price-block .eyebrow{color:#f1d2a3}
   .mp .price-block ul{margin:.8rem 0 0}
   .mp .price-block li{margin:.55rem 0}
+  .mp .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
+  .mp .testi-track{flex:1; overflow:hidden;}
+  .mp .testi-card{background:rgba(255,253,248,.96); border-radius:1.7rem; padding:2rem 2.2rem; box-shadow:0 4px 20px -8px rgba(90,40,20,.1); border:1px solid rgba(138,75,52,.1);}
+  .mp .testi-card p{font-size:.98rem; color:var(--muted); line-height:1.72; font-style:italic; margin-bottom:1rem;}
+  .mp .testi-card cite{font-style:normal; font-weight:800; font-size:.88rem; color:var(--terra);}
+  .mp .testi-arrow{flex-shrink:0; width:2.6rem; height:2.6rem; border-radius:50%; border:none; background:var(--terra); color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .15s;}
+  .mp .testi-arrow:hover{background:var(--terra-fosc); transform:scale(1.08);}
+  .mp .testi-dots{display:flex; justify-content:center; gap:.55rem; margin-top:1.4rem;}
+  .mp .testi-dot{width:.5rem; height:.5rem; border-radius:50%; background:var(--mel); border:none; cursor:pointer; padding:0; transition:background .2s, transform .2s;}
+  .mp .testi-dot.active{background:var(--terra); transform:scale(1.3);}
   .mp footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
   .mp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
   .mp .back-link:hover{color:var(--terra-fosc);}
@@ -201,6 +208,39 @@ const css = `
   }
 `;
 
+const testimonialsData = [
+  { text: "Anar al Cercle de Dones és meravellós. Són moltes coses positives per mi. És com anar a la meva illa de la calma i de la pau. És un espai d'autocura total. Un espai on estic pensant només en mi i en les meves companyes. Un espai on puc trobar aquestes mirades còmplices i amoroses de les dones que formen part del cercle amb mi i de la Gavina, que acompanya amb aquesta saviesa tan encertada, que sap acompanyar sense dirigir i això és important perquè em sento acompanyada i escoltada. Un espai on em sento molt sostinguda i on també tinc l'oportunitat de sostenir. M'encanta.", name: "Carolina A." },
+  { text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.", name: "Alba C." },
+  { text: "Gràcies, Gavina, per iniciar-me en aquest camí cap al coneixement de mi mateixa; ara puc mirar els meus fills amb uns altres ulls. Gràcies també per acompanyar-me en l'autoconeixement, per permetre sentir tot el que em passa, incloses les emocions més difícils, i ensenyar-me a escoltar-me, ara soc capaç de reconèixer amb més facilitat les meves emocions, i també les dels altres. He après que la maternitat necessita de saber-nos escoltar per poder escoltar els altres i veure'ls de veritat. També gràcies per la tribu i la companyia, el camí és més fàcil amb les mares del cercle.", name: "Queralt S." },
+];
+
+function TestimonialCarousel() {
+  const [idx, setIdx] = useState(0);
+  const n = testimonialsData.length;
+  const prev = () => setIdx(i => (i - 1 + n) % n);
+  const next = () => setIdx(i => (i + 1) % n);
+  const { text, name } = testimonialsData[idx];
+  return (
+    <div>
+      <div className="testi-carousel">
+        <button className="testi-arrow" onClick={prev} aria-label="Anterior">‹</button>
+        <div className="testi-track">
+          <div className="testi-card">
+            <p>&ldquo;{text}&rdquo;</p>
+            <cite>{name}</cite>
+          </div>
+        </div>
+        <button className="testi-arrow" onClick={next} aria-label="Següent">›</button>
+      </div>
+      <div className="testi-dots">
+        {testimonialsData.map((_, i) => (
+          <button key={i} className={`testi-dot${i === idx ? " active" : ""}`} onClick={() => setIdx(i)} aria-label={`Testimoni ${i + 1}`} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function MatriusPage() {
   return (
     <div className="mp">
@@ -210,7 +250,7 @@ function MatriusPage() {
         style={{
           position: "fixed",
           inset: 0,
-          zIndex: 9999,
+          zIndex: 0,
           pointerEvents: "none",
           display: "flex",
           alignItems: "center",
@@ -354,20 +394,7 @@ function MatriusPage() {
               <span className="eyebrow">Testimonis</span>
               <h2>Les dones que han passat pels cercles diuen...</h2>
             </div>
-            <div className="testimonials-grid">
-              <article className="testimonial-card">
-                <p className="testimonial-quote">&ldquo;Anar al Cercle de Dones és meravellós. Són moltes coses positives per mi. És com anar a la meva illa de la calma i de la pau. És un espai d'autocura total. Un espai on estic pensant només en mi i en les meves companyes. Un espai on puc trobar aquestes mirades còmplices i amoroses de les dones que formen part del cercle amb mi i de la Gavina, que acompanya amb aquesta saviesa tan encertada, que sap acompanyar sense dirigir i això és important perquè em sento acompanyada i escoltada. Un espai on em sento molt sostinguda i on també tinc l'oportunitat de sostenir. M'encanta.&rdquo;</p>
-                <div className="testimonial-author">Carolina A.</div>
-              </article>
-              <article className="testimonial-card">
-                <p className="testimonial-quote">&ldquo;Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.&rdquo;</p>
-                <div className="testimonial-author">Alba C.</div>
-              </article>
-              <article className="testimonial-card">
-                <p className="testimonial-quote">&ldquo;Gràcies, Gavina, per iniciar-me en aquest camí cap al coneixement de mi mateixa; ara puc mirar els meus fills amb uns altres ulls. Gràcies també per acompanyar-me en l'autoconeixement, per permetre sentir tot el que em passa, incloses les emocions més difícils, i ensenyar-me a escoltar-me, ara soc capaç de reconèixer amb més facilitat les meves emocions, i també les dels altres. He après que la maternitat necessita de saber-nos escoltar per poder escoltar els altres i veure'ls de veritat. També gràcies per la tribu i la companyia, el camí és més fàcil amb les mares del cercle.&rdquo;</p>
-                <div className="testimonial-author">Queralt S.</div>
-              </article>
-            </div>
+            <TestimonialCarousel />
           </div>
         </section>
 
