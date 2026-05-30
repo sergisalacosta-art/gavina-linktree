@@ -553,11 +553,12 @@ function IndividualPage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          mixBlendMode: "multiply",
           maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
           WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
         }}
       >
-        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.05 }} />
+        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
       <Link to="/recurs" className="back-link">← Tornar</Link>
