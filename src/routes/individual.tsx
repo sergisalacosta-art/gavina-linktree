@@ -548,7 +548,7 @@ function IndividualPage() {
         style={{
           position: "fixed",
           inset: 0,
-          zIndex: 9999,
+          zIndex: 0,
           pointerEvents: "none",
           display: "flex",
           alignItems: "center",
@@ -560,6 +560,7 @@ function IndividualPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
+      <div style={{ position: "relative", zIndex: 10 }}>
       <Link to="/recurs" className="back-link">← Tornar</Link>
 
       {/* Intro + vídeo */}
@@ -728,6 +729,7 @@ function IndividualPage() {
       </section>
 
       <footer>Gavina Freixa Rius · Salut Cíclica Femenina</footer>
+      </div>
     </div>
   );
 }

@@ -15,9 +15,8 @@ function RecursPage() {
     <main className="relative min-h-screen overflow-x-hidden bg-background">
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 flex items-center justify-center"
+        className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"
         style={{
-          zIndex: 9999,
           maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
           WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
         }}
@@ -25,84 +24,86 @@ function RecursPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
-      <div className="mx-auto max-w-5xl px-6 pt-10 pb-12">
-        <Link
-          to="/"
-          className="mb-8 inline-flex items-center gap-2 text-sm italic text-[#8e6e60] hover:text-[#6b5347] transition-colors"
-        >
-          ← Tornar
-        </Link>
+      <div className="relative z-10">
+        <div className="mx-auto max-w-5xl px-6 pt-10 pb-12">
+          <Link
+            to="/"
+            className="mb-8 inline-flex items-center gap-2 text-sm italic text-[#8e6e60] hover:text-[#6b5347] transition-colors"
+          >
+            ← Tornar
+          </Link>
 
-        {/* Video */}
-        <div className="overflow-hidden rounded-3xl bg-[oklch(0.22_0.03_40)] shadow-soft">
-          <div className="relative aspect-video w-full">
-            <iframe
-              className="absolute inset-0 h-full w-full"
-              src="https://www.youtube.com/embed/r_Qh0WJ6OCM?rel=0"
-              title="Bases per restaurar i mantenir la teva salut femenina ginecològica"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
+          {/* Video */}
+          <div className="overflow-hidden rounded-3xl bg-[oklch(0.22_0.03_40)] shadow-soft">
+            <div className="relative aspect-video w-full">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/r_Qh0WJ6OCM?rel=0"
+                title="Bases per restaurar i mantenir la teva salut femenina ginecològica"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
+          <h1 className="mx-auto mt-10 max-w-2xl text-center font-serif text-2xl leading-[1.15] md:text-3xl">
+            Bases per restaurar i mantenir la teva salut femenina ginecològica
+          </h1>
+          <p className="mt-4 text-center text-base italic text-muted-foreground md:text-lg">
+            (dura només 30 min ;))
+          </p>
+        </div>
+
+        {/* Tres propostes */}
+        <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+          <p className="text-center font-serif text-2xl text-primary md:text-3xl">
+            T’acompanyo amb aquestes tres propostes:
+          </p>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <ProposalCard
+              img={handsImg}
+              alt="Mà sostenint una flor de calèndula"
+              title="Acompanyament Individual"
+              href="/individual"
+            />
+            <ProposalCard
+              img={focdonesImg}
+              alt="Cercle de dones abraçades en un bosc"
+              title="Matrius en Cercle"
+              subtitle="Espai grupal mensual (online)"
+              href="/matrius"
+            />
+            <ProposalCard
+              img={curesImg}
+              alt="Cures de matriu, cercle de dones a l’aire lliure"
+              title="Cures de Matriu"
+              subtitle="Retir d’1 dia · Octubre 2026"
+              note="Informació disponible ben aviat"
+              imgPosition="center 35%"
             />
           </div>
-        </div>
+        </section>
 
-        <h1 className="mx-auto mt-10 max-w-2xl text-center font-serif text-2xl leading-[1.15] md:text-3xl">
-          Bases per restaurar i mantenir la teva salut femenina ginecològica
-        </h1>
-        <p className="mt-4 text-center text-base italic text-muted-foreground md:text-lg">
-          (dura només 30 min ;))
-        </p>
+        <section className="mx-auto max-w-3xl px-6 pb-24 pt-8 text-center">
+          <p className="font-serif text-2xl text-primary md:text-3xl">
+            Em pots contactar aquí:
+          </p>
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:brightness-105"
+          >
+            <WhatsAppIcon className="h-6 w-6" />
+            <span>Contacta’m per WhatsApp</span>
+          </a>
+        </section>
+
+        <footer className="bg-primary py-6 text-center text-xs text-white">
+          Gavina Freixa Rius · Salut Cíclica Femenina
+        </footer>
       </div>
-
-      {/* Tres propostes */}
-      <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
-        <p className="text-center font-serif text-2xl text-primary md:text-3xl">
-          T’acompanyo amb aquestes tres propostes:
-        </p>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          <ProposalCard
-            img={handsImg}
-            alt="Mà sostenint una flor de calèndula"
-            title="Acompanyament Individual"
-            href="/individual"
-          />
-          <ProposalCard
-            img={focdonesImg}
-            alt="Cercle de dones abraçades en un bosc"
-            title="Matrius en Cercle"
-            subtitle="Espai grupal mensual (online)"
-            href="/matrius"
-          />
-          <ProposalCard
-            img={curesImg}
-            alt="Cures de matriu, cercle de dones a l’aire lliure"
-            title="Cures de Matriu"
-            subtitle="Retir d’1 dia · Octubre 2026"
-            note="Informació disponible ben aviat"
-            imgPosition="center 35%"
-          />
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-3xl px-6 pb-24 pt-8 text-center">
-        <p className="font-serif text-2xl text-primary md:text-3xl">
-          Em pots contactar aquí:
-        </p>
-        <a
-          href={WA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:brightness-105"
-        >
-          <WhatsAppIcon className="h-6 w-6" />
-          <span>Contacta'm per WhatsApp</span>
-        </a>
-      </section>
-
-      <footer className="bg-primary py-6 text-center text-xs text-white">
-        Gavina Freixa Rius · Salut Cíclica Femenina
-      </footer>
     </main>
   );
 }
