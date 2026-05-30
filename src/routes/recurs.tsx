@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import handsImg from "@/assets/acompanyament.jpg";
 import focdonesImg from "@/assets/matrius-cercle.jpg";
 import curesImg from "@/assets/cures-matriu.jpg";
-import logoMark from "@/assets/logo-mark.png";
 
 const WA_URL = "https://wa.me/34616351534";
 
@@ -14,10 +13,11 @@ function RecursPage() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-background">
       <img
-        src={logoMark}
+        src="/matrius/assets/logo-watermark.png"
         alt=""
         aria-hidden
-        className="pointer-events-none fixed left-1/2 top-1/3 -z-10 w-[40rem] -translate-x-1/2 opacity-[0.06]"
+        className="pointer-events-none fixed left-1/2 top-1/3 w-[40rem] -translate-x-1/2"
+        style={{ opacity: 0.08, zIndex: 9999, mixBlendMode: "multiply" }}
       />
 
       <div className="mx-auto max-w-5xl px-6 pt-10 pb-12">
@@ -91,7 +91,7 @@ function RecursPage() {
           className="mt-6 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:brightness-105"
         >
           <WhatsAppIcon className="h-6 w-6" />
-          <span>616 351 534</span>
+          <span>Contacta'm per WhatsApp</span>
         </a>
       </section>
 
