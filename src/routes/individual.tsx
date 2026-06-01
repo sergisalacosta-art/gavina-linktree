@@ -228,15 +228,12 @@ const css = `
   }
   .ai .inclou-col { width: 100%; }
   .ai .inclou-col h4 {
-    font-size: .72rem;
-    letter-spacing: .18em;
-    text-transform: uppercase;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-style: italic;
     color: var(--terra);
-    font-weight: 600;
-    border-bottom: 1px solid rgba(138,75,52,.3);
-    padding-bottom: .35rem;
-    margin-bottom: 1.2rem;
-    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
   }
   .ai .inclou-col ul { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
   .ai .inclou-col ul li {
@@ -572,29 +569,6 @@ function IndividualPage() {
         </p>
       </section>
 
-      {/* Per a qui */}
-      <section className="per-qui">
-        <div className="per-qui-inner">
-          <div>
-            <h2 className="s-heading">Per a qui és</h2>
-            <ul className="per-qui-list">
-              <li>Tens <strong>dolors menstruals, cicles irregulars, sagnats abundants, amenorrea, infertilitat…</strong> i no vols prendre hormones.</li>
-              <li>Tens un <strong>mioma, un pòlip o un quiste</strong>, l&apos;única opció que et donen és passar per quiròfan, i vols una opció respectuosa amb el teu cos.</li>
-              <li>Estàs en els teus <strong>primers anys de climateri</strong> i vols optar per recursos naturals per acompanyar-te en aquesta nova etapa.</li>
-              <li>Vols aprendre a <strong>mantenir-te en salut femenina</strong> coneguent i aplicant en tu medicina natural ancestral, com la <strong>desparasitació amb plantes</strong> o els <strong>vapors pelvicovaginals</strong>.</li>
-              <li>Vols <strong>autogestionar la teva salut femenina</strong> amb els recursos naturals que han sostingut tantíssimes dones en diferents tradicions.</li>
-              <li>Vols tenir recursos per acompanyar <strong>la teva filla</strong> en la seva salut cíclica femenina, i en la teva pròpia.</li>
-            </ul>
-          </div>
-          <div className="wa-card">
-            <p>Reserva la teva <strong>videotrucada gratuïta de 30 min</strong>,<br />enviant-me un WhatsApp.<br />Valorem juntes el teu cas. Sense compromís.</p>
-            <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="wa-btn">
-              <WaIcon /> Contacta&apos;m
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Fases */}
       <section className="fases">
         <div className="fases-inner">
@@ -640,6 +614,29 @@ function IndividualPage() {
         </div>
       </section>
 
+      {/* Per a qui */}
+      <section className="per-qui">
+        <div className="per-qui-inner">
+          <div>
+            <h2 className="s-heading">Per a qui és</h2>
+            <ul className="per-qui-list">
+              <li>Tens <strong>dolors menstruals, cicles irregulars, sagnats abundants, amenorrea, infertilitat…</strong> i no vols prendre hormones.</li>
+              <li>Tens un <strong>mioma, un pòlip o un quiste</strong>, l&apos;única opció que et donen és passar per quiròfan, i vols una opció respectuosa amb el teu cos.</li>
+              <li>Estàs en els teus <strong>primers anys de climateri</strong> i vols optar per recursos naturals per acompanyar-te en aquesta nova etapa.</li>
+              <li>Vols aprendre a <strong>mantenir-te en salut femenina</strong> coneguent i aplicant en tu medicina natural ancestral, com la <strong>desparasitació amb plantes</strong> o els <strong>vapors pelvicovaginals</strong>.</li>
+              <li>Vols <strong>autogestionar la teva salut femenina</strong> amb els recursos naturals que han sostingut tantíssimes dones en diferents tradicions.</li>
+              <li>Vols tenir recursos per acompanyar <strong>la teva filla</strong> en la seva salut cíclica femenina, i en la teva pròpia.</li>
+            </ul>
+          </div>
+          <div className="wa-card">
+            <p>Reserva la teva <strong>videotrucada gratuïta de 30 min</strong>,<br />enviant-me un WhatsApp.<br />Valorem juntes el teu cas. Sense compromís.</p>
+            <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="wa-btn">
+              <WaIcon /> Contacta&apos;m
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Inclou / No inclou — single column */}
       <section className="inclou">
         <div className="inclou-inner">
@@ -665,11 +662,17 @@ function IndividualPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="faq">
-        <div className="faq-inner">
-          <h2 className="s-heading">Preguntes freqüents</h2>
-          <FaqAccordion />
+      {/* Sobre la Gavina */}
+      <section className="sobre">
+        <div className="sobre-inner">
+          <div className="sobre-img">
+            <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" />
+          </div>
+          <div className="sobre-text">
+            <h2 className="s-heading">Qui acompanya</h2>
+            <p>Soc la Gavina, acompanyant de dones que tenen ganes de fer-se càrrec de la seva salut femenina des de <strong>les bases que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d&apos;arreu del món.</strong></p>
+            <p>T&apos;acompanyo a prevenir i tractar els desequilibris ginecològics que estiguis tenint a partir de les <strong>rutines i pràctiques ancestrals que ens mantenen en salut i que ens ajuden a restaurar-la.</strong></p>
+          </div>
         </div>
       </section>
 
@@ -681,16 +684,11 @@ function IndividualPage() {
         </div>
       </section>
 
-      {/* Sobre la Gavina */}
-      <section className="sobre">
-        <div className="sobre-inner">
-          <div className="sobre-img">
-            <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" />
-          </div>
-          <div className="sobre-text">
-            <p>Soc la Gavina, acompanyant de dones que tenen ganes de fer-se càrrec de la seva salut femenina des de <strong>les bases que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d&apos;arreu del món.</strong></p>
-            <p>T&apos;acompanyo a prevenir i tractar els desequilibris ginecològics que estiguis tenint a partir de les <strong>rutines i pràctiques ancestrals que ens mantenen en salut i que ens ajuden a restaurar-la.</strong></p>
-          </div>
+      {/* FAQ */}
+      <section className="faq">
+        <div className="faq-inner">
+          <h2 className="s-heading">Preguntes freqüents</h2>
+          <FaqAccordion />
         </div>
       </section>
 
