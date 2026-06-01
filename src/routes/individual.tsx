@@ -3,7 +3,6 @@ import { useState } from "react";
 import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
-const VIDEO_ID = "r_Qh0WJ6OCM";
 
 export const Route = createFileRoute("/individual")({
   component: IndividualPage,
@@ -59,7 +58,7 @@ const css = `
   }
 
   /* Intro */
-  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; position: relative; z-index: 10000; }
+  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; position: relative; z-index: 1; }
   .ai .intro-title {
     font-family: "Fraunces", Georgia, serif;
     font-size: clamp(1.4rem, 3vw, 2rem);
@@ -562,27 +561,8 @@ function IndividualPage() {
 
       <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
 
-      {/* Intro + vídeo */}
+      {/* Intro */}
       <section className="intro">
-        <h1 className="intro-title">
-          Bases per <em>restaurar i mantenir</em><br />la salut femenina ginecològica
-        </h1>
-        <a
-          href={`https://www.youtube.com/watch?v=${VIDEO_ID}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="intro-link"
-        >
-          Accés a la gravació de la xerrada (30 minuts)
-        </a>
-        <div className="video-wrap">
-          <iframe
-            src={`https://www.youtube.com/embed/${VIDEO_ID}?rel=0`}
-            title="Bases per restaurar i mantenir la teva salut femenina ginecològica"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
         <p className="hero-tag">
           Acompanyament
           <span>Individual</span>
@@ -590,7 +570,6 @@ function IndividualPage() {
         <p className="hero-sub">
           T&apos;acompanyo <strong>durant 4 mesos</strong> perquè integris bé les bases per millorar i mantenir la teva salut femenina.
         </p>
-        <p className="hero-hint">A continuació, tota la informació ben detallada.<br />Continua llegint...</p>
       </section>
 
       {/* Per a qui */}
@@ -608,9 +587,9 @@ function IndividualPage() {
             </ul>
           </div>
           <div className="wa-card">
-            <p>Reserva la teva <strong>videotrucada gratuïta de 30 min</strong>, enviant-me un WhatsApp.<br />Valorem juntes el teu cas. Sense compromís.</p>
+            <p>Reserva la teva <strong>videotrucada gratuïta de 30 min</strong>,<br />enviant-me un WhatsApp.<br />Valorem juntes el teu cas. Sense compromís.</p>
             <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="wa-btn">
-              <WaIcon /> 616 351 534
+              <WaIcon /> Contacta&apos;m
             </a>
           </div>
         </div>
@@ -620,7 +599,7 @@ function IndividualPage() {
       <section className="fases">
         <div className="fases-inner">
           <div>
-            <h2 className="s-heading">Com funciona</h2>
+            <h2 className="s-heading">Què farem</h2>
             <p className="fases-intro">
               Primer de tot, farem una <strong>sessió online (1h30min)</strong> per revisar el teu cas en la teva realitat quotidiana. I tot seguit, aniràs integrant, mes a mes, cada una de les fases:
             </p>
@@ -664,19 +643,16 @@ function IndividualPage() {
       {/* Inclou / No inclou — single column */}
       <section className="inclou">
         <div className="inclou-inner">
-          <h2 className="inclou-title">
-            Resumidament...<br />
-            Aquest acompanyament individual de 4 mesos...
-          </h2>
           <div className="inclou-col">
             <h4>Inclou</h4>
             <ul className="si">
               <li>2 sessions online amb mi: la primera (de valoració i revisió del teu cas) i l&apos;última (de valoració, revisió i tancament de procés).</li>
-              <li>4 vídeos explicatius: alimentació fisiològica, desparasitació amb plantes, vaporitzacions, automassatge pits i exercicis Moviment Pèlvic Uterí.<p className="nota">Accés fins al final dels 4 mesos. No es podran baixar.</p></li>
+              <li>4 vídeos explicatius: alimentació fisiològica, desparasitació amb plantes, vaporitzacions, automassatge pits i exercicis Moviment Pèlvic Uterí.</li>
               <li>5 guies resum (Rutines, Alimentació Fisiològica, Desparasitació amb Plantes, Vaporitzacions i Autocura Pits)</li>
-              <li>Àudio &ldquo;La nostra Ciclicitat&rdquo; + Àudio meditació &ldquo;Connecta amb la teva matriu&rdquo;<p className="destacat">Àudios i guies resum es podran baixar.</p></li>
+              <li>Àudio &ldquo;La nostra Ciclicitat&rdquo; + Àudio meditació &ldquo;Connecta amb la teva matriu&rdquo;</li>
               <li>Seguiment amb resolució de dubtes directa via WhatsApp o correu durant els 4 mesos.</li>
             </ul>
+            <p className="nota" style={{ marginTop: "1.2rem" }}>L&apos;accés als vídeos només durant els 4 mesos de l&apos;acompanyament. Els pdf i els àudios te&apos;ls podràs baixar</p>
           </div>
           <div className="inclou-sep" />
           <div className="inclou-col">
