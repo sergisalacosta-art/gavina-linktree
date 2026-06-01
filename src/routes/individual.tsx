@@ -160,7 +160,7 @@ const css = `
   .ai .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
 
   /* Fases */
-  .ai .fases { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
+  .ai .fases { background: var(--crema); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .fases-inner {
     max-width: var(--max);
     margin: 0 auto;
@@ -293,7 +293,7 @@ const css = `
   .ai .faq-body strong { color: var(--text); font-weight: 600; }
 
   /* Testimonials carousel */
-  .ai .testi { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
+  .ai .testi { background: var(--crema); padding: 4rem 1.5rem; position: relative; z-index: 10000; }
   .ai .testi-inner { max-width: var(--max); margin: 0 auto; }
   .ai .testi-carousel {
     display: flex;
@@ -351,7 +351,7 @@ const css = `
   .ai .testi-dot.active { background: var(--terra); transform: scale(1.3); }
 
   /* Sobre */
-  .ai .sobre { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
+  .ai .sobre { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .sobre-inner {
     max-width: var(--max);
     margin: 0 auto;
@@ -655,7 +655,6 @@ function IndividualPage() {
             </ul>
             <p className="nota" style={{ marginTop: "1.2rem" }}>L&apos;accés als vídeos només durant els 4 mesos de l&apos;acompanyament. Els pdf i els àudios te&apos;ls podràs baixar</p>
           </div>
-          <div className="inclou-sep" />
           <div className="inclou-col">
             <h4>No inclou</h4>
             <ul className="no">
