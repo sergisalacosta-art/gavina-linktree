@@ -54,7 +54,9 @@ const css = `
     font-size: clamp(1.6rem, 3vw, 2.2rem);
     color: var(--terra);
     font-style: italic;
-    margin-bottom: 2rem;
+    padding-bottom: .55rem;
+    border-bottom: 1.5px solid rgba(138,75,52,.3);
+    margin-bottom: 1.6rem;
   }
 
   /* Intro */
@@ -216,7 +218,7 @@ const css = `
   }
 
   /* Inclou — single column */
-  .ai .inclou { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
+  .ai .inclou { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .inclou-inner { max-width: var(--max); margin: 0 auto; }
   .ai .inclou-title {
     font-family: "Fraunces", Georgia, serif;
@@ -232,7 +234,9 @@ const css = `
     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     font-style: italic;
     color: var(--terra);
-    font-weight: 700;
+    font-weight: 400;
+    padding-bottom: .55rem;
+    border-bottom: 1.5px solid rgba(138,75,52,.3);
     margin-bottom: 1.4rem;
   }
   .ai .inclou-col ul { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
