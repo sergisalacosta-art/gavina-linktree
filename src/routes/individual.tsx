@@ -160,7 +160,7 @@ const css = `
   .ai .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
 
   /* Fases */
-  .ai .fases { background: var(--crema); padding: 4rem 1.5rem; position: relative; z-index: 1; }
+  .ai .fases { background: var(--crema); padding: 4rem 1.5rem; position: relative; z-index: 10000; }
   .ai .fases-inner {
     max-width: var(--max);
     margin: 0 auto;
@@ -229,6 +229,7 @@ const css = `
     line-height: 1.3;
   }
   .ai .inclou-col { width: 100%; }
+  .ai .inclou-col + .inclou-col { margin-top: 3.5rem; }
   .ai .inclou-col h4 {
     font-family: "Fraunces", Georgia, serif;
     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
