@@ -250,7 +250,7 @@ function MatriusPage() {
         style={{
           position: "fixed",
           inset: 0,
-          zIndex: 9999,
+          zIndex: 0,
           pointerEvents: "none",
           display: "flex",
           alignItems: "center",
@@ -359,14 +359,14 @@ function MatriusPage() {
           <div className="wrap details-stack single-detail">
             <article className="pricing-card">
               <span className="eyebrow">Inversió</span>
-              <ul className="price-list" style={{ margin: "1.4rem 0 0", maxWidth: "none" }}>
+              <ul className="bullets" style={{ margin: "1.4rem 0 0" }}>
                 <li>Una sessió mensual cada mes en directe</li>
                 <li>Contingut de valor al final de cada trimestre</li>
                 <li>20% descompte per al Retir d&apos;1 dia de l&apos;octubre</li>
               </ul>
               <p className="price-number" style={{ textAlign: "left", marginTop: "1.4rem" }}>38€/mes</p>
               <p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: ".95rem", fontWeight: 800, lineHeight: "1.5" }}>
-                Si t&apos;hi apuntes abans de l&apos;1 de juliol, reps una guia regal sobre &ldquo;Tres maneres per començar a recol·lectar la teva sang menstrual&rdquo;
+                Si t&apos;hi apuntes abans de l&apos;1 de juliol, rebràs una Guia d&apos;iniciació per començar a recol·lectar la teva sang menstrual.
               </p>
             </article>
           </div>
