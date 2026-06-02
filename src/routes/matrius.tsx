@@ -366,7 +366,7 @@ function MatriusPage() {
               </ul>
               <p className="price-number" style={{ textAlign: "left", marginTop: "1.4rem" }}>38€/mes</p>
               <p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: ".95rem", fontWeight: 800, lineHeight: "1.5" }}>
-                Si t&apos;hi apuntes abans de l&apos;1 de juliol, rebràs una Guia d&apos;iniciació per començar a recol·lectar la teva sang menstrual.
+                Si t&apos;hi apuntes abans del 7 de juliol, rebràs una Guia d&apos;iniciació per començar a recol·lectar la teva sang menstrual.
               </p>
             </article>
           </div>
