@@ -382,8 +382,8 @@ function MatriusPage() {
                 <span className="eyebrow">Qui acompanya</span>
               </div>
               <p className="lead">Soc la Gavina, acompanyant de dones que tenen ganes de cuidar la seva salut femenina ginecològica aplicant rutines bàsiques d'autocura i pautes de prevenció reals i naturals, lluny de fàrmacs i intervencions quirúrgiques.</p>
-              <p>Uns recursos que són les bases de la salut femenina i que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d'arreu del món.</p>
-              <p><a className="btn btn-primary" href={WA_URL} target="_blank" rel="noopener noreferrer">Consulta places per WhatsApp</a></p>
+              <p style={{ color: "var(--text)" }}>Uns recursos que són les bases de la salut femenina i que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d'arreu del món.</p>
+              <p style={{ marginTop: "1.8rem" }}><a className="btn btn-primary" href={WA_URL} target="_blank" rel="noopener noreferrer">Consulta places per WhatsApp</a></p>
             </div>
           </div>
         </section>
