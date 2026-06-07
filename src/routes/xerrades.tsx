@@ -208,8 +208,9 @@ function XerradesPage() {
               <p>Es normalitza el dolor menstrual i la solució no és tapar-lo amb una pastilla, sinó entendre'n la causa, cuidar-se de debò i resoldre'l des de l'arrel amb respecte vers el teu cos per prevenir desequilibris ginecològics futurs.</p>
               <p style={{ marginTop: "1.4rem", fontStyle: "italic", color: "var(--terra-fosc)", fontWeight: 600 }}>Aquesta xerrada és un espai per a dones que volen trencar amb l'herència del patiment menstrual.</p>
             </div>
-            <div className="soft-img soft-img-fill">
-              <img src="/xerrades/assets/xerrada-2.jpg" alt="Xerrada en grup" loading="lazy" />
+            <div className="soft-img" style={{ position: "relative", minHeight: "260px" }}>
+              <img src="/xerrades/assets/xerrada-2.jpg" alt="Xerrada en grup" loading="lazy"
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
             </div>
           </div>
         </section>
@@ -258,8 +259,9 @@ function XerradesPage() {
         {/* Qui soc */}
         <section>
           <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
-            <div className="soft-img soft-img-fill">
-              <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" style={{ objectPosition: "top" }} />
+            <div className="soft-img" style={{ position: "relative", minHeight: "260px" }}>
+              <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy"
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
             </div>
             <div className="card text-card">
               <span className="eyebrow">Qui soc</span>
