@@ -39,7 +39,7 @@ const css = `
     display:grid;
     align-items:end;
     background: linear-gradient(90deg, rgba(45,36,27,.50), rgba(45,36,27,.08) 44%, rgba(45,36,27,.32)),
-      url("/xerrades/assets/hero.jpg") center center / cover no-repeat;
+      url("/xerrades/assets/Hero.png") center center / cover no-repeat;
     color:white;
     isolation:isolate;
     z-index:1;
@@ -207,7 +207,7 @@ function XerradesPage() {
               <p style={{ marginTop: "1.4rem", fontStyle: "italic", color: "var(--terra-fosc)", fontWeight: 600 }}>Aquesta xerrada és un espai per a dones que volen trencar amb l'herència del patiment menstrual.</p>
             </div>
             <div className="soft-img soft-img-v">
-              <img src="/xerrades/assets/hero.jpg" alt="Mare i filla passejant entre flors" loading="lazy" />
+              <img src="/xerrades/assets/Hero.png" alt="Mare i filla passejant entre flors" loading="lazy" />
             </div>
           </div>
         </section>
