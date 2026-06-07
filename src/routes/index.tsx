@@ -54,6 +54,7 @@ const links: LinkCard[] = [
   },
   {
     title: "Xerrades per a AFAs, ajuntaments i d'altres",
+    href: "/xerrades",
     variant: "brown",
   },
   {
@@ -232,7 +233,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
 
   if (href) {
     return (
-      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual"} className={activeClass}>
+      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades"} className={activeClass}>
         {inner}
       </Link>
     );
