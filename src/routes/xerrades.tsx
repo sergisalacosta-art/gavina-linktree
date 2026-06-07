@@ -271,17 +271,6 @@ function XerradesPage() {
           </div>
         </section>
 
-        {/* Galeria fotos */}
-        <section className="cream">
-          <div className="wrap">
-            <div className="photos-grid">
-              <div className="soft-img"><img src="/xerrades/assets/xerrada-1.jpg" alt="Xerrada grup" loading="lazy" /></div>
-              <div className="soft-img"><img src="/xerrades/assets/xerrada-2.jpg" alt="Xerrada grup gran" loading="lazy" /></div>
-              <div className="soft-img"><img src="/xerrades/assets/xerrada-3.jpg" alt="Xerrada amb participants" loading="lazy" /></div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section>
           <div className="wrap">
