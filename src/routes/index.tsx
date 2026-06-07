@@ -31,19 +31,19 @@ const links: LinkCard[] = [
     featured: true,
   },
   {
-    title: "Matrius en Cercle",
+    title: "Matrius en cercle",
     subtitle: "Espai grupal mensual (online)",
     href: "/matrius",
     variant: "brown",
   },
   {
-    title: "Cures de Matriu",
+    title: "Cures de matriu",
     subtitle: "Retir d'1 dia · Octubre 2026",
     note: "Ben aviat informació detallada",
     variant: "coral",
   },
   {
-    title: "Acompanyament Individual",
+    title: "Acompanyament individual",
     subtitle: "Sessions personalitzades, 1 a 1",
     href: "/individual",
     variant: "brown",
@@ -61,7 +61,7 @@ const links: LinkCard[] = [
     subtitle: "on comparteixo informació de primícia. Contacta'm per obtenir-ne l'enllaç.",
     href: "https://wa.me/34616351534",
     external: true,
-    variant: "coral",
+    variant: "brown",
   },
   {
     title: "Contacta'm",
