@@ -257,9 +257,9 @@ function XerradesPage() {
 
         {/* Qui soc */}
         <section>
-          <div className="wrap grid-2">
-            <div className="soft-img soft-img-h">
-              <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" />
+          <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
+            <div className="soft-img soft-img-fill">
+              <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" style={{ objectPosition: "top" }} />
             </div>
             <div className="card text-card">
               <span className="eyebrow">Qui soc</span>
