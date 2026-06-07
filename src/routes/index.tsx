@@ -49,6 +49,21 @@ const links: LinkCard[] = [
     variant: "brown",
   },
   {
+    title: "Acompanyament mare i filla",
+    variant: "coral",
+  },
+  {
+    title: "Xerrades per a AFAs, ajuntaments i d'altres",
+    variant: "brown",
+  },
+  {
+    title: "Uneix-te gratuïtament a la meva Comunitat privada",
+    subtitle: "on comparteixo informació de primícia. Contacta'm per obtenir-ne l'enllaç.",
+    href: "https://wa.me/34616351534",
+    external: true,
+    variant: "coral",
+  },
+  {
     title: "Contacta'm",
     subtitle: "per WhatsApp",
     href: "https://wa.me/34616351534",
