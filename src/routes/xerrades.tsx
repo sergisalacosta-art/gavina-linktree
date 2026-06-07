@@ -83,18 +83,19 @@ const css = `
     text-wrap:balance;
     text-shadow:0 8px 30px rgba(0,0,0,.18);
   }
+  .xp .menstruar{ color:#7b1818; }
   .xp .subtitle{
     margin:1.2rem 0 0;
     max-width:660px;
     color:rgba(255,255,255,.92);
-    font-size:clamp(1.05rem, 2vw, 1.35rem);
+    font-size:clamp(1.2rem, 2.5vw, 1.7rem);
     line-height:1.4;
   }
   .xp .avís{
     margin:.8rem 0 0;
     max-width:660px;
-    color:rgba(255,255,255,.75);
-    font-size:clamp(.85rem, 1.5vw, 1rem);
+    color:rgba(255,255,255,.85);
+    font-size:clamp(1.2rem, 2.5vw, 1.7rem);
     font-style:italic;
     line-height:1.4;
   }
@@ -130,8 +131,8 @@ const css = `
   }
   .xp h2{font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; margin-bottom:1rem;}
   .xp h3{font-size:clamp(1.15rem, 2.1vw, 1.83rem); color:var(--terra-fosc); margin-bottom:.8rem;}
-  .xp .lead{font-size:clamp(1.08rem, 2vw, 1.28rem); max-width:780px; color:var(--muted); margin-bottom:1rem; line-height:1.6;}
-  .xp p{margin:.75rem 0 0; color:var(--text); line-height:1.65;}
+  .xp .lead{font-size:clamp(1.08rem, 2vw, 1.28rem); color:var(--muted); margin-bottom:1rem; line-height:1.6;}
+  .xp p{margin:.75rem 0 0; color:var(--muted); font-size:clamp(1.08rem, 2vw, 1.28rem); line-height:1.6;}
   .xp .cream{background:linear-gradient(180deg, rgba(244,234,215,.55), rgba(255,253,248,.9))}
   .xp .card{background:#fffdf8; border:1px solid rgba(138,75,52,.12); border-radius:2rem; box-shadow:0 20px 60px rgba(84,54,34,.08);}
   .xp .text-card{padding:clamp(1.4rem,3.5vw,2.8rem)}
@@ -141,8 +142,10 @@ const css = `
   .xp .soft-img-h img{aspect-ratio:4/3;}
   .xp .soft-img-v img{aspect-ratio:3/4; object-position:center top;}
   .xp .bullets{list-style:none; padding:0; margin:1.2rem 0 0; display:grid; gap:.9rem;}
-  .xp .bullets li{position:relative; padding-left:1.45rem; color:var(--text); line-height:1.55;}
+  .xp .bullets li{position:relative; padding-left:1.45rem; color:var(--muted); font-size:clamp(1.08rem, 2vw, 1.28rem); line-height:1.6;}
   .xp .bullets li:before{content:""; position:absolute; left:0; top:.72em; width:.46rem; height:.46rem; border-radius:50%; background:var(--terra);}
+  .xp .soft-img-fill{height:100%; display:flex; flex-direction:column;}
+  .xp .soft-img-fill img{flex:1; height:100%; object-fit:cover;}
   .xp .photos-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2.5rem;}
   .xp .photos-grid .soft-img img{aspect-ratio:4/3;}
   .xp .cta-block{background:var(--terra); color:white; border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
@@ -189,8 +192,7 @@ function XerradesPage() {
 
       <header className="hero">
         <div className="hero-inner">
-          <p className="kicker">Xerrada per a AFAs, ajuntaments i d'altres</p>
-          <h1>Menstruar sense dolor</h1>
+          <h1><span className="menstruar">Menstruar</span> sense dolor</h1>
           <p className="subtitle">Acompanyar la salut femenina de la teva filla des de l'arrel, detectant senyals d'alerta i aplicant recursos naturals d'autocura i prevenció</p>
           <p className="avís">(AVÍS IMPORTANT: El contingut no és el mateix que el d'una xerrada taller d'educació sexual).</p>
         </div>
@@ -199,15 +201,15 @@ function XerradesPage() {
       <main>
         {/* Presentació */}
         <section>
-          <div className="wrap grid-2">
+          <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
             <div className="card text-card">
               <span className="eyebrow">Presentació</span>
-              <p className="lead">Per cuidar la salut femenina de la teva filla cal començar per la teva. Com pots acompanyar-la si tens dubtes sobre el teu cicle? Sabries identificar quan un símptoma premenstrual o menstrual és un senyal d'alerta?</p>
+              <p>Per cuidar la salut femenina de la teva filla cal començar per la teva. Com pots acompanyar-la si tens dubtes sobre el teu cicle? Sabries identificar quan un símptoma premenstrual o menstrual és un senyal d'alerta?</p>
               <p>Es normalitza el dolor menstrual i la solució no és tapar-lo amb una pastilla, sinó entendre'n la causa, cuidar-se de debò i resoldre'l des de l'arrel amb respecte vers el teu cos per prevenir desequilibris ginecològics futurs.</p>
               <p style={{ marginTop: "1.4rem", fontStyle: "italic", color: "var(--terra-fosc)", fontWeight: 600 }}>Aquesta xerrada és un espai per a dones que volen trencar amb l'herència del patiment menstrual.</p>
             </div>
-            <div className="soft-img soft-img-v">
-              <img src="/xerrades/assets/Hero.png" alt="Mare i filla passejant entre flors" loading="lazy" />
+            <div className="soft-img soft-img-fill">
+              <img src="/xerrades/assets/xerrada-2.jpg" alt="Xerrada en grup" loading="lazy" />
             </div>
           </div>
         </section>
@@ -257,7 +259,7 @@ function XerradesPage() {
         <section>
           <div className="wrap grid-2">
             <div className="soft-img soft-img-h">
-              <img src="/xerrades/assets/xerrada-2.jpg" alt="Xerrada en grup gran" loading="lazy" />
+              <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" />
             </div>
             <div className="card text-card">
               <span className="eyebrow">Qui soc</span>
