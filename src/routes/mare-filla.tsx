@@ -99,6 +99,7 @@ const css = `
     margin-bottom:1.8rem;
   }
   .mf .accent{ color:#7b1818; font-weight:700; font-style:normal; }
+  .mf .accent-light{ color:#bf3030; font-weight:700; font-style:normal; }
   .mf .intro-desc{ display:flex; flex-direction:column; gap:1rem; }
   .mf .intro-desc p{ margin:0; color:var(--text); font-size:clamp(1.05rem,1.8vw,1.2rem); line-height:1.65; }
 
@@ -237,7 +238,7 @@ function MareFilla() {
       <header className="hero">
         <div className="hero-inner">
           <h1>
-            Acompanyament a mares i filles
+            Acompanyament <span style={{ whiteSpace: "nowrap" }}>a <span className="accent-light">mares</span> i <span className="accent-light">filles</span></span>
             <span className="sub-line">amb <span className="accent">Dismenorrea</span> o <span className="accent">Síndrome Premenstrual</span></span>
           </h1>
         </div>
@@ -247,9 +248,6 @@ function MareFilla() {
         {/* INTRO */}
         <section>
           <div className="wrap">
-            <p className="intro-subtitle">
-              amb <span className="accent">Dismenorrea</span> o <span className="accent">Síndrome Premenstrual</span>
-            </p>
             <div className="intro-desc">
               <p>Tenir una <span className="accent">Dismenorrea</span> o <span className="accent">Síndrome Premenstrual</span> equival a <span className="accent">no estar en salut</span>.</p>
               <p>La <span className="accent">Dismenorrea</span> és un dolor incapacitant, acompanyat sovint de nàusees i vòmits, durant els primers dies del sagnat.</p>
