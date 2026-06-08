@@ -151,6 +151,9 @@ const css = `
   .xp .cta-block{background:var(--terra); color:white; border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
   .xp .cta-block h2{color:white; font-size:clamp(1.5rem,3vw,2.4rem); margin-bottom:1.2rem;}
   .xp .btn-white{background:#fff; color:var(--terra); font-weight:700;}
+  .xp .portrait-img{position:relative; min-height:260px;}
+  .xp .portrait-img img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top;}
+  @media(max-width:900px){ .xp .portrait-img{min-height:0; aspect-ratio:4/5;} }
   .xp footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
   .xp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
   .xp .back-link:hover{color:var(--terra-fosc);}
@@ -259,9 +262,8 @@ function XerradesPage() {
         {/* Qui soc */}
         <section>
           <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
-            <div className="soft-img" style={{ position: "relative", minHeight: "260px" }}>
-              <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy"
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
+            <div className="soft-img portrait-img">
+              <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" />
             </div>
             <div className="card text-card">
               <span className="eyebrow">Qui soc</span>
