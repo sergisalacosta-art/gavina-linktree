@@ -266,7 +266,7 @@ function MareFilla() {
               <p>Et guio perquè vagis integrant les bases que ens mantenen en salut a les dones. I al mateix temps, t&apos;aniré indicant les <strong>pautes perquè puguis acompanyar la teva filla</strong>, <strong>pas a pas</strong>, en la seva situació de dismenorrea i/o Síndrome Premenstrual per <strong>resoldre el seu desequilibri des de l&apos;arrel</strong>, <strong>amb recursos naturals i atenent l&apos;arrel que està ocasionant</strong>.</p>
             </div>
             <div className="soft-img soft-img-h">
-              <img src="/mare-filla/assets/mans.jpg" alt="Massatge de matriu" loading="lazy" />
+              <img src="/mare-filla/assets/mans.png" alt="Massatge de matriu" loading="lazy" />
             </div>
           </div>
         </section>
@@ -291,7 +291,7 @@ function MareFilla() {
         <section>
           <div className="wrap grid-2">
             <div className="soft-img soft-img-h">
-              <img src="/mare-filla/assets/plantes.jpg" alt="Plantes medicinals" loading="lazy" />
+              <img src="/mare-filla/assets/plantes foto AMF.png" alt="Plantes medicinals" loading="lazy" />
             </div>
             <div className="card text-card">
               <span className="eyebrow">Com ho farem?</span>
