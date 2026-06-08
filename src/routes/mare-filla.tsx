@@ -114,8 +114,10 @@ const css = `
   .mf .soft-img img{width:100%; object-fit:cover;}
   .mf .soft-img-h img{aspect-ratio:4/3;}
   .mf .soft-img-v img{aspect-ratio:3/4; object-position:center top;}
-  .mf .portrait-img{position:relative; min-height:300px;}
-  .mf .portrait-img img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top;}
+  .mf .soft-img-fill{position:relative;}
+  .mf .soft-img-fill img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;}
+  .mf .portrait-img{position:relative; overflow:hidden; min-height:500px;}
+  .mf .portrait-img img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;}
 
   /* EYEBROW + HEADINGS */
   .mf .eyebrow{
@@ -147,7 +149,7 @@ const css = `
   .mf .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
   .mf .testi-track{flex:1; overflow:hidden;}
   .mf .testi-card{background:#fffdf8; border-radius:1.7rem; padding:2rem 2.2rem; box-shadow:0 4px 20px -8px rgba(90,40,20,.1); border:1px solid rgba(138,75,52,.1);}
-  .mf .testi-card p{font-size:.98rem; color:var(--muted); line-height:1.72; font-style:italic; margin-bottom:1rem;}
+  .mf .testi-card p{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); line-height:1.72; font-style:italic; margin-bottom:1rem;}
   .mf .testi-card cite{font-style:normal; font-weight:800; font-size:.88rem; color:var(--terra);}
   .mf .testi-arrow{flex-shrink:0; width:2.6rem; height:2.6rem; border-radius:50%; border:none; background:var(--terra); color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .15s;}
   .mf .testi-arrow:hover{background:var(--terra-fosc); transform:scale(1.08);}
@@ -157,7 +159,7 @@ const css = `
 
   /* CTA */
   .mf .cta-block{background:var(--terra); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
-  .mf .btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:.9rem 2.2rem; font-weight:700; font-size:1rem; gap:.5rem; text-decoration:none; transition:transform .18s;}
+  .mf .btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:.9rem 2.2rem; font-weight:700; font-size:clamp(1.1rem, 2vw, 1.35rem); gap:.5rem; text-decoration:none; transition:transform .18s;}
   .mf .btn:hover{transform:translateY(-2px);}
   .mf .btn-white{background:#fff; color:var(--terra);}
 
@@ -259,13 +261,13 @@ function MareFilla() {
 
         {/* EN QUÈ CONSISTEIX */}
         <section>
-          <div className="wrap grid-2">
+          <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
             <div className="card text-card">
               <span className="eyebrow">En què consisteix</span>
               <p>T&apos;acompanyo perquè aprenguis a <strong>cuidar la teva salut femenina ginecològica</strong> i així puguis <strong>acompanyar la de la teva filla</strong>.</p>
               <p>Et guio perquè vagis integrant les bases que ens mantenen en salut a les dones. I al mateix temps, t&apos;aniré indicant les <strong>pautes perquè puguis acompanyar la teva filla</strong>, <strong>pas a pas</strong>, en la seva situació de dismenorrea i/o Síndrome Premenstrual per <strong>resoldre el seu desequilibri des de l&apos;arrel</strong>, <strong>amb recursos naturals i atenent l&apos;arrel que està ocasionant</strong>.</p>
             </div>
-            <div className="soft-img soft-img-h">
+            <div className="soft-img soft-img-fill">
               <img src="/mare-filla/assets/mans.png" alt="Massatge de matriu" loading="lazy" />
             </div>
           </div>
@@ -331,7 +333,7 @@ function MareFilla() {
 
         {/* QUI ACOMPANYA */}
         <section>
-          <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
+          <div className="wrap grid-2">
             <div className="soft-img portrait-img">
               <img src="/mare-filla/assets/gavina.jpg" alt="La Gavina" loading="lazy" />
             </div>
