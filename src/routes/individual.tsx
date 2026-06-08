@@ -371,8 +371,8 @@ const css = `
   }
   .ai .sobre-img {
     flex: 0 0 auto;
-    width: clamp(140px, 20%, 210px);
-    aspect-ratio: 1/1;
+    width: clamp(220px, 32%, 360px);
+    aspect-ratio: 3/4;
     overflow: hidden;
     border-radius: 1.2rem;
     box-shadow: 0 8px 28px -10px rgba(90,40,20,.2);
