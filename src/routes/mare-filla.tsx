@@ -348,7 +348,6 @@ function MareFilla() {
           <div className="wrap">
             <div style={{ marginBottom: "2rem" }}>
               <span className="eyebrow">Testimonis</span>
-              <h2>El que diuen les dones que han passat per aquest acompanyament</h2>
             </div>
             <TestimonialCarousel />
           </div>
