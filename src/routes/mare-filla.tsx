@@ -262,8 +262,8 @@ function MareFilla() {
           <div className="wrap grid-2">
             <div className="card text-card">
               <span className="eyebrow">En què consisteix</span>
-              <p>T&apos;acompanyo perquè aprenguis a cuidar la teva salut femenina ginecològica i així puguis acompanyar la de la teva filla.</p>
-              <p>Et guio perquè vagis integrant les bases que ens mantenen en salut a les dones. I al mateix temps, t&apos;aniré indicant les pautes perquè puguis acompanyar la teva filla, pas a pas, en la seva situació de dismenorrea i/o Síndrome Premenstrual per resoldre el seu desequilibri des de l&apos;arrel, amb recursos naturals i atenent l&apos;arrel que està ocasionant la Dismenorrea i/o el Síndrome Premenstrual.</p>
+              <p>T&apos;acompanyo perquè aprenguis a <strong>cuidar la teva salut femenina ginecològica</strong> i així puguis <strong>acompanyar la de la teva filla</strong>.</p>
+              <p>Et guio perquè vagis integrant les bases que ens mantenen en salut a les dones. I al mateix temps, t&apos;aniré indicant les <strong>pautes perquè puguis acompanyar la teva filla</strong>, <strong>pas a pas</strong>, en la seva situació de dismenorrea i/o Síndrome Premenstrual per <strong>resoldre el seu desequilibri des de l&apos;arrel</strong>, <strong>amb recursos naturals i atenent l&apos;arrel que està ocasionant</strong>.</p>
             </div>
             <div className="soft-img soft-img-h">
               <img src="/mare-filla/assets/mans.jpg" alt="Massatge de matriu" loading="lazy" />
