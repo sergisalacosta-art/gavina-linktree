@@ -117,7 +117,7 @@ const css = `
   .mf .soft-img-fill{position:relative;}
   .mf .soft-img-fill img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;}
   .mf .portrait-img{position:relative; overflow:hidden; min-height:520px;}
-  .mf .portrait-img img{position:absolute; inset:-6%; width:112%; height:112%; object-fit:cover; object-position:50% 5%;}
+  .mf .portrait-img img{position:absolute; inset:-6% -14% -6% -6%; width:120%; height:112%; object-fit:cover; object-position:30% 5%;}
 
   /* EYEBROW + HEADINGS */
   .mf .eyebrow{
@@ -276,8 +276,7 @@ function MareFilla() {
         {/* PER A QUI ÉS */}
         <section className="cream">
           <div className="wrap">
-            <span className="eyebrow">Per a qui és</span>
-            <h2>És per tu (mare) si…</h2>
+            <span className="eyebrow">És per tu (mare) si…</span>
             <ul className="bullets">
               <li>La teva filla està patint dolors menstruals (Dismenorrea) o Síndrome Premenstrual i la vols acompanyar de manera natural i des de l&apos;arrel, lluny de fàrmacs i &ldquo;parxes&rdquo;</li>
               <li>Vols aprendre a prevenir i cuidar la teva salut femenina ginecològica per tu mateixa i per tenir més recursos a l&apos;hora d&apos;acompanyar la teva filla</li>
