@@ -123,13 +123,11 @@ const css = `
   .mf .eyebrow{
     font-family:Georgia, "Times New Roman", serif;
     color:var(--terra);
-    text-transform:uppercase;
-    letter-spacing:.12em;
     font-weight:700;
-    font-size:1rem;
+    font-size:clamp(1.7rem, 4vw, 3.4rem);
+    line-height:1.1;
+    text-wrap:balance;
     display:block;
-    padding-bottom:.5rem;
-    border-bottom:1.5px solid var(--terra);
     margin-bottom:1.4rem;
   }
   .mf h2{font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; margin-bottom:1rem;}
