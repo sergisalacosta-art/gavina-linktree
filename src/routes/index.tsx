@@ -51,6 +51,7 @@ const links: LinkCard[] = [
   {
     title: "Acompanyament mare i filla",
     subtitle: "Dolors menstruals i/o Síndrome Premenstrual",
+    href: "/mare-filla",
     variant: "coral",
   },
   {
@@ -234,7 +235,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
 
   if (href) {
     return (
-      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades"} className={activeClass}>
+      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades" | "/mare-filla"} className={activeClass}>
         {inner}
       </Link>
     );
