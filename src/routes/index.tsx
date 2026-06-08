@@ -50,6 +50,7 @@ const links: LinkCard[] = [
   },
   {
     title: "Acompanyament mare i filla",
+    subtitle: "Dolors menstruals i/o Síndrome Premenstrual",
     variant: "coral",
   },
   {
