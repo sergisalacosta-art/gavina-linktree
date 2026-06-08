@@ -409,7 +409,7 @@ const css = `
     background: #fff;
     color: var(--terra);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
     border-radius: 999px;
     padding: 1rem 2rem;
     box-shadow: 0 6px 24px rgba(0,0,0,.15);
@@ -706,7 +706,7 @@ function IndividualPage() {
         <h2>Estàs preparada<br />per iniciar<br />aquest camí?</h2>
         <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="cta-wa">
           <WaIcon />
-          Reserva videotrucada gratuïta · WhatsApp
+          Reserva videotrucada gratuïta
         </a>
       </section>
 
