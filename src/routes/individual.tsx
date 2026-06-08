@@ -50,12 +50,12 @@ const css = `
 
   /* Section heading */
   .ai .s-heading {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 4vw, 3.4rem);
     color: var(--terra);
-    font-style: italic;
-    padding-bottom: .55rem;
-    border-bottom: 1.5px solid rgba(138,75,52,.3);
+    font-weight: 700;
+    line-height: 1.1;
+    text-wrap: balance;
     margin-bottom: 1.6rem;
   }
 
@@ -125,7 +125,7 @@ const css = `
   .ai .per-qui-list li {
     padding-left: 1.3rem;
     position: relative;
-    font-size: 1rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     color: var(--muted);
     line-height: 1.6;
   }
@@ -145,7 +145,7 @@ const css = `
     color: #fff;
     text-align: center;
   }
-  .ai .wa-card p { font-size: 1rem; line-height: 1.55; margin-bottom: 1.4rem; opacity: .93; }
+  .ai .wa-card p { font-size: clamp(1.08rem, 2vw, 1.28rem); line-height: 1.55; margin-bottom: 1.4rem; opacity: .93; }
   .ai .wa-card strong { font-weight: 700; }
   .ai .wa-btn {
     display: inline-flex;
@@ -177,7 +177,7 @@ const css = `
     .ai .fases-img { order: -1; }
   }
   .ai .fases-intro {
-    font-size: 1.05rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     color: var(--muted);
     margin-bottom: 1.8rem;
     line-height: 1.55;
@@ -196,7 +196,7 @@ const css = `
   }
   .ai .fase-item ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .3rem; }
   .ai .fase-item ul li {
-    font-size: 1rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     color: var(--muted);
     padding-left: 1rem;
     position: relative;
@@ -204,7 +204,7 @@ const css = `
   }
   .ai .fase-item ul li::before { content: "–"; position: absolute; left: 0; color: var(--rosa); }
   .ai .fase-note {
-    font-size: 1rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     color: var(--muted);
     margin-top: .6rem;
     padding-left: 1rem;
@@ -224,17 +224,19 @@ const css = `
   .ai .inclou { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
   .ai .inclou-inner { max-width: var(--max); margin: 0 auto; }
   .ai .inclou-title {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.3rem, 3vw, 1.9rem);
-    color: var(--terra-fosc);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 4vw, 3.4rem);
+    color: var(--terra);
+    font-weight: 700;
+    line-height: 1.1;
+    text-wrap: balance;
     text-align: center;
     margin-bottom: 2.5rem;
-    line-height: 1.3;
   }
   .ai .inclou-col { width: 100%; }
   .ai .inclou-col + .inclou-col { margin-top: 3.5rem; }
   .ai .inclou-col h4 {
-    font-family: "Fraunces", Georgia, serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     font-style: italic;
     color: var(--terra);
@@ -245,7 +247,7 @@ const css = `
   }
   .ai .inclou-col ul { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
   .ai .inclou-col ul li {
-    font-size: 1rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     color: var(--muted);
     padding-left: 1.3rem;
     position: relative;
@@ -276,7 +278,7 @@ const css = `
     font-family: inherit;
     color: var(--terra-fosc);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     line-height: 1.4;
   }
   .ai .faq-btn:hover { color: var(--terra); }
@@ -289,7 +291,7 @@ const css = `
   }
   .ai .faq-arrow.open { transform: rotate(180deg); }
   .ai .faq-body {
-    font-size: 1rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     color: var(--muted);
     line-height: 1.7;
     padding-bottom: 1.4rem;
@@ -381,7 +383,7 @@ const css = `
     object-fit: cover;
     object-position: top center;
   }
-  .ai .sobre-text p { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+  .ai .sobre-text p { font-size: clamp(1.08rem, 2vw, 1.28rem); color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
   .ai .sobre-text strong { color: var(--terra-fosc); font-weight: 600; }
 
   /* CTA */
