@@ -116,8 +116,8 @@ const css = `
   .mf .soft-img-v img{aspect-ratio:3/4; object-position:center top;}
   .mf .soft-img-fill{position:relative;}
   .mf .soft-img-fill img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;}
-  .mf .portrait-img{position:relative; overflow:hidden; min-height:500px;}
-  .mf .portrait-img img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;}
+  .mf .portrait-img{position:relative; overflow:hidden; min-height:520px;}
+  .mf .portrait-img img{position:absolute; inset:-6%; width:112%; height:112%; object-fit:cover; object-position:50% 5%;}
 
   /* EYEBROW + HEADINGS */
   .mf .eyebrow{
@@ -289,8 +289,8 @@ function MareFilla() {
 
         {/* COM HO FAREM */}
         <section>
-          <div className="wrap grid-2">
-            <div className="soft-img soft-img-h">
+          <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
+            <div className="soft-img soft-img-fill">
               <img src="/mare-filla/assets/plantes foto AMF.png" alt="Plantes medicinals" loading="lazy" />
             </div>
             <div className="card text-card">
