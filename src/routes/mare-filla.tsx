@@ -127,6 +127,8 @@ const css = `
     font-size:clamp(1.7rem, 4vw, 3.4rem);
     line-height:1.1;
     text-wrap:balance;
+    text-transform:none;
+    letter-spacing:normal;
     display:block;
     margin-bottom:1.4rem;
   }
