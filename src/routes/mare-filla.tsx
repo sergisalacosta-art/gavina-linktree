@@ -88,24 +88,19 @@ const css = `
     font-style:italic;
     font-weight:400;
   }
-  .mf .hero-desc{
-    margin:1.6rem 0 0;
-    max-width:680px;
-    display:flex;
-    flex-direction:column;
-    gap:.9rem;
-  }
-  .mf .hero-desc p{
-    color:rgba(255,255,255,.88);
-    font-size:clamp(1rem, 1.8vw, 1.18rem);
-    line-height:1.55;
-    margin:0;
-  }
-  .mf .hero-desc p.avís{
+
+  /* INTRO SECTION (below hero) */
+  .mf .intro-subtitle{
+    font-family:Georgia, "Times New Roman", serif;
     font-style:italic;
-    color:rgba(255,255,255,.75);
-    font-size:clamp(.9rem, 1.5vw, 1rem);
+    font-size:clamp(1.2rem, 2.5vw, 1.8rem);
+    color:var(--text);
+    line-height:1.4;
+    margin-bottom:1.8rem;
   }
+  .mf .accent{ color:#7b1818; font-weight:700; font-style:normal; }
+  .mf .intro-desc{ display:flex; flex-direction:column; gap:1rem; }
+  .mf .intro-desc p{ margin:0; color:var(--text); font-size:clamp(1.05rem,1.8vw,1.2rem); line-height:1.65; }
 
   /* SECTIONS */
   .mf section{padding:clamp(2.8rem, 5vw, 5rem) 0; position:relative; z-index:1;}
@@ -242,19 +237,28 @@ function MareFilla() {
       <header className="hero">
         <div className="hero-inner">
           <h1>
-            Acompanyament a mares amb filles
-            <span className="sub-line">amb Dismenorrea o Síndrome Premenstrual</span>
+            Acompanyament a mares i filles
+            <span className="sub-line">amb <span className="accent">Dismenorrea</span> o <span className="accent">Síndrome Premenstrual</span></span>
           </h1>
-          <div className="hero-desc">
-            <p>Tenir una Dismenorrea o Síndrome Premenstrual equival a no estar en salut.</p>
-            <p>La <strong>Dismenorrea</strong> és un dolor incapacitant, acompanyat sovint de nàusees i vòmits, durant els primers dies del sagnat.</p>
-            <p>El <strong>Síndrome Premenstrual</strong> és un conjunt de símptomes mentals, emocionals i físics que es presenten en cada fase premenstrual.</p>
-            <p>Ni la dismenorrea ni el Síndrome Premenstrual s'han de naturalitzar. Poden acabar desencadenant, a la llarga, altres desequilibris ginecològics més greus.</p>
-          </div>
         </div>
       </header>
 
       <main>
+        {/* INTRO */}
+        <section>
+          <div className="wrap">
+            <p className="intro-subtitle">
+              amb <span className="accent">Dismenorrea</span> o <span className="accent">Síndrome Premenstrual</span>
+            </p>
+            <div className="intro-desc">
+              <p>Tenir una <span className="accent">Dismenorrea</span> o <span className="accent">Síndrome Premenstrual</span> equival a <span className="accent">no estar en salut</span>.</p>
+              <p>La <span className="accent">Dismenorrea</span> és un dolor incapacitant, acompanyat sovint de nàusees i vòmits, durant els primers dies del sagnat.</p>
+              <p>El <span className="accent">Síndrome Premenstrual</span> és un conjunt de símptomes mentals, emocionals i físics que es presenten en cada fase premenstrual.</p>
+              <p>Ni la <span className="accent">Dismenorrea</span> ni el <span className="accent">Síndrome Premenstrual</span> s&apos;han de naturalitzar. <span className="accent">Poden acabar desencadenant</span>, a la llarga, <span className="accent">altres desequilibris ginecològics més greus</span>.</p>
+            </div>
+          </div>
+        </section>
+
         {/* EN QUÈ CONSISTEIX */}
         <section>
           <div className="wrap grid-2">
