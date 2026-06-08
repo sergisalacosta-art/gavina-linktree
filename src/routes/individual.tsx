@@ -89,21 +89,24 @@ const css = `
   }
   .ai .video-wrap iframe { display: block; width: 100%; aspect-ratio: 16/9; border: none; }
   .ai .hero-tag {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.6rem, 4vw, 2.6rem);
-    color: var(--terra-fosc);
-    line-height: 1.1;
-    letter-spacing: .04em;
-    margin-bottom: .3rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 8vw, 7.2rem);
+    color: var(--terra);
+    line-height: 1.06;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+    text-wrap: balance;
+    max-width: 980px;
+    margin: 0 auto;
   }
   .ai .hero-tag span {
     display: block;
-    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-size: inherit;
     color: var(--terra);
     text-transform: uppercase;
-    letter-spacing: .08em;
+    letter-spacing: inherit;
   }
-  .ai .hero-sub { max-width: 560px; margin: 1.2rem auto 0; font-size: 1.05rem; color: var(--muted); }
+  .ai .hero-sub { max-width: 660px; margin: 1.4rem auto 0; font-size: clamp(1.05rem, 2vw, 1.35rem); color: var(--muted); }
   .ai .hero-sub strong { color: var(--terra-fosc); font-weight: 700; }
   .ai .hero-hint { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); font-style: italic; }
 
