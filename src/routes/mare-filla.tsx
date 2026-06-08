@@ -295,7 +295,7 @@ function MareFilla() {
             </div>
             <div className="card text-card">
               <span className="eyebrow">Com ho farem?</span>
-              <p>T&apos;acompanyo a integrar bé les 4 bases per millorar i mantenir la teva salut femenina:</p>
+              <p>T&apos;acompanyo a integrar bé les 4 bases per millorar i mantenir la vostra salut femenina:</p>
               <ul className="bullets">
                 <li>Alimentació fisiològica</li>
                 <li>Rutines bàsiques adaptades al teu dia a dia</li>
