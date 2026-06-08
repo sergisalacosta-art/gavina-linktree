@@ -99,7 +99,7 @@ const css = `
     margin-bottom:1.8rem;
   }
   .mf .accent{ color:#7b1818; font-weight:700; font-style:normal; }
-  .mf .accent-light{ color:#c4607a; font-weight:700; font-style:italic; }
+  .mf .accent-light{ color:#7b1818; font-weight:700; font-style:italic; }
   .mf .intro-desc{ display:flex; flex-direction:column; gap:1rem; }
   .mf .intro-desc p{ margin:0; color:var(--text); font-size:clamp(1.05rem,1.8vw,1.2rem); line-height:1.65; }
 
