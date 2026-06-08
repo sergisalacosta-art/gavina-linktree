@@ -117,7 +117,7 @@ const css = `
   .mf .soft-img-fill{position:relative;}
   .mf .soft-img-fill img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center;}
   .mf .portrait-img{position:relative; overflow:hidden; min-height:520px;}
-  .mf .portrait-img img{position:absolute; inset:-6% -14% -6% -6%; width:120%; height:112%; object-fit:cover; object-position:30% 5%;}
+  .mf .portrait-img img{position:absolute; top:-6%; left:-6%; bottom:-6%; right:-40%; object-fit:cover; object-position:20% 5%;}
 
   /* EYEBROW + HEADINGS */
   .mf .eyebrow{
@@ -159,7 +159,7 @@ const css = `
 
   /* CTA */
   .mf .cta-block{background:var(--terra); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
-  .mf .btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:.9rem 2.2rem; font-weight:700; font-size:clamp(1.1rem, 2vw, 1.35rem); gap:.5rem; text-decoration:none; transition:transform .18s;}
+  .mf .btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:.9rem 2.2rem; font-weight:700; font-size:clamp(1.7rem, 4vw, 3.4rem); gap:.7rem; text-decoration:none; transition:transform .18s;}
   .mf .btn:hover{transform:translateY(-2px);}
   .mf .btn-white{background:#fff; color:var(--terra);}
 
@@ -359,10 +359,10 @@ function MareFilla() {
           <div className="wrap">
             <div className="cta-block">
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-white">
-                <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.2rem", height: "1.2rem" }} aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "2rem", height: "2rem", flexShrink: 0 }} aria-hidden="true">
                   <path d="M19.05 4.91A10 10 0 0 0 12 2a10 10 0 0 0-8.66 15l-1.3 4.74 4.86-1.27A10 10 0 1 0 19.05 4.91Zm-7.05 15.4a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.88.75.77-2.81-.2-.31A8.31 8.31 0 1 1 20.3 12a8.34 8.34 0 0 1-8.3 8.31Zm4.55-6.22c-.25-.13-1.48-.73-1.71-.81s-.4-.13-.56.13-.65.81-.79.97-.29.18-.54.06a6.78 6.78 0 0 1-2-1.23 7.56 7.56 0 0 1-1.4-1.74c-.14-.25 0-.38.11-.51s.25-.29.37-.43a1.62 1.62 0 0 0 .25-.41.46.46 0 0 0 0-.44c-.06-.13-.56-1.34-.76-1.83s-.4-.42-.56-.43h-.48a.93.93 0 0 0-.67.31 2.81 2.81 0 0 0-.88 2.1 4.91 4.91 0 0 0 1 2.59 11.16 11.16 0 0 0 4.27 3.77 14.43 14.43 0 0 0 1.42.52 3.43 3.43 0 0 0 1.57.1 2.58 2.58 0 0 0 1.69-1.19 2.1 2.1 0 0 0 .14-1.19c-.06-.1-.22-.16-.47-.28Z"/>
                 </svg>
-                Escriu-me i valorem el vostre cas
+                Escriu-me i valorem juntes el vostre cas
               </a>
             </div>
           </div>
