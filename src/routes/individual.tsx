@@ -461,6 +461,10 @@ const faqItems = [
 
 const testimonials = [
   {
+    text: "Feia temps que tenia problemes menstruals, amenorrea, sagnats intermenstruals i ja m'havien visitat diferents professionals (endocrina ginecòlegs, metges i fins i tot nutricionista sense gaire èxit). Vaig decidir començar amb la Gavina perquè volia provar una altra mirada, buscar l'arrel del problema des d'una perspectiva més natural i entenent el llenguatge del meu cos. La Gavina em va ensenyar a mirar-me com mai, a posar-me al centre i escoltar el meu cos. A donar-li descans i la pausa que necessitava per tenir energia suficient per ovular. També gràcies als seus coneixements, de manera paral·lela, vaig poder obtenir més respostes dels metges. Em van trobar un càncer a l'úter, que no m'haguessin diagnosticat tan a temps si ella no m'hagués assessorat. La Gavina em va ajudar moltíssim a decidir el meu tractament amb tota la informació. Tan de bo hagués trobat una mirada com la de la Gavina anys enrere.",
+    name: "Lorena",
+  },
+  {
     text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important",
     name: "Alba",
   },
@@ -471,10 +475,6 @@ const testimonials = [
   {
     text: "Vam iniciar les sessions amb la Gavina perquè la meva filla Laia, de 13 anys, tenia molts dolors durant la menstruació. A la Laia li van anar molt bé les sessions presencials perquè eren un espai on es relaxava i connectava, i a mi també. Durant tot el procés ens vam sentir molt còmodes i la Laia va expressar amb tranquil·litat allò que sentia en un clima de molta confiança. Va aprendre a conèixer com funciona el seu cicle, ubicar el seu úter i ovaris. Els massatges matriu, també, fets amb molta delicadesa i tendresa ens van fer sentir molt a gust. Hem fet un aprenentatge, mare i filla, que ens servirà per sempre. Seguint les pautes de la Gavina, la Laia ha millorat molt.",
     name: "Teresa",
-  },
-  {
-    text: "Feia temps que tenia problemes menstruals, amenorrea, sagnats intermenstruals i ja m'havien visitat diferents professionals (endocrina ginecòlegs, metges i fins i tot nutricionista sense gaire èxit). Vaig decidir començar amb la Gavina perquè volia provar una altra mirada, buscar l'arrel del problema des d'una perspectiva més natural i entenent el llenguatge del meu cos. La Gavina em va ensenyar a mirar-me com mai, a posar-me al centre i escoltar el meu cos. A donar-li descans i la pausa que necessitava per tenir energia suficient per ovular. També gràcies als seus coneixements, de manera paral·lela, vaig poder obtenir més respostes dels metges. Em van trobar un càncer a l'úter, que no m'haguessin diagnosticat tan a temps si ella no m'hagués assessorat. La Gavina em va ajudar moltíssim a decidir el meu tractament amb tota la informació. Tan de bo hagués trobat una mirada com la de la Gavina anys enrere.",
-    name: "Lorena",
   },
   {
     text: "La Gavina em transmet molta confiança cap a una mirada més connectada amb la natura i la meva intuïció femenina. Sento que gran part dels missatges cap als canvis, el cos i la salut es miren molt des de la por i una visió molt medicalitzada. Ancestralment les dones s'acompanyaven entre elles, des de la seva saviesa i coneixements. Sento molta curiositat per provar l'acompanyament amb una dona sensible i empàtica com ella. Tenir a la Gavina és tot un regal!",
