@@ -159,7 +159,7 @@ const css = `
 
   /* CTA */
   .mf .cta-block{background:var(--terra); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
-  .mf .btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:.9rem 2.2rem; font-weight:700; font-size:clamp(1.7rem, 4vw, 3.4rem); gap:.7rem; text-decoration:none; transition:transform .18s;}
+  .mf .btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:.9rem 2.2rem; font-weight:700; font-size:clamp(1.1rem, 2.2vw, 1.6rem); gap:.7rem; text-decoration:none; transition:transform .18s;}
   .mf .btn:hover{transform:translateY(-2px);}
   .mf .btn-white{background:#fff; color:var(--terra);}
 
