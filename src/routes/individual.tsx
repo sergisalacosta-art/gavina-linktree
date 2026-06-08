@@ -90,7 +90,7 @@ const css = `
   .ai .video-wrap iframe { display: block; width: 100%; aspect-ratio: 16/9; border: none; }
   .ai .hero-tag {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(3rem, 8vw, 7.2rem);
+    font-size: clamp(2.2rem, 6vw, 5.5rem);
     color: var(--terra);
     line-height: 1.06;
     letter-spacing: .045em;
