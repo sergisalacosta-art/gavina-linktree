@@ -189,7 +189,7 @@ const css = `
     border-left: 3px solid var(--rosa);
   }
   .ai .fase-item h4 {
-    font-size: 1rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     font-weight: 700;
     color: var(--terra);
     margin-bottom: .6rem;
@@ -237,12 +237,12 @@ const css = `
   .ai .inclou-col + .inclou-col { margin-top: 3.5rem; }
   .ai .inclou-col h4 {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-    font-style: italic;
+    font-size: clamp(1.7rem, 4vw, 3.4rem);
+    font-style: normal;
     color: var(--terra);
-    font-weight: 400;
-    padding-bottom: .55rem;
-    border-bottom: 1.5px solid rgba(138,75,52,.3);
+    font-weight: 700;
+    line-height: 1.1;
+    text-wrap: balance;
     margin-bottom: 1.4rem;
   }
   .ai .inclou-col ul { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
@@ -255,7 +255,7 @@ const css = `
   }
   .ai .inclou-col ul.si li::before { content: "✓"; position: absolute; left: 0; color: var(--terra); }
   .ai .inclou-col ul.no li::before { content: "✗"; position: absolute; left: 0; color: #b04b3a; }
-  .ai .nota { font-size: .85rem; font-style: italic; color: var(--muted); margin-top: .25rem; }
+  .ai .nota { font-size: clamp(1.08rem, 2vw, 1.28rem); font-style: italic; color: var(--muted); margin-top: .25rem; }
   .ai .destacat { font-size: .85rem; font-weight: 700; color: var(--terra-fosc); margin-top: .25rem; }
   .ai .inclou-sep { height: 1px; background: rgba(138,75,52,.2); margin: 2.5rem 0; }
 
@@ -314,7 +314,7 @@ const css = `
     box-shadow: 0 4px 20px -8px rgba(90,40,20,.1);
   }
   .ai .testi-card p {
-    font-size: .98rem;
+    font-size: clamp(1.08rem, 2vw, 1.28rem);
     color: var(--muted);
     line-height: 1.7;
     font-style: italic;
