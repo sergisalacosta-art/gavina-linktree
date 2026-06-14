@@ -350,7 +350,7 @@ function MatriusPage() {
             <article className="card detail-card">
               <span className="eyebrow">Dates a recordar</span>
               <h3>Ens trobem un dimecres al mes</h3>
-              <p>El primer cercle serà <strong>dimecres 29 de juliol</strong>. Ens trobem l'últim dimecres de cada mes, de <strong>17.45 a 19.15 h</strong>.</p>
+              <p>Ens trobem l'últim dimecres de cada mes, de <strong>17.45 a 19.15 h</strong>.</p>
             </article>
           </div>
         </section>
@@ -365,9 +365,6 @@ function MatriusPage() {
                 <li>20% descompte per al Retir d&apos;1 dia de l&apos;octubre</li>
               </ul>
               <p className="price-number" style={{ textAlign: "left", marginTop: "1.4rem" }}>38€/mes</p>
-              <p style={{ marginTop: "1rem", color: "var(--muted)", fontSize: ".95rem", fontWeight: 800, lineHeight: "1.5" }}>
-                Si t&apos;hi apuntes abans del 7 de juliol, rebràs una Guia d&apos;iniciació per començar a recol·lectar la teva sang menstrual.
-              </p>
             </article>
           </div>
         </section>
@@ -382,7 +379,7 @@ function MatriusPage() {
                 <span className="eyebrow">Qui acompanya</span>
               </div>
               <p className="lead">Soc la Gavina, acompanyant de dones que tenen ganes de cuidar la seva salut femenina ginecològica aplicant rutines bàsiques d'autocura i pautes de prevenció reals i naturals, lluny de fàrmacs i intervencions quirúrgiques.</p>
-              <p style={{ color: "var(--text)" }}>Uns recursos que són les bases de la salut femenina i que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d'arreu del món.</p>
+              <p className="lead" style={{ marginTop: "1.2rem" }}>Uns recursos que són les bases de la salut femenina i que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d'arreu del món.</p>
               <p style={{ marginTop: "1.8rem" }}><a className="btn btn-primary" href={WA_URL} target="_blank" rel="noopener noreferrer">Consulta places per WhatsApp</a></p>
             </div>
           </div>
