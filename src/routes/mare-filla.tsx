@@ -268,7 +268,7 @@ function MareFilla() {
               <p>Et guio perquè vagis integrant les bases que ens mantenen en salut a les dones. I al mateix temps, t&apos;aniré indicant les <strong>pautes perquè puguis acompanyar la teva filla</strong>, <strong>pas a pas</strong>, en la seva situació de dismenorrea i/o Síndrome Premenstrual per <strong>resoldre el seu desequilibri des de l&apos;arrel</strong> amb recursos naturals.</p>
             </div>
             <div className="soft-img soft-img-fill">
-              <img src="/mare-filla/assets/flors.jpg" alt="Flors silvestres" loading="lazy" />
+              <img src="/mare-filla/assets/flors.jpeg" alt="Flors silvestres" loading="lazy" />
             </div>
           </div>
         </section>
@@ -292,7 +292,7 @@ function MareFilla() {
         <section>
           <div className="wrap grid-2" style={{ alignItems: "stretch" }}>
             <div className="soft-img soft-img-fill">
-              <img src="/mare-filla/assets/cors-fulles.jpg" alt="Fulles en forma de cor" loading="lazy" />
+              <img src="/mare-filla/assets/cors fulles.jpeg" alt="Fulles en forma de cor" loading="lazy" />
             </div>
             <div className="card text-card">
               <span className="eyebrow">Com ho farem?</span>
