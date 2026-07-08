@@ -132,23 +132,16 @@ function Index() {
 
             <div className="space-y-5 text-[1.15rem] leading-relaxed sm:text-[1.2rem]">
               <p>
-                Acompanyo dones que tenen ganes de{" "}
-                <strong className="font-semibold">cuidar i millorar</strong> la seva{" "}
-                <strong className="font-semibold">salut femenina ginecològica</strong>{" "}
-                aplicant rutines bàsiques d'
-                <strong className="font-semibold">
-                  autocura i pautes de prevenció reals i naturals, lluny de fàrmacs i
-                  intervencions quirúrgiques
-                </strong>
-                .
+                T'acompanyo a <strong className="font-semibold">cuidar i transformar la teva salut femenina</strong> a partir de rutines d'autocura conscients i pautes de prevenció reals, respectuoses i naturals, lluny de fàrmacs i intervencions quirúrgiques.
               </p>
               <p>
-                Uns recursos que són les bases de la salut femenina i que han sostingut, i
-                sostenen, les{" "}
-                <strong className="font-semibold">
-                  dones en diferents tradicions mil·lenàries d'arreu del món
-                </strong>
-                .
+                La meva missió és ajudar-te a integrar nous hàbits en el teu dia a dia com a base sòlida per connectar amb el teu cos. Juntes, adaptarem aquestes pràctiques segons les teves necessitats i el moment vital en què et trobis: <em>Alimentació regenerativa, Desparasitació amb plantes, Moviment pelvicuterí, Vapors pelvicovaginals, Massatge de matriu, Automassatge de pits…</em>
+              </p>
+              <p>
+                Si estàs disposada a comprometre't amb tu, et guio en aquest camí de <strong className="font-semibold">transformació amorosa cap a tu</strong>.
+              </p>
+              <p>
+                Trobaràs el meu suport de diferents maneres:
               </p>
             </div>
           </div>
