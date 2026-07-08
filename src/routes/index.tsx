@@ -38,8 +38,8 @@ const links: LinkCard[] = [
   },
   {
     title: "Cures de matriu",
-    subtitle: "Retir d'1 dia · Octubre 2026",
-    note: "Ben aviat informació detallada",
+    subtitle: "Retir d'1 dia · Dissabte 17 octubre",
+    href: "/retir",
     variant: "coral",
   },
   {
@@ -228,7 +228,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
 
   if (href) {
     return (
-      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades" | "/mare-filla"} className={activeClass}>
+      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades" | "/mare-filla" | "/retir"} className={activeClass}>
         {inner}
       </Link>
     );
