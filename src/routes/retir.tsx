@@ -39,7 +39,9 @@ const css = `
     position:relative;
     display:grid;
     align-items:end;
-    background:linear-gradient(135deg, #3b2215 0%, #6b3a25 40%, #8a4b34 70%, #5d3428 100%);
+    background:
+      linear-gradient(90deg, rgba(30,20,14,.70), rgba(30,20,14,.18) 55%, rgba(30,20,14,.50)),
+      url("/retir/assets/retir1.jpg") center center / cover no-repeat;
     color:white;
     isolation:isolate;
     z-index:1;
@@ -152,8 +154,10 @@ const css = `
   .rt .bullets li:before{content:""; position:absolute; left:0; top:.75em; width:.45rem; height:.45rem; border-radius:50%; background:var(--terra);}
 
   .rt .grid-2{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr); gap:clamp(2rem,5vw,5rem); align-items:center;}
+  .rt .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2rem;}
   .rt .soft-img{border-radius:1.7rem; overflow:hidden; box-shadow:0 26px 70px rgba(55,40,25,.16);}
   .rt .soft-img img{width:100%; object-fit:cover; aspect-ratio:3/4; object-position:center top;}
+  .rt .soft-img-h img{aspect-ratio:4/3; object-position:center;}
   .rt .bio{display:grid; grid-template-columns:340px 1fr; gap:clamp(2rem,5vw,5rem); align-items:center;}
 
   /* TIMELINE */
@@ -194,6 +198,7 @@ const css = `
   @media(max-width:900px){
     .rt .hero{min-height:72vh}
     .rt .grid-2,.rt .bio{grid-template-columns:1fr}
+    .rt .grid-3{grid-template-columns:1fr 1fr}
     .rt .timeline-item{grid-template-columns:5.5rem 1fr}
   }
   @media(max-width:560px){
@@ -202,6 +207,7 @@ const css = `
     .rt section{padding:2.4rem 0}
     .rt h1{font-size:2.7rem}
     .rt .btn{width:100%}
+    .rt .grid-3{grid-template-columns:1fr}
     .rt .timeline-item{grid-template-columns:1fr; gap:.3rem;}
     .rt .timeline-time{font-size:.88rem;}
   }
@@ -294,7 +300,7 @@ function RetirPage() {
         <section>
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">De què va el retir?</span>
+              <h2>De què va el retir?</h2>
             </div>
             <p className="lead">Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern. I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
@@ -315,6 +321,17 @@ function RetirPage() {
               </ul>
               <p style={{ marginTop: "1.4rem" }}>Connectarem amb la medicina de les plantes en combinació amb els diferents elements que alquimitzarem per rebre&apos;n els beneficis.</p>
               <p><strong>I ho farem juntes, entre dones.</strong></p>
+            </div>
+            <div className="grid-3">
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/massatge.jpg" alt="Massatge de matriu" loading="lazy" />
+              </div>
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/rebozo.jpg" alt="Massatge pelvic amb rebozo" loading="lazy" />
+              </div>
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/vv.jpg" alt="Vapors pelvicovaginals amb plantes" loading="lazy" />
+              </div>
             </div>
           </div>
         </section>
