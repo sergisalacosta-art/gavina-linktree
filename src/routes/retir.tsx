@@ -161,6 +161,7 @@ const css = `
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
 
   /* INVERSIÓ */
+  .rt .destacat{background:linear-gradient(135deg,#f7ead3,#fff5e4); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-style:italic;}
   .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #f7ead3 0%, #fff5e4 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
   .rt .price-number{font-family:Georgia, "Times New Roman", serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
   .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); font-style:italic; margin:.5rem 0 0;}
@@ -459,13 +460,16 @@ function RetirPage() {
             <div className="section-title">
               <h2>Després d&apos;aquest retir…</h2>
             </div>
-            <p className="lead">Tingues present que fa masses anys que estem vivint en desequilibri en els nostres cossos; i recuperar el benestar integral demana compromís, amor i temps. Aquest retir és un inici per provar algunes de les medicines que han ajudat a cuidar, restaurar i mantenir la salut de les dones des de fa milers d&apos;anys.</p>
+            <p className="lead">Tingues present que fa masses anys que estem vivint en desequilibri en els nostres cossos; i <strong>recuperar el benestar integral demana compromís, amor i temps.</strong></p>
+            <blockquote className="destacat">
+              Aquest retir és un inici per provar algunes de les medicines que han ajudat a cuidar, restaurar i mantenir la salut de les dones des de fa milers d&apos;anys.
+            </blockquote>
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
-              <li>Recordaràs on habita la teva energia femenina i com mantenir-la desperta i vital</li>
-              <li>Et sentiràs calmada, lleugera, clara, connectada amb el teu plaer i la teva matriu</li>
-              <li>Sabràs què fer si tornes a perdre&apos;t en el camí</li>
-              <li>Tornaràs a habitar el teu cos, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, tant si encara menstrues com si no</li>
-              <li>Coneixeràs i hauràs provat algunes de les medicines naturals i ancestrals que han usat les dones en diferents tradicions mil·lenàries</li>
+              <li>Recordaràs <strong>on habita la teva energia femenina</strong> i com mantenir-la <strong>desperta i vital</strong></li>
+              <li>Et sentiràs <strong>calmada, lleugera, clara, connectada</strong> amb el teu plaer i la teva matriu</li>
+              <li>Sabràs <strong>què fer si tornes a perdre&apos;t</strong> en el camí</li>
+              <li>Tornaràs a habitar el teu cos, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, <strong>tant si encara menstrues com si no</strong></li>
+              <li>Coneixeràs i hauràs provat algunes de les <strong>medicines naturals i ancestrals</strong> que han usat les dones en diferents tradicions mil·lenàries</li>
             </ul>
           </div>
         </section>
