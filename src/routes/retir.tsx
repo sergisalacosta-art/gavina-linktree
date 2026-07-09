@@ -406,10 +406,10 @@ function RetirPage() {
 
             <div className="grid-2-img">
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/retir2.jpg" alt="Dones en cercle al bosc" loading="lazy" />
+                <img src="/retir/assets/retir%202.jpg" alt="Dones en cercle al bosc" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/retir4.jpg" alt="Dones compartint" loading="lazy" />
+                <img src="/retir/assets/retir%204.jpg" alt="Dones compartint" loading="lazy" />
               </div>
             </div>
           </div>
