@@ -41,7 +41,7 @@ const css = `
     align-items:end;
     background:
       linear-gradient(90deg, rgba(30,20,14,.70), rgba(30,20,14,.18) 55%, rgba(30,20,14,.50)),
-      url("/retir/assets/retir1.jpg") center center / cover no-repeat;
+      url("/retir/assets/retir%201.jpg") center center / cover no-repeat;
     color:white;
     isolation:isolate;
     z-index:1;
@@ -357,7 +357,7 @@ function RetirPage() {
                 <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/casa2.jpg" alt="Camí d'entrada a l'espai" loading="lazy" />
+                <img src="/retir/assets/casa2.jpeg" alt="Camí d'entrada a l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
                 <img src="/retir/assets/casa3.jpg" alt="Vistes des de l'interior" loading="lazy" />
