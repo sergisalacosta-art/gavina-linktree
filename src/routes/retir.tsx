@@ -163,7 +163,7 @@ const css = `
   /* INVERSIÓ */
   .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #f7ead3 0%, #fff5e4 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
   .rt .price-number{font-family:Georgia, "Times New Roman", serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
-  .rt .price-note{font-size:.95rem; color:var(--muted); font-style:italic; margin:.5rem 0 0;}
+  .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); font-style:italic; margin:.5rem 0 0;}
 
   /* CTA */
   .rt .cta-block{background:var(--terra); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
