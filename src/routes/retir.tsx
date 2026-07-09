@@ -446,9 +446,9 @@ function RetirPage() {
               <div className="section-title">
                 <h2>Facilitadora</h2>
               </div>
-              <p className="lead">Soc la Gavina i t&apos;acompanyo a cuidar i transformar la teva salut femenina a partir de rutines d&apos;autocura conscients i pautes de prevenció reals, respectuoses i naturals, lluny de fàrmacs i intervencions quirúrgiques.</p>
-              <p className="lead" style={{ marginTop: "1.2rem" }}>La meva missió és ajudar-te a integrar nous hàbits en el teu dia a dia com a base sòlida per connectar amb el teu cos. Juntes, adaptarem aquestes pràctiques segons les teves necessitats i el moment vital en què et trobis: <em>Alimentació regenerativa, Desparasitació amb plantes, Moviment pelvicuterí, Vapors pelvicovaginals, Massatge de matriu, Automassatge de pits…</em></p>
-              <p style={{ marginTop: "1.4rem" }}>Si estàs disposada a comprometre&apos;t amb tu, et guio en aquest camí de <strong>transformació amorosa cap a tu</strong>.</p>
+              <p className="lead">Soc la Gavina i t&apos;acompanyo a <strong>cuidar i transformar la teva salut femenina</strong> a partir de <strong>rutines d&apos;autocura conscients i pautes de prevenció reals, respectuoses i naturals,</strong> lluny de fàrmacs i intervencions quirúrgiques.</p>
+              <p className="lead" style={{ marginTop: "1.2rem" }}>La meva missió és <strong>ajudar-te a integrar nous hàbits</strong> en el teu dia a dia com a base sòlida per connectar amb el teu cos. Juntes, adaptarem aquestes pràctiques <strong>segons les teves necessitats i el moment vital</strong> en què et trobis: <em>Alimentació regenerativa, Desparasitació amb plantes, Moviment pelvicuterí, Vapors pelvicovaginals, Massatge de matriu, Automassatge de pits…</em></p>
+              <p style={{ marginTop: "1.4rem" }}><strong>Si estàs disposada a comprometre&apos;t amb tu</strong>, et guio en aquest camí de <strong>transformació amorosa cap a tu</strong>.</p>
             </div>
           </div>
         </section>
