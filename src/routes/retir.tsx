@@ -295,7 +295,7 @@ function RetirPage() {
             <div className="section-title">
               <h2>De què va el retir?</h2>
             </div>
-            <p className="lead">Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern. I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
+            <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}>Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern. I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
               <li>Un dia per <strong>(re)connectar amb la teva matriu…</strong></li>
               <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
@@ -406,7 +406,7 @@ function RetirPage() {
 
             <div className="grid-2-img">
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/retir%202.jpg" alt="Dones en cercle al bosc" loading="lazy" />
+                <img src="/retir/assets/retir%202.jpg" alt="Dones en cercle al bosc" loading="lazy" style={{ objectPosition: "center bottom" }} />
               </div>
               <div className="soft-img soft-img-h">
                 <img src="/retir/assets/retir%204.jpg" alt="Dones compartint" loading="lazy" />
