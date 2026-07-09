@@ -327,10 +327,10 @@ function RetirPage() {
                 <img src="/retir/assets/massatge.jpg" alt="Massatge de matriu" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/rebozo.jpg" alt="Massatge pelvic amb rebozo" loading="lazy" />
+                <img src="/retir/assets/vv.jpg" alt="Vapors pelvicovaginals amb plantes" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/vv.jpg" alt="Vapors pelvicovaginals amb plantes" loading="lazy" />
+                <img src="/retir/assets/rebozo.jpg" alt="Massatge pelvic amb rebozo" loading="lazy" />
               </div>
             </div>
           </div>
@@ -340,7 +340,6 @@ function RetirPage() {
         <section className="cream">
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">Per a qui és</span>
               <h2>Aquest retir és per tu si…</h2>
             </div>
             <ul className="bullets">
@@ -352,14 +351,25 @@ function RetirPage() {
           </div>
         </section>
 
-        {/* QUAN */}
+        {/* QUAN I ON */}
         <section>
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">Quan?</span>
-              <h2>Dissabte 17 octubre</h2>
+              <h2>Quan i on?</h2>
             </div>
-            <p className="lead">De <strong>10h a 19h</strong></p>
+            <p className="lead"><strong>Dissabte 17 d&apos;octubre, de 10h a 19h.</strong></p>
+            <p className="lead" style={{ marginTop: ".6rem" }}>En un espai preciós de <strong>Les Franqueses del Vallès</strong>.</p>
+            <div className="grid-3" style={{ marginTop: "2rem" }}>
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
+              </div>
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/casa2.jpg" alt="Camí d'entrada a l'espai" loading="lazy" />
+              </div>
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/casa3.jpg" alt="Vistes des de l'interior" loading="lazy" />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -397,16 +407,6 @@ function RetirPage() {
                 <p className="timeline-desc">Automassatge matriu, massatge pelvic amb rebozos, vapors pelvicovaginals. Compartirs i tancament.</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ON SERÀ */}
-        <section>
-          <div className="wrap">
-            <div className="section-title">
-              <span className="eyebrow">On serà?</span>
-            </div>
-            <p className="lead">En un espai preciós de <strong>Les Franqueses del Vallès</strong>.</p>
           </div>
         </section>
 
