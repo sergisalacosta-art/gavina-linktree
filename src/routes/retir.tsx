@@ -157,7 +157,7 @@ const css = `
   .rt .timeline-item:last-child{border-bottom:1px solid rgba(138,75,52,.12);}
   .rt .timeline-time{font-weight:700; color:var(--terra); font-size:.95rem; padding-top:.15rem; line-height:1.3;}
   .rt .timeline-desc{color:var(--muted); font-size:clamp(1.05rem, 1.8vw, 1.2rem); line-height:1.6; margin:0;}
-  .rt .pre-event{background:linear-gradient(135deg, #f7ead3, #fff8ea); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
+  .rt .pre-event{background:linear-gradient(135deg, #f7ead3, #fff8ea); border-right:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
 
   /* INVERSIÓ */
@@ -471,6 +471,9 @@ function RetirPage() {
               <li>Tornaràs a habitar el teu cos, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, <strong>tant si encara menstrues com si no</strong></li>
               <li>Coneixeràs i hauràs provat algunes de les <strong>medicines naturals i ancestrals</strong> que han usat les dones en diferents tradicions mil·lenàries</li>
             </ul>
+            <div className="soft-img soft-img-h" style={{ marginTop: "2.2rem" }}>
+              <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" />
+            </div>
           </div>
         </section>
 
