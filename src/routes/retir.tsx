@@ -131,18 +131,9 @@ const css = `
   .rt .text-card{padding:clamp(1.4rem,3.5vw,2.8rem)}
 
   .rt .section-title{display:flex; flex-direction:column; gap:.65rem; margin-bottom:2rem;}
-  .rt .eyebrow{
-    font-family:Georgia, "Times New Roman", serif;
-    color:var(--terra);
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    font-weight:700;
-    font-size:1rem;
-    display:block;
-    padding-bottom:.5rem;
-    border-bottom:1.5px solid var(--terra);
-  }
-  .rt h2{font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; margin-bottom:1rem;}
+  .rt .section-title h2{padding-bottom:.55rem; border-bottom:1.5px solid var(--terra); margin-bottom:0;}
+  .rt h2{font-family:Georgia,"Times New Roman",serif; font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; font-weight:700; line-height:1.06; margin:0 0 1rem;}
+  .rt .grid-2-img{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2rem;}
   .rt h3{font-size:clamp(1.1rem, 2vw, 1.55rem); color:var(--terra-fosc); margin-bottom:.7rem;}
   .rt p{margin:.75rem 0 0; color:var(--muted); font-size:clamp(1.05rem, 1.8vw, 1.2rem); line-height:1.65;}
   .rt p:first-child{margin-top:0}
@@ -199,6 +190,7 @@ const css = `
     .rt .hero{min-height:72vh}
     .rt .grid-2,.rt .bio{grid-template-columns:1fr}
     .rt .grid-3{grid-template-columns:1fr 1fr}
+    .rt .grid-2-img{grid-template-columns:1fr}
     .rt .timeline-item{grid-template-columns:5.5rem 1fr}
   }
   @media(max-width:560px){
@@ -377,11 +369,11 @@ function RetirPage() {
         <section className="cream" id="pla">
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">Pla de l&apos;experiència</span>
+              <h2>Pla de l&apos;experiència</h2>
             </div>
 
             <div className="pre-event">
-              <h3>Una setmana abans del retir — Sessió online prèvia</h3>
+              <p style={{ margin: 0, fontWeight: 700, color: "var(--terra-fosc)" }}>Una setmana abans del retir, hi haurà una sessió online on:</p>
               <ul className="bullets">
                 <li>Ubicarem i nombrarem els nostres òrgans femenins</li>
                 <li>Repassarem els 5 imprescindibles per cuidar la nostra matriu i mantenir-nos en salut</li>
@@ -391,20 +383,32 @@ function RetirPage() {
 
             <div className="timeline" style={{ marginTop: "2rem" }}>
               <div className="timeline-item">
-                <span className="timeline-time">9.30 – 9.50h</span>
+                <span className="timeline-time">9.30 – 10.00h</span>
                 <p className="timeline-desc">Arribades</p>
               </div>
               <div className="timeline-item">
-                <span className="timeline-time">10 – 14h</span>
-                <p className="timeline-desc">Sentir, despertar i activar la matriu. Moviment pelvicuterí amb veu. Nutrició per a la matriu amb cataplasmes de plantes i meditació uterina. <em>Pausa breu a mig matí amb infusions medicinals.</em></p>
+                <span className="timeline-time">10.00 – 14.00h</span>
+                <div>
+                  <p className="timeline-desc">Sentir, despertar i activar la matriu. Moviment pelvicuterí amb veu. Nutrició per a la matriu amb cataplasmes de plantes i meditació uterina.</p>
+                  <p className="timeline-desc" style={{ marginTop: ".5rem" }}><em>Pausa breu a mig matí amb infusions medicinals.</em></p>
+                </div>
               </div>
               <div className="timeline-item">
-                <span className="timeline-time">14 – 15.30h</span>
+                <span className="timeline-time">14.00 – 15.30h</span>
                 <p className="timeline-desc">Pausa dinar lleuger</p>
               </div>
               <div className="timeline-item">
-                <span className="timeline-time">15.30 – 19h</span>
+                <span className="timeline-time">15.30 – 19.00h</span>
                 <p className="timeline-desc">Automassatge matriu, massatge pelvic amb rebozos, vapors pelvicovaginals. Compartirs i tancament.</p>
+              </div>
+            </div>
+
+            <div className="grid-2-img">
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/retir2.jpg" alt="Dones en cercle al bosc" loading="lazy" />
+              </div>
+              <div className="soft-img soft-img-h">
+                <img src="/retir/assets/retir4.jpg" alt="Dones compartint" loading="lazy" />
               </div>
             </div>
           </div>
@@ -414,7 +418,7 @@ function RetirPage() {
         <section className="cream">
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">Inversió</span>
+              <h2>Inversió</h2>
             </div>
             <div className="pricing-card">
               <p style={{ margin: 0, color: "var(--muted)" }}>El preu d&apos;aquesta trobada és de</p>
@@ -440,7 +444,7 @@ function RetirPage() {
             </div>
             <div className="card text-card">
               <div className="section-title">
-                <span className="eyebrow">Facilitadora</span>
+                <h2>Facilitadora</h2>
               </div>
               <p className="lead">Soc la Gavina i t&apos;acompanyo a cuidar i transformar la teva salut femenina a partir de rutines d&apos;autocura conscients i pautes de prevenció reals, respectuoses i naturals, lluny de fàrmacs i intervencions quirúrgiques.</p>
               <p className="lead" style={{ marginTop: "1.2rem" }}>La meva missió és ajudar-te a integrar nous hàbits en el teu dia a dia com a base sòlida per connectar amb el teu cos. Juntes, adaptarem aquestes pràctiques segons les teves necessitats i el moment vital en què et trobis: <em>Alimentació regenerativa, Desparasitació amb plantes, Moviment pelvicuterí, Vapors pelvicovaginals, Massatge de matriu, Automassatge de pits…</em></p>
@@ -453,7 +457,7 @@ function RetirPage() {
         <section className="cream">
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">Després d&apos;aquest retir…</span>
+              <h2>Després d&apos;aquest retir…</h2>
             </div>
             <p className="lead">Tingues present que fa masses anys que estem vivint en desequilibri en els nostres cossos; i recuperar el benestar integral demana compromís, amor i temps. Aquest retir és un inici per provar algunes de les medicines que han ajudat a cuidar, restaurar i mantenir la salut de les dones des de fa milers d&apos;anys.</p>
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
@@ -470,7 +474,7 @@ function RetirPage() {
         <section>
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">Testimonis</span>
+              <h2>Testimonis</h2>
             </div>
             <TestimonialCarousel />
           </div>
