@@ -39,7 +39,6 @@ const links: LinkCard[] = [
   {
     title: "Cures de matriu",
     subtitle: "Retir d'1 dia · Dissabte 17 octubre",
-    href: "/retir",
     variant: "coral",
   },
   {
