@@ -40,18 +40,27 @@ const css = `
     display:grid;
     align-items:end;
     background:
-      linear-gradient(90deg, rgba(30,20,14,.70), rgba(30,20,14,.18) 55%, rgba(30,20,14,.50)),
+      linear-gradient(90deg, rgba(80,42,16,.68), rgba(150,95,35,.10) 55%, rgba(60,32,10,.42)),
       url("/retir/assets/retir%201.jpg") 20% top / cover no-repeat;
     color:white;
     isolation:isolate;
     z-index:1;
+  }
+  .rt .hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:rgba(200,145,55,.18);
+    mix-blend-mode:multiply;
+    pointer-events:none;
   }
   .rt .hero:after{
     content:"";
     position:absolute;
     inset:auto 0 0 0;
     height:40%;
-    background:linear-gradient(180deg, transparent, rgba(30,20,14,.55));
+    background:linear-gradient(180deg, transparent, rgba(70,35,10,.55));
     z-index:-1;
   }
   .rt .hero-inner{
