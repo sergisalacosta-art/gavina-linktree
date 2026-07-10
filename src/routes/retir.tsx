@@ -215,15 +215,11 @@ const testimonialsData = [
     name: "Alba C.",
   },
   {
-    text: "El Cercle de Dones Mares m'està ajudant a conèixer-me millor i desprendre'm de tot allò que em condiciona i no em deixa actuar lliurament per poder començar a ser la mare que realment soc i actuar des de l'amor que sento pels meus fills amb seguretat.",
-    name: "Eva J.",
-  },
-  {
     text: "Per mi l'acompanyament de la Gavina ha sigut sincer, honest, entregat, intuïtiu i professional. L'he sentida molt propera, entregada i sincera amb mi i amb totes les mares del grup. Això ha sigut el més valuós que m'emporto d'aquesta experiència. El cercle de dones mares ha sigut una experiència increïble, sobretot per l'acompanyament i professionalitat de la Gavina.",
     name: "Montse G.",
   },
   {
-    text: "Durant els 9 mesos de Cercle Dones Mares sento que he après com maternar de manera més conscient, i també m'enduc coneixements teòrics sobre diferents temes sobre criança. M'he sentit immensament acompanyada, escoltada, compresa, sostinguda en tot moment tan per part de la Gavina com la resta de mares. Per mi l'acompanyament de la Gavina ha estat excel·lent.",
+    text: "M'he sentit immensament acompanyada, escoltada, compresa, sostinguda en tot moment tan per part de la Gavina com la resta de mares. Per mi l'acompanyament de la Gavina ha estat excel·lent.",
     name: "Ester V.",
   },
   {
