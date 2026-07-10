@@ -303,7 +303,11 @@ function RetirPage() {
             <div className="section-title">
               <h2>De què va el retir?</h2>
             </div>
-            <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}>Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern. I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
+            <p className="lead">Fa molts anys que estem vivint en desequilibri en els nostres cossos.<br />Recuperar el benestar integral demana compromís, amor i temps.</p>
+            <blockquote className="destacat" style={{ marginTop: "1.6rem" }}>
+              Aquest retir és un inici per passar pel teu cos algunes de les medicines que han ajudat a cuidar la salut de les dones des de fa milers d&apos;anys, i a despertar i nodrir les nostres matrius.
+            </blockquote>
+            <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, marginTop: "1.6rem" }}>Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern.<br />I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
               <li>Un dia per <strong>(re)connectar amb la teva matriu…</strong></li>
               <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
@@ -358,15 +362,12 @@ function RetirPage() {
             </div>
             <p className="lead"><strong>Dissabte 17 d&apos;octubre, de 10h a 19h.</strong></p>
             <p className="lead" style={{ marginTop: ".6rem" }}>En un espai preciós de <strong>Les Franqueses del Vallès</strong>.</p>
-            <div className="grid-3" style={{ marginTop: "2rem" }}>
+            <div className="grid-2-img">
               <div className="soft-img soft-img-h">
                 <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/casa2.jpeg" alt="Camí d'entrada a l'espai" loading="lazy" />
-              </div>
-              <div className="soft-img soft-img-h">
-                <img src="/retir/assets/casa3.jpg" alt="Vistes des de l'interior" loading="lazy" />
+                <img src="/retir/assets/foc%20dones.jpg" alt="Foc de dones" loading="lazy" />
               </div>
             </div>
           </div>
@@ -433,9 +434,7 @@ function RetirPage() {
               <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.4rem" }}>Inclou:</p>
               <ul className="bullets" style={{ marginTop: ".8rem" }}>
                 <li>La sessió d&apos;1h30min online uns dies previs al retir: <em>&ldquo;Òrgans femenins i els 5 imprescindibles per cuidar la nostra matriu&rdquo;</em></li>
-                <li>El meu acompanyament des del dia de la sessió online fins uns dies després del retir</li>
-                <li>El lloguer de la sala</li>
-                <li>L&apos;organització i la gestió del retir</li>
+                <li>El meu acompanyament</li>
               </ul>
               <p className="price-note" style={{ marginTop: "1.6rem" }}>* El dinar no està inclòs. Cal que portis el teu dinar i també alguna cosa lleugera per picar a mig matí.</p>
               <p className="price-note">* No podrem escalfar menjar ni podrem sortir de l&apos;espai per anar a comprar res.</p>
@@ -453,9 +452,14 @@ function RetirPage() {
               <div className="section-title">
                 <h2>Facilitadora</h2>
               </div>
-              <p className="lead">Soc la Gavina i t&apos;acompanyo a <strong>cuidar i transformar la teva salut femenina</strong> a partir de <strong>rutines d&apos;autocura conscients i pautes de prevenció reals, respectuoses i naturals,</strong> lluny de fàrmacs i intervencions quirúrgiques.</p>
-              <p className="lead" style={{ marginTop: "1.2rem" }}>La meva missió és <strong>ajudar-te a integrar nous hàbits</strong> en el teu dia a dia com a base sòlida per connectar amb el teu cos. Juntes, adaptarem aquestes pràctiques <strong>segons les teves necessitats i el moment vital</strong> en què et trobis: <em>Alimentació regenerativa, Desparasitació amb plantes, Moviment pelvicuterí, Vapors pelvicovaginals, Massatge de matriu, Automassatge de pits…</em></p>
-              <p style={{ marginTop: "1.4rem" }}><strong>Si estàs disposada a comprometre&apos;t amb tu</strong>, et guio en aquest camí de <strong>transformació amorosa cap a tu</strong>.</p>
+              <p className="lead">Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a connectar,</p>
+              <p style={{ marginTop: ".8rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>
+                NODRIR,<br />
+                DESPERTAR,<br />
+                ACTIVAR les matrius de tantes dones.
+              </p>
+              <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES, SANAR-NOS.</strong></p>
+              <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries com continuar vivint la teva vida.</strong></p>
             </div>
           </div>
         </section>
@@ -466,10 +470,6 @@ function RetirPage() {
             <div className="section-title">
               <h2>Després d&apos;aquest retir…</h2>
             </div>
-            <p className="lead">Tingues present que fa masses anys que estem vivint en desequilibri en els nostres cossos; i <strong>recuperar el benestar integral demana compromís, amor i temps.</strong></p>
-            <blockquote className="destacat">
-              Aquest retir és un inici per provar algunes de les medicines que han ajudat a cuidar, restaurar i mantenir la salut de les dones des de fa milers d&apos;anys.
-            </blockquote>
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
               <li>Recordaràs <strong>on habita la teva energia femenina</strong> i com mantenir-la <strong>desperta i vital</strong></li>
               <li>Et sentiràs <strong>calmada, lleugera, clara, connectada</strong> amb el teu plaer i la teva matriu</li>
