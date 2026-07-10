@@ -41,7 +41,7 @@ const css = `
     align-items:end;
     background:
       linear-gradient(90deg, rgba(30,20,14,.70), rgba(30,20,14,.18) 55%, rgba(30,20,14,.50)),
-      url("/retir/assets/retir%201.jpg") 70% top / cover no-repeat;
+      url("/retir/assets/retir%201.jpg") 90% top / cover no-repeat;
     color:white;
     isolation:isolate;
     z-index:1;
