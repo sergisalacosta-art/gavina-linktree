@@ -41,7 +41,7 @@ const css = `
     align-items:end;
     background:
       linear-gradient(90deg, rgba(30,20,14,.70), rgba(30,20,14,.18) 55%, rgba(30,20,14,.50)),
-      url("/retir/assets/retir%201.jpg") center center / cover no-repeat;
+      url("/retir/assets/retir%201.jpg") center top / cover no-repeat;
     color:white;
     isolation:isolate;
     z-index:1;
@@ -149,7 +149,9 @@ const css = `
   .rt .soft-img{border-radius:1.7rem; overflow:hidden; box-shadow:0 26px 70px rgba(55,40,25,.16);}
   .rt .soft-img img{width:100%; object-fit:cover; aspect-ratio:3/4; object-position:center top;}
   .rt .soft-img-h img{aspect-ratio:4/3; object-position:center;}
-  .rt .bio{display:grid; grid-template-columns:340px 1fr; gap:clamp(2rem,5vw,5rem); align-items:center;}
+  .rt .bio{display:grid; grid-template-columns:340px 1fr; gap:clamp(2rem,5vw,5rem); align-items:stretch;}
+  .rt .bio .soft-img{height:100%;}
+  .rt .bio .soft-img img{height:100%; aspect-ratio:unset;}
 
   /* TIMELINE */
   .rt .timeline{display:grid; gap:0; margin-top:1.8rem;}
@@ -157,11 +159,12 @@ const css = `
   .rt .timeline-item:last-child{border-bottom:1px solid rgba(138,75,52,.12);}
   .rt .timeline-time{font-weight:700; color:var(--terra); font-size:.95rem; padding-top:.15rem; line-height:1.3;}
   .rt .timeline-desc{color:var(--muted); font-size:clamp(1.05rem, 1.8vw, 1.2rem); line-height:1.6; margin:0;}
-  .rt .pre-event{background:linear-gradient(135deg, #f7ead3, #fff8ea); border-right:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
+  .rt .pre-event{background:linear-gradient(135deg, #f7ead3, #fff8ea); border-left:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
 
   /* INVERSIÓ */
   .rt .destacat{background:linear-gradient(135deg,#f7ead3,#fff5e4); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-style:italic;}
+  .rt .com-ho-farem{background:linear-gradient(135deg,#f7ead3,#fff5e4); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:2.2rem;}
   .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #f7ead3 0%, #fff5e4 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
   .rt .price-number{font-family:Georgia, "Times New Roman", serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
   .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); font-style:italic; margin:.5rem 0 0;}
@@ -301,11 +304,9 @@ function RetirPage() {
               <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
               <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
             </ul>
-            <p className="lead" style={{ marginTop: "1.4rem", fontStyle: "italic" }}>…al costat d&apos;altres dones…</p>
-
-            <div className="card text-card" style={{ marginTop: "2.2rem" }}>
-              <h3>Com ho farem?</h3>
-              <p>Fent un tastet de diverses medicines ancestrals que ens ajudaran a començar a despertar i revitalitzar la matriu:</p>
+            <div className="com-ho-farem">
+              <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, margin: "0 0 1rem" }}>Com ho farem?</p>
+              <p><strong>Fent un tastet de diverses medicines ancestrals que ens ajudaran a començar a despertar i revitalitzar la matriu:</strong></p>
               <ul className="bullets">
                 <li>La ubicarem i sentirem com està el seu batec</li>
                 <li>L&apos;hi donarem moviment i flexibilitat</li>
