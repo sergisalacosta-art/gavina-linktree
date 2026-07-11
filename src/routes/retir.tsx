@@ -220,7 +220,7 @@ const css = `
 
 const testimonialsData = [
   {
-    text: "El Cercle de Dones que facilita la Gavina m'aporta alineació entre el que sento, desitjo i faig, cap-cor-cos. En les sessions em connecto amb el sentiment de pertinença, sento gaudi, sento que la ment es mou en consonància amb la resta, sense que pesi tant. I aquesta alineació és just l'oposat al que moltes vegades em porta el dia a dia, que es alienació. Canvia una lletra de lloc, però ho canvia tot. Després de cada cercle m'emporto més unió amb les companyes, allà trobo mirades i actituds còmplices, que acaronen per dins. I visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.",
+    text: "La Gavina m'aporta alineació entre el que sento, desitjo i faig, cap-cor-cos. Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.",
     name: "Alba C.",
   },
   {
@@ -310,11 +310,11 @@ function RetirPage() {
               <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
             </ul>
             <div className="grid-2-img">
-              <div className="soft-img" style={{ height: "320px" }}>
-                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset" }} />
+              <div className="soft-img">
+                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "unset", objectFit: "fill" }} />
               </div>
-              <div className="soft-img" style={{ height: "320px" }}>
-                <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset" }} />
+              <div className="soft-img">
+                <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "unset", objectFit: "fill" }} />
               </div>
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
@@ -360,7 +360,7 @@ function RetirPage() {
                 <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/haseya2.jpg" alt="Haseya" loading="lazy" style={{ objectPosition: "center top" }} />
+                <img src="/retir/assets/haseya2.jpg" alt="Haseya" loading="lazy" style={{ objectPosition: "center 30%" }} />
               </div>
             </div>
           </div>
