@@ -311,10 +311,10 @@ function RetirPage() {
             </ul>
             <div className="grid-2-img">
               <div className="soft-img soft-img-h" style={{ background: "var(--sorra)" }}>
-                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain", aspectRatio: "unset" }} />
+                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain" }} />
               </div>
               <div className="soft-img soft-img-h" style={{ background: "var(--sorra)" }}>
-                <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain", aspectRatio: "unset" }} />
+                <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain" }} />
               </div>
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
