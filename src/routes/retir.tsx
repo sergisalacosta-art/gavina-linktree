@@ -310,11 +310,11 @@ function RetirPage() {
               <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
             </ul>
             <div className="grid-2-img">
-              <div className="soft-img">
-                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" />
+              <div className="soft-img" style={{ height: "320px" }}>
+                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset" }} />
               </div>
-              <div className="soft-img">
-                <img src="/retir/assets/massatge%20gemma.jpg" alt="Massatge de matriu" loading="lazy" />
+              <div className="soft-img" style={{ height: "320px" }}>
+                <img src="/retir/assets/massatge%20gemma.jpg" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset" }} />
               </div>
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
@@ -360,7 +360,7 @@ function RetirPage() {
                 <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/haseya2.jpg" alt="Espai del retir" loading="lazy" style={{ objectPosition: "center top" }} />
+                <img src="/retir/assets/haseya2.jpg" alt="Haseya" loading="lazy" style={{ objectPosition: "center top" }} />
               </div>
             </div>
           </div>
