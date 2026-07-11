@@ -231,6 +231,10 @@ const testimonialsData = [
     text: "Gràcies sempre, Gavina, per la sensibilitat i cura amb la que fas les teves propostes. La teva delicadesa és sempre una invitació amable a treballar profund i amb consciència. Aquest retir com cada taller que proposes són espais de veritable alliberació i sanació per a l'ànima femenina. Pura bellesa i vida.",
     name: "Montserrat, G.",
   },
+  {
+    text: "Tuve el regalo de participar en un retiro de mujeres donde Gavina nos acompañó con una presencia amorosa, sosteniendo el espacio con una entrega silenciosa y constante. Desde el primer momento sentí en ella una combinación muy especial de dulzura, fortaleza y calma. Su manera de estar, de escuchar y de cuidar hizo que me sintiera profundamente acompañada y sostenida durante todo el proceso. Hay personas cuya luz no necesita hacer ruido para iluminar a los demás, y para mí Gavina es una de ellas. Su presencia inspira confianza, amor y humanidad. Estoy profundamente agradecida por haber coincidido con ella en ese camino y por todo lo que sembró en mi corazón. La recomiendo de todo corazón a cualquier mujer que sienta el llamado a dejarse acompañar desde un lugar auténtico, consciente y lleno de amor.",
+    name: "Kelly",
+  },
 ];
 
 function TestimonialCarousel() {
