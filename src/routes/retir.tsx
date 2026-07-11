@@ -224,16 +224,12 @@ const testimonialsData = [
     name: "Alba C.",
   },
   {
-    text: "Per mi l'acompanyament de la Gavina ha sigut sincer, honest, entregat, intuïtiu i professional. L'he sentida molt propera, entregada i sincera amb mi i amb totes les mares del grup. Això ha sigut el més valuós que m'emporto d'aquesta experiència. El cercle de dones mares ha sigut una experiència increïble, sobretot per l'acompanyament i professionalitat de la Gavina.",
-    name: "Montse G.",
+    text: "Amb tu, Gavina, vaig assistir al retir del Foc de les Dones i vaig tocar a pell la teva medicina. El cercle, les dones, la connexió amb el cos, el moviment i la dansa..tot per iniciar un viatge intern profund i restauratiu. Agraïda de la teva mirada i visió cap a les nostres matrius.",
+    name: "Maria Rosa, S.",
   },
   {
-    text: "M'he sentit immensament acompanyada, escoltada, compresa, sostinguda en tot moment tan per part de la Gavina com la resta de mares. Per mi l'acompanyament de la Gavina ha estat excel·lent.",
-    name: "Ester V.",
-  },
-  {
-    text: "L'acompanyament de la Gavina per mi ha estat impecable; sempre acurat i amb gran contingut de valor. És una gran terapeuta, una gran professional i una gran acompanyant de mares. Amb ella m'he sentit molt sostinguda, acompanyada i escoltada; treballa amb molta delicadesa, respecte i amor des del no judici en totes les seves intervencions. M'alegro molt d'haver entrat en aquest cercle inicialment sense expectativa i que m'ha ajudat tant i m'ha transformat com a persona i com a mare. Sempre estaré agraïda a la Gavina per aquest projecte preciós que ha creat.",
-    name: "Josefina C.",
+    text: "Gràcies sempre, Gavina, per la sensibilitat i cura amb la que fas les teves propostes. La teva delicadesa és sempre una invitació amable a treballar profund i amb consciència. Aquest retir com cada taller que proposes són espais de veritable alliberació i sanació per a l'ànima femenina. Pura bellesa i vida.",
+    name: "Montserrat, G.",
   },
 ];
 
@@ -303,17 +299,22 @@ function RetirPage() {
             <div className="section-title">
               <h2>De què va el retir?</h2>
             </div>
-            <p className="lead">Fa molts anys que estem vivint en desequilibri en els nostres cossos.<br />Recuperar el benestar integral demana compromís, amor i temps.</p>
+            <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}>Fa molts anys que estem vivint en desequilibri en els nostres cossos.<br />Recuperar el benestar integral demana compromís, amor i temps.</p>
             <blockquote className="destacat" style={{ marginTop: "1.6rem" }}>
               Aquest retir és un inici per passar pel teu cos algunes de les medicines que han ajudat a cuidar la salut de les dones des de fa milers d&apos;anys, i a despertar i nodrir les nostres matrius.
             </blockquote>
             <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, marginTop: "1.6rem" }}>Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern.<br />I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
-            <ul className="bullets" style={{ marginTop: "1.6rem" }}>
-              <li>Un dia per <strong>(re)connectar amb la teva matriu…</strong></li>
-              <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
-              <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
-            </ul>
-            <div className="com-ho-farem">
+            <div className="grid-2" style={{ marginTop: "1.6rem", alignItems: "start" }}>
+              <ul className="bullets">
+                <li>Un dia per <strong>(re)connectar amb la teva matriu…</strong></li>
+                <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
+                <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
+              </ul>
+              <div className="soft-img">
+                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" />
+              </div>
+            </div>
+            <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
               <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, margin: "0 0 1rem" }}>Com ho farem?</p>
               <p><strong>Fent un tastet de diverses medicines ancestrals que ens ajudaran a començar a despertar i revitalitzar la matriu:</strong></p>
               <ul className="bullets">
@@ -324,17 +325,6 @@ function RetirPage() {
               </ul>
               <p style={{ marginTop: "1.4rem" }}>Connectarem amb la medicina de les plantes en combinació amb els diferents elements que alquimitzarem per rebre&apos;n els beneficis.</p>
               <p><strong>I ho farem juntes, entre dones.</strong></p>
-            </div>
-            <div className="grid-3">
-              <div className="soft-img soft-img-h">
-                <img src="/retir/assets/massatge.jpg" alt="Massatge de matriu" loading="lazy" />
-              </div>
-              <div className="soft-img soft-img-h">
-                <img src="/retir/assets/vv.jpg" alt="Vapors pelvicovaginals amb plantes" loading="lazy" />
-              </div>
-              <div className="soft-img soft-img-h">
-                <img src="/retir/assets/rebozo.jpg" alt="Massatge pelvic amb rebozo" loading="lazy" />
-              </div>
             </div>
           </div>
         </section>
@@ -429,7 +419,6 @@ function RetirPage() {
               <h2>Inversió</h2>
             </div>
             <div className="pricing-card">
-              <p style={{ margin: 0, color: "var(--muted)" }}>El preu d&apos;aquesta trobada és de</p>
               <p className="price-number">120€</p>
               <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.4rem" }}>Inclou:</p>
               <ul className="bullets" style={{ marginTop: ".8rem" }}>
@@ -452,14 +441,16 @@ function RetirPage() {
               <div className="section-title">
                 <h2>Facilitadora</h2>
               </div>
-              <p className="lead">Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a connectar,</p>
+              <p className="lead">Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a:</p>
               <p style={{ marginTop: ".8rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>
+                CONNECTAR,<br />
                 NODRIR,<br />
                 DESPERTAR,<br />
-                ACTIVAR les matrius de tantes dones.
+                ACTIVAR...
               </p>
-              <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES, SANAR-NOS.</strong></p>
-              <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries com continuar vivint la teva vida.</strong></p>
+              <p className="lead" style={{ marginTop: ".4rem" }}>les matrius de tantes dones.</p>
+              <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES,</strong> a <strong>SANAR-NOS.</strong></p>
+              <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
             </div>
           </div>
         </section>
