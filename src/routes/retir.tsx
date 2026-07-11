@@ -314,7 +314,7 @@ function RetirPage() {
                 <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset" }} />
               </div>
               <div className="soft-img" style={{ height: "320px" }}>
-                <img src="/retir/assets/massatge%20gemma.jpg" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset" }} />
+                <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset" }} />
               </div>
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
