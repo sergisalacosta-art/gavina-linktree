@@ -310,11 +310,11 @@ function RetirPage() {
               <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
             </ul>
             <div className="grid-2-img">
-              <div className="soft-img">
-                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "unset", objectFit: "fill" }} />
+              <div className="soft-img soft-img-h" style={{ background: "var(--sorra)" }}>
+                <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain", aspectRatio: "unset" }} />
               </div>
-              <div className="soft-img">
-                <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ width: "100%", height: "auto", aspectRatio: "unset", objectFit: "fill" }} />
+              <div className="soft-img soft-img-h" style={{ background: "var(--sorra)" }}>
+                <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain", aspectRatio: "unset" }} />
               </div>
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
