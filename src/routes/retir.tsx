@@ -304,14 +304,17 @@ function RetirPage() {
               Aquest retir és un inici per passar pel teu cos algunes de les medicines que han ajudat a cuidar la salut de les dones des de fa milers d&apos;anys, i a despertar i nodrir les nostres matrius.
             </blockquote>
             <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, marginTop: "1.6rem" }}>Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern.<br />I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
-            <div className="grid-2" style={{ marginTop: "1.6rem", alignItems: "start" }}>
-              <ul className="bullets">
-                <li>Un dia per <strong>(re)connectar amb la teva matriu…</strong></li>
-                <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
-                <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
-              </ul>
+            <ul className="bullets" style={{ marginTop: "1.6rem" }}>
+              <li>Un dia per <strong>(re)connectar amb la teva matriu…</strong></li>
+              <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
+              <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
+            </ul>
+            <div className="grid-2-img">
               <div className="soft-img">
                 <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" />
+              </div>
+              <div className="soft-img">
+                <img src="/retir/assets/massatge%20gemma.jpg" alt="Massatge de matriu" loading="lazy" />
               </div>
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
@@ -357,7 +360,7 @@ function RetirPage() {
                 <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/foc%20dones.jpg" alt="Foc de dones" loading="lazy" />
+                <img src="/retir/assets/haseya2.jpg" alt="Espai del retir" loading="lazy" style={{ objectPosition: "center top" }} />
               </div>
             </div>
           </div>
@@ -448,7 +451,7 @@ function RetirPage() {
                 DESPERTAR,<br />
                 ACTIVAR...
               </p>
-              <p className="lead" style={{ marginTop: ".4rem" }}>les matrius de tantes dones.</p>
+              <p style={{ marginTop: ".4rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>les matrius de tantes dones.</p>
               <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES,</strong> a <strong>SANAR-NOS.</strong></p>
               <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
             </div>
