@@ -465,27 +465,29 @@ function RetirPage() {
 
         {/* FACILITADORA */}
         <section>
-          <div className="wrap bio-side">
-            <div>
-              <div className="section-title">
-                <h2>Qui t&apos;acompanyarà en aquesta experiència?</h2>
+          <div className="wrap">
+            <div className="bio-side">
+              <div>
+                <div className="section-title">
+                  <h2>Qui t&apos;acompanyarà en aquesta experiència?</h2>
+                </div>
+                <p className="lead">Soc la Gavina i fa 7 anys que vaig començar a acompanyar dones en el seu procés de creixement de la mà de la maternitat en base a la teràpia Gestalt i la Ciclicitat Femenina. Aquests espais es van anar transformant i ampliant en pro de la Salut Femenina, a través de la Sexualitat i la Ginecologia Natural i Ancestral.</p>
+                <p className="lead" style={{ marginTop: ".8rem" }}>Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a:</p>
+                <p style={{ marginTop: ".8rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>
+                  CONNECTAR,<br />
+                  NODRIR,<br />
+                  DESPERTAR,<br />
+                  ACTIVAR...
+                </p>
+                <p style={{ marginTop: ".4rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>les matrius de tantes dones.</p>
+                <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES,</strong> a <strong>SANAR-NOS.</strong></p>
               </div>
-              <p className="lead">Soc la Gavina i fa 7 anys que vaig començar a acompanyar dones en el seu procés de creixement de la mà de la maternitat en base a la teràpia Gestalt i la Ciclicitat Femenina. Aquests espais es van anar transformant i ampliant en pro de la Salut Femenina, a través de la Sexualitat i la Ginecologia Natural i Ancestral.</p>
-              <p className="lead" style={{ marginTop: ".8rem" }}>Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a:</p>
-              <p style={{ marginTop: ".8rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>
-                CONNECTAR,<br />
-                NODRIR,<br />
-                DESPERTAR,<br />
-                ACTIVAR...
-              </p>
-              <p style={{ marginTop: ".4rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>les matrius de tantes dones.</p>
-              <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES,</strong> a <strong>SANAR-NOS.</strong></p>
-              <p className="lead" style={{ marginTop: "1.2rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</p>
-              <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
+              <div className="soft-img">
+                <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
+              </div>
             </div>
-            <div className="soft-img">
-              <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
-            </div>
+            <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</p>
+            <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
           </div>
         </section>
 
