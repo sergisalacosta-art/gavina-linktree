@@ -230,11 +230,15 @@ const testimonialsData = [
   },
   {
     text: "Gràcies sempre, Gavina, per la sensibilitat i cura amb la que fas les teves propostes. La teva delicadesa és sempre una invitació amable a treballar profund i amb consciència. Aquest retir com cada taller que proposes són espais de veritable alliberació i sanació per a l'ànima femenina. Pura bellesa i vida.",
-    name: "Montserrat, G.",
+    name: "Montserrat, G. @alquimiafemenina.espaidona",
   },
   {
     text: "Tuve el regalo de participar en un retiro de mujeres donde Gavina nos acompañó con una presencia amorosa, sosteniendo el espacio con una entrega silenciosa y constante. Desde el primer momento sentí en ella una combinación muy especial de dulzura, fortaleza y calma. Su manera de estar, de escuchar y de cuidar hizo que me sintiera profundamente acompañada y sostenida durante todo el proceso. Hay personas cuya luz no necesita hacer ruido para iluminar a los demás, y para mí Gavina es una de ellas. Su presencia inspira confianza, amor y humanidad. Estoy profundamente agradecida por haber coincidido con ella en ese camino y por todo lo que sembró en mi corazón. La recomiendo de todo corazón a cualquier mujer que sienta el llamado a dejarse acompañar desde un lugar auténtico, consciente y lleno de amor.",
     name: "Kelly",
+  },
+  {
+    text: "Vaig conèixer la Gavina per primera vegada al retir Haseya, on era una de les facilitadores. Amb la seva manera d'acompanyar-nos, aconseguia crear espais on les dones ens sentíem segures per mostrar-nos tal com érem. Ens ajudava a conèixer millor el nostre cos, a escoltar les nostres necessitats i a guanyar confiança tant en nosaltres mateixes com en el grup. Aquella experiència va ser tan enriquidora que, l'any següent, vaig decidir repetir i participar en el retir El Foc de les Dones. Entre cants, temazcal i danses, vam aprofundir en diferents aspectes relacionats amb el climateri, el plaer i la Ira Sagrada. Van ser vivències que em van permetre connectar amb mi mateixa i amb altres dones des d'un lloc més sincer, lliure i conscient. Guardo aquests espais amb molta estima, perquè em van oferir eines, aprenentatges i moments compartits que encara avui continuen formant part del meu camí.",
+    name: "Ruth, A.",
   },
 ];
 
@@ -333,7 +337,7 @@ function RetirPage() {
               <p><strong>Fent un tastet de diverses medicines ancestrals que ens ajudaran a començar a despertar i revitalitzar la matriu:</strong></p>
               <ul className="bullets">
                 <li>La ubicarem i sentirem com està el seu batec</li>
-                <li>L&apos;hi donarem moviment i flexibilitat</li>
+                <li>L&apos;hi donarem moviment, flexibilitat i veu</li>
                 <li>La humidificarem i li donarem escalfor</li>
                 <li>La nodrirem amb plantes</li>
               </ul>
@@ -355,6 +359,11 @@ function RetirPage() {
               <li>Tens ganes de viure un dia íntim de <strong>nutrició i atenció plena dedicada a la teva matriu</strong>, i acompanyada d&apos;altres dones</li>
               <li>Et criden les medicines naturals ancestrals, com els <strong>vapors vaginals, el moviment pelvic uterí, els cataplasmes amb plantes i l&apos;automassatge de matriu</strong></li>
             </ul>
+            <div style={{ marginTop: "2rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra" style={{ fontSize: "clamp(1rem, 2vw, 1.15rem)", letterSpacing: ".06em" }}>
+                SOM-HI. VULL SER-HI!
+              </a>
+            </div>
           </div>
         </section>
 
@@ -393,7 +402,8 @@ function RetirPage() {
               </ul>
             </div>
 
-            <div className="timeline" style={{ marginTop: "2rem" }}>
+            <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.8rem", fontSize: "clamp(1.05rem, 1.8vw, 1.2rem)" }}>El dia del retir</p>
+            <div className="timeline" style={{ marginTop: ".8rem" }}>
               <div className="timeline-item">
                 <span className="timeline-time">9.30 – 10.00h</span>
                 <p className="timeline-desc">Arribades</p>
@@ -422,6 +432,11 @@ function RetirPage() {
               <div className="soft-img soft-img-h">
                 <img src="/retir/assets/retir%204.jpg" alt="Dones compartint" loading="lazy" />
               </div>
+            </div>
+            <div style={{ marginTop: "2rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra" style={{ fontSize: "clamp(1rem, 2vw, 1.15rem)", letterSpacing: ".06em" }}>
+                NO M&apos;HO VULL PERDRE!
+              </a>
             </div>
           </div>
         </section>
@@ -453,9 +468,10 @@ function RetirPage() {
             </div>
             <div className="card text-card">
               <div className="section-title">
-                <h2>Facilitadora</h2>
+                <h2>Qui t&apos;acompanyarà en aquesta experiència?</h2>
               </div>
-              <p className="lead">Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a:</p>
+              <p className="lead">Soc la Gavina i fa 7 anys que vaig començar a acompanyar dones en el seu procés de creixement de la mà de la maternitat en base a la teràpia Gestalt i la Ciclicitat Femenina. Aquests espais es van anar transformant i ampliant en pro de la Salut Femenina, a través de la Sexualitat i la Ginecologia Natural i Ancestral.</p>
+              <p className="lead" style={{ marginTop: ".8rem" }}>Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a:</p>
               <p style={{ marginTop: ".8rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>
                 CONNECTAR,<br />
                 NODRIR,<br />
@@ -464,6 +480,7 @@ function RetirPage() {
               </p>
               <p style={{ marginTop: ".4rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>les matrius de tantes dones.</p>
               <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES,</strong> a <strong>SANAR-NOS.</strong></p>
+              <p className="lead" style={{ marginTop: "1.2rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</p>
               <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
             </div>
           </div>
@@ -502,8 +519,7 @@ function RetirPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <h2>Reserva la teva plaça</h2>
-              <p>Places limitades per cuidar el grup i a cada una.</p>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3 }}>Estàs preparada<br />per començar a cuidar la teva salut femenina<br />amb les Cures per a la teva Matriu<br />que coneixeràs en aquest retir?</h2>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.4rem", height: "1.4rem", flexShrink: 0 }} aria-hidden="true">
