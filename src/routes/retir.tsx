@@ -505,7 +505,7 @@ function RetirPage() {
               <li>Coneixeràs i hauràs provat algunes de les <strong>medicines naturals i ancestrals</strong> que han usat les dones en diferents tradicions mil·lenàries</li>
             </ul>
             <div className="soft-img" style={{ marginTop: "2.2rem", height: "260px" }}>
-              <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset", objectPosition: "center center" }} />
+              <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset", objectPosition: "center top" }} />
             </div>
           </div>
         </section>
