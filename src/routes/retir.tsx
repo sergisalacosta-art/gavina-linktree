@@ -504,7 +504,7 @@ function RetirPage() {
               <li>Tornaràs a habitar el teu cos, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, <strong>tant si encara menstrues com si no</strong></li>
               <li>Coneixeràs i hauràs provat algunes de les <strong>medicines naturals i ancestrals</strong> que han usat les dones en diferents tradicions mil·lenàries</li>
             </ul>
-            <div className="soft-img" style={{ marginTop: "2.2rem", height: "380px" }}>
+            <div className="soft-img" style={{ marginTop: "2.2rem", height: "460px" }}>
               <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset", objectPosition: "center top" }} />
             </div>
           </div>
