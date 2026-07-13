@@ -173,6 +173,7 @@ const css = `
 
   /* INVERSIÓ */
   .rt .destacat{background:linear-gradient(135deg,#f7ead3,#fff5e4); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-style:italic;}
+  .rt .destacat p{color:var(--terra-fosc); font-size:inherit; line-height:inherit; font-family:inherit; margin-top:.6rem;}
   .rt .com-ho-farem{background:linear-gradient(135deg,#f7ead3,#fff5e4); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:2.2rem;}
   .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #f7ead3 0%, #fff5e4 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
   .rt .price-number{font-family:Georgia, "Times New Roman", serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
@@ -303,16 +304,22 @@ function RetirPage() {
             <div className="section-title">
               <h2>De què va el retir?</h2>
             </div>
-            <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}>Fa molts anys que estem vivint en desequilibri en els nostres cossos.<br />Recuperar el benestar integral demana compromís, amor i temps.</p>
-            <blockquote className="destacat" style={{ marginTop: "1.6rem" }}>
-              Aquest retir és un inici per passar pel teu cos algunes de les medicines que han ajudat a cuidar la salut de les dones des de fa milers d&apos;anys, i a despertar i nodrir les nostres matrius.
-            </blockquote>
-            <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, marginTop: "1.6rem" }}>Si estàs desconnectada de la teva matriu, estàs desconnectada del teu poder intern.<br />I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades.</p>
-            <ul className="bullets" style={{ marginTop: "1.6rem" }}>
-              <li>Un dia per <strong>(re)connectar amb la teva matriu…</strong></li>
-              <li>Un dia per <strong>nodrir-te amb les cures femenines</strong> que han acompanyat les dones de tantes tradicions mil·lenàries…</li>
-              <li>Un dia per recordar-nos que <strong>des de la matriu ens gestem, ens nodrim i ens parim</strong> des que naixem fins que morim</li>
-            </ul>
+            <p className="lead">Sabem que cada vegada, les dones, vivim més desequilibris en els nostres òrgans femenins, i això té molt a veure amb &ldquo;viure&rdquo; fragmentades i desconnectades de les nostres matrius.</p>
+            <p className="lead" style={{ marginTop: "1rem" }}>Si et sents desconnectada de la teva matriu, estàs desconnectada del teu poder intern. I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades i manipulables.</p>
+            <p className="lead" style={{ marginTop: "1rem" }}>La tardor és el moment de començar a caminar cap a la cova, d&apos;anar trobant l&apos;espai i el temps per estar amb tu, i així regenerar-te després de posar l&apos;energia cap enfora durant la primavera i l&apos;estiu.</p>
+            <div className="destacat" style={{ fontStyle: "normal", marginTop: "1.8rem" }}>
+              <p style={{ fontWeight: 700, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", margin: 0 }}>Aquest retir és una oportunitat…</p>
+              <p style={{ fontStyle: "italic", marginTop: ".6rem" }}>parar, respirar i tornar al cos.<br />I des d&apos;aquí…</p>
+              <p style={{ fontStyle: "italic", marginTop: ".6rem" }}>
+                …començar a posar consciència en la teva salut femenina a través de la teva matriu.<br />
+                …experimentar en pròpia pell algunes de les medicines que han ajudat a cuidar la salut de les dones des de fa milers d&apos;anys.<br />
+                …(re)connectar, despertar i nodrir la teva matriu, font de vida i salut.
+              </p>
+              <p style={{ fontStyle: "italic", marginTop: "1.2rem" }}>Un dia per recordar-nos que quan <strong style={{ fontStyle: "normal" }}>HABITEM</strong> la nostra matriu, ens podem</p>
+              <p style={{ fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4, fontStyle: "normal", marginTop: ".3rem" }}>GESTAR,<br />NODRIR,<br />PARIR</p>
+              <p style={{ fontStyle: "italic", marginTop: ".3rem" }}>tantes vegades com necessitem,<br />des que naixem fins que morim.</p>
+              <p style={{ fontStyle: "italic", marginTop: "1.2rem" }}>Un espai per compartir amb altres dones,<br />per cuidar-nos i sostenir-nos,<br />sentint el poder del grup.</p>
+            </div>
             <div className="grid-2-img">
               <div className="soft-img soft-img-h" style={{ background: "var(--sorra)" }}>
                 <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain" }} />
