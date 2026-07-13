@@ -224,6 +224,10 @@ const css = `
 
 const testimonialsData = [
   {
+    text: "Tuve el regalo de participar en un retiro de mujeres donde Gavina nos acompañó con una presencia amorosa, sosteniendo el espacio con una entrega silenciosa y constante. Desde el primer momento sentí en ella una combinación muy especial de dulzura, fortaleza y calma. Su manera de estar, de escuchar y de cuidar hizo que me sintiera profundamente acompañada y sostenida durante todo el proceso. Hay personas cuya luz no necesita hacer ruido para iluminar a los demás, y para mí Gavina es una de ellas. Su presencia inspira confianza, amor y humanidad. Estoy profundamente agradecida por haber coincidido con ella en ese camino y por todo lo que sembró en mi corazón. La recomiendo de todo corazón a cualquier mujer que sienta el llamado a dejarse acompañar desde un lugar auténtico, consciente y lleno de amor.",
+    name: "Kelly",
+  },
+  {
     text: "La Gavina m'aporta alineació entre el que sento, desitjo i faig, cap-cor-cos. Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.",
     name: "Alba C.",
   },
@@ -234,10 +238,6 @@ const testimonialsData = [
   {
     text: "Gràcies sempre, Gavina, per la sensibilitat i cura amb la que fas les teves propostes. La teva delicadesa és sempre una invitació amable a treballar profund i amb consciència. Aquest retir com cada taller que proposes són espais de veritable alliberació i sanació per a l'ànima femenina. Pura bellesa i vida.",
     name: "Montserrat, G. @alquimiafemenina.espaidona",
-  },
-  {
-    text: "Tuve el regalo de participar en un retiro de mujeres donde Gavina nos acompañó con una presencia amorosa, sosteniendo el espacio con una entrega silenciosa y constante. Desde el primer momento sentí en ella una combinación muy especial de dulzura, fortaleza y calma. Su manera de estar, de escuchar y de cuidar hizo que me sintiera profundamente acompañada y sostenida durante todo el proceso. Hay personas cuya luz no necesita hacer ruido para iluminar a los demás, y para mí Gavina es una de ellas. Su presencia inspira confianza, amor y humanidad. Estoy profundamente agradecida por haber coincidido con ella en ese camino y por todo lo que sembró en mi corazón. La recomiendo de todo corazón a cualquier mujer que sienta el llamado a dejarse acompañar desde un lugar auténtico, consciente y lleno de amor.",
-    name: "Kelly",
   },
   {
     text: "Vaig conèixer la Gavina per primera vegada al retir Haseya, on era una de les facilitadores. Amb la seva manera d'acompanyar-nos, aconseguia crear espais on les dones ens sentíem segures per mostrar-nos tal com érem. Ens ajudava a conèixer millor el nostre cos, a escoltar les nostres necessitats i a guanyar confiança tant en nosaltres mateixes com en el grup. Aquella experiència va ser tan enriquidora que, l'any següent, vaig decidir repetir i participar en el retir El Foc de les Dones. Entre cants, temazcal i danses, vam aprofundir en diferents aspectes relacionats amb el climateri, el plaer i la Ira Sagrada. Van ser vivències que em van permetre connectar amb mi mateixa i amb altres dones des d'un lloc més sincer, lliure i conscient. Guardo aquests espais amb molta estima, perquè em van oferir eines, aprenentatges i moments compartits que encara avui continuen formant part del meu camí.",
