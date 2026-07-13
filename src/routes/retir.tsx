@@ -161,6 +161,11 @@ const css = `
   .rt .bio{display:grid; grid-template-columns:340px 1fr; gap:clamp(2rem,5vw,5rem); align-items:stretch;}
   .rt .bio .soft-img{height:100%;}
   .rt .bio .soft-img img{height:100%; aspect-ratio:unset;}
+  .rt .bio-circle{display:grid; grid-template-columns:1fr clamp(220px,28vw,300px); gap:clamp(2rem,5vw,5rem); align-items:center;}
+  .rt .circ-frame{display:flex; align-items:center; justify-content:center;}
+  .rt .circ-frame .circ-img{width:clamp(200px,26vw,290px); height:clamp(200px,26vw,290px); border-radius:50%; overflow:hidden; mask-image:radial-gradient(circle, black 58%, transparent 84%); -webkit-mask-image:radial-gradient(circle, black 58%, transparent 84%);}
+  .rt .circ-frame .circ-img img{width:100%; height:100%; object-fit:cover; object-position:center top; display:block;}
+  @media(max-width:900px){.rt .bio-circle{grid-template-columns:1fr; justify-items:center;} .rt .circ-frame{order:-1;}}
 
   /* TIMELINE */
   .rt .timeline{display:grid; gap:0; margin-top:1.8rem;}
@@ -462,10 +467,7 @@ function RetirPage() {
 
         {/* FACILITADORA */}
         <section>
-          <div className="wrap bio">
-            <div className="soft-img">
-              <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
-            </div>
+          <div className="wrap bio-circle">
             <div className="card text-card">
               <div className="section-title">
                 <h2>Qui t&apos;acompanyarà en aquesta experiència?</h2>
@@ -482,6 +484,11 @@ function RetirPage() {
               <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES,</strong> a <strong>SANAR-NOS.</strong></p>
               <p className="lead" style={{ marginTop: "1.2rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</p>
               <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
+            </div>
+            <div className="circ-frame">
+              <div className="circ-img">
+                <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
+              </div>
             </div>
           </div>
         </section>
