@@ -161,9 +161,9 @@ const css = `
   .rt .bio{display:grid; grid-template-columns:340px 1fr; gap:clamp(2rem,5vw,5rem); align-items:stretch;}
   .rt .bio .soft-img{height:100%;}
   .rt .bio .soft-img img{height:100%; aspect-ratio:unset;}
-  .rt .bio-side{display:grid; grid-template-columns:1fr clamp(180px,22vw,240px); gap:clamp(2rem,4vw,4rem); align-items:start;}
+  .rt .bio-side{display:grid; grid-template-columns:1fr clamp(260px,34vw,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
   .rt .bio-side .soft-img img{aspect-ratio:3/4; object-position:center top;}
-  @media(max-width:900px){.rt .bio-side{grid-template-columns:1fr;} .rt .bio-side .soft-img{max-width:240px; margin:0 auto;}}
+  @media(max-width:900px){.rt .bio-side{grid-template-columns:1fr;} .rt .bio-side .soft-img{max-width:320px; margin:0 auto;}}
 
   /* TIMELINE */
   .rt .timeline{display:grid; gap:0; margin-top:1.8rem;}
