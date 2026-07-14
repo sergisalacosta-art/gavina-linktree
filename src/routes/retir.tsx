@@ -339,10 +339,10 @@ function RetirPage() {
               <p style={{ fontStyle: "italic", marginTop: "1.2rem" }}>Un espai per compartir amb altres dones,<br />per cuidar-nos i sostenir-nos,<br />sentint el poder del grup.</p>
             </div>
             <div className="grid-2-img">
-              <div className="soft-img soft-img-h" style={{ background: "var(--sorra)" }}>
+              <div className="soft-img soft-img-h" style={{ background: "#fceae3" }}>
                 <img src="/retir/assets/montse.jpg" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain" }} />
               </div>
-              <div className="soft-img soft-img-h" style={{ background: "var(--sorra)" }}>
+              <div className="soft-img soft-img-h" style={{ background: "#fceae3" }}>
                 <img src="/retir/assets/massatge%20gemma.png" alt="Massatge de matriu" loading="lazy" style={{ objectFit: "contain" }} />
               </div>
             </div>
