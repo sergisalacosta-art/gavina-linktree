@@ -211,7 +211,7 @@ const css = `
   .rt .faq-body p{margin:.6rem 0 0; color:var(--muted); font-size:inherit; line-height:inherit;}
   .rt .faq-body p:first-child{margin-top:0;}
 
-  .rt .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 7' preserveAspectRatio='none'%3E%3Cpath d='M0,5 C12,1 28,7 50,4 C72,1 88,6 100,3' stroke='%23e5b66d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:0 100%; background-size:100% 7px; padding-bottom:6px;}
+  .rt .em-sub{display:inline; background:linear-gradient(to bottom, rgba(229,182,109,.38) 85%, transparent 85%); padding:0 3px; border-radius:2px;}
   .rt footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
   .rt .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
   .rt .back-link:hover{color:var(--terra-fosc);}
