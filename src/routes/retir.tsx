@@ -313,7 +313,6 @@ function RetirPage() {
             </div>
             <p className="lead">Sabem que cada vegada, les dones, vivim més desequilibris en els nostres òrgans femenins, i això té molt a veure amb &ldquo;viure&rdquo; fragmentades i desconnectades de les nostres matrius.</p>
             <p className="lead" style={{ marginTop: "1rem" }}>Si et sents desconnectada de la teva matriu, estàs desconnectada del teu poder intern. I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades i manipulables.</p>
-            <p className="lead" style={{ marginTop: "1rem" }}>La tardor és el moment de començar a caminar cap a la cova, d&apos;anar trobant l&apos;espai i el temps per estar amb tu, i així regenerar-te després de posar l&apos;energia cap enfora durant la primavera i l&apos;estiu.</p>
             <div className="destacat" style={{ fontStyle: "normal", marginTop: "1.8rem" }}>
               <p style={{ fontWeight: 700, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", margin: 0 }}>Aquest retir és una oportunitat…</p>
               <p style={{ fontStyle: "italic", marginTop: ".6rem" }}>parar, respirar i tornar al cos.<br />I des d&apos;aquí…</p>
@@ -376,7 +375,8 @@ function RetirPage() {
             <div className="section-title">
               <h2>Quan i on?</h2>
             </div>
-            <p className="lead"><strong>Dissabte 17 d&apos;octubre, de 10h a 19h.</strong></p>
+            <p className="lead">La tardor és el moment de començar a caminar cap a la cova, d&apos;anar trobant l&apos;espai i el temps per estar amb tu, i així regenerar-te després de posar l&apos;energia cap enfora durant la primavera i l&apos;estiu. Per això aquest retir serà en aquesta estació de l&apos;any.</p>
+            <p className="lead" style={{ marginTop: "1rem" }}><strong>Dissabte 17 d&apos;octubre, de 10h a 19h.</strong></p>
             <p className="lead" style={{ marginTop: ".6rem" }}>En un espai preciós de <strong>Les Franqueses del Vallès</strong>.</p>
             <div className="grid-2-img">
               <div className="soft-img soft-img-h">
