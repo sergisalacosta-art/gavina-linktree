@@ -199,6 +199,18 @@ const css = `
   .rt .testi-dot{width:.5rem; height:.5rem; border-radius:50%; background:var(--mel); border:none; cursor:pointer; padding:0; transition:background .2s, transform .2s;}
   .rt .testi-dot.active{background:var(--terra); transform:scale(1.3);}
 
+  /* FAQ */
+  .rt .faq{display:grid; gap:.7rem; margin-top:1.6rem;}
+  .rt .faq-item{border:1px solid rgba(138,75,52,.15); border-radius:1.2rem; overflow:hidden; background:#fffdf8;}
+  .rt .faq-item summary{list-style:none; cursor:pointer; padding:1.15rem 1.4rem; font-weight:700; font-size:clamp(1rem,1.8vw,1.15rem); color:var(--terra-fosc); display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none;}
+  .rt .faq-item summary::-webkit-details-marker{display:none;}
+  .rt .faq-item summary::after{content:"+"; font-size:1.4rem; font-weight:400; color:var(--terra); flex-shrink:0; transition:transform .2s;}
+  .rt .faq-item[open] summary::after{transform:rotate(45deg);}
+  .rt .faq-item[open] summary{border-bottom:1px solid rgba(138,75,52,.1);}
+  .rt .faq-body{padding:1.1rem 1.4rem 1.3rem; color:var(--muted); font-size:clamp(1rem,1.7vw,1.12rem); line-height:1.65;}
+  .rt .faq-body p{margin:.6rem 0 0; color:var(--muted); font-size:inherit; line-height:inherit;}
+  .rt .faq-body p:first-child{margin-top:0;}
+
   .rt .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 7' preserveAspectRatio='none'%3E%3Cpath d='M0,5 C12,1 28,7 50,4 C72,1 88,6 100,3' stroke='%23e5b66d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:0 100%; background-size:100% 7px; padding-bottom:6px;}
   .rt footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
   .rt .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
@@ -518,6 +530,64 @@ function RetirPage() {
               <h2>Testimonis</h2>
             </div>
             <TestimonialCarousel />
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Tens preguntes? Aquí tens algunes respostes…</h2>
+            </div>
+            <div className="faq">
+              <details className="faq-item">
+                <summary>He d&apos;haver fet algun acompanyament amb tu per assistir al retir?</summary>
+                <div className="faq-body">
+                  <p>No és necessari. Tant si has fet acompanyament individual amb mi, com si has assistit a alguna de les xerrades que he impartit com si encara no ens hem conegut. Si ressones amb aquesta proposta i amb mi, seràs benvinguda.</p>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>Necessito haver tingut contacte previ amb aquestes medicines naturals i ancestrals o algun coneixement específic sobre sexualitat femenina?</summary>
+                <div className="faq-body">
+                  <p>No és necessari.</p>
+                  <p>Si et crida l&apos;atenció cuidar-te de manera natural, respectuosa amb el teu cos, amb recursos que et pots aplicar tu mateixa a casa, de manera senzilla i econòmica i així autogestionar fins on puguis la teva salut femenina per cuidar-te i fer prevenció…</p>
+                  <p>Si tens ganes de viure una experiència diferent de reconnexió amb el teu cos femení…</p>
+                  <p>…hi ha un espai per tu.</p>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>On és exactament el retir i què hauré de portar?</summary>
+                <div className="faq-body">
+                  <p>El retir serà a les Franqueses del Vallès. L&apos;adreça exacta i els detalls sobre el que haureu de portar us ho comunicaré un cop reservada la plaça.</p>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>Com seran les dinàmiques?</summary>
+                <div className="faq-body">
+                  <p>Totes les propostes són creades i pensades des de la màxima cura i en pro del teu benestar i el del grup. Les dinàmiques són majoritàriament individuals, però el treball el fem juntes. El primer mantra en aquest retir és: escolta&apos;t; això vol dir que no has de fer res amb què no et sentis còmoda. Que us sentiu acollides, sostingudes i segures és una de les meves missions.</p>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>Tinc dubtes sobre si aquest retir és per mi.</summary>
+                <div className="faq-body">
+                  <p>Contacta&apos;m i valorem juntes el teu cas.</p>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary>Tens alguna altra pregunta?</summary>
+                <div className="faq-body">
+                  <p>Serà un plaer respondre&apos;t per WhatsApp.</p>
+                  <p style={{ marginTop: "1rem" }}>
+                    <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra" style={{ fontSize: "clamp(.95rem, 1.8vw, 1.05rem)" }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.2rem", height: "1.2rem", flexShrink: 0 }} aria-hidden="true">
+                        <path d="M19.05 4.91A10 10 0 0 0 12 2a10 10 0 0 0-8.66 15l-1.3 4.74 4.86-1.27A10 10 0 1 0 19.05 4.91Zm-7.05 15.4a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.88.75.77-2.81-.2-.31A8.31 8.31 0 1 1 20.3 12a8.34 8.34 0 0 1-8.3 8.31Zm4.55-6.22c-.25-.13-1.48-.73-1.71-.81s-.4-.13-.56.13-.65.81-.79.97-.29.18-.54.06a6.78 6.78 0 0 1-2-1.23 7.56 7.56 0 0 1-1.4-1.74c-.14-.25 0-.38.11-.51s.25-.29.37-.43a1.62 1.62 0 0 0 .25-.41.46.46 0 0 0 0-.44c-.06-.13-.56-1.34-.76-1.83s-.4-.42-.56-.43h-.48a.93.93 0 0 0-.67.31 2.81 2.81 0 0 0-.88 2.1 4.91 4.91 0 0 0 1 2.59 11.16 11.16 0 0 0 4.27 3.77 14.43 14.43 0 0 0 1.42.52 3.43 3.43 0 0 0 1.57.1 2.58 2.58 0 0 0 1.69-1.19 2.1 2.1 0 0 0 .14-1.19c-.06-.1-.22-.16-.47-.28Z"/>
+                      </svg>
+                      Escriu-me per WhatsApp
+                    </a>
+                  </p>
+                </div>
+              </details>
+            </div>
           </div>
         </section>
 
