@@ -486,7 +486,7 @@ function RetirPage() {
                 <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
               </div>
             </div>
-            <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</p>
+            <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. <strong>Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</strong></p>
             <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
           </div>
         </section>
@@ -501,7 +501,7 @@ function RetirPage() {
               <li>Recordaràs <strong>on habita la teva energia femenina</strong> i com mantenir-la <strong>desperta i vital</strong></li>
               <li>Et sentiràs <strong>calmada, lleugera, clara, connectada</strong> amb el teu plaer i la teva matriu</li>
               <li>Sabràs <strong>què fer si tornes a perdre&apos;t</strong> en el camí</li>
-              <li>Tornaràs a habitar el teu cos, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, <strong>tant si encara menstrues com si no</strong></li>
+              <li>Tornaràs a habitar la teva matriu, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, <strong>tant si encara menstrues com si no</strong></li>
               <li>Coneixeràs i hauràs provat algunes de les <strong>medicines naturals i ancestrals</strong> que han usat les dones en diferents tradicions mil·lenàries</li>
             </ul>
             <div className="soft-img" style={{ marginTop: "2.2rem", height: "460px" }}>
