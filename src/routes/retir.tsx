@@ -131,7 +131,7 @@ const css = `
   .rt .btn:hover{transform:translateY(-2px)}
   .rt .btn-primary{background:var(--mel); color:#221a14}
   .rt .btn-ghost{border-color:rgba(255,255,255,.55); color:white; background:rgba(255,255,255,.08); backdrop-filter:blur(6px)}
-  .rt .btn-terra{background:linear-gradient(135deg,#d07888 0%,#b85872 100%); color:white; font-size:clamp(1.15rem,2.2vw,1.45rem); padding:1.1rem 2.6rem; box-shadow:0 0 32px rgba(185,85,110,.46), 0 4px 18px rgba(150,50,75,.2); letter-spacing:.1em;}
+  .rt .btn-terra{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); color:#4a2e22; font-size:clamp(1.15rem,2.2vw,1.45rem); padding:1.1rem 2.6rem; box-shadow:0 0 30px rgba(197,162,142,.48), 0 4px 18px rgba(160,118,95,.22); letter-spacing:.1em;}
 
   .rt section{padding:clamp(2.8rem, 5vw, 5rem) 0; position:relative; z-index:1;}
   .rt .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto;}
@@ -211,7 +211,7 @@ const css = `
   .rt .faq-body p{margin:.6rem 0 0; color:var(--muted); font-size:inherit; line-height:inherit;}
   .rt .faq-body p:first-child{margin-top:0;}
 
-  .rt .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'%3E%3Cpath d='M2,6 C35,2 80,8 120,4 C155,1 185,6 198,8 L198,20 C165,24 120,21 80,23 C45,25 15,20 2,22 Z' fill='%23e5b66d' fill-opacity='0.48'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-size:100% 100%; padding:0.12em 0.35em;}
+  .rt .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32' preserveAspectRatio='none'%3E%3Cpath d='M6,9 C28,4 65,10 105,6 C142,2 178,8 195,7 C199,11 198,20 193,23 C158,28 115,23 75,25 C40,27 11,23 4,21 C1,18 2,13 6,9 Z' fill='%23e5b66d' fill-opacity='0.46'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-size:100% 100%; padding:0.12em 0.4em;}
   .rt footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
   .rt .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
   .rt .back-link:hover{color:var(--terra-fosc);}
