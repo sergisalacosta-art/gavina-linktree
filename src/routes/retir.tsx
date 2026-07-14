@@ -171,14 +171,14 @@ const css = `
   .rt .timeline-item:last-child{border-bottom:1px solid rgba(138,75,52,.12);}
   .rt .timeline-time{font-weight:700; color:var(--terra); font-size:.95rem; padding-top:.15rem; line-height:1.3;}
   .rt .timeline-desc{color:var(--muted); font-size:clamp(1.05rem, 1.8vw, 1.2rem); line-height:1.6; margin:0;}
-  .rt .pre-event{background:linear-gradient(135deg, #f7ead3, #fff8ea); border-left:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
+  .rt .pre-event{background:linear-gradient(135deg, #fceae3, #fef5f1); border-left:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
 
   /* INVERSIÓ */
-  .rt .destacat{background:linear-gradient(135deg,#f7ead3,#fff5e4); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-style:italic;}
+  .rt .destacat{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-style:italic;}
   .rt .destacat p{color:var(--terra-fosc); font-size:inherit; line-height:inherit; font-family:inherit; margin-top:.6rem;}
-  .rt .com-ho-farem{background:linear-gradient(135deg,#f7ead3,#fff5e4); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:2.2rem;}
-  .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #f7ead3 0%, #fff5e4 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
+  .rt .com-ho-farem{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:2.2rem;}
+  .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #fceae3 0%, #fef5f1 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
   .rt .price-number{font-family:Georgia, "Times New Roman", serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
   .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); font-style:italic; margin:.5rem 0 0;}
 
