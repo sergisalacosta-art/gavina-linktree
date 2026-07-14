@@ -183,9 +183,9 @@ const css = `
   .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); font-style:italic; margin:.5rem 0 0;}
 
   /* CTA */
-  .rt .cta-block{background:var(--terra); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
-  .rt .cta-block h2{color:white; margin-bottom:1rem;}
-  .rt .cta-block p{color:rgba(255,255,255,.88);}
+  .rt .cta-block{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(160,115,90,.22);}
+  .rt .cta-block h2{color:#4a2e22; margin-bottom:1rem;}
+  .rt .cta-block p{color:#5d3c2c;}
 
   /* TESTIMONIS */
   .rt .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
