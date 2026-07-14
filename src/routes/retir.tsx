@@ -199,6 +199,7 @@ const css = `
   .rt .testi-dot{width:.5rem; height:.5rem; border-radius:50%; background:var(--mel); border:none; cursor:pointer; padding:0; transition:background .2s, transform .2s;}
   .rt .testi-dot.active{background:var(--terra); transform:scale(1.3);}
 
+  .rt .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 7' preserveAspectRatio='none'%3E%3Cpath d='M0,5 C12,1 28,7 50,4 C72,1 88,6 100,3' stroke='%23e5b66d' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:0 100%; background-size:100% 7px; padding-bottom:6px;}
   .rt footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
   .rt .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
   .rt .back-link:hover{color:var(--terra-fosc);}
@@ -524,7 +525,7 @@ function RetirPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3 }}>Estàs preparada<br />per començar a cuidar la teva salut femenina<br />amb les Cures per a la teva Matriu<br />que coneixeràs en aquest retir?</h2>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3 }}>Estàs preparada<br />per <span className="em-sub">començar a cuidar la teva salut femenina</span><br />amb les <span className="em-sub">Cures per a la teva Matriu</span><br />que coneixeràs en aquest retir?</h2>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.4rem", height: "1.4rem", flexShrink: 0 }} aria-hidden="true">
