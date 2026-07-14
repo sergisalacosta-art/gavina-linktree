@@ -306,9 +306,8 @@ function RetirPage() {
       {/* HERO */}
       <header className="hero">
         <div className="hero-inner">
-          <p className="kicker">Retir presencial · Les Franqueses del Vallès</p>
+          <p className="kicker">Retir presencial d&apos;un dia<br />Les Franqueses del Vallès</p>
           <h1>Cures de Matriu</h1>
-          <p className="hero-sub">Retir d&apos;un dia</p>
           <p className="hero-date">Dissabte 17 octubre</p>
           <div className="hero-actions">
             <a className="btn btn-terra" href={WA_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: "clamp(1rem, 1.8vw, 1.2rem)", padding: ".9rem 2rem" }}>Reserva la teva plaça</a>
