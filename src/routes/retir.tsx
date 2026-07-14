@@ -468,7 +468,7 @@ function RetirPage() {
               <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.4rem" }}>Inclou:</p>
               <ul className="bullets" style={{ marginTop: ".8rem" }}>
                 <li>La sessió d&apos;1h30min online uns dies previs al retir: <em>&ldquo;Òrgans femenins i els 5 imprescindibles per cuidar la nostra matriu&rdquo;</em></li>
-                <li>El meu acompanyament</li>
+                <li>El meu acompanyament en el retir</li>
               </ul>
               <p className="price-note" style={{ marginTop: "1.6rem" }}>* El dinar no està inclòs. Cal que portis el teu dinar i també alguna cosa lleugera per picar a mig matí.</p>
               <p className="price-note">* No podrem escalfar menjar ni podrem sortir de l&apos;espai per anar a comprar res.</p>
@@ -484,7 +484,7 @@ function RetirPage() {
                 <div className="section-title">
                   <h2>Qui t&apos;acompanyarà en aquesta experiència?</h2>
                 </div>
-                <p className="lead">Soc la Gavina i fa 7 anys que vaig començar a acompanyar dones en el seu procés de creixement de la mà de la maternitat en base a la teràpia Gestalt i la Ciclicitat Femenina. Aquests espais es van anar transformant i ampliant en pro de la Salut Femenina, a través de la Sexualitat i la Ginecologia Natural i Ancestral.</p>
+                <p className="lead">Soc la Gavina i fa 7 anys que vaig començar a acompanyar dones en el seu procés de creixement de la mà de la maternitat en base a la teràpia Gestalt i la Ciclicitat i Sexualitat Femenines. Aquests espais es van anar transformant i ampliant en pro de la Salut Femenina, al costat de la Ginecologia Natural i Ancestral.</p>
                 <p className="lead" style={{ marginTop: ".8rem" }}>Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a:</p>
                 <p style={{ marginTop: ".8rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>
                   CONNECTAR,<br />
