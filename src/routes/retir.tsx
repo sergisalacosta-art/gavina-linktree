@@ -73,7 +73,7 @@ const css = `
   .rt .kicker{
     letter-spacing:.18em;
     text-transform:uppercase;
-    color:var(--mel);
+    color:white;
     font-size:.82rem;
     margin:0 0 1rem;
     font-weight:700;
@@ -86,7 +86,7 @@ const css = `
     font-weight:700;
   }
   .rt h1{
-    color:white;
+    color:#e1bda6;
     font-size:clamp(3rem, 8vw, 7.2rem);
     letter-spacing:.045em;
     text-transform:uppercase;
@@ -99,13 +99,13 @@ const css = `
     font-family:Georgia, "Times New Roman", serif;
     font-style:italic;
     font-size:clamp(1.3rem, 3vw, 2.2rem);
-    color:rgba(255,255,255,.92);
+    color:#e1bda6;
     font-weight:400;
   }
   .rt .hero-date{
     margin:.5rem 0 0;
     font-size:clamp(1rem, 2vw, 1.35rem);
-    color:var(--mel);
+    color:white;
     font-weight:600;
     letter-spacing:.05em;
   }
@@ -311,7 +311,7 @@ function RetirPage() {
           <p className="hero-sub">Retir d&apos;un dia</p>
           <p className="hero-date">Dissabte 17 octubre</p>
           <div className="hero-actions">
-            <a className="btn btn-primary" href={WA_URL} target="_blank" rel="noopener noreferrer">Reserva la teva plaça</a>
+            <a className="btn btn-terra" href={WA_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: "clamp(1rem, 1.8vw, 1.2rem)", padding: ".9rem 2rem" }}>Reserva la teva plaça</a>
             <a className="btn btn-ghost" href="#pla">Veure el pla del dia</a>
           </div>
         </div>
