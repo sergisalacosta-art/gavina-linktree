@@ -40,7 +40,7 @@ const css = `
     display:grid;
     align-items:end;
     background:
-      linear-gradient(90deg, rgba(80,42,16,.68), rgba(150,95,35,.10) 55%, rgba(60,32,10,.42)),
+      linear-gradient(90deg, rgba(80,42,16,.38), rgba(150,95,35,.04) 55%, rgba(60,32,10,.18)),
       url("/retir/assets/retir%201.jpg") 20% top / cover no-repeat;
     color:white;
     isolation:isolate;
@@ -51,8 +51,8 @@ const css = `
     position:absolute;
     inset:0;
     z-index:0;
-    background:rgba(200,145,55,.18);
-    mix-blend-mode:multiply;
+    background:rgba(220,160,60,.12);
+    mix-blend-mode:overlay;
     pointer-events:none;
   }
   .rt .hero:after{
@@ -60,7 +60,7 @@ const css = `
     position:absolute;
     inset:auto 0 0 0;
     height:40%;
-    background:linear-gradient(180deg, transparent, rgba(70,35,10,.55));
+    background:linear-gradient(180deg, transparent, rgba(70,35,10,.32));
     z-index:-1;
   }
   .rt .hero-inner{
