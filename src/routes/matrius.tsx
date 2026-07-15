@@ -190,10 +190,15 @@ const css = `
   #inclou{padding-bottom:0!important}
   #dates{padding-top:0!important;margin-top:.6rem!important}
   #dates .details-stack{margin-top:0!important}
+  .mp .pq-mid{display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-top:1.1rem;}
+  .mp .pq-mid .soft-img{height:100%;}
+  .mp .pq-mid .soft-img img{aspect-ratio:unset; height:100%; width:100%; object-fit:cover; object-position:center;}
+  .mp .pq-cards{display:grid; gap:1.1rem;}
   @media(max-width:900px){
     .mp .hero{min-height:74vh}
     .mp .grid-2,.mp .price-block,.mp .bio{grid-template-columns:1fr}
     .mp .include-grid,.mp .split,.mp .testimonials-grid,.mp .pricing-options{grid-template-columns:1fr}
+    .mp .pq-mid{grid-template-columns:1fr;}
     .mp .price-option.annual{border-left:0;border-top:1px solid rgba(138,75,52,.18);padding-top:1.2rem;margin-top:.6rem;}
     .mp .hero-inner{padding-bottom:4rem}
     .mp::after{background-size:460px auto;opacity:.14;}
@@ -299,23 +304,30 @@ function MatriusPage() {
         </section>
 
         <section className="cream" id="per-a-qui">
-          <div className="wrap grid-2">
-            <div className="soft-img">
-              <img src="/matrius/assets/herbes.jpg" alt="Mans preparant herbes en un cistell" />
+          <div className="wrap">
+            <div className="section-title">
+              <span className="eyebrow">Per a qui és</span>
+              <h2>És per a tu si...</h2>
             </div>
-            <div>
-              <div className="section-title">
-                <span className="eyebrow">Per a qui és</span>
-                <h2>És per a tu si...</h2>
+            {/* Top 2 cards */}
+            <div className="split" style={{ marginTop: "1.5rem" }}>
+              <div className="mini"><strong>Vols cuidar-te amb recursos naturals.</strong><p>Et ressona el cuidar-te de manera natural i vols recursos per acompanyar-te.</p></div>
+              <div className="mini"><strong>Tens compromís amb tu mateixa.</strong><p>Vols millorar i mantenir la teva salut femenina.</p></div>
+            </div>
+            {/* Middle: image left + 2 cards right */}
+            <div className="pq-mid">
+              <div className="soft-img">
+                <img src="/matrius/assets/herbes.jpg" alt="Mans preparant herbes en un cistell" />
               </div>
-              <div className="split">
-                <div className="mini"><strong>Vols cuidar-te amb recursos naturals.</strong><p>Et ressona el cuidar-te de manera natural i vols recursos per acompanyar-te.</p></div>
-                <div className="mini"><strong>Tens compromís amb tu mateixa.</strong><p>Vols millorar i mantenir la teva salut femenina.</p></div>
+              <div className="pq-cards">
                 <div className="mini"><strong>Et ressonen les medicines que han sostingut les dones en diferents cultures d'arreu del món</strong><p>Quan sents a parlar de medicina natural —vapors vaginals, cataplasmes, òvuls vaginals, desparasitació amb plantes…—, el teu cos et fa saber que &ldquo;sí&rdquo;.</p></div>
                 <div className="mini"><strong>Vols recursos pràctics d'autocura.</strong><p>Et ressona introduir recursos senzills i pràctics en l'autocura i la prevenció de la teva salut femenina, provinents de la saviesa i medicina natural i ancestral.</p></div>
-                <div className="mini"><strong>Vols escoltar el teu cos.</strong><p>Et fan soroll els missatges ràpids sobre salut i sexualitat femenines.</p></div>
-                <div className="mini"><strong>Vols compartir-te amb honestedat amb tu</strong><p>Tens ganes d'escoltar altres dones i parlar dels temes que ens cuiden des d'un lloc diferent al que probablement sents al teu voltant.</p></div>
               </div>
+            </div>
+            {/* Bottom 2 cards */}
+            <div className="split" style={{ marginTop: "1.1rem" }}>
+              <div className="mini"><strong>Vols escoltar el teu cos.</strong><p>Et fan soroll els missatges ràpids sobre salut i sexualitat femenines.</p></div>
+              <div className="mini"><strong>Vols compartir-te amb honestedat amb tu</strong><p>Tens ganes d'escoltar altres dones i parlar dels temes que ens cuiden des d'un lloc diferent al que probablement sents al teu voltant.</p></div>
             </div>
           </div>
         </section>
