@@ -500,7 +500,7 @@ function RetirPage() {
               </div>
             </div>
             <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. <strong>Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</strong></p>
-            <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. I des d&apos;aquí, ja no hi ha volta enrere. <strong>Tu tries des d&apos;on continuar vivint la teva vida.</strong></p>
+            <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. <strong>I des d&apos;aquí, puguis decidir amb coherència, claredat i certesa.</strong></p>
           </div>
         </section>
 
@@ -513,7 +513,7 @@ function RetirPage() {
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
               <li>Recordaràs <strong>on habita la teva energia femenina</strong> i com mantenir-la <strong>desperta i vital</strong></li>
               <li>Et sentiràs <strong>calmada, lleugera, clara, connectada</strong> amb el teu plaer i la teva matriu</li>
-              <li>Sabràs <strong>què fer si tornes a perdre&apos;t</strong> en el camí</li>
+              <li>Tornaràs a connectar amb el teu <strong>cos territori</strong> per començar a habitar la teva matriu, (re)connectant amb el teu cicle, tant si encara menstrues com si no</li>
               <li>Tornaràs a habitar la teva matriu, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, <strong>tant si encara menstrues com si no</strong></li>
               <li>Coneixeràs i hauràs provat algunes de les <strong>medicines naturals i ancestrals</strong> que han usat les dones en diferents tradicions mil·lenàries</li>
             </ul>
@@ -571,6 +571,14 @@ function RetirPage() {
                 <summary>Tinc dubtes sobre si aquest retir és per mi.</summary>
                 <div className="faq-body">
                   <p>Contacta&apos;m i valorem juntes el teu cas.</p>
+                  <p style={{ marginTop: "1rem" }}>
+                    <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra" style={{ fontSize: "clamp(.95rem, 1.8vw, 1.05rem)" }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.2rem", height: "1.2rem", flexShrink: 0 }} aria-hidden="true">
+                        <path d="M19.05 4.91A10 10 0 0 0 12 2a10 10 0 0 0-8.66 15l-1.3 4.74 4.86-1.27A10 10 0 1 0 19.05 4.91Zm-7.05 15.4a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.88.75.77-2.81-.2-.31A8.31 8.31 0 1 1 20.3 12a8.34 8.34 0 0 1-8.3 8.31Zm4.55-6.22c-.25-.13-1.48-.73-1.71-.81s-.4-.13-.56.13-.65.81-.79.97-.29.18-.54.06a6.78 6.78 0 0 1-2-1.23 7.56 7.56 0 0 1-1.4-1.74c-.14-.25 0-.38.11-.51s.25-.29.37-.43a1.62 1.62 0 0 0 .25-.41.46.46 0 0 0 0-.44c-.06-.13-.56-1.34-.76-1.83s-.4-.42-.56-.43h-.48a.93.93 0 0 0-.67.31 2.81 2.81 0 0 0-.88 2.1 4.91 4.91 0 0 0 1 2.59 11.16 11.16 0 0 0 4.27 3.77 14.43 14.43 0 0 0 1.42.52 3.43 3.43 0 0 0 1.57.1 2.58 2.58 0 0 0 1.69-1.19 2.1 2.1 0 0 0 .14-1.19c-.06-.1-.22-.16-.47-.28Z"/>
+                      </svg>
+                      Escriu-me per WhatsApp
+                    </a>
+                  </p>
                 </div>
               </details>
               <details className="faq-item">
