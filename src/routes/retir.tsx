@@ -253,6 +253,10 @@ const testimonialsData = [
     name: "Montserrat, G. @alquimiafemenina.espaidona",
   },
   {
+    text: "Vaig participar en el retir \"El foc de les Dones\" i l'acompanyament de la Gavina va ser molt bonic. Em va fer connectar amb el cos i treballar les creences limitants, sortir del soroll de la ment i per mi va ser molt alliberador. I fer-ho amb una tribu de dones és una experiència molt més potent. Molt recomanable per a totes les dones en qualsevol edat i etapa de la seva vida.",
+    name: "Pilar, A.",
+  },
+  {
     text: "Vaig conèixer la Gavina per primera vegada al retir Haseya, on era una de les facilitadores. Amb la seva manera d'acompanyar-nos, aconseguia crear espais on les dones ens sentíem segures per mostrar-nos tal com érem. Ens ajudava a conèixer millor el nostre cos, a escoltar les nostres necessitats i a guanyar confiança tant en nosaltres mateixes com en el grup. Aquella experiència va ser tan enriquidora que, l'any següent, vaig decidir repetir i participar en el retir El Foc de les Dones. Entre cants, temazcal i danses, vam aprofundir en diferents aspectes relacionats amb el climateri, el plaer i la Ira Sagrada. Van ser vivències que em van permetre connectar amb mi mateixa i amb altres dones des d'un lloc més sincer, lliure i conscient. Guardo aquests espais amb molta estima, perquè em van oferir eines, aprenentatges i moments compartits que encara avui continuen formant part del meu camí.",
     name: "Ruth, A.",
   },
