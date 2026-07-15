@@ -253,7 +253,7 @@ const testimonialsData = [
     name: "Montserrat, G. @alquimiafemenina.espaidona",
   },
   {
-    text: "Vaig participar en el retir \"El foc de les Dones\" i l'acompanyament de la Gavina va ser molt bonic. Em va fer connectar amb el cos i treballar les creences limitants, sortir del soroll de la ment i per mi va ser molt alliberador. I fer-ho amb una tribu de dones és una experiència molt més potent. Molt recomanable per a totes les dones en qualsevol edat i etapa de la seva vida.",
+    text: "Vaig participar en el retir \"El foc de les Dones\" i l'acompanyament de la Gavina va ser molt bonic. Ens va fer connectar amb el cos i treballar les creences limitants, sortir del soroll de la ment i per mi va ser molt alliberador. I fer-ho amb una tribu de dones és una experiència molt més potent. Molt recomanable per a totes les dones en qualsevol edat i etapa de la seva vida.",
     name: "Pilar, A.",
   },
   {
