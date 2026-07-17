@@ -473,7 +473,7 @@ function RetirPage() {
               <ul className="bullets" style={{ marginTop: ".8rem" }}>
                 <li>La sessió d&apos;1h30min online uns dies previs al retir: <em>&ldquo;Òrgans femenins i els 5 imprescindibles per cuidar la nostra matriu&rdquo;</em></li>
                 <li>El meu acompanyament en el retir</li>
-                <li>Una sessió a Matrius en Cercle per continuar profunditzant en la dona que ets avui</li>
+                <li>La sessió en directe d&apos;octubre (dimecres 28, de 17.45 a 19.15 h) a Matrius en Cercle per continuar profunditzant en la dona que ets avui</li>
               </ul>
               <p className="price-note" style={{ marginTop: "1.6rem" }}>* El dinar no està inclòs. Cal que portis el teu dinar i també alguna cosa lleugera per picar a mig matí.</p>
               <p className="price-note">* No podrem escalfar menjar ni podrem sortir de l&apos;espai per anar a comprar res.</p>
