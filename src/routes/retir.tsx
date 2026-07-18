@@ -260,6 +260,10 @@ const testimonialsData = [
     text: "Vaig conèixer la Gavina per primera vegada al retir Haseya, on era una de les facilitadores. Amb la seva manera d'acompanyar-nos, aconseguia crear espais on les dones ens sentíem segures per mostrar-nos tal com érem. Ens ajudava a conèixer millor el nostre cos, a escoltar les nostres necessitats i a guanyar confiança tant en nosaltres mateixes com en el grup. Aquella experiència va ser tan enriquidora que, l'any següent, vaig decidir repetir i participar en el retir El Foc de les Dones. Entre cants, temazcal i danses, vam aprofundir en diferents aspectes relacionats amb el climateri, el plaer i la Ira Sagrada. Van ser vivències que em van permetre connectar amb mi mateixa i amb altres dones des d'un lloc més sincer, lliure i conscient. Guardo aquests espais amb molta estima, perquè em van oferir eines, aprenentatges i moments compartits que encara avui continuen formant part del meu camí.",
     name: "Ruth, A.",
   },
+  {
+    text: "En els espais que la Gavina organitza, ho fa amb molt mimo i cura, cada detall en l'arribada i durant les diferents activitats. La seva escolta, la seva entrega, el respecte pels diferents ritmes aporta escolta, tacte, carinyo en el seu acompanyament. Recordo que tant les meditacions per connectar amb l'úter com el moviment corporal en grup per mi va ser molt alliberador. La Gavina és d'aquestes dones amb una sensibilitat, un sosté i una fortalesa que ajuden a transitar els moviments emocionals que emergeixen. Gràcies, gràcies, gràcies, Gavina!!",
+    name: "Montse, P.",
+  },
 ];
 
 function TestimonialCarousel() {
