@@ -593,7 +593,7 @@ function RetirPage() {
               <details className="faq-item">
                 <summary>M&apos;atrau la proposta, però em tira enrera fer-la en grup</summary>
                 <div className="faq-body">
-                  <p>Contacta&apos;m.</p>
+                  <p>Contacta&apos;m i en parlem.</p>
                   <p style={{ marginTop: "1rem" }}>
                     <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra" style={{ fontSize: "clamp(.95rem, 1.8vw, 1.05rem)" }}>
                       <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.2rem", height: "1.2rem", flexShrink: 0 }} aria-hidden="true">
