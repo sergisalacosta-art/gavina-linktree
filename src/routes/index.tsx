@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/gavina-hero.jpg";
-import portraitImage from "@/assets/gavina-portrait.jpg";
 import logoImage from "@/assets/gavina-logo.png";
 
 export const Route = createFileRoute("/")({
@@ -115,34 +114,187 @@ function Index() {
         </section>
 
         {/* INTRO */}
-        <section className="mx-auto max-w-5xl px-6 pt-4 pb-12 sm:pt-8 sm:pb-16">
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[260px_1fr] md:gap-12">
-            <div className="flex flex-col items-center">
-              <div className="relative">
-                <img
-                  src={portraitImage}
-                  alt="Retrat de la Gavina"
-                  className="h-44 w-44 rounded-full object-cover object-[center_25%] shadow-md ring-1 ring-[#d8c4b3] sm:h-52 sm:w-52"
-                />
-              </div>
-              <p className="mt-4 text-center text-2xl italic text-[#6b5347]">
-                Soc la Gavina
-              </p>
+        <section className="mx-auto max-w-7xl px-4 sm:px-8 pt-6 pb-12 sm:pt-10 sm:pb-16">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "clamp(260px, 36%, 430px) 1fr",
+              gap: "clamp(2rem, 5vw, 5rem)",
+              alignItems: "start",
+            }}
+          >
+            {/* Photo */}
+            <div
+              className="overflow-hidden rounded-2xl"
+              style={{ boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}
+            >
+              <img
+                src="/gavina-plantes.jpg"
+                alt="La Gavina"
+                style={{
+                  width: "100%",
+                  display: "block",
+                  objectFit: "cover",
+                  aspectRatio: "3/4",
+                  objectPosition: "center top",
+                }}
+              />
             </div>
 
-            <div className="space-y-5 text-[1.15rem] leading-relaxed sm:text-[1.2rem]">
-              <p>
-                T'acompanyo a <strong className="font-semibold">cuidar i transformar la teva salut femenina</strong> a partir de <strong className="font-semibold">rutines d'autocura conscients i pautes de prevenció reals, respectuoses i naturals, lluny de fàrmacs i intervencions quirúrgiques</strong>.
+            {/* Text content */}
+            <div
+              style={{
+                display: "grid",
+                gap: "1.4rem",
+                fontSize: "clamp(1rem, 1.7vw, 1.15rem)",
+                lineHeight: 1.7,
+                color: "#2b2925",
+              }}
+            >
+              <h2
+                className="font-serif"
+                style={{
+                  fontSize: "clamp(1.45rem, 3vw, 2rem)",
+                  color: "#6b5347",
+                  fontWeight: 700,
+                  lineHeight: 1.25,
+                  margin: 0,
+                }}
+              >
+                Soc la Gavina.{" "}
+                <em>Vetlladora del batec de les matrius.</em>
+              </h2>
+
+              <p
+                className="font-serif"
+                style={{
+                  fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)",
+                  color: "#8a4b34",
+                  fontWeight: 700,
+                  margin: 0,
+                }}
+              >
+                T&apos;acompanyo a{" "}
+                <span
+                  style={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#c89684",
+                    textDecorationThickness: "3px",
+                    textUnderlineOffset: "6px",
+                  }}
+                >
+                  HABITAR LA TEVA MATRIU
+                </span>
+                .
               </p>
-              <p>
-                La meva missió és ajudar-te a integrar nous hàbits en el teu dia a dia com a base sòlida per connectar amb el teu cos. <strong className="font-semibold">Juntes, adaptarem aquestes pràctiques segons les teves necessitats i el moment vital en què et trobis:</strong> <em>Alimentació regenerativa, Desparasitació amb plantes, Moviment pelvicuterí, Vapors pelvicovaginals, Massatge de matriu, Automassatge de pits…</em>
+
+              <p style={{ margin: 0 }}>
+                Un camí per recordar la saviesa i el poder que hi habiten.
               </p>
-              <p>
-                <strong className="font-semibold">Si estàs disposada a comprometre't amb tu, et guio en aquest camí de transformació amorosa cap a tu.</strong>
-              </p>
-              <p>
-                Trobaràs el meu suport de diferents maneres:
-              </p>
+
+              <div>
+                <p style={{ fontWeight: 600, color: "#6b5347", margin: 0 }}>
+                  Perquè puguis…
+                </p>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: ".75rem 0 0",
+                    display: "grid",
+                    gap: ".55rem",
+                  }}
+                >
+                  {[
+                    "Viure en coherència amb la dona que ets avui.",
+                    "Cuidar la teva salut femenina i cultivar la prevenció.",
+                    "Recuperar la sobirania sobre el teu cos, la teva sexualitat i el teu plaer.",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      style={{ display: "flex", alignItems: "flex-start", gap: ".6rem" }}
+                    >
+                      <span
+                        style={{
+                          color: "#c89684",
+                          fontWeight: 700,
+                          flexShrink: 0,
+                          marginTop: ".15em",
+                        }}
+                      >
+                        ✦
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div style={{ display: "grid", gap: ".35rem" }}>
+                {[
+                  ["Un camí de ", "VERITAT"],
+                  ["Un camí de ", "SALUT"],
+                  ["Un camí d’", "EMPODERAMENT"],
+                ].map(([pre, word]) => (
+                  <p
+                    key={word}
+                    className="font-serif"
+                    style={{
+                      fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)",
+                      color: "#6b5347",
+                      fontWeight: 700,
+                      margin: 0,
+                    }}
+                  >
+                    {pre}
+                    <span
+                      style={{
+                        background: "#f4ead7",
+                        padding: ".08em .45em",
+                        borderRadius: ".3rem",
+                      }}
+                    >
+                      {word}
+                    </span>
+                  </p>
+                ))}
+              </div>
+
+              <div
+                style={{
+                  borderTop: "1.5px solid rgba(200,150,132,.3)",
+                  paddingTop: "1.5rem",
+                  display: "grid",
+                  gap: ".9rem",
+                }}
+              >
+                <p
+                  className="font-serif"
+                  style={{
+                    fontSize: "clamp(1.05rem, 1.8vw, 1.25rem)",
+                    color: "#6b5347",
+                    fontWeight: 700,
+                    fontStyle: "italic",
+                    margin: 0,
+                  }}
+                >
+                  Em presento breument...
+                </p>
+                <p style={{ margin: 0 }}>
+                  El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada. La maternitat em va portar a revisar la meva història, especialment la relació amb mi mateixa, amb la meva feminitat i la meva sexualitat.
+                </p>
+                <p style={{ margin: 0 }}>
+                  Des d&apos;aleshores he recorregut un camí de recerca, aprenentatge i transformació, formant-me en tot allò que ha ressonat amb mi i que m&apos;ha ajudat a tornar al meu cos i a la meva saviesa. Un camí que continuo explorant cada dia.
+                </p>
+                <p style={{ margin: 0 }}>
+                  Avui poso aquesta experiència al servei d&apos;altres dones, acompanyant-les a recordar el poder que sempre ha habitat en les seves matrius.
+                </p>
+                <p style={{ margin: 0 }}>
+                  <strong className="font-semibold">
+                    Si estàs disposada a comprometre&apos;t amb tu, et guio en aquest camí de recordar la dona sàvia i poderosa que ets.
+                  </strong>
+                </p>
+              </div>
             </div>
           </div>
         </section>
