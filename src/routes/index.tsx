@@ -260,42 +260,48 @@ function Index() {
                 ))}
               </div>
 
-              <div
-                style={{
-                  borderTop: "1.5px solid rgba(200,150,132,.3)",
-                  paddingTop: "1.5rem",
-                  display: "grid",
-                  gap: ".9rem",
-                }}
-              >
-                <p
-                  className="font-serif"
-                  style={{
-                    fontSize: "clamp(1.05rem, 1.8vw, 1.25rem)",
-                    color: "#6b5347",
-                    fontWeight: 700,
-                    fontStyle: "italic",
-                    margin: 0,
-                  }}
-                >
-                  Em presento breument...
-                </p>
-                <p style={{ margin: 0 }}>
-                  El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada. La maternitat em va portar a revisar la meva història, especialment la relació amb mi mateixa, amb la meva feminitat i la meva sexualitat.
-                </p>
-                <p style={{ margin: 0 }}>
-                  Des d&apos;aleshores he recorregut un camí de recerca, aprenentatge i transformació, formant-me en tot allò que ha ressonat amb mi i que m&apos;ha ajudat a tornar al meu cos i a la meva saviesa. Un camí que continuo explorant cada dia.
-                </p>
-                <p style={{ margin: 0 }}>
-                  Avui poso aquesta experiència al servei d&apos;altres dones, acompanyant-les a recordar el poder que sempre ha habitat en les seves matrius.
-                </p>
-                <p style={{ margin: 0 }}>
-                  <strong className="font-semibold">
-                    Si estàs disposada a comprometre&apos;t amb tu, et guio en aquest camí de recordar la dona sàvia i poderosa que ets.
-                  </strong>
-                </p>
-              </div>
             </div>
+          </div>
+
+          {/* Bio — full width below the photo+text grid */}
+          <div
+            style={{
+              borderTop: "1.5px solid rgba(200,150,132,.3)",
+              marginTop: "2.5rem",
+              paddingTop: "1.8rem",
+              display: "grid",
+              gap: ".9rem",
+              fontSize: "clamp(1rem, 1.7vw, 1.15rem)",
+              lineHeight: 1.7,
+              color: "#2b2925",
+            }}
+          >
+            <p
+              className="font-serif"
+              style={{
+                fontSize: "clamp(1.05rem, 1.8vw, 1.25rem)",
+                color: "#6b5347",
+                fontWeight: 700,
+                fontStyle: "italic",
+                margin: 0,
+              }}
+            >
+              Em presento breument...
+            </p>
+            <p style={{ margin: 0 }}>
+              El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada. La maternitat em va portar a revisar la meva història, especialment la relació amb mi mateixa, amb la meva feminitat i la meva sexualitat.
+            </p>
+            <p style={{ margin: 0 }}>
+              Des d&apos;aleshores he recorregut un camí de recerca, aprenentatge i transformació, formant-me en tot allò que ha ressonat amb mi i que m&apos;ha ajudat a tornar al meu cos i a la meva saviesa. Un camí que continuo explorant cada dia.
+            </p>
+            <p style={{ margin: 0 }}>
+              Avui poso aquesta experiència al servei d&apos;altres dones, acompanyant-les a recordar el poder que sempre ha habitat en les seves matrius.
+            </p>
+            <p style={{ margin: 0 }}>
+              <strong className="font-semibold">
+                Si estàs disposada a comprometre&apos;t amb tu, et guio en aquest camí de recordar la dona sàvia i poderosa que ets.
+              </strong>
+            </p>
           </div>
         </section>
 
