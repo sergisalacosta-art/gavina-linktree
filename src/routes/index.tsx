@@ -129,7 +129,7 @@ function Index() {
               style={{ boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}
             >
               <img
-                src="/gavina-plantes.jpg"
+                src="/gavina%20planta.jpg"
                 alt="La Gavina"
                 style={{
                   width: "100%",
