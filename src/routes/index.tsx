@@ -201,7 +201,7 @@ function Index() {
                 <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>SAVIESA</span>
                 {" "}i el{" "}
                 <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>PODER</span>
-                {" "}que hi habiten.
+                <br />que hi habiten.
               </p>
 
               <div>
