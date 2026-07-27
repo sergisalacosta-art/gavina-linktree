@@ -161,7 +161,7 @@ function Index() {
                   margin: 0,
                 }}
               >
-                Soc la Gavina.{" "}
+                Soc la Gavina.<br />
                 <em>Vetlladora del batec de les matrius.</em>
               </h2>
 
@@ -188,8 +188,20 @@ function Index() {
                 .
               </p>
 
-              <p style={{ margin: 0 }}>
-                Un camí per recordar la saviesa i el poder que hi habiten.
+              <p
+                className="font-serif"
+                style={{
+                  fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)",
+                  color: "#8a4b34",
+                  fontWeight: 700,
+                  margin: 0,
+                }}
+              >
+                Un camí per recordar la{" "}
+                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>SAVIESA</span>
+                {" "}i el{" "}
+                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>PODER</span>
+                {" "}que hi habiten.
               </p>
 
               <div>
@@ -249,7 +261,8 @@ function Index() {
                     {pre}
                     <span
                       style={{
-                        background: "#f4ead7",
+                        background: "#8a4b34",
+                        color: "white",
                         padding: ".08em .45em",
                         borderRadius: ".3rem",
                       }}
@@ -279,8 +292,8 @@ function Index() {
             <p
               className="font-serif"
               style={{
-                fontSize: "clamp(1.05rem, 1.8vw, 1.25rem)",
-                color: "#6b5347",
+                fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)",
+                color: "#8a4b34",
                 fontWeight: 700,
                 fontStyle: "italic",
                 margin: 0,
@@ -301,6 +314,18 @@ function Index() {
               <strong className="font-semibold">
                 Si estàs disposada a comprometre&apos;t amb tu, et guio en aquest camí de recordar la dona sàvia i poderosa que ets.
               </strong>
+            </p>
+            <p
+              className="font-serif"
+              style={{
+                fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)",
+                color: "#8a4b34",
+                fontWeight: 700,
+                textAlign: "center",
+                marginTop: ".8rem",
+              }}
+            >
+              Aquestes són les diferents formes com et puc acompanyar avui:
             </p>
           </div>
         </section>
