@@ -246,7 +246,7 @@ function Index() {
                 {[
                   ["Un camí de ", "VERITAT"],
                   ["Un camí de ", "SALUT"],
-                  ["Un camí d’", "EMPODERAMENT"],
+                  ["Un camí de ", "SOBIRANIA"],
                 ].map(([pre, word]) => (
                   <p
                     key={word}
