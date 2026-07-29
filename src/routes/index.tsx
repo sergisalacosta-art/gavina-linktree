@@ -125,10 +125,9 @@ function Index() {
               marginTop: "1.8rem",
             }}
           >
-            Per a qualsevol consulta, mentrestant, em podeu contactar al{" "}
+            Per a qualsevol consulta, mentrestant, em podeu contactar al<br />
             <a href="tel:+34616351534" style={{ fontWeight: 700, color: "#8a4b34", textDecoration: "none" }}>616 351 534</a>.<br />
-            Bon agost!<br />
-            <em>Gavina</em>
+            Bon agost!
           </p>
           <div style={{ marginTop: "2.5rem", height: "1px", width: "80px", background: "rgba(200,150,132,.45)" }} />
           <p style={{ marginTop: "1.5rem", fontSize: ".9rem", color: "#a08070", letterSpacing: ".05em" }}>
