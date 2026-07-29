@@ -115,6 +115,21 @@ function Index() {
           >
             Estic actualitzant els serveis per oferir la meva més polida versió avui. Tingueu paciència. Al llarg de l&apos;agost podreu consultar-ho tot&nbsp;;)
           </p>
+          <p
+            className="font-serif"
+            style={{
+              fontSize: "clamp(1rem, 2.2vw, 1.3rem)",
+              color: "#6b5347",
+              lineHeight: 1.7,
+              maxWidth: "600px",
+              marginTop: "1.8rem",
+            }}
+          >
+            Per a qualsevol consulta, mentrestant, em podeu contactar al{" "}
+            <a href="tel:+34616351534" style={{ fontWeight: 700, color: "#8a4b34", textDecoration: "none" }}>616 351 534</a>.<br />
+            Bon agost!<br />
+            <em>Gavina</em>
+          </p>
           <div style={{ marginTop: "2.5rem", height: "1px", width: "80px", background: "rgba(200,150,132,.45)" }} />
           <p style={{ marginTop: "1.5rem", fontSize: ".9rem", color: "#a08070", letterSpacing: ".05em" }}>
             Gavina Freixa Rius · Salut Cíclica Femenina
