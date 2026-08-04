@@ -66,7 +66,7 @@ const css = `
   .rt .hero-inner{
     width:min(var(--max), calc(100% - 40px));
     margin:0 auto;
-    padding:7rem 0 5.5rem;
+    padding:2.5rem 0 5.5rem;
     position:relative;
     z-index:1;
   }
