@@ -146,7 +146,7 @@ const css = `
   .rt p{margin:.75rem 0 0; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
   .rt p:first-child{margin-top:0}
   .rt .lead{font-size:clamp(1.05rem, 1.8vw, 1.3rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif;}
-  .rt strong{font-weight:800; color:#1f1d1a}
+  .rt strong{font-weight:800; color:#6b5347}
 
   .rt .bullets{list-style:none; padding:0; margin:1.2rem 0 0; display:grid; gap:.9rem;}
   .rt .bullets li{position:relative; padding-left:1.45rem; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
@@ -355,9 +355,9 @@ function RetirPage() {
                 ))}
               </ul>
               <p style={{ marginTop: "1.2rem" }}>Un dia per recordar-nos que quan <strong style={{ color: "var(--terra)" }}>HABITEM</strong> la nostra matriu, ens podem</p>
-              <p style={{ fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4, fontStyle: "normal", marginTop: ".3rem" }}>GESTAR,<br />NODRIR,<br />PARIR</p>
+              <p style={{ fontWeight: 700, color: "var(--terra)", lineHeight: 1.4, marginTop: ".3rem" }}>GESTAR,<br />NODRIR,<br />PARIR</p>
               <p style={{ marginTop: ".3rem" }}>tantes vegades com necessitem.</p>
-              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontStyle: "normal" }}>
+              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
                 No és només un dia per conèixer noves eines.<br />
                 És un dia per obrir un espai d&apos;escolta, presència i reconnexió amb la teva matriu.
               </p>
@@ -390,7 +390,7 @@ function RetirPage() {
                   </li>
                 ))}
               </ul>
-              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
                 Durant aquest dia no només parlarem de salut femenina.<br />
                 És un dia per sentir, experimentar i començar a habitar la teva matriu.
               </p>
@@ -546,7 +546,7 @@ function RetirPage() {
             <div className="soft-img" style={{ marginTop: "2.2rem", height: "460px" }}>
               <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset", objectPosition: "center top" }} />
             </div>
-            <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+            <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
               Aquest retir és una invitació a reconnectar amb una saviesa que ja habita en tu.<br />
               És un dia per reconnectar amb la saviesa que habita en la teva matriu.
             </p>
@@ -651,7 +651,7 @@ function RetirPage() {
                 Si sents la crida de tornar al teu cos, <span className="em-sub">reconnectar amb la teva matriu i recordar la saviesa que hi habita</span>...
               </h2>
               <p style={{ marginTop: "1.4rem", fontSize: "clamp(1.1rem, 2.4vw, 1.7rem)", fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 700, lineHeight: 1.4 }}>
-                Et convido a regalar-te un dia per parar, sentir i comen&ccedil;ar a habitar la teva matriu.
+                Et convido a regalar-te un dia per parar, sentir<br />i comen&ccedil;ar a habitar la teva matriu.
               </p>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
