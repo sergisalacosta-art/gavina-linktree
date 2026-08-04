@@ -96,7 +96,6 @@ const css = `
   .rt .hero-sub{
     margin:.9rem 0 0;
     font-family:Georgia, "Times New Roman", serif;
-    font-style:italic;
     font-size:clamp(0.95rem, 2.5vw, 2rem);
     color:rgba(255,255,255,.92);
     font-weight:400;
@@ -175,12 +174,12 @@ const css = `
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
 
   /* INVERSIÓ */
-  .rt .destacat{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-style:italic;}
+  .rt .destacat{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:1.6rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
   .rt .destacat p{color:var(--terra-fosc); font-size:inherit; line-height:inherit; font-family:inherit; margin-top:.6rem;}
   .rt .com-ho-farem{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:2.2rem;}
   .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #fceae3 0%, #fef5f1 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
   .rt .price-number{font-family:Georgia, "Times New Roman", serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
-  .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); font-style:italic; margin:.5rem 0 0;}
+  .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); margin:.5rem 0 0;}
 
   /* CTA */
   .rt .cta-block{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(160,115,90,.22);}
@@ -191,7 +190,7 @@ const css = `
   .rt .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
   .rt .testi-track{flex:1; overflow:hidden;}
   .rt .testi-card{background:#fffdf8; border-radius:1.7rem; padding:2rem 2.2rem; box-shadow:0 4px 20px -8px rgba(90,40,20,.1); border:1px solid rgba(138,75,52,.1);}
-  .rt .testi-card p{font-size:clamp(1.05rem, 1.8vw, 1.3rem); color:#6b5347; line-height:1.72; font-style:italic; margin-bottom:1rem; font-family:Georgia,"Times New Roman",serif;}
+  .rt .testi-card p{font-size:clamp(1.05rem, 1.8vw, 1.3rem); color:#6b5347; line-height:1.72; margin-bottom:1rem; font-family:Georgia,"Times New Roman",serif;}
   .rt .testi-card cite{font-style:normal; font-weight:800; font-size:.88rem; color:var(--terra);}
   .rt .testi-arrow{flex-shrink:0; width:2.6rem; height:2.6rem; border-radius:50%; border:none; background:var(--terra); color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .15s;}
   .rt .testi-arrow:hover{background:var(--terra-fosc); transform:scale(1.08);}
@@ -340,8 +339,8 @@ function RetirPage() {
                 i de la saviesa que habita en la nostra matriu.
               </p>
             </div>
-            <div className="destacat" style={{ fontStyle: "normal", marginTop: "1.8rem" }}>
-              <p style={{ fontWeight: 700, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", margin: 0 }}>Aquest retir és una invitació a parar, respirar i escoltar el teu cos i especialment la teva matriu per:</p>
+            <div className="destacat" style={{ marginTop: "1.8rem" }}>
+              <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0 }}>Aquest retir és una invitació a parar, respirar i escoltar el teu cos i especialment la teva matriu per:</p>
               <ul style={{ listStyle: "none", padding: 0, margin: ".9rem 0 0", display: "grid", gap: ".75rem" }}>
                 {[
                   "Començar a posar consciència en la teva salut femenina des de la mirada de la matriu.",
@@ -349,15 +348,15 @@ function RetirPage() {
                   "Nodrir i despertar la relació amb la teva matriu amb consciència i presència.",
                   "Compartir un espai de confiança amb altres dones, recordant la força i la saviesa que emergeixen quan ens sostenim juntes.",
                 ].map((item) => (
-                  <li key={item} style={{ fontStyle: "italic", display: "flex", alignItems: "flex-start", gap: ".5rem" }}>
+                  <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".5rem" }}>
                     <span style={{ flexShrink: 0 }}>🌿</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-              <p style={{ fontStyle: "italic", marginTop: "1.2rem" }}>Un dia per recordar-nos que quan <strong style={{ fontStyle: "normal", color: "var(--terra)" }}>HABITEM</strong> la nostra matriu, ens podem</p>
+              <p style={{ marginTop: "1.2rem" }}>Un dia per recordar-nos que quan <strong style={{ color: "var(--terra)" }}>HABITEM</strong> la nostra matriu, ens podem</p>
               <p style={{ fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4, fontStyle: "normal", marginTop: ".3rem" }}>GESTAR,<br />NODRIR,<br />PARIR</p>
-              <p style={{ fontStyle: "italic", marginTop: ".3rem" }}>tantes vegades com necessitem.</p>
+              <p style={{ marginTop: ".3rem" }}>tantes vegades com necessitem.</p>
               <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontStyle: "normal" }}>
                 No és només un dia per conèixer noves eines.<br />
                 És un dia per obrir un espai d&apos;escolta, presència i reconnexió amb la teva matriu.
@@ -378,7 +377,7 @@ function RetirPage() {
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
               <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, margin: "0 0 1rem" }}>Com ho farem?</p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: ".75rem", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontStyle: "italic", color: "var(--terra-fosc)" }}>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: ".75rem", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "var(--terra-fosc)" }}>
                 {[
                   "Escoltaràs la teva matriu. A través del contacte i la meditació guiada.",
                   "L'hi donaràs moviment i veu. Amb pràctica pelvicuterina, respiració i veu.",
@@ -465,7 +464,7 @@ function RetirPage() {
                 <span className="timeline-time">10h – 14h</span>
                 <div>
                   <p className="timeline-desc">Sentir, despertar i activar la matriu. Moviment pelvicuterí i veu. Nutrició per a la matriu. Cataplasmes amb plantes. Meditació uterina.</p>
-                  <p className="timeline-desc" style={{ marginTop: ".5rem" }}><em>Pausa breu a mig matí amb infusions medicinals.</em></p>
+                  <p className="timeline-desc" style={{ marginTop: ".5rem" }}>Pausa breu a mig matí amb infusions medicinals.</p>
                 </div>
               </div>
               <div className="timeline-item">
@@ -499,7 +498,7 @@ function RetirPage() {
               <p className="price-number">120€</p>
               <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.4rem" }}>Inclou:</p>
               <ul className="bullets" style={{ marginTop: ".8rem" }}>
-                <li>La sessió d&apos;1h30min online uns dies previs al retir: <em>&ldquo;Òrgans femenins i els 5 imprescindibles per cuidar la nostra matriu&rdquo;</em></li>
+                <li>La sessió d&apos;1h30min online uns dies previs al retir: &ldquo;Òrgans femenins i els 5 imprescindibles per cuidar la nostra matriu&rdquo;</li>
                 <li>El meu acompanyament en el retir</li>
                 <li>La sessió en directe d&apos;octubre (dimecres 28, de 17.45 a 19.15 h) a Matrius en Cercle per continuar profunditzant en la dona que ets avui</li>
               </ul>
@@ -648,10 +647,12 @@ function RetirPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3 }}>
-                Si sents la crida de tornar al teu cos, <span className="em-sub">reconnectar amb la teva matriu i recordar la saviesa que hi habita</span>...<br />
-                Et convido a regalar-te un dia per parar, sentir i comen&ccedil;ar a habitar la teva matriu.
+              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0 }}>
+                Si sents la crida de tornar al teu cos, <span className="em-sub">reconnectar amb la teva matriu i recordar la saviesa que hi habita</span>...
               </h2>
+              <p style={{ marginTop: "1.4rem", fontSize: "clamp(1.1rem, 2.4vw, 1.7rem)", fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 700, lineHeight: 1.4 }}>
+                Et convido a regalar-te un dia per parar, sentir i comen&ccedil;ar a habitar la teva matriu.
+              </p>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   Vull viure aquesta experi&egrave;ncia
