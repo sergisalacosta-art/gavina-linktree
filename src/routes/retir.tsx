@@ -38,7 +38,7 @@ const css = `
     min-height:82vh;
     position:relative;
     display:grid;
-    align-items:end;
+    align-items:start;
     background:
       linear-gradient(90deg, rgba(80,42,16,.38), rgba(150,95,35,.04) 55%, rgba(60,32,10,.18)),
       url("/retir/assets/retir%201.jpg") 20% top / cover no-repeat;
