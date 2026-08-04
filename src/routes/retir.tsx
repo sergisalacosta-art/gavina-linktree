@@ -143,13 +143,13 @@ const css = `
   .rt h2{font-family:Georgia,"Times New Roman",serif; font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; font-weight:700; line-height:1.06; margin:0 0 1rem;}
   .rt .grid-2-img{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2rem;}
   .rt h3{font-size:clamp(1.1rem, 2vw, 1.55rem); color:var(--terra-fosc); margin-bottom:.7rem;}
-  .rt p{margin:.75rem 0 0; color:var(--muted); font-size:clamp(1.05rem, 1.8vw, 1.2rem); line-height:1.65;}
+  .rt p{margin:.75rem 0 0; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
   .rt p:first-child{margin-top:0}
-  .rt .lead{font-size:clamp(1.08rem, 2vw, 1.28rem); color:var(--muted);}
+  .rt .lead{font-size:clamp(1.05rem, 1.8vw, 1.3rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif;}
   .rt strong{font-weight:800; color:#1f1d1a}
 
   .rt .bullets{list-style:none; padding:0; margin:1.2rem 0 0; display:grid; gap:.9rem;}
-  .rt .bullets li{position:relative; padding-left:1.45rem; color:var(--muted); font-size:clamp(1.05rem, 1.8vw, 1.2rem); line-height:1.6;}
+  .rt .bullets li{position:relative; padding-left:1.45rem; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-weight:700;}
   .rt .bullets li:before{content:""; position:absolute; left:0; top:.75em; width:.45rem; height:.45rem; border-radius:50%; background:var(--terra);}
 
   .rt .grid-2{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr); gap:clamp(2rem,5vw,5rem); align-items:center;}
@@ -485,11 +485,6 @@ function RetirPage() {
                 <img src="/retir/assets/retir%204.jpg" alt="Dones compartint" loading="lazy" />
               </div>
             </div>
-            <div style={{ marginTop: "2rem", textAlign: "center" }}>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                NO M&apos;HO VULL PERDRE!
-              </a>
-            </div>
           </div>
         </section>
 
@@ -521,23 +516,18 @@ function RetirPage() {
                 <div className="section-title">
                   <h2>Qui t&apos;acompanyarà en aquesta experiència?</h2>
                 </div>
-                <p className="lead">Soc la Gavina i fa 7 anys que vaig començar a acompanyar dones en el seu procés de creixement de la mà de la maternitat en base a la teràpia Gestalt i la Ciclicitat i Sexualitat Femenines. Aquests espais es van anar transformant i ampliant en pro de la Salut Femenina, al costat de la Ginecologia Natural i Ancestral.</p>
-                <p className="lead" style={{ marginTop: ".8rem" }}>Amb aquest retir experimentaràs algunes de les medicines naturals que han ajudat a:</p>
-                <p style={{ marginTop: ".8rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>
-                  CONNECTAR,<br />
-                  NODRIR,<br />
-                  DESPERTAR,<br />
-                  ACTIVAR...
-                </p>
-                <p style={{ marginTop: ".4rem", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4 }}>les matrius de tantes dones.</p>
-                <p className="lead" style={{ marginTop: ".8rem" }}>I per tant, a <strong>SANAR-LES,</strong> a <strong>SANAR-NOS.</strong></p>
+                <p className="lead">Soc la Gavina i el meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
+                <p className="lead" style={{ marginTop: ".8rem" }}>La maternitat em va portar a mirar-me profundament i a revisar la relació amb el meu cos, la meva feminitat, la meva sexualitat i la meva matriu. Va ser l&apos;inici d&apos;un camí de recerca, transformació i retorn a mi mateixa que encara avui continuo recorrent.</p>
+                <p className="lead" style={{ marginTop: ".8rem" }}>Amb els anys he anat integrant diferents mirades i recursos que han donat forma a la meva manera d&apos;acompanyar: Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals.</p>
+                <p className="lead" style={{ marginTop: ".8rem" }}>Però sobretot, aquest camí m&apos;ha ensenyat que la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu.</p>
               </div>
               <div className="soft-img">
                 <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
               </div>
             </div>
-            <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament, perquè així ho he viscut al llarg dels anys, que part del procés de sanació passa per entregar-nos a espais com aquest, amb altres dones. El que passa quan ens ajuntem, no és el mateix que caminant soles ni fent acompanyaments individuals. <strong>Quan les dones ens ajuntem, arribem a nivells més profunds de sanació.</strong></p>
-            <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència, t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. <strong>I des d&apos;aquí, puguis decidir amb coherència, claredat i certesa.</strong></p>
+            <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament que hi ha processos que necessiten ser viscuts en companyia d&apos;altres dones. Perquè quan ens trobem, compartim i ens sostenim, alguna cosa profunda es transforma. No és el mateix caminar soles que habitar un espai on altres dones també estan escoltant-se, recordant-se i reconnectant amb elles mateixes.</p>
+            <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. Un espai intern des d&apos;on poder escoltar-te, prendre decisions més alineades amb tu i caminar amb més claredat i confiança.</p>
+            <p className="lead" style={{ marginTop: "1.2rem" }}>Aquest és el sentit d&apos;aquest retir: crear un espai segur i sostingut on puguis parar, sentir i recordar la saviesa que ja habita en tu.</p>
           </div>
         </section>
 
