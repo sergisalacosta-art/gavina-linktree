@@ -194,9 +194,12 @@ function Index() {
             {/* Text content */}
             <div style={{ display: "grid", gap: "1.4rem", fontSize: "clamp(1rem, 1.7vw, 1.15rem)", lineHeight: 1.7, color: "#2b2925" }}>
               <h2 className="font-serif" style={{ fontSize: "clamp(1.45rem, 3vw, 2rem)", color: "#6b5347", fontWeight: 700, lineHeight: 1.25, margin: 0 }}>
-                Soc la Gavina.<br />
-                <em>Vetlladora del batec de les matrius.</em>
+                Soc la Gavina i...
               </h2>
+
+              <p style={{ margin: 0 }}>
+                Reconec la saviesa i el poder que habiten en la matriu de cada dona.
+              </p>
 
               <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
                 T&apos;acompanyo a{" "}
@@ -205,16 +208,8 @@ function Index() {
                 </span>.
               </p>
 
-              <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
-                Un camí per recordar la{" "}
-                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>SAVIESA</span>
-                {" "}i el{" "}
-                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>PODER</span>
-                <br />que hi habiten.
-              </p>
-
               <div>
-                <p style={{ fontWeight: 600, color: "#6b5347", margin: 0 }}>Perquè puguis…</p>
+                <p style={{ fontWeight: 600, color: "#6b5347", margin: 0 }}>Un camí per recordar-te que pots...</p>
                 <ul style={{ listStyle: "none", padding: 0, margin: ".75rem 0 0", display: "grid", gap: ".55rem" }}>
                   {[
                     "Viure en coherència amb la dona que ets avui.",
@@ -232,7 +227,7 @@ function Index() {
               <div style={{ display: "grid", gap: ".35rem" }}>
                 {[["Un camí de ", "VERITAT"], ["Un camí de ", "SALUT"], ["Un camí de ", "SOBIRANIA"]].map(([pre, word]) => (
                   <p key={word} className="font-serif" style={{ fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
-                    {pre}<span style={{ background: "#8a4b34", color: "white", padding: ".08em .45em", borderRadius: ".3rem" }}>{word}</span>
+                    {pre}<span style={{ background: "#8a4b34", color: "white", padding: ".08em .45em", borderRadius: ".3rem" }}>{word}</span>.
                   </p>
                 ))}
               </div>
@@ -244,12 +239,15 @@ function Index() {
             <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, fontStyle: "italic", margin: 0 }}>
               Em presento breument...
             </p>
-            <p style={{ margin: 0 }}>El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada. La maternitat em va portar a revisar la meva història, especialment la relació amb mi mateixa, amb la meva feminitat i la meva sexualitat.</p>
-            <p style={{ margin: 0 }}>Des d&apos;aleshores he recorregut un camí de recerca, aprenentatge i transformació, formant-me en tot allò que ha ressonat amb mi i que m&apos;ha ajudat a tornar al meu cos i a la meva saviesa. Un camí que continuo explorant cada dia.</p>
-            <p style={{ margin: 0 }}>Avui poso aquesta experiència al servei d&apos;altres dones, acompanyant-les a recordar el poder que sempre ha habitat en les seves matrius.</p>
-            <p style={{ margin: 0 }}><strong className="font-semibold">Si estàs disposada a comprometre&apos;t amb tu, et guio en aquest camí de recordar la dona sàvia i poderosa que ets.</strong></p>
+            <p style={{ margin: 0 }}>El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
+            <p style={{ margin: 0 }}>La maternitat em va portar a revisar la relació amb mi mateixa, amb la meva feminitat, la meva sexualitat i la meva matriu. Va ser l&apos;inici d&apos;un camí profund de recerca, transformació i retorn al meu cos que encara avui continuo recorrent.</p>
+            <p style={{ margin: 0 }}>Amb els anys he descobert que la salut femenina no es transforma només incorporant recursos. Es transforma quan una dona recupera la relació amb el seu cos, amb la seva ciclicitat, amb la natura i amb la saviesa que habita en la seva matriu.</p>
+            <p style={{ margin: 0 }}>Aquesta és la mirada que sosté tot el que comparteixo.</p>
+            <p style={{ margin: 0 }}>Els recursos que t&apos;ofereixo —alimentació regenerativa, plantes, fitoginecologia, moviment pelvicuterí, consciència sobre la sexualitat i connexió amb la ciclicitat— no són la finalitat del camí. Són portes d&apos;entrada perquè puguis anar reconstruint, al teu ritme, una relació més conscient amb la teva matriu i amb tu mateixa.</p>
+            <p style={{ margin: 0 }}>Per mi, aquest és el veritable sentit d&apos;habitar la matriu.</p>
+            <p style={{ margin: 0 }}>I és des d&apos;aquest lloc que avui puc acompanyar-te.</p>
             <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, textAlign: "center", marginTop: ".8rem" }}>
-              Aquestes són les diferents formes com et puc acompanyar avui:
+              Aquestes són les diferents maneres com podem recórrer aquest camí juntes.
             </p>
           </div>
         </section>
