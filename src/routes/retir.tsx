@@ -143,13 +143,13 @@ const css = `
   .rt h2{font-family:Georgia,"Times New Roman",serif; font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; font-weight:700; line-height:1.06; margin:0 0 1rem;}
   .rt .grid-2-img{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2rem;}
   .rt h3{font-size:clamp(1.1rem, 2vw, 1.55rem); color:var(--terra-fosc); margin-bottom:.7rem;}
-  .rt p{margin:.75rem 0 0; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
+  .rt p{margin:.75rem 0 0; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
   .rt p:first-child{margin-top:0}
-  .rt .lead{font-size:clamp(1.05rem, 1.8vw, 1.3rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif;}
+  .rt .lead{font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif;}
   .rt strong{font-weight:800; color:#6b5347}
 
   .rt .bullets{list-style:none; padding:0; margin:1.2rem 0 0; display:grid; gap:.9rem;}
-  .rt .bullets li{position:relative; padding-left:1.45rem; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
+  .rt .bullets li{position:relative; padding-left:1.45rem; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
   .rt .bullets li:before{content:""; position:absolute; left:0; top:.75em; width:.45rem; height:.45rem; border-radius:50%; background:var(--terra);}
 
   .rt .grid-2{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr); gap:clamp(2rem,5vw,5rem); align-items:center;}
@@ -168,8 +168,8 @@ const css = `
   .rt .timeline{display:grid; gap:0; margin-top:1.8rem;}
   .rt .timeline-item{display:grid; grid-template-columns:10rem 1fr; gap:1.2rem; padding:1.2rem 0; border-top:1px solid rgba(138,75,52,.12);}
   .rt .timeline-item:last-child{border-bottom:1px solid rgba(138,75,52,.12);}
-  .rt .timeline-time{font-weight:700; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); padding-top:.15rem; line-height:1.3; font-family:Georgia,"Times New Roman",serif;}
-  .rt .timeline-desc{color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; margin:0; font-family:Georgia,"Times New Roman",serif;}
+  .rt .timeline-time{font-weight:700; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); padding-top:.15rem; line-height:1.3; font-family:Georgia,"Times New Roman",serif;}
+  .rt .timeline-desc{color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.6; margin:0; font-family:Georgia,"Times New Roman",serif;}
   .rt .pre-event{background:linear-gradient(135deg, #fceae3, #fef5f1); border-left:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
 
@@ -179,7 +179,7 @@ const css = `
   .rt .com-ho-farem{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:2.2rem;}
   .rt .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #fceae3 0%, #fef5f1 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10);}
   .rt .price-number{font-family:Georgia, "Times New Roman", serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
-  .rt .price-note{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); margin:.5rem 0 0;}
+  .rt .price-note{font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--muted); margin:.5rem 0 0;}
 
   /* CTA */
   .rt .cta-block{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(160,115,90,.22);}
@@ -190,7 +190,7 @@ const css = `
   .rt .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
   .rt .testi-track{flex:1; overflow:hidden;}
   .rt .testi-card{background:#fffdf8; border-radius:1.7rem; padding:2rem 2.2rem; box-shadow:0 4px 20px -8px rgba(90,40,20,.1); border:1px solid rgba(138,75,52,.1);}
-  .rt .testi-card p{font-size:clamp(1.05rem, 1.8vw, 1.3rem); color:#6b5347; line-height:1.72; margin-bottom:1rem; font-family:Georgia,"Times New Roman",serif;}
+  .rt .testi-card p{font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:#6b5347; line-height:1.72; margin-bottom:1rem; font-family:Georgia,"Times New Roman",serif;}
   .rt .testi-card cite{font-style:normal; font-weight:800; font-size:.88rem; color:var(--terra);}
   .rt .testi-arrow{flex-shrink:0; width:2.6rem; height:2.6rem; border-radius:50%; border:none; background:var(--terra); color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .15s;}
   .rt .testi-arrow:hover{background:var(--terra-fosc); transform:scale(1.08);}
@@ -201,12 +201,12 @@ const css = `
   /* FAQ */
   .rt .faq{display:grid; gap:.7rem; margin-top:1.6rem;}
   .rt .faq-item{border:1px solid rgba(138,75,52,.15); border-radius:1.2rem; overflow:hidden; background:#fffdf8;}
-  .rt .faq-item summary{list-style:none; cursor:pointer; padding:1.15rem 1.4rem; font-weight:700; font-size:clamp(1.05rem,1.8vw,1.3rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif; display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none;}
+  .rt .faq-item summary{list-style:none; cursor:pointer; padding:1.15rem 1.4rem; font-weight:700; font-size:clamp(1.15rem,2.2vw,1.4rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif; display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none;}
   .rt .faq-item summary::-webkit-details-marker{display:none;}
   .rt .faq-item summary::after{content:"+"; font-size:1.4rem; font-weight:400; color:var(--terra); flex-shrink:0; transition:transform .2s;}
   .rt .faq-item[open] summary::after{transform:rotate(45deg);}
   .rt .faq-item[open] summary{border-bottom:1px solid rgba(138,75,52,.1);}
-  .rt .faq-body{padding:1.1rem 1.4rem 1.3rem; color:#6b5347; font-size:clamp(1.05rem,1.8vw,1.3rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
+  .rt .faq-body{padding:1.1rem 1.4rem 1.3rem; color:#6b5347; font-size:clamp(1.15rem,2.2vw,1.4rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
   .rt .faq-body p{margin:.6rem 0 0; color:#6b5347; font-size:inherit; line-height:inherit; font-family:inherit;}
   .rt .faq-body p:first-child{margin-top:0;}
 
@@ -327,14 +327,14 @@ function RetirPage() {
             <div className="section-title">
               <h2>De què va el retir?</h2>
             </div>
-            <div style={{ display: "grid", gap: ".55rem" }}>
-              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
+            <div>
+              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "#6b5347", margin: 0 }}>
                 Un dia per <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>tornar al teu centre</span>.
               </p>
-              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
+              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "#6b5347", marginTop: ".6rem" }}>
                 Un dia per escoltar, sentir i reconnectar amb <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la saviesa que habita en la teva matriu</span>.
               </p>
-              <p style={{ margin: 0, fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", textAlign: "center" }}>
+              <p style={{ marginTop: "1.6rem", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "var(--terra)", fontWeight: 700, textAlign: "center" }}>
                 Perqu&egrave; vivim desconnectades de la nostra naturalesa femenina, dels nostres ritmes naturals<br />
                 i de la saviesa que habita en la nostra matriu.
               </p>
@@ -354,9 +354,10 @@ function RetirPage() {
                   </li>
                 ))}
               </ul>
-              <p style={{ marginTop: "1.2rem" }}>Un dia per recordar-nos que quan <strong style={{ color: "var(--terra)" }}>HABITEM</strong> la nostra matriu, ens podem</p>
-              <p style={{ fontWeight: 700, color: "var(--terra)", lineHeight: 1.4, marginTop: ".3rem" }}>GESTAR,<br />NODRIR,<br />PARIR</p>
-              <p style={{ marginTop: ".3rem" }}>tantes vegades com necessitem.</p>
+              <p style={{ marginTop: "1.2rem" }}>
+                Un dia per recordar-nos que quan <strong style={{ color: "var(--terra)" }}>HABITEM</strong> la nostra matriu, ens podem <strong style={{ color: "var(--terra)" }}>GESTAR, NODRIR, PARIR</strong><br />
+                tantes vegades com necessitem.
+              </p>
               <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
                 No és només un dia per conèixer noves eines.<br />
                 És un dia per obrir un espai d&apos;escolta, presència i reconnexió amb la teva matriu.
@@ -454,7 +455,7 @@ function RetirPage() {
               </ul>
             </div>
 
-            <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.8rem", fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)" }}>El dia del retir</p>
+            <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.8rem" }}>El dia del retir</p>
             <div className="timeline" style={{ marginTop: ".8rem" }}>
               <div className="timeline-item">
                 <span className="timeline-time">9.30 – 9.50h</span>
