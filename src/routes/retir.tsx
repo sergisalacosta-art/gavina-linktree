@@ -87,10 +87,9 @@ const css = `
   }
   .rt h1{
     color:#e1bda6;
-    font-size:clamp(1rem, 5vw, 5rem);
-    letter-spacing:.045em;
+    font-size:clamp(1rem, 4.5vw, 5rem);
+    letter-spacing:.03em;
     text-transform:uppercase;
-    white-space:nowrap;
     max-width:none;
     text-shadow:0 8px 30px rgba(0,0,0,.22);
   }
@@ -98,7 +97,7 @@ const css = `
     margin:.9rem 0 0;
     font-family:Georgia, "Times New Roman", serif;
     font-style:italic;
-    font-size:clamp(1.3rem, 3vw, 2.2rem);
+    font-size:clamp(0.95rem, 2.5vw, 2rem);
     color:rgba(255,255,255,.92);
     font-weight:400;
   }
@@ -335,8 +334,9 @@ function RetirPage() {
               <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
                 Un dia per escoltar, sentir i reconnectar amb <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la saviesa que habita en la teva matriu</span>.
               </p>
-              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0, textAlign: "center" }}>
-                Perqu&egrave; vivim desconnectades de la nostra naturalesa femenina, dels nostres ritmes naturals i de la saviesa que habita en la nostra matriu.
+              <p style={{ margin: 0, fontSize: "clamp(1.05rem, 1.8vw, 1.2rem)", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", textAlign: "center" }}>
+                Perqu&egrave; vivim desconnectades de la nostra naturalesa femenina, dels nostres ritmes naturals<br />
+                i de la saviesa que habita en la nostra matriu.
               </p>
             </div>
             <div className="destacat" style={{ fontStyle: "normal", marginTop: "1.8rem" }}>
