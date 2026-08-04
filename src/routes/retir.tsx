@@ -87,11 +87,10 @@ const css = `
   }
   .rt h1{
     color:#e1bda6;
-    font-size:clamp(2rem, 6.5vw, 7.2rem);
+    font-size:clamp(1.8rem, 4.5vw, 5rem);
     letter-spacing:.045em;
     text-transform:uppercase;
     max-width:none;
-    white-space:nowrap;
     text-shadow:0 8px 30px rgba(0,0,0,.22);
   }
   .rt .hero-sub{
@@ -99,7 +98,7 @@ const css = `
     font-family:Georgia, "Times New Roman", serif;
     font-style:italic;
     font-size:clamp(1.3rem, 3vw, 2.2rem);
-    color:#e1bda6;
+    color:rgba(255,255,255,.92);
     font-weight:400;
   }
   .rt .hero-date{
@@ -314,7 +313,6 @@ function RetirPage() {
       {/* HERO */}
       <header className="hero">
         <div className="hero-inner">
-          <p className="kicker">Retir presencial d&apos;un dia</p>
           <h1>HABITA LA TEVA MATRIU</h1>
           <p className="hero-sub">Retir de reconnexió, presència i cures ancestrals</p>
           <p className="hero-date">Dissabte 17 octubre</p>
