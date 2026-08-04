@@ -334,7 +334,7 @@ function RetirPage() {
               <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
                 Un dia per escoltar, sentir i reconnectar amb <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la saviesa que habita en la teva matriu</span>.
               </p>
-              <p style={{ margin: 0, fontSize: "clamp(1.05rem, 1.8vw, 1.2rem)", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", textAlign: "center" }}>
+              <p style={{ margin: 0, fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", textAlign: "center" }}>
                 Perqu&egrave; vivim desconnectades de la nostra naturalesa femenina, dels nostres ritmes naturals<br />
                 i de la saviesa que habita en la nostra matriu.
               </p>
@@ -377,15 +377,23 @@ function RetirPage() {
             </div>
             <div className="com-ho-farem" style={{ marginTop: "2rem" }}>
               <p style={{ fontSize: "clamp(1.25rem, 2.8vw, 1.9rem)", color: "var(--terra)", lineHeight: 1.45, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 700, margin: "0 0 1rem" }}>Com ho farem?</p>
-              <p><strong>Fent un tastet de diverses medicines ancestrals que ens ajudaran a començar a despertar i revitalitzar la matriu:</strong></p>
-              <ul className="bullets">
-                <li>La ubicarem i sentirem com està el seu batec</li>
-                <li>L&apos;hi donarem moviment, flexibilitat i veu</li>
-                <li>La humidificarem i li donarem escalfor</li>
-                <li>La nodrirem amb plantes</li>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: ".75rem", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontStyle: "italic", color: "var(--terra-fosc)" }}>
+                {[
+                  "Escoltaràs la teva matriu. A través del contacte i la meditació guiada.",
+                  "L'hi donaràs moviment i veu. Amb pràctica pelvicuterina, respiració i veu.",
+                  "La nodriràs. Amb plantes i escalfor.",
+                  "Obrirem un espai de cercle compartit i d'escolta.",
+                ].map((item) => (
+                  <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".5rem" }}>
+                    <span style={{ flexShrink: 0 }}>🌿</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
-              <p style={{ marginTop: "1.4rem" }}>Connectarem amb la medicina de les plantes en combinació amb els diferents elements que alquimitzarem per rebre&apos;n els beneficis.</p>
-              <p><strong>I ho farem juntes, entre dones.</strong></p>
+              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+                Durant aquest dia no només parlarem de salut femenina.<br />
+                És un dia per sentir, experimentar i començar a habitar la teva matriu.
+              </p>
             </div>
           </div>
         </section>
