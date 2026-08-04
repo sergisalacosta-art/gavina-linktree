@@ -197,8 +197,12 @@ function Index() {
                 Soc la Gavina i...
               </h2>
 
-              <p style={{ margin: 0 }}>
-                Reconec la saviesa i el poder que habiten en la matriu de cada dona.
+              <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
+                Reconec la{" "}
+                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>SAVIESA</span>
+                {" "}i el{" "}
+                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>PODER</span>
+                {" "}que habiten en la matriu de cada dona.
               </p>
 
               <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
