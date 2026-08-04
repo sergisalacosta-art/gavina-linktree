@@ -122,6 +122,7 @@ const css = `
     padding:.88rem 1.8rem;
     text-decoration:none;
     font-weight:700;
+    font-family:Georgia,"Times New Roman",serif;
     letter-spacing:.01em;
     border:1px solid transparent;
     transition:transform .18s ease, background .18s ease;
@@ -149,7 +150,7 @@ const css = `
   .rt strong{font-weight:800; color:#1f1d1a}
 
   .rt .bullets{list-style:none; padding:0; margin:1.2rem 0 0; display:grid; gap:.9rem;}
-  .rt .bullets li{position:relative; padding-left:1.45rem; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; font-family:Georgia,"Times New Roman",serif; font-weight:700;}
+  .rt .bullets li{position:relative; padding-left:1.45rem; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
   .rt .bullets li:before{content:""; position:absolute; left:0; top:.75em; width:.45rem; height:.45rem; border-radius:50%; background:var(--terra);}
 
   .rt .grid-2{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr); gap:clamp(2rem,5vw,5rem); align-items:center;}
@@ -169,7 +170,7 @@ const css = `
   .rt .timeline-item{display:grid; grid-template-columns:7rem 1fr; gap:1.2rem; padding:1.2rem 0; border-top:1px solid rgba(138,75,52,.12);}
   .rt .timeline-item:last-child{border-bottom:1px solid rgba(138,75,52,.12);}
   .rt .timeline-time{font-weight:700; color:var(--terra); font-size:.95rem; padding-top:.15rem; line-height:1.3;}
-  .rt .timeline-desc{color:var(--muted); font-size:clamp(1.05rem, 1.8vw, 1.2rem); line-height:1.6; margin:0;}
+  .rt .timeline-desc{color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; margin:0; font-family:Georgia,"Times New Roman",serif;}
   .rt .pre-event{background:linear-gradient(135deg, #fceae3, #fef5f1); border-left:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
 
@@ -454,7 +455,7 @@ function RetirPage() {
               </ul>
             </div>
 
-            <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.8rem", fontSize: "clamp(1.05rem, 1.8vw, 1.2rem)" }}>El dia del retir</p>
+            <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.8rem", fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)" }}>El dia del retir</p>
             <div className="timeline" style={{ marginTop: ".8rem" }}>
               <div className="timeline-item">
                 <span className="timeline-time">9.30 – 10.00h</span>
@@ -538,15 +539,18 @@ function RetirPage() {
               <h2>Després d&apos;aquest retir…</h2>
             </div>
             <ul className="bullets" style={{ marginTop: "1.6rem" }}>
-              <li>Recordaràs <strong>on habita la teva energia femenina</strong> i com mantenir-la <strong>desperta i vital</strong></li>
-              <li>Et sentiràs <strong>calmada, lleugera, clara, connectada</strong> amb el teu plaer i la teva matriu</li>
-              <li>Tornaràs a connectar amb el teu <strong>cos territori</strong> per començar a habitar la teva matriu, (re)connectant amb el teu cicle, tant si encara menstrues com si no</li>
-              <li>Tornaràs a habitar la teva matriu, recuperaràs claredat i començaràs a (re)connectar amb el teu cicle, <strong>tant si encara menstrues com si no</strong></li>
-              <li>Coneixeràs i hauràs provat algunes de les <strong>medicines naturals i ancestrals</strong> que han usat les dones en diferents tradicions mil·lenàries</li>
+              <li>Tornaràs a connectar amb la teva matriu i el teu cicle, tant si encara menstrues com si no.</li>
+              <li>Comprendràs millor la relació amb el teu cos i la teva matriu.</li>
+              <li>Hauràs experimentat eines i medicines naturals d&apos;autocura per a la teva matriu, i que podràs continuar explorant en el teu dia a dia.</li>
+              <li>Sentiràs més connexió amb el teu cos, la teva ciclicitat i la teva energia femenina, i això t&apos;aportarà calma i claredat i et connectarà amb el plaer.</li>
             </ul>
             <div className="soft-img" style={{ marginTop: "2.2rem", height: "460px" }}>
               <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset", objectPosition: "center top" }} />
             </div>
+            <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontStyle: "normal", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+              Aquest retir és una invitació a reconnectar amb una saviesa que ja habita en tu.<br />
+              És un dia per reconnectar amb la saviesa que habita en la teva matriu.
+            </p>
           </div>
         </section>
 
