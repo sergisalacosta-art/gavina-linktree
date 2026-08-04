@@ -213,14 +213,14 @@ function Index() {
               </p>
 
               <div>
-                <p style={{ fontWeight: 600, color: "#6b5347", margin: 0 }}>Un camí per recordar-te que pots...</p>
+                <p style={{ fontWeight: 700, color: "#6b5347", margin: 0, fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif' }}>Un camí per recordar-te que pots...</p>
                 <ul style={{ listStyle: "none", padding: 0, margin: ".75rem 0 0", display: "grid", gap: ".55rem" }}>
                   {[
                     "Viure en coherència amb la dona que ets avui.",
                     "Cuidar la teva salut femenina i cultivar la prevenció.",
                     "Recuperar la sobirania sobre el teu cos, la teva sexualitat i el teu plaer.",
                   ].map((item) => (
-                    <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>
+                    <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347" }}>
                       <span style={{ color: "#c89684", fontWeight: 700, flexShrink: 0, marginTop: ".15em" }}>✦</span>
                       <span>{item}</span>
                     </li>
@@ -239,17 +239,17 @@ function Index() {
           </div>
 
           {/* Bio — full width */}
-          <div style={{ borderTop: "1.5px solid rgba(200,150,132,.3)", marginTop: "2.5rem", paddingTop: "1.8rem", display: "grid", gap: ".9rem", fontSize: "clamp(1rem, 1.7vw, 1.15rem)", lineHeight: 1.7, color: "#2b2925" }}>
+          <div style={{ borderTop: "1.5px solid rgba(200,150,132,.3)", marginTop: "2.5rem", paddingTop: "1.8rem", display: "grid", gap: ".9rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", lineHeight: 1.7, color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif' }}>
             <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, fontStyle: "italic", margin: 0 }}>
               Em presento breument...
             </p>
-            <p style={{ margin: 0, fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
-            <p style={{ margin: 0, fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>La maternitat em va portar a revisar la relació amb mi mateixa, amb la meva feminitat, la meva sexualitat i la meva matriu. Va ser l&apos;inici d&apos;un camí profund de recerca, transformació i retorn al meu cos que encara avui continuo recorrent.</p>
-            <p style={{ margin: 0, fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>Amb els anys he descobert que la salut femenina no es transforma només incorporant recursos. Es transforma quan una dona recupera la relació amb el seu cos, amb la seva ciclicitat, amb la natura i amb la saviesa que habita en la seva matriu.</p>
-            <p style={{ margin: 0, fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>Aquesta és la mirada que sosté tot el que comparteixo.</p>
-            <p style={{ margin: 0, fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>Els recursos que t&apos;ofereixo —alimentació regenerativa, plantes, fitoginecologia, moviment pelvicuterí, consciència sobre la sexualitat i connexió amb la ciclicitat— no són la finalitat del camí. Són portes d&apos;entrada perquè puguis anar reconstruint, al teu ritme, una relació més conscient amb la teva matriu i amb tu mateixa.</p>
-            <p style={{ margin: 0, fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>Per mi, aquest és el veritable sentit d&apos;habitar la matriu.</p>
-            <p style={{ margin: 0, fontSize: "clamp(1rem, 1.7vw, 1.15rem)" }}>I és des d&apos;aquest lloc que avui puc acompanyar-te.</p>
+            <p style={{ margin: 0 }}>El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
+            <p style={{ margin: 0 }}>La maternitat em va portar a revisar la relació amb mi mateixa, amb la meva feminitat, la meva sexualitat i la meva matriu. Va ser l&apos;inici d&apos;un camí profund de recerca, transformació i retorn al meu cos que encara avui continuo recorrent.</p>
+            <p style={{ margin: 0 }}>Amb els anys he descobert que la salut femenina no es transforma només incorporant recursos. Es transforma quan una dona recupera la relació amb el seu cos, amb la seva ciclicitat, amb la natura i amb la saviesa que habita en la seva matriu.</p>
+            <p style={{ margin: 0 }}>Aquesta és la mirada que sosté tot el que comparteixo.</p>
+            <p style={{ margin: 0 }}>Els recursos que t&apos;ofereixo —alimentació regenerativa, plantes, fitoginecologia, moviment pelvicuterí, consciència sobre la sexualitat i connexió amb la ciclicitat— no són la finalitat del camí. Són portes d&apos;entrada perquè puguis anar reconstruint, al teu ritme, una relació més conscient amb la teva matriu i amb tu mateixa.</p>
+            <p style={{ margin: 0 }}>Per mi, aquest és el veritable sentit d&apos;habitar la matriu.</p>
+            <p style={{ margin: 0 }}>I és des d&apos;aquest lloc que avui puc acompanyar-te.</p>
             <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, textAlign: "center", marginTop: ".8rem" }}>
               Aquestes són les diferents maneres com podem recórrer aquest camí juntes.
             </p>
