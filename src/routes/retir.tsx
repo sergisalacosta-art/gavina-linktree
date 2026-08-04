@@ -191,7 +191,7 @@ const css = `
   .rt .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
   .rt .testi-track{flex:1; overflow:hidden;}
   .rt .testi-card{background:#fffdf8; border-radius:1.7rem; padding:2rem 2.2rem; box-shadow:0 4px 20px -8px rgba(90,40,20,.1); border:1px solid rgba(138,75,52,.1);}
-  .rt .testi-card p{font-size:clamp(1.05rem, 1.8vw, 1.2rem); color:var(--muted); line-height:1.72; font-style:italic; margin-bottom:1rem;}
+  .rt .testi-card p{font-size:clamp(1.05rem, 1.8vw, 1.3rem); color:#6b5347; line-height:1.72; font-style:italic; margin-bottom:1rem; font-family:Georgia,"Times New Roman",serif;}
   .rt .testi-card cite{font-style:normal; font-weight:800; font-size:.88rem; color:var(--terra);}
   .rt .testi-arrow{flex-shrink:0; width:2.6rem; height:2.6rem; border-radius:50%; border:none; background:var(--terra); color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .15s;}
   .rt .testi-arrow:hover{background:var(--terra-fosc); transform:scale(1.08);}
@@ -202,13 +202,13 @@ const css = `
   /* FAQ */
   .rt .faq{display:grid; gap:.7rem; margin-top:1.6rem;}
   .rt .faq-item{border:1px solid rgba(138,75,52,.15); border-radius:1.2rem; overflow:hidden; background:#fffdf8;}
-  .rt .faq-item summary{list-style:none; cursor:pointer; padding:1.15rem 1.4rem; font-weight:700; font-size:clamp(1rem,1.8vw,1.15rem); color:var(--terra-fosc); display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none;}
+  .rt .faq-item summary{list-style:none; cursor:pointer; padding:1.15rem 1.4rem; font-weight:700; font-size:clamp(1.05rem,1.8vw,1.3rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif; display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none;}
   .rt .faq-item summary::-webkit-details-marker{display:none;}
   .rt .faq-item summary::after{content:"+"; font-size:1.4rem; font-weight:400; color:var(--terra); flex-shrink:0; transition:transform .2s;}
   .rt .faq-item[open] summary::after{transform:rotate(45deg);}
   .rt .faq-item[open] summary{border-bottom:1px solid rgba(138,75,52,.1);}
-  .rt .faq-body{padding:1.1rem 1.4rem 1.3rem; color:var(--muted); font-size:clamp(1rem,1.7vw,1.12rem); line-height:1.65;}
-  .rt .faq-body p{margin:.6rem 0 0; color:var(--muted); font-size:inherit; line-height:inherit;}
+  .rt .faq-body{padding:1.1rem 1.4rem 1.3rem; color:#6b5347; font-size:clamp(1.05rem,1.8vw,1.3rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
+  .rt .faq-body p{margin:.6rem 0 0; color:#6b5347; font-size:inherit; line-height:inherit; font-family:inherit;}
   .rt .faq-body p:first-child{margin-top:0;}
 
   .rt .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32' preserveAspectRatio='none'%3E%3Cpath d='M6,9 C28,4 65,10 105,6 C142,2 178,8 195,7 C199,11 198,20 193,23 C158,28 115,23 75,25 C40,27 11,23 4,21 C1,18 2,13 6,9 Z' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-size:100% 100%; padding:0.12em 0.4em;}
@@ -520,15 +520,15 @@ function RetirPage() {
                 <p className="lead">Soc la Gavina i el meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
                 <p className="lead" style={{ marginTop: ".8rem" }}>La maternitat em va portar a mirar-me profundament i a revisar la relació amb el meu cos, la meva feminitat, la meva sexualitat i la meva matriu. Va ser l&apos;inici d&apos;un camí de recerca, transformació i retorn a mi mateixa que encara avui continuo recorrent.</p>
                 <p className="lead" style={{ marginTop: ".8rem" }}>Amb els anys he anat integrant diferents mirades i recursos que han donat forma a la meva manera d&apos;acompanyar: Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals.</p>
-                <p className="lead" style={{ marginTop: ".8rem" }}>Però sobretot, aquest camí m&apos;ha ensenyat que la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu.</p>
               </div>
               <div className="soft-img">
                 <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
               </div>
             </div>
-            <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament que hi ha processos que necessiten ser viscuts en companyia d&apos;altres dones. Perquè quan ens trobem, compartim i ens sostenim, alguna cosa profunda es transforma. No és el mateix caminar soles que habitar un espai on altres dones també estan escoltant-se, recordant-se i reconnectant amb elles mateixes.</p>
-            <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. Un espai intern des d&apos;on poder escoltar-te, prendre decisions més alineades amb tu i caminar amb més claredat i confiança.</p>
-            <p className="lead" style={{ marginTop: "1.2rem" }}>Aquest és el sentit d&apos;aquest retir: crear un espai segur i sostingut on puguis parar, sentir i recordar la saviesa que ja habita en tu.</p>
+            <p className="lead" style={{ marginTop: "1.8rem" }}>Però sobretot, aquest camí m&apos;ha ensenyat que la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu.</p>
+            <p className="lead" style={{ marginTop: "1.8rem", fontWeight: 700 }}>Crec profundament que hi ha processos que necessiten ser viscuts en companyia d&apos;altres dones. Perquè quan ens trobem, compartim i ens sostenim, alguna cosa profunda es transforma. No és el mateix caminar soles que habitar un espai on altres dones també estan escoltant-se, recordant-se i reconnectant amb elles mateixes.</p>
+            <p className="lead" style={{ marginTop: "1.2rem", fontWeight: 700 }}>Amb aquesta experiència t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. Un espai intern des d&apos;on poder escoltar-te, prendre decisions més alineades amb tu i caminar amb més claredat i confiança.</p>
+            <p className="lead" style={{ marginTop: "1.2rem", fontWeight: 700 }}>Aquest és el sentit d&apos;aquest retir: crear un espai segur i sostingut on puguis parar, sentir i recordar la saviesa que ja habita en tu.</p>
           </div>
         </section>
 
@@ -648,13 +648,13 @@ function RetirPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3 }}>Estàs preparada<br />per <span className="em-sub">començar a cuidar la teva salut femenina</span><br />amb les <span className="em-sub">Cures per a la teva Matriu</span><br />que coneixeràs en aquest retir?</h2>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3 }}>
+                Si sents la crida de tornar al teu cos, reconnectar amb la teva matriu i recordar la saviesa que hi habita...<br />
+                Et convido a regalar-te un dia per aturar-te, sentir i comen&ccedil;ar a habitar la teva matriu.
+              </h2>
               <p style={{ marginTop: "1.8rem" }}>
-                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                  <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: "1.4rem", height: "1.4rem", flexShrink: 0 }} aria-hidden="true">
-                    <path d="M19.05 4.91A10 10 0 0 0 12 2a10 10 0 0 0-8.66 15l-1.3 4.74 4.86-1.27A10 10 0 1 0 19.05 4.91Zm-7.05 15.4a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.88.75.77-2.81-.2-.31A8.31 8.31 0 1 1 20.3 12a8.34 8.34 0 0 1-8.3 8.31Zm4.55-6.22c-.25-.13-1.48-.73-1.71-.81s-.4-.13-.56.13-.65.81-.79.97-.29.18-.54.06a6.78 6.78 0 0 1-2-1.23 7.56 7.56 0 0 1-1.4-1.74c-.14-.25 0-.38.11-.51s.25-.29.37-.43a1.62 1.62 0 0 0 .25-.41.46.46 0 0 0 0-.44c-.06-.13-.56-1.34-.76-1.83s-.4-.42-.56-.43h-.48a.93.93 0 0 0-.67.31 2.81 2.81 0 0 0-.88 2.1 4.91 4.91 0 0 0 1 2.59 11.16 11.16 0 0 0 4.27 3.77 14.43 14.43 0 0 0 1.42.52 3.43 3.43 0 0 0 1.57.1 2.58 2.58 0 0 0 1.69-1.19 2.1 2.1 0 0 0 .14-1.19c-.06-.1-.22-.16-.47-.28Z"/>
-                  </svg>
-                  Escriu-me per WhatsApp
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                  Vull viure aquesta experi&egrave;ncia
                 </a>
               </p>
             </div>
