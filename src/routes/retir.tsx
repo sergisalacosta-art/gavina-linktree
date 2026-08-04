@@ -167,9 +167,9 @@ const css = `
 
   /* TIMELINE */
   .rt .timeline{display:grid; gap:0; margin-top:1.8rem;}
-  .rt .timeline-item{display:grid; grid-template-columns:7rem 1fr; gap:1.2rem; padding:1.2rem 0; border-top:1px solid rgba(138,75,52,.12);}
+  .rt .timeline-item{display:grid; grid-template-columns:10rem 1fr; gap:1.2rem; padding:1.2rem 0; border-top:1px solid rgba(138,75,52,.12);}
   .rt .timeline-item:last-child{border-bottom:1px solid rgba(138,75,52,.12);}
-  .rt .timeline-time{font-weight:700; color:var(--terra); font-size:.95rem; padding-top:.15rem; line-height:1.3;}
+  .rt .timeline-time{font-weight:700; color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); padding-top:.15rem; line-height:1.3; font-family:Georgia,"Times New Roman",serif;}
   .rt .timeline-desc{color:#6b5347; font-size:clamp(1.05rem, 1.8vw, 1.3rem); line-height:1.6; margin:0; font-family:Georgia,"Times New Roman",serif;}
   .rt .pre-event{background:linear-gradient(135deg, #fceae3, #fef5f1); border-left:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
@@ -458,23 +458,23 @@ function RetirPage() {
             <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.8rem", fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)" }}>El dia del retir</p>
             <div className="timeline" style={{ marginTop: ".8rem" }}>
               <div className="timeline-item">
-                <span className="timeline-time">9.30 – 10.00h</span>
+                <span className="timeline-time">9.30 – 9.50h</span>
                 <p className="timeline-desc">Arribades</p>
               </div>
               <div className="timeline-item">
-                <span className="timeline-time">10.00 – 14.00h</span>
+                <span className="timeline-time">10h – 14h</span>
                 <div>
-                  <p className="timeline-desc">Sentir, despertar i activar la matriu. Moviment pelvicuterí amb veu. Nutrició per a la matriu amb cataplasmes de plantes i meditació uterina.</p>
+                  <p className="timeline-desc">Sentir, despertar i activar la matriu. Moviment pelvicuterí i veu. Nutrició per a la matriu. Cataplasmes amb plantes. Meditació uterina.</p>
                   <p className="timeline-desc" style={{ marginTop: ".5rem" }}><em>Pausa breu a mig matí amb infusions medicinals.</em></p>
                 </div>
               </div>
               <div className="timeline-item">
-                <span className="timeline-time">14.00 – 15.30h</span>
-                <p className="timeline-desc">Pausa dinar lleuger</p>
+                <span className="timeline-time">14h – 15.30h</span>
+                <p className="timeline-desc">Dinar lleuger i estona de quietud</p>
               </div>
               <div className="timeline-item">
                 <span className="timeline-time">15.30 – 19.00h</span>
-                <p className="timeline-desc">Automassatge matriu, massatge pelvic amb rebozos, vapors pelvicovaginals. Compartirs i tancament.</p>
+                <p className="timeline-desc">Massatges matriu i vapors pelvicovaginals. Compartirs i tancament.</p>
               </div>
             </div>
 
@@ -525,7 +525,7 @@ function RetirPage() {
                 <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
               </div>
             </div>
-            <p className="lead" style={{ marginTop: "1.8rem" }}>Però sobretot, aquest camí m&apos;ha ensenyat que la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu.</p>
+            <p className="lead" style={{ marginTop: "1.8rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Però sobretot, aquest camí m&apos;ha ensenyat que <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu</span>.</p>
             <p className="lead" style={{ marginTop: "1.8rem", fontWeight: 700 }}>Crec profundament que hi ha processos que necessiten ser viscuts en companyia d&apos;altres dones. Perquè quan ens trobem, compartim i ens sostenim, alguna cosa profunda es transforma. No és el mateix caminar soles que habitar un espai on altres dones també estan escoltant-se, recordant-se i reconnectant amb elles mateixes.</p>
             <p className="lead" style={{ marginTop: "1.2rem", fontWeight: 700 }}>Amb aquesta experiència t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. Un espai intern des d&apos;on poder escoltar-te, prendre decisions més alineades amb tu i caminar amb més claredat i confiança.</p>
             <p className="lead" style={{ marginTop: "1.2rem", fontWeight: 700 }}>Aquest és el sentit d&apos;aquest retir: crear un espai segur i sostingut on puguis parar, sentir i recordar la saviesa que ja habita en tu.</p>
@@ -649,11 +649,11 @@ function RetirPage() {
           <div className="wrap">
             <div className="cta-block">
               <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3 }}>
-                Si sents la crida de tornar al teu cos, reconnectar amb la teva matriu i recordar la saviesa que hi habita...<br />
-                Et convido a regalar-te un dia per aturar-te, sentir i comen&ccedil;ar a habitar la teva matriu.
+                Si sents la crida de tornar al teu cos, <span className="em-sub">reconnectar amb la teva matriu i recordar la saviesa que hi habita</span>...<br />
+                Et convido a regalar-te un dia per parar, sentir i comen&ccedil;ar a habitar la teva matriu.
               </h2>
               <p style={{ marginTop: "1.8rem" }}>
-                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   Vull viure aquesta experi&egrave;ncia
                 </a>
               </p>
