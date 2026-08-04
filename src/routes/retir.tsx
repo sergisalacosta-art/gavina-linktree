@@ -329,28 +329,43 @@ function RetirPage() {
               <h2>De què va el retir?</h2>
             </div>
             <div style={{ display: "grid", gap: ".55rem" }}>
-              {[
-                "Un dia per tornar al teu centre.",
-                "Un dia per escoltar, sentir i reconnectar amb la saviesa que habita en la teva matriu.",
-                "Vivim sovint desconnectades de la nostra naturalesa femenina, dels nostres ritmes naturals i de la saviesa que habita en la nostra matriu.",
-              ].map((text) => (
-                <p key={text} style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
-                  {text}
-                </p>
-              ))}
+              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
+                Un dia per <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>tornar al teu centre</span>.
+              </p>
+              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
+                Un dia per escoltar, sentir i reconnectar amb <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la saviesa que habita en la teva matriu</span>.
+              </p>
+              <p style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0, textAlign: "center" }}>
+                Perqu&egrave; vivim desconnectades de la nostra naturalesa femenina, dels nostres ritmes naturals i de la saviesa que habita en la nostra matriu.
+              </p>
             </div>
             <div className="destacat" style={{ fontStyle: "normal", marginTop: "1.8rem" }}>
-              <p style={{ fontWeight: 700, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", margin: 0 }}>Aquest retir és una oportunitat…</p>
-              <p style={{ fontStyle: "italic", marginTop: ".6rem" }}>parar, respirar i tornar al cos.<br />I des d&apos;aquí…</p>
-              <p style={{ fontStyle: "italic", marginTop: ".6rem" }}>
-                …començar a posar consciència en la teva salut femenina a través de la teva matriu.<br />
-                …experimentar en pròpia pell algunes de les medicines que han ajudat a cuidar la salut de les dones des de fa milers d&apos;anys.<br />
-                …(re)connectar, despertar i nodrir la teva matriu, font de vida i salut.
-              </p>
-              <p style={{ fontStyle: "italic", marginTop: "1.2rem" }}>Un dia per recordar-nos que quan <strong style={{ fontStyle: "normal" }}>HABITEM</strong> la nostra matriu, ens podem</p>
+              <p style={{ fontWeight: 700, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", margin: 0 }}>Aquest retir és una invitació a parar, respirar i escoltar el teu cos i especialment la teva matriu per:</p>
+              <ul style={{ listStyle: "none", padding: 0, margin: ".9rem 0 0", display: "grid", gap: ".75rem" }}>
+                {[
+                  "Començar a posar consciència en la teva salut femenina des de la mirada de la matriu.",
+                  "Experimentar algunes de les medicines naturals que han acompanyat les dones durant milers d’anys.",
+                  "Nodrir i despertar la relació amb la teva matriu amb consciència i presència.",
+                  "Compartir un espai de confiança amb altres dones, recordant la força i la saviesa que emergeixen quan ens sostenim juntes.",
+                ].map((item) => (
+                  <li key={item} style={{ fontStyle: "italic", display: "flex", alignItems: "flex-start", gap: ".5rem" }}>
+                    <span style={{ flexShrink: 0 }}>🌿</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p style={{ fontStyle: "italic", marginTop: "1.2rem" }}>Un dia per recordar-nos que quan <strong style={{ fontStyle: "normal", color: "var(--terra)" }}>HABITEM</strong> la nostra matriu, ens podem</p>
               <p style={{ fontWeight: 700, color: "var(--terra)", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", lineHeight: 1.4, fontStyle: "normal", marginTop: ".3rem" }}>GESTAR,<br />NODRIR,<br />PARIR</p>
-              <p style={{ fontStyle: "italic", marginTop: ".3rem" }}>tantes vegades com necessitem,<br />des que naixem fins que morim.</p>
-              <p style={{ fontStyle: "italic", marginTop: "1.2rem" }}>Un espai per compartir amb altres dones,<br />per cuidar-nos i sostenir-nos,<br />sentint el poder del grup.</p>
+              <p style={{ fontStyle: "italic", marginTop: ".3rem" }}>tantes vegades com necessitem.</p>
+              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontStyle: "normal" }}>
+                No és només un dia per conèixer noves eines.<br />
+                És un dia per obrir un espai d&apos;escolta, presència i reconnexió amb la teva matriu.
+              </p>
+              <div style={{ textAlign: "center", marginTop: "1.8rem" }}>
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                  Vull viure aquesta experiència
+                </a>
+              </div>
             </div>
             <div className="grid-2-img">
               <div className="soft-img soft-img-h" style={{ background: "#fceae3" }}>
