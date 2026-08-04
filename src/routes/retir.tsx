@@ -315,13 +315,10 @@ function RetirPage() {
       <header className="hero">
         <div className="hero-inner">
           <p className="kicker">Retir presencial d&apos;un dia</p>
-          <h1>Cures de Matriu</h1>
+          <h1>HABITA LA TEVA MATRIU</h1>
+          <p className="hero-sub">Retir de reconnexió, presència i cures ancestrals</p>
           <p className="hero-date">Dissabte 17 octubre</p>
           <p className="hero-date">Les Franqueses del Vallès</p>
-          <div className="hero-actions">
-            <a className="btn btn-terra" href={WA_URL} target="_blank" rel="noopener noreferrer" style={{ fontSize: "clamp(1rem, 1.8vw, 1.2rem)", padding: ".9rem 2rem" }}>Reserva la teva plaça</a>
-            <a className="btn btn-ghost" href="#pla">Veure el pla del dia</a>
-          </div>
         </div>
       </header>
 
