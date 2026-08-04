@@ -87,9 +87,10 @@ const css = `
   }
   .rt h1{
     color:#e1bda6;
-    font-size:clamp(1.8rem, 4.5vw, 5rem);
+    font-size:clamp(1rem, 5vw, 5rem);
     letter-spacing:.045em;
     text-transform:uppercase;
+    white-space:nowrap;
     max-width:none;
     text-shadow:0 8px 30px rgba(0,0,0,.22);
   }
