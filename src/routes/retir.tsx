@@ -405,14 +405,14 @@ function RetirPage() {
               <h2>Aquest retir és per tu si…</h2>
             </div>
             <ul className="bullets">
-              <li>Estàs encara menstruant o ja estàs notant canvis en el teu cicle, i sents que el teu cos t&apos;està demanant un canvi, <strong>començar a cuidar-te de debò des de dins</strong>, i no saps per on començar</li>
-              <li>Et sents esgotada, amb energia baixa, confusa, trista, enfadada… Si et sents així probablement estàs <strong>desconnectada de la teva matriu</strong></li>
-              <li>Tens ganes de viure un dia íntim de <strong>nutrició i atenció plena dedicada a la teva matriu</strong>, i acompanyada d&apos;altres dones</li>
-              <li>Et criden les medicines naturals ancestrals, com els <strong>vapors vaginals, el moviment pelvic uterí, els cataplasmes amb plantes i l&apos;automassatge de matriu</strong></li>
+              <li>Estiguis menstruant o transitant una nova etapa del teu cicle vital, i sentis que el teu cos et demana fer canvis: parar, escoltar-te i començar a cuidar-te des d&apos;un lloc més profund.</li>
+              <li>Et sents cansada, amb poca energia, desconnectada de tu mateixa o sents que necessites recuperar vitalitat i tornar a escoltar el teu cos.</li>
+              <li>Tens ganes de regalar-te un dia d&apos;escolta, nutrició i cura dedicat a la teva matriu, compartint l&apos;experiència amb altres dones.</li>
+              <li>Et criden les medicines naturals i ancestrals com una manera de reconnectar amb el teu cos i cuidar la teva salut femenina des d&apos;una mirada més natural i conscient.</li>
             </ul>
             <div style={{ marginTop: "2rem", textAlign: "center" }}>
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                SOM-HI. VULL SER-HI!
+                Vull reservar la meva plaça
               </a>
             </div>
           </div>
