@@ -87,11 +87,11 @@ const css = `
   }
   .rt h1{
     color:#e1bda6;
-    font-size:clamp(3rem, 8vw, 7.2rem);
+    font-size:clamp(2rem, 6.5vw, 7.2rem);
     letter-spacing:.045em;
     text-transform:uppercase;
-    max-width:520px;
-    text-wrap:balance;
+    max-width:none;
+    white-space:nowrap;
     text-shadow:0 8px 30px rgba(0,0,0,.22);
   }
   .rt .hero-sub{
