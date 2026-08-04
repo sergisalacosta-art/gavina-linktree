@@ -327,8 +327,17 @@ function RetirPage() {
             <div className="section-title">
               <h2>De què va el retir?</h2>
             </div>
-            <p className="lead">Sabem que cada vegada, les dones, vivim més desequilibris en els nostres òrgans femenins, i això té molt a veure amb &ldquo;viure&rdquo; fragmentades i desconnectades de les nostres matrius.</p>
-            <p className="lead" style={{ marginTop: "1rem" }}>Si et sents desconnectada de la teva matriu, estàs desconnectada del teu poder intern. I ja sabem que així és com ens vol aquest sistema on vivim: desempoderades i manipulables.</p>
+            <div style={{ display: "grid", gap: ".55rem" }}>
+              {[
+                "Un dia per tornar al teu centre.",
+                "Un dia per escoltar, sentir i reconnectar amb la saviesa que habita en la teva matriu.",
+                "Vivim sovint desconnectades de la nostra naturalesa femenina, dels nostres ritmes naturals i de la saviesa que habita en la nostra matriu.",
+              ].map((text) => (
+                <p key={text} style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
+                  {text}
+                </p>
+              ))}
+            </div>
             <div className="destacat" style={{ fontStyle: "normal", marginTop: "1.8rem" }}>
               <p style={{ fontWeight: 700, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", margin: 0 }}>Aquest retir és una oportunitat…</p>
               <p style={{ fontStyle: "italic", marginTop: ".6rem" }}>parar, respirar i tornar al cos.<br />I des d&apos;aquí…</p>
