@@ -194,6 +194,82 @@ const testimonialsData = [
   { text: "Anar al Cercle de Dones és meravellós. Són moltes coses positives per mi. És com anar a la meva illa de la calma i de la pau. És un espai d'autocura total. Un espai on estic pensant només en mi i en les meves companyes. Un espai on puc trobar aquestes mirades còmplices i amoroses de les dones que formen part del cercle amb mi i de la Gavina, que acompanya amb aquesta saviesa tan encertada, que sap acompanyar sense dirigir i això és important perquè em sento acompanyada i escoltada. Un espai on em sento molt sostinguda i on també tinc l'oportunitat de sostenir. M'encanta.", name: "Carolina A." },
   { text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.", name: "Alba C." },
   { text: "Gràcies, Gavina, per iniciar-me en aquest camí cap al coneixement de mi mateixa; ara puc mirar els meus fills amb uns altres ulls. Gràcies també per acompanyar-me en l'autoconeixement, per permetre sentir tot el que em passa, incloses les emocions més difícils, i ensenyar-me a escoltar-me, ara soc capaç de reconèixer amb més facilitat les meves emocions, i també les dels altres. He après que la maternitat necessita de saber-nos escoltar per poder escoltar els altres i veure'ls de veritat. També gràcies per la tribu i la companyia, el camí és més fàcil amb les mares del cercle.", name: "Queralt S." },
+  { text: "La Gavina em transmet molta confiança cap a una mirada més connectada amb la natura i la meva intuïció femenina. Sento que gran part dels missatges cap als canvis, el cos i la salut es miren molt des de la por i una visió molt medicalitzada. Ancestralment les dones s'acompanyaven entre elles, des de la seva saviesa i coneixements. Sento molta curiositat per provar l'acompanyament amb una dona sensible i empàtica com ella. Tenir a la Gavina és tot un regal!", name: "Brenda" },
+  { text: "Feia temps que tenia problemes menstruals, amenorrea, sagnats intermenstruals i ja m'havien visitat diferents professionals (endocrina ginecòlegs, metges i fins i tot nutricionista sense gaire èxit). Vaig decidir començar amb la Gavina perquè volia provar una altra mirada, buscar l'arrel del problema des d'una perspectiva més natural i entenent el llenguatge del meu cos. La Gavina em va ensenyar a mirar-me com mai, a posar-me al centre i escoltar el meu cos. A donar-li descans i la pausa que necessitava per tenir energia suficient per ovular. També gràcies als seus coneixements, de manera paral·lela, vaig poder obtenir més respostes dels metges. Em van trobar un càncer a l'úter, que no m'haguessin diagnosticat tan a temps si ella no m'hagués assessorat. La Gavina em va ajudar moltíssim a decidir el meu tractament amb tota la informació. Tan de bo hagués trobat una mirada com la de la Gavina anys enrere.", name: "Lorena" },
+  { text: "En els espais que la Gavina organitza, ho fa amb molt mimo i cura, cada detall en l'arribada i durant les diferents activitats. La seva escolta, la seva entrega, el respecte pels diferents ritmes aporta escolta, tacte, carinyo en el seu acompanyament. Recordo que tant les meditacions per connectar amb l'úter com el moviment corporal en grup per mi va ser molt alliberador. La Gavina és d'aquestes dones amb una sensibilitat, un sosté i una fortalesa que ajuden a transitar els moviments emocionals que emergeixen. Gràcies, gràcies, gràcies, Gavina!!", name: "Montse P." },
+];
+
+const faqData: { q: string; a: string[] }[] = [
+  {
+    q: "És necessari tenir un desequilibri ginecològic per participar a Matrius en Cercle?",
+    a: [
+      "No.",
+      "Aquest procés és tant per a dones que estan vivint algun desequilibri concret com per a dones que senten el desig de reconnectar amb el seu cos, la seva ciclicitat i la seva matriu.",
+      "No cal esperar que alguna cosa no funcioni per començar a cuidar-nos. La salut femenina també es cultiva quan escoltem el cos, integrem nous recursos i recuperem la confiança en la nostra pròpia saviesa.",
+    ],
+  },
+  {
+    q: "Necessito tenir coneixements previs sobre salut femenina o plantes?",
+    a: [
+      "No.",
+      "Matrius en Cercle està pensat perquè cada dona pugui començar des del seu propi punt de partida.",
+      "No importa si és la primera vegada que t'apropes a aquesta mirada o si ja fa temps que explores la salut femenina. Anirem construint, juntes, el procés pas a pas.",
+    ],
+  },
+  {
+    q: "És un grup. Tindré un acompanyament personalitzat?",
+    a: [
+      "Sí.",
+      "Tot i ser un procés grupal, cada dona té la seva pròpia història, el seu moment vital i les seves necessitats.",
+      "Al llarg del procés podràs compartir dubtes i experiències dins del cercle, i també rebràs el meu acompanyament i feedback per poder adaptar els recursos a la teva realitat.",
+    ],
+  },
+  {
+    q: "He de fer tots els recursos que proposes? I si no tinc gaire temps per dedicar-hi?",
+    a: [
+      "Els recursos que anirem descobrint són portes d'entrada per començar a construir una nova relació amb el teu cos i amb la teva matriu.",
+      "Anirem pas a pas, mes a mes, incorporant-los d'un en un, perquè puguis integrar-los amb calma i observar com responen en tu.",
+      "Ara bé, perquè el procés sigui realment transformador, és important que puguis posar en pràctica allò que anem treballant i compartir què va passant en el teu cos.",
+      "Així podré acompanyar-te millor, anar ajustant el procés a les teves necessitats i avançar juntes en el teu propi camí.",
+    ],
+  },
+  {
+    q: "Què passa si no puc assistir a alguna de les sessions en directe?",
+    a: [
+      "Les sessions en directe seran un espai molt important del procés, perquè és on compartirem, resoldrem dubtes i aprofundirem juntes.",
+      "Si algun dia no pots assistir, buscarem la millor manera perquè puguis continuar connectada amb el procés i aprofitar el contingut treballat.",
+    ],
+  },
+  {
+    q: "Com funciona el grup privat de WhatsApp?",
+    a: [
+      "El grup de WhatsApp serà un espai de suport durant tot el procés.",
+      "Hi podràs compartir dubtes més pràctics del dia a dia, i les respostes podran nodrir també la resta de dones del cercle.",
+      "La idea és que sigui un espai viu, respectuós i de suport mutu.",
+    ],
+  },
+  {
+    q: "Quant dura Matrius en Cercle?",
+    a: [
+      "El procés té una durada de cinc mesos.",
+      "Començarem a finals de novembre i finalitzarem a finals d'abril.",
+      "Cada mes obrirem un nou camí de treball, amb temps perquè puguis integrar els recursos i observar com es transformen la teva relació amb el cos i amb la teva matriu.",
+    ],
+  },
+  {
+    q: "Quantes dones formaran part del cercle?",
+    a: [
+      "El nombre de places és limitat.",
+      "Vull poder cuidar l'espai, sostenir el procés del grup i oferir l'acompanyament necessari perquè cada dona se senti vista i acompanyada.",
+    ],
+  },
+  {
+    q: "I si sento que aquest no és el moment per a mi?",
+    a: [
+      "Escoltar el teu moment també forma part del procés.",
+      "Si sents la crida però tens dubtes, pots escriure'm i valorarem juntes si Matrius en Cercle és l'espai adequat per a tu ara mateix.",
+    ],
+  },
 ];
 
 function TestimonialCarousel() {
@@ -389,7 +465,8 @@ function MatriusPage() {
               </p>
               <p style={{ margin: 0, textAlign: "center", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
                 <strong style={{ textTransform: "uppercase", display: "block" }}>Places limitades</strong>
-                El nombre de dones serà reduït per poder cuidar el grup i oferir un acompanyament més proper i personalitzat.
+                El nombre de dones serà reduït per poder cuidar el grup<br />
+                i oferir un acompanyament més proper i personalitzat.
               </p>
             </div>
           </div>
@@ -403,13 +480,12 @@ function MatriusPage() {
             </div>
 
             <div className="qui-grid">
-              {/* Text */}
+              {/* Text — 4 paragraphs beside the photo */}
               <div>
                 <p style={{ marginTop: 0 }}>Soc la Gavina i el meu camí amb la salut femenina va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
                 <p>La maternitat va obrir una porta de transformació profunda: em va portar a revisar la relació amb mi mateixa, amb el meu cos, la meva feminitat, la meva sexualitat i la meva matriu.</p>
                 <p>Des d&apos;aleshores he recorregut un camí de recerca, aprenentatge i transformació que encara avui continuo caminant. Un camí que m&apos;ha portat a escoltar el meu propi cos, a aprofundir en diferents mirades sobre la salut femenina i a recuperar una relació més conscient amb la meva matriu.</p>
                 <p>Al llarg d&apos;aquest procés m&apos;he format en Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals que avui formen part de la meva manera d&apos;acompanyar.</p>
-                <p>Però el meu acompanyament no neix només de les formacions, sinó sobretot de la meva pròpia experiència de vida i del camí recorregut.</p>
               </div>
               {/* Photo */}
               <div className="qui-photo" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
@@ -420,6 +496,9 @@ function MatriusPage() {
                 />
               </div>
             </div>
+
+            {/* 5th paragraph below both columns */}
+            <p style={{ marginTop: "1.4rem" }}>Però el meu acompanyament no neix només de les formacions, sinó sobretot de la meva pròpia experiència de vida i del camí recorregut.</p>
 
             <p style={{ marginTop: "2rem", textAlign: "center", fontWeight: 700, color: "#6b5347", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', lineHeight: 1.65 }}>
               He après que{" "}
@@ -443,6 +522,84 @@ function MatriusPage() {
               no estem soles en aquest camí<br />
               i que la saviesa que habita en la matriu de cada una també es nodreix del cercle.
             </p>
+          </div>
+        </section>
+
+        {/* DESPRÉS D'AQUESTS 5 MESOS */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Després d&apos;aquests 5 mesos…</h2>
+            </div>
+            <ul style={{ listStyle: "none", padding: 0, margin: "1.2rem 0 0", display: "grid", gap: ".75rem" }}>
+              {[
+                "Comprendràs millor el teu cos i els seus ritmes.",
+                "Tindràs recursos naturals per cuidar la teva salut femenina amb més autonomia.",
+                "Aprendràs a escoltar els missatges del teu cos i prendre decisions amb més confiança.",
+                "Sentiràs més connexió amb la teva matriu i amb la teva naturalesa cíclica.",
+                "Formaràs part d'un cercle de dones amb qui compartir un camí de consciència i transformació.",
+              ].map((item) => (
+                <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                  <span style={{ flexShrink: 0, color: "var(--terra)", fontWeight: 700 }}>✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
+              <p style={{ margin: 0, fontWeight: 700, color: "#6b5347", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                Perquè habitar la matriu és un procés.
+              </p>
+              <p style={{ marginTop: ".6rem", fontWeight: 700, color: "#6b5347", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                Un camí de retorn a tu.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* LES DONES PARLEN */}
+        <section>
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Les dones parlen...</h2>
+            </div>
+            <TestimonialCarousel />
+          </div>
+        </section>
+
+        {/* PREGUNTES FREQÜENTS */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Preguntes freqüents</h2>
+            </div>
+            <div className="faq">
+              {faqData.map(({ q, a }) => (
+                <details key={q} className="faq-item">
+                  <summary>{q}</summary>
+                  <div className="faq-body">
+                    {a.map((para, i) => <p key={i}>{para}</p>)}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA FINAL */}
+        <section>
+          <div className="wrap">
+            <div className="cta-block">
+              <p style={{ margin: 0, color: "#4a2e22", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', lineHeight: 1.75, fontWeight: 700 }}>
+                Si sents que ha arribat el moment de deixar de caminar sola<br />
+                i regalar-te un espai on aprendre, compartir i habitar la teva matriu<br />
+                al costat d&apos;altres dones...
+              </p>
+              <div style={{ marginTop: "1.8rem" }}>
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                  Vull formar part de Matrius en Cercle
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
