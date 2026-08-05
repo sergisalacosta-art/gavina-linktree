@@ -175,12 +175,14 @@ const css = `
   @media(max-width:900px){
     .mp .hero{min-height:74vh}
     .mp .grid-2-img{grid-template-columns:1fr}
+    .mp .format-grid{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:560px){
     .mp{font-size:16px}
     .mp .hero-inner,.mp .wrap{width:min(100% - 28px, var(--max))}
     .mp section{padding:2.4rem 0}
     .mp .btn{width:100%}
+    .mp .format-grid{grid-template-columns:1fr}
   }
 `;
 
@@ -268,7 +270,14 @@ function MatriusPage() {
               <p style={{ marginTop: ".35rem" }}>Ens reconeixem.</p>
               <p style={{ marginTop: ".35rem" }}>Ens nodrim.</p>
               <p style={{ marginTop: ".8rem" }}>I aquesta experiència compartida també forma part de la medicina del cercle.</p>
-              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+              <div style={{ margin: "2rem 0 1.6rem", borderRadius: "1.2rem", overflow: "hidden" }}>
+                <img
+                  src="/matrius/assets/haseya-dones.jpg"
+                  alt="Cercle de dones"
+                  style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: "480px", objectPosition: "center" }}
+                />
+              </div>
+              <p style={{ marginTop: "0", textAlign: "center", color: "var(--terra)", fontWeight: 700, textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
                 No és només un espai per aprendre sobre salut femenina.<br />
                 És un espai per caminar aquest procés al costat d&apos;altres dones,<br />
                 recordant juntes la saviesa que habita en cada una de nosaltres.
@@ -331,6 +340,13 @@ function MatriusPage() {
                 </li>
               ))}
             </ul>
+            <div style={{ marginTop: "2rem", borderRadius: "1.2rem", overflow: "hidden" }}>
+              <img
+                src="/matrius/assets/surita-copalera.jpg"
+                alt="Surita copalera"
+                style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: "480px", objectPosition: "center top" }}
+              />
+            </div>
           </div>
         </section>
 
@@ -341,30 +357,34 @@ function MatriusPage() {
               <h2>Format i dates</h2>
             </div>
             <p>Durant aquests cinc mesos tindràs accés a:</p>
-            <ul style={{ listStyle: "none", padding: 0, margin: "1.4rem 0 0", display: "grid", gap: "1.2rem" }}>
+            <div className="format-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1rem", marginTop: "1.4rem" }}>
               {[
                 { title: "Contingut nou a l'inici de cada mes", desc: "Cada inici de mes tindràs disponible el nou contingut, perquè puguis veure'l al teu ritme i integrar-lo amb calma." },
                 { title: "Un grup privat de WhatsApp", desc: "Un espai per compartir preguntes, dubtes pràctics i experiències, nodrint-nos també de les respostes de les altres dones." },
                 { title: "Una trobada online (2 hores) al final de cada mes", desc: "A finals de cada mes ens trobarem online per compartir el procés de cada una, resoldre dubtes i aprofundir juntes en allò que estiguem vivint." },
                 { title: "Acompanyament personalitzat dins del grup", desc: "Tot i ser un procés grupal, cada dona tindrà el seu propi camí. Jo aniré observant i oferint feedback per adaptar el procés a les necessitats de cadascuna." },
               ].map(({ title, desc }) => (
-                <li key={title} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
-                  <span style={{ flexShrink: 0, marginTop: ".1em" }}>🌿</span>
-                  <div>
-                    <p style={{ fontWeight: 700, margin: 0, color: "#6b5347" }}>{title}</p>
-                    <p style={{ marginTop: ".3rem" }}>{desc}</p>
-                  </div>
-                </li>
+                <div key={title} style={{ background: "#fffdf8", border: "1.5px solid rgba(138,75,52,.18)", borderRadius: "1.2rem", padding: "clamp(.9rem,2vw,1.4rem)", display: "flex", flexDirection: "column", gap: ".5rem" }}>
+                  <p style={{ fontWeight: 700, margin: 0, color: "#6b5347", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', lineHeight: 1.35 }}>{title}</p>
+                  <p style={{ margin: 0, fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>{desc}</p>
+                </div>
               ))}
-            </ul>
+            </div>
             <p style={{ marginTop: "2.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
               No es tracta de fer-ho tot ni d&apos;aplicar tots els recursos de cop.<br />
               Es tracta d&apos;anar integrant, pas a pas, allò que tingui sentit per a tu.
             </p>
             <div style={{ marginTop: "1.8rem", background: "linear-gradient(135deg,#fceae3,#fef5f1)", border: "1px solid rgba(138,75,52,.18)", borderRadius: "1rem", padding: "clamp(1.2rem,3vw,2rem)" }}>
-              <p style={{ margin: 0, fontWeight: 700, color: "#6b5347" }}>Inici: finals de novembre</p>
-              <p style={{ marginTop: ".4rem", fontWeight: 700, color: "#6b5347" }}>Finalització: finals d&apos;abril</p>
-              <p style={{ marginTop: ".9rem" }}>Places limitades. El nombre de dones serà reduït per poder cuidar el grup i oferir un acompanyament proper i personalitzat.</p>
+              <p style={{ margin: 0, color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+                <strong style={{ textTransform: "uppercase" }}>Inici:</strong> finals de novembre
+              </p>
+              <p style={{ marginTop: ".4rem", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+                <strong style={{ textTransform: "uppercase" }}>Finalització:</strong> finals d&apos;abril
+              </p>
+              <p style={{ marginTop: ".9rem", textAlign: "center", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+                <strong style={{ textTransform: "uppercase", display: "block" }}>Places limitades.</strong>
+                El nombre de dones serà reduït per poder cuidar el grup i oferir un acompanyament proper i personalitzat.
+              </p>
             </div>
           </div>
         </section>
