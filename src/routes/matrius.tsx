@@ -172,10 +172,14 @@ const css = `
   .mp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
   .mp .back-link:hover{color:var(--terra-fosc);}
 
+  .mp .qui-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
+
   @media(max-width:900px){
     .mp .hero{min-height:74vh}
     .mp .grid-2-img{grid-template-columns:1fr}
     .mp .format-grid{grid-template-columns:repeat(2,1fr)}
+    .mp .qui-grid{grid-template-columns:1fr}
+    .mp .qui-photo{order:-1; margin-bottom:1rem}
   }
   @media(max-width:560px){
     .mp{font-size:16px}
@@ -364,7 +368,7 @@ function MatriusPage() {
                 { title: "Una trobada online (2 hores) al final de cada mes", desc: "A finals de cada mes ens trobarem online per compartir el procés de cada una, resoldre dubtes i aprofundir juntes en allò que estiguem vivint." },
                 { title: "Acompanyament personalitzat dins del grup", desc: "Tot i ser un procés grupal, cada dona tindrà el seu propi camí. Jo aniré observant i oferint feedback per adaptar el procés a les necessitats de cadascuna." },
               ].map(({ title, desc }) => (
-                <div key={title} style={{ background: "#fffdf8", border: "1.5px solid rgba(138,75,52,.18)", borderRadius: "1.2rem", padding: "clamp(.9rem,2vw,1.4rem)", display: "flex", flexDirection: "column", gap: ".5rem" }}>
+                <div key={title} style={{ background: "#fffdf8", borderTop: "1.5px solid rgba(138,75,52,.18)", borderRight: "1.5px solid rgba(138,75,52,.18)", borderBottom: "1.5px solid rgba(138,75,52,.18)", borderLeft: "4px solid #8a4b34", borderRadius: "1.2rem", padding: "clamp(.9rem,2vw,1.4rem)", display: "flex", flexDirection: "column", gap: ".5rem" }}>
                   <p style={{ fontWeight: 700, margin: 0, color: "#6b5347", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', lineHeight: 1.35 }}>{title}</p>
                   <p style={{ margin: 0, fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>{desc}</p>
                 </div>
@@ -374,18 +378,71 @@ function MatriusPage() {
               No es tracta de fer-ho tot ni d&apos;aplicar tots els recursos de cop.<br />
               Es tracta d&apos;anar integrant, pas a pas, allò que tingui sentit per a tu.
             </p>
-            <div style={{ marginTop: "1.8rem", background: "linear-gradient(135deg,#fceae3,#fef5f1)", border: "1px solid rgba(138,75,52,.18)", borderRadius: "1rem", padding: "clamp(1.2rem,3vw,2rem)" }}>
-              <p style={{ margin: 0, color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
-                <strong style={{ textTransform: "uppercase" }}>Inici:</strong> finals de novembre
+            <div style={{ marginTop: "1.8rem", background: "linear-gradient(135deg,#fceae3,#fef5f1)", border: "1px solid rgba(138,75,52,.18)", borderRadius: "1rem", padding: "clamp(1.2rem,3vw,2rem)", display: "flex", flexDirection: "column", gap: ".8rem" }}>
+              <p style={{ margin: 0, textAlign: "center", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+                <strong style={{ textTransform: "uppercase", display: "block" }}>Inici:</strong>
+                finals de novembre
               </p>
-              <p style={{ marginTop: ".4rem", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
-                <strong style={{ textTransform: "uppercase" }}>Finalització:</strong> finals d&apos;abril
+              <p style={{ margin: 0, textAlign: "center", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+                <strong style={{ textTransform: "uppercase", display: "block" }}>Finalització:</strong>
+                finals d&apos;abril
               </p>
-              <p style={{ marginTop: ".9rem", textAlign: "center", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
-                <strong style={{ textTransform: "uppercase", display: "block" }}>Places limitades.</strong>
-                El nombre de dones serà reduït per poder cuidar el grup i oferir un acompanyament proper i personalitzat.
+              <p style={{ margin: 0, textAlign: "center", color: "#6b5347", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" }}>
+                <strong style={{ textTransform: "uppercase", display: "block" }}>Places limitades</strong>
+                El nombre de dones serà reduït per poder cuidar el grup i oferir un acompanyament més proper i personalitzat.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* QUI T'ACOMPANYA */}
+        <section>
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Qui t&apos;acompanya</h2>
+            </div>
+
+            <div className="qui-grid">
+              {/* Text */}
+              <div>
+                <p style={{ marginTop: 0 }}>Soc la Gavina i el meu camí amb la salut femenina va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
+                <p>La maternitat va obrir una porta de transformació profunda: em va portar a revisar la relació amb mi mateixa, amb el meu cos, la meva feminitat, la meva sexualitat i la meva matriu.</p>
+                <p>Des d&apos;aleshores he recorregut un camí de recerca, aprenentatge i transformació que encara avui continuo caminant. Un camí que m&apos;ha portat a escoltar el meu propi cos, a aprofundir en diferents mirades sobre la salut femenina i a recuperar una relació més conscient amb la meva matriu.</p>
+                <p>Al llarg d&apos;aquest procés m&apos;he format en Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals que avui formen part de la meva manera d&apos;acompanyar.</p>
+                <p>Però el meu acompanyament no neix només de les formacions, sinó sobretot de la meva pròpia experiència de vida i del camí recorregut.</p>
+              </div>
+              {/* Photo */}
+              <div className="qui-photo" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
+                <img
+                  src="/matrius/assets/gavina-riu.jpg"
+                  alt="La Gavina"
+                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center top" }}
+                />
+              </div>
+            </div>
+
+            <p style={{ marginTop: "2rem", textAlign: "center", fontWeight: 700, color: "#6b5347", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', lineHeight: 1.65 }}>
+              He après que{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                la salut femenina no es transforma només incorporant recursos, sinó quan recuperem la relació amb el nostre cos, escoltem els seus missatges i tornem a confiar en la saviesa que habita en la nostra matriu.
+              </span>
+            </p>
+
+            <p style={{ marginTop: "1.4rem" }}>
+              Aquesta és <strong>la mirada que sosté Matrius en Cercle</strong>: un espai per{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>aprendre</span>
+              ,{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>compartir</span>
+              {" "}i{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>caminar juntes</span>
+              {" "}en el procés de reconnectar amb la nostra matriu.
+            </p>
+
+            <p style={{ marginTop: "2rem", textAlign: "center", fontWeight: 700, color: "#6b5347", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', lineHeight: 1.8 }}>
+              Perquè quan les dones ens reunim i ens sostenim, recordem que<br />
+              no estem soles en aquest camí<br />
+              i que la saviesa que habita en la matriu de cada una també es nodreix del cercle.
+            </p>
           </div>
         </section>
 
