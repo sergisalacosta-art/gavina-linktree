@@ -68,21 +68,28 @@ const css = `
     font-weight:700;
   }
   .mp h1{
-    color:white;
-    font-size:clamp(3rem, 8vw, 7.2rem);
-    letter-spacing:.045em;
+    color:#e1bda6;
+    font-size:clamp(1rem, 4.5vw, 5rem);
+    letter-spacing:.03em;
     text-transform:uppercase;
-    max-width:980px;
-    text-wrap:balance;
-    text-shadow:0 8px 30px rgba(0,0,0,.18);
+    max-width:none;
+    text-shadow:0 8px 30px rgba(0,0,0,.22);
   }
   .mp .subtitle{
-    margin:1.4rem 0 0;
-    max-width:700px;
+    margin:.9rem 0 0;
     color:rgba(255,255,255,.92);
-    font-size:clamp(1.05rem, 2vw, 1.4rem);
+    font-size:clamp(0.95rem, 2.5vw, 2rem);
     font-family:Georgia,"Times New Roman",serif;
-    line-height:1.5;
+    font-weight:400;
+    line-height:1.4;
+  }
+  .mp .hero-date{
+    margin:.5rem 0 0;
+    font-size:clamp(1rem, 2vw, 1.35rem);
+    color:white;
+    font-weight:700;
+    font-family:Georgia,"Times New Roman",serif;
+    letter-spacing:.03em;
   }
 
   /* BUTTONS */
@@ -232,7 +239,8 @@ function MatriusPage() {
       <header className="hero">
         <div className="hero-inner">
           <h1>Matrius en Cercle</h1>
-          <p className="subtitle">Un viatge de cinc mesos per recuperar la relació amb la teva matriu i la teva saviesa femenina</p>
+          <p className="subtitle">Un viatge de cinc mesos per recuperar la relació<br />amb la teva matriu i la teva saviesa femenina</p>
+          <p className="hero-date">De finals de novembre a finals d&apos;abril</p>
         </div>
       </header>
 
@@ -246,12 +254,7 @@ function MatriusPage() {
             </div>
             <p>Un acompanyament grupal i online de cinc mesos per recuperar i cultivar la relació amb la teva matriu, integrar recursos naturals que t&apos;ajudin a cuidar-la amb més consciència, confiança i autonomia.</p>
             <p style={{ marginTop: ".8rem" }}>Un espai per aprendre, compartir i caminar juntes.</p>
-            <p style={{ marginTop: ".8rem" }}>Perquè quan les dones ens reunim amb la intenció de cuidar-nos, escoltar-nos i recordar la nostra saviesa, alguna cosa es transforma.</p>
-            <div style={{ marginTop: "1.8rem", textAlign: "center" }}>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                Vull formar part del cercle
-              </a>
-            </div>
+            <p style={{ marginTop: "1.2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Perquè quan les dones ens reunim amb la intenció de cuidar-nos, escoltar-nos i recordar la nostra saviesa, alguna cosa es transforma.</p>
 
             <div className="destacat">
               <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)" }}>
@@ -275,6 +278,98 @@ function MatriusPage() {
                   Vull formar part de Matrius en Cercle
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PER A QUI ÉS */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Per a qui és</h2>
+            </div>
+            <p>Aquest espai és per a tu si...</p>
+            <ul style={{ listStyle: "none", padding: 0, margin: "1.2rem 0 0", display: "grid", gap: ".75rem" }}>
+              {[
+                "Sents que vols recuperar la connexió amb el teu cos, la teva ciclicitat i la teva matriu.",
+                "Vols comprendre millor la teva salut femenina i adquirir recursos naturals per cuidar-te.",
+                "Sents que necessites tornar a escoltar el teu cos i confiar més en la seva saviesa.",
+                "Vols aprendre sobre alimentació, plantes, fitoginecologia i moviment des d'una mirada femenina i conscient.",
+                "Estàs transitant un moment de canvi vital i vols sentir-te acompanyada per altres dones.",
+                "Sents el desig de formar part d'un espai compartit on créixer, aprendre i nodrir-te.",
+              ].map((item) => (
+                <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                  <span style={{ flexShrink: 0, color: "var(--terra)", fontWeight: 700 }}>✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div style={{ marginTop: "2rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                Vull formar part de Matrius en Cercle
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* COM SERÀ EL PROCÉS */}
+        <section>
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Com serà el procés: els camins que recorrerem</h2>
+            </div>
+            <p>Durant cinc mesos recorrerem diferents camins que t&apos;ajudaran a cultivar aquesta nova relació amb la teva matriu:</p>
+            <ul style={{ listStyle: "none", padding: 0, margin: "1.4rem 0 0", display: "grid", gap: "1.2rem" }}>
+              {[
+                { title: "Mes 1 · Nodrir el teu cos", desc: "Alimentació regenerativa, rutines bàsiques, ciclicitat i una primera aproximació a la teva matriu." },
+                { title: "Mes 2 · Reconnectar amb els ritmes de la natura", desc: "Desparasitar, depurar i comprendre el paper de les plantes en el sosteniment de la salut femenina." },
+                { title: "Mes 3 · Endinsar-nos en la fitoginecologia", desc: "Aprendre recursos ancestrals amb plantes per acompanyar els processos del cos femení." },
+                { title: "Mes 4 · Conèixer el teu cos femení", desc: "Comprendre els òrgans femenins i la relació entre les diferents parts del teu cos." },
+                { title: "Mes 5 · Despertar la pelvis i la matriu", desc: "Moviment pelvicuterí acompanyat de la respiració i la veu per començar a alliberar memòries." },
+              ].map(({ title, desc }) => (
+                <li key={title} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                  <span style={{ flexShrink: 0, marginTop: ".1em" }}>🌿</span>
+                  <div>
+                    <p style={{ fontWeight: 700, margin: 0, color: "#6b5347" }}>{title}</p>
+                    <p style={{ marginTop: ".3rem" }}>{desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* FORMAT I DATES */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Format i dates</h2>
+            </div>
+            <p>Durant aquests cinc mesos tindràs accés a:</p>
+            <ul style={{ listStyle: "none", padding: 0, margin: "1.4rem 0 0", display: "grid", gap: "1.2rem" }}>
+              {[
+                { title: "Contingut nou a l'inici de cada mes", desc: "Cada inici de mes tindràs disponible el nou contingut, perquè puguis veure'l al teu ritme i integrar-lo amb calma." },
+                { title: "Un grup privat de WhatsApp", desc: "Un espai per compartir preguntes, dubtes pràctics i experiències, nodrint-nos també de les respostes de les altres dones." },
+                { title: "Una trobada online (2 hores) al final de cada mes", desc: "A finals de cada mes ens trobarem online per compartir el procés de cada una, resoldre dubtes i aprofundir juntes en allò que estiguem vivint." },
+                { title: "Acompanyament personalitzat dins del grup", desc: "Tot i ser un procés grupal, cada dona tindrà el seu propi camí. Jo aniré observant i oferint feedback per adaptar el procés a les necessitats de cadascuna." },
+              ].map(({ title, desc }) => (
+                <li key={title} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                  <span style={{ flexShrink: 0, marginTop: ".1em" }}>🌿</span>
+                  <div>
+                    <p style={{ fontWeight: 700, margin: 0, color: "#6b5347" }}>{title}</p>
+                    <p style={{ marginTop: ".3rem" }}>{desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <p style={{ marginTop: "2.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              No es tracta de fer-ho tot ni d&apos;aplicar tots els recursos de cop.<br />
+              Es tracta d&apos;anar integrant, pas a pas, allò que tingui sentit per a tu.
+            </p>
+            <div style={{ marginTop: "1.8rem", background: "linear-gradient(135deg,#fceae3,#fef5f1)", border: "1px solid rgba(138,75,52,.18)", borderRadius: "1rem", padding: "clamp(1.2rem,3vw,2rem)" }}>
+              <p style={{ margin: 0, fontWeight: 700, color: "#6b5347" }}>Inici: finals de novembre</p>
+              <p style={{ marginTop: ".4rem", fontWeight: 700, color: "#6b5347" }}>Finalització: finals d&apos;abril</p>
+              <p style={{ marginTop: ".9rem" }}>Places limitades. El nombre de dones serà reduït per poder cuidar el grup i oferir un acompanyament proper i personalitzat.</p>
             </div>
           </div>
         </section>
