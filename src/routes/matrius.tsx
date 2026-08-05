@@ -273,11 +273,6 @@ function MatriusPage() {
                 És un espai per caminar aquest procés al costat d&apos;altres dones,<br />
                 recordant juntes la saviesa que habita en cada una de nosaltres.
               </p>
-              <div style={{ textAlign: "center", marginTop: "1.8rem" }}>
-                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                  Vull formar part de Matrius en Cercle
-                </a>
-              </div>
             </div>
           </div>
         </section>
