@@ -12,20 +12,17 @@ const css = `
   .mp{
     --terra:#8a4b34;
     --terra-fosc:#5d3428;
-    --sorra:#f4ead7;
-    --sorra-2:#fff8ea;
     --mel:#e5b66d;
     --mel-suau:#f8df9a;
-    --text:#2b2925;
     --muted:#635d55;
     --blanc:#fffdf8;
     --max:1160px;
   }
   .mp *{box-sizing:border-box}
   .mp{
-    color:var(--text);
+    color:#6b5347;
     background:var(--blanc);
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family:Georgia,"Times New Roman",serif;
     line-height:1.55;
     font-size:17px;
     overflow-x:hidden;
@@ -35,6 +32,7 @@ const css = `
   .mp img{max-width:100%;display:block}
   .mp a{color:inherit;text-decoration:none}
 
+  /* HERO */
   .mp .hero{
     min-height:86vh;
     position:relative;
@@ -62,16 +60,8 @@ const css = `
     position:relative;
     z-index:1;
   }
-  .mp .kicker{
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,.86);
-    font-size:.78rem;
-    margin:0 0 1rem;
-    font-weight:600;
-  }
   .mp h1,.mp h2,.mp h3{
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:Georgia,"Times New Roman",serif;
     color:var(--terra);
     line-height:1.06;
     margin:0;
@@ -88,128 +78,102 @@ const css = `
   }
   .mp .subtitle{
     margin:1.4rem 0 0;
-    max-width:660px;
+    max-width:700px;
     color:rgba(255,255,255,.92);
-    font-size:clamp(1.05rem, 2vw, 1.35rem);
+    font-size:clamp(1.05rem, 2vw, 1.4rem);
+    font-family:Georgia,"Times New Roman",serif;
+    line-height:1.5;
   }
-  .mp .hero-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:.9rem;
-    margin-top:2rem;
-  }
+
+  /* BUTTONS */
   .mp .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
     border-radius:999px;
-    padding:.88rem 1.35rem;
+    padding:.88rem 1.8rem;
     text-decoration:none;
     font-weight:700;
+    font-family:Georgia,"Times New Roman",serif;
     letter-spacing:.01em;
     border:1px solid transparent;
     transition:transform .18s ease, background .18s ease;
+    gap:.55rem;
   }
   .mp .btn:hover{transform:translateY(-2px)}
-  .mp .btn-primary{background:var(--mel); color:#221a14}
-  .mp .btn-ghost{border-color:rgba(255,255,255,.55); color:white; background:rgba(255,255,255,.08); backdrop-filter:blur(6px)}
+  .mp .btn-primary{background:#fff; color:#4a2e22}
+  .mp .btn-terra{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); color:#4a2e22; font-size:clamp(1.15rem,2.2vw,1.45rem); padding:1.1rem 2.6rem; box-shadow:0 0 30px rgba(197,162,142,.48), 0 4px 18px rgba(160,118,95,.22); letter-spacing:.1em;}
+
+  /* LAYOUT */
   .mp section{padding:clamp(2.8rem, 5vw, 5rem) 0; position:relative; z-index:1;}
   .mp .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto;}
-  .mp .section-title{display:flex; flex-direction:column; gap:.65rem; margin-bottom:2rem;}
-  .mp .eyebrow{
-    font-family:Georgia, "Times New Roman", serif;
-    color:var(--terra);
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    font-weight:700;
-    font-size:1rem;
-    display:block;
-    padding-bottom:.5rem;
-    border-bottom:1.5px solid var(--terra);
-  }
-  .mp h2{font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance;}
-  .mp h3{font-size:clamp(1.15rem, 2.1vw, 1.83rem); color:var(--terra-fosc);}
-  .mp .lead{font-size:clamp(1.08rem, 2vw, 1.28rem); max-width:780px; color:var(--muted);}
-  .mp .grid-2{display:grid; grid-template-columns:minmax(0,1.06fr) minmax(310px,.94fr); gap:clamp(2rem,5vw,5rem); align-items:center;}
-  .mp .card{background:#fffdf8; border:1px solid rgba(138,75,52,.12); border-radius:2rem; box-shadow:0 20px 60px rgba(84,54,34,.08);}
-  .mp .text-card{padding:clamp(1.4rem,3.5vw,2.8rem)}
-  .mp .soft-img{border-radius:1.7rem; overflow:hidden; box-shadow:0 26px 70px rgba(55,40,25,.16);}
-  .mp .soft-img img{aspect-ratio:4/3; width:100%; object-fit:cover;}
-  .mp .soft-img-vertical img{aspect-ratio:3/4; object-position:center top;}
-  .mp .bullets{list-style:none; padding:0; margin:1.5rem 0 0; display:grid; gap:1.05rem;}
-  .mp .bullets li{position:relative; padding-left:1.45rem; color:var(--text);}
-  .mp .bullets li:before{content:""; position:absolute; left:0; top:.72em; width:.46rem; height:.46rem; border-radius:50%; background:var(--terra);}
-  .mp strong{font-weight:800; color:#1f1d1a}
-  .mp .section-note{margin:2.1rem 0 0; font-style:italic; color:var(--muted);}
   .mp .cream{background:linear-gradient(180deg, rgba(244,234,215,.55), rgba(255,253,248,.9))}
-  .mp .testimonials{background:linear-gradient(180deg, rgba(255,248,234,.82), rgba(244,234,215,.38));}
-  .mp .split{display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-top:2rem;}
-  .mp .mini{padding:1.25rem 1.3rem; border-left:3px solid var(--mel); background:#fff; border-radius:1rem;}
-  .mp .mini p{margin:.4rem 0 0; color:var(--muted)}
-  .mp .include-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.4rem; margin-top:2rem;}
-  .mp .include{padding:2rem; min-height:240px; display:flex; flex-direction:column; justify-content:space-between;}
-  .mp .include span{display:inline-flex; align-items:center; justify-content:center; width:3rem; height:3rem; border-radius:50%; background:var(--mel-suau); color:var(--terra-fosc); font-weight:900; margin-bottom:1rem;}
-  .mp .details-stack{max-width:960px; margin:2.8rem auto 0; display:grid; gap:1.4rem;}
-  .mp .single-detail{margin-top:0;}
-  .mp .detail-card{padding:clamp(1.6rem, 3vw, 2.4rem); background:#fffdf8; color:var(--text); text-align:left;}
-  .mp .detail-card .eyebrow{margin-bottom:.85rem;}
-  .mp .price-block .eyebrow{border-bottom-color:rgba(241,210,163,.45);}
-  .mp .detail-card h3{margin-bottom:1rem;}
-  .mp .detail-card p{margin:.75rem 0 0;}
-  .mp .pricing-card{padding:clamp(1.8rem, 3.4vw, 2.8rem); border-radius:2rem; background:linear-gradient(180deg, #f7ead3 0%, #fff5e4 100%); border:1px solid rgba(138,75,52,.16); box-shadow:0 22px 65px rgba(84,54,34,.10); color:var(--text);}
-  .mp .pricing-options{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1.2rem; align-items:stretch; margin-top:.8rem;}
-  .mp .price-option{background:transparent; border:0; border-radius:0; padding:.35rem 1rem; text-align:center; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; width:100%; height:100%; box-sizing:border-box;}
-  .mp .price-option.annual{border-left:1px solid rgba(138,75,52,.18);}
-  .mp .price-option h3{text-transform:uppercase; letter-spacing:.08em; font-size:1rem; margin:0 0 .8rem; text-align:center;}
-  .mp .price-list{list-style:none; padding:0; margin:0; width:100%; max-width:30ch; color:var(--muted); font-size:.97rem; line-height:1.45; text-align:left;}
-  .mp .price-list li{position:relative; padding-left:1.15rem; margin:0 0 .65rem;}
-  .mp .price-list li::before{content:"•"; position:absolute; left:0; top:0; color:var(--terra); font-weight:700;}
-  .mp .price-number{font-family:Arial, Helvetica, sans-serif; color:var(--terra); font-size:clamp(1.7rem, 3.3vw, 2.55rem); line-height:1; font-weight:900; margin:.15rem 0 1.1rem; text-align:center; width:100%; letter-spacing:-.02em;}
-  .mp .price-launch-note{margin:.65rem 0 0; color:var(--muted); font-size:.9rem; line-height:1.35; text-align:center;}
-  .mp .price-note{margin:0; color:var(--muted); line-height:1.4; text-align:center; max-width:31ch; font-size:.95rem;}
-  .mp .bio{display:grid; grid-template-columns:380px 1fr; gap:clamp(2rem,5vw,5rem); align-items:center;}
-  .mp .bio .soft-img img{aspect-ratio:1/1.12;}
-  .mp .price-block{background:var(--terra); color:white; border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); display:grid; grid-template-columns:1fr 1.2fr; gap:2rem; align-items:center; box-shadow:0 30px 80px rgba(93,52,40,.22);}
-  .mp .price-block h2,.mp .price-block h3{color:white}
-  .mp .price-block .eyebrow{color:#f1d2a3}
-  .mp .price-block ul{margin:.8rem 0 0}
-  .mp .price-block li{margin:.55rem 0}
+
+  /* TYPOGRAPHY */
+  .mp .section-title{display:flex; flex-direction:column; gap:.65rem; margin-bottom:2rem;}
+  .mp .section-title h2{padding-bottom:.55rem; border-bottom:1.5px solid var(--terra); margin-bottom:0;}
+  .mp h2{font-family:Georgia,"Times New Roman",serif; font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; font-weight:700; line-height:1.06; margin:0 0 1rem;}
+  .mp h3{font-size:clamp(1.1rem, 2vw, 1.55rem); color:var(--terra-fosc); margin-bottom:.7rem; font-family:Georgia,"Times New Roman",serif;}
+  .mp p{margin:.75rem 0 0; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
+  .mp p:first-child{margin-top:0}
+  .mp .lead{font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif;}
+  .mp strong{font-weight:800; color:#6b5347}
+
+  .mp .bullets{list-style:none; padding:0; margin:1.2rem 0 0; display:grid; gap:.9rem;}
+  .mp .bullets li{position:relative; padding-left:1.45rem; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
+  .mp .bullets li:before{content:""; position:absolute; left:0; top:.75em; width:.45rem; height:.45rem; border-radius:50%; background:var(--terra);}
+
+  .mp .soft-img{border-radius:1.7rem; overflow:hidden; box-shadow:0 26px 70px rgba(55,40,25,.16);}
+  .mp .soft-img img{width:100%; object-fit:cover; aspect-ratio:4/3; object-position:center;}
+  .mp .grid-2-img{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:2rem;}
+
+  /* DESTACAT */
+  .mp .destacat{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); margin-top:2rem; font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
+  .mp .destacat p{color:var(--terra-fosc); font-size:inherit; line-height:inherit; font-family:inherit; margin-top:.6rem;}
+  .mp .destacat p:first-child{margin-top:0;}
+
+  /* TESTIMONIALS */
   .mp .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
   .mp .testi-track{flex:1; overflow:hidden;}
   .mp .testi-card{background:#fffdf8; border-radius:1.7rem; padding:2rem 2.2rem; box-shadow:0 4px 20px -8px rgba(90,40,20,.1); border:1px solid rgba(138,75,52,.1);}
-  .mp .testi-card p{font-size:.98rem; color:var(--muted); line-height:1.72; font-style:italic; margin-bottom:1rem;}
+  .mp .testi-card p{font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:#6b5347; line-height:1.72; margin-bottom:1rem; font-family:Georgia,"Times New Roman",serif;}
   .mp .testi-card cite{font-style:normal; font-weight:800; font-size:.88rem; color:var(--terra);}
   .mp .testi-arrow{flex-shrink:0; width:2.6rem; height:2.6rem; border-radius:50%; border:none; background:var(--terra); color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .15s;}
   .mp .testi-arrow:hover{background:var(--terra-fosc); transform:scale(1.08);}
   .mp .testi-dots{display:flex; justify-content:center; gap:.55rem; margin-top:1.4rem;}
   .mp .testi-dot{width:.5rem; height:.5rem; border-radius:50%; background:var(--mel); border:none; cursor:pointer; padding:0; transition:background .2s, transform .2s;}
   .mp .testi-dot.active{background:var(--terra); transform:scale(1.3);}
+
+  /* FAQ */
+  .mp .faq{display:grid; gap:.7rem; margin-top:1.6rem;}
+  .mp .faq-item{border:1px solid rgba(138,75,52,.15); border-radius:1.2rem; overflow:hidden; background:#fffdf8;}
+  .mp .faq-item summary{list-style:none; cursor:pointer; padding:1.15rem 1.4rem; font-weight:700; font-size:clamp(1.15rem,2.2vw,1.4rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif; display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none;}
+  .mp .faq-item summary::-webkit-details-marker{display:none;}
+  .mp .faq-item summary::after{content:"+"; font-size:1.4rem; font-weight:400; color:var(--terra); flex-shrink:0; transition:transform .2s;}
+  .mp .faq-item[open] summary::after{transform:rotate(45deg);}
+  .mp .faq-item[open] summary{border-bottom:1px solid rgba(138,75,52,.1);}
+  .mp .faq-body{padding:1.1rem 1.4rem 1.3rem; color:#6b5347; font-size:clamp(1.15rem,2.2vw,1.4rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
+  .mp .faq-body p{margin:.6rem 0 0; color:#6b5347; font-size:inherit; line-height:inherit; font-family:inherit;}
+  .mp .faq-body p:first-child{margin-top:0;}
+
+  /* CTA */
+  .mp .cta-block{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(160,115,90,.22);}
+  .mp .cta-block h2{color:#4a2e22; margin-bottom:1rem;}
+  .mp .cta-block p{color:#5d3c2c;}
+
   .mp footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
-  .mp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; font-style:italic; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
+  .mp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
   .mp .back-link:hover{color:var(--terra-fosc);}
-  #inclou{padding-bottom:0!important}
-  #dates{padding-top:0!important;margin-top:.6rem!important}
-  #dates .details-stack{margin-top:0!important}
-  .mp .pq-mid{display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-top:1.1rem;}
-  .mp .pq-mid .soft-img{height:100%;}
-  .mp .pq-mid .soft-img img{aspect-ratio:unset; height:100%; width:100%; object-fit:cover; object-position:center;}
-  .mp .pq-cards{display:grid; gap:1.1rem;}
+
   @media(max-width:900px){
     .mp .hero{min-height:74vh}
-    .mp .grid-2,.mp .price-block,.mp .bio{grid-template-columns:1fr}
-    .mp .include-grid,.mp .split,.mp .testimonials-grid,.mp .pricing-options{grid-template-columns:1fr}
-    .mp .pq-mid{grid-template-columns:1fr;}
-    .mp .price-option.annual{border-left:0;border-top:1px solid rgba(138,75,52,.18);padding-top:1.2rem;margin-top:.6rem;}
-    .mp .hero-inner{padding-bottom:4rem}
-    .mp::after{background-size:460px auto;opacity:.14;}
+    .mp .grid-2-img{grid-template-columns:1fr}
   }
   @media(max-width:560px){
     .mp{font-size:16px}
     .mp .hero-inner,.mp .wrap{width:min(100% - 28px, var(--max))}
     .mp section{padding:2.4rem 0}
     .mp .btn{width:100%}
-    .mp h1{font-size:2.7rem}
-    .mp .text-card,.mp .include{padding:1.35rem}
   }
 `;
 
@@ -253,13 +217,8 @@ function MatriusPage() {
       <div
         aria-hidden
         style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 0,
-          pointerEvents: "none",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none",
+          display: "flex", alignItems: "center", justifyContent: "center",
           maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
           WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
         }}
@@ -269,160 +228,62 @@ function MatriusPage() {
 
       <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
 
+      {/* HERO */}
       <header className="hero">
         <div className="hero-inner">
-          <p className="kicker">Espai online entre dones</p>
           <h1>Matrius en Cercle</h1>
-          <p className="subtitle">Un espai mensual per parlar i compartir sobre salut femenina, sexualitat i recursos naturals d'autocura i prevenció.</p>
-          <div className="hero-actions">
-            <a className="btn btn-primary" href={WA_URL} target="_blank" rel="noopener noreferrer">Consulta disponibilitat per WhatsApp</a>
-            <a className="btn btn-ghost" href="#que-es">Veure què inclou</a>
-          </div>
+          <p className="subtitle">Un viatge de cinc mesos per recuperar la relació amb la teva matriu i la teva saviesa femenina</p>
         </div>
       </header>
 
       <main>
-        <section id="que-es">
-          <div className="wrap grid-2">
-            <div className="card text-card">
-              <div className="section-title">
-                <span className="eyebrow">Què és</span>
-                <h2>Un cercle online per cultivar l'escolta, el cos i la paraula.</h2>
-              </div>
-              <p className="lead"><strong>Matrius en Cercle</strong> és un espai online entre dones on parlarem i reflexionarem sobre salut femenina, sexualitat, climateri, ciclicitat, menstruació, relacions, maternitat, preparats herbals i altres alquímies.</p>
-              <ul className="bullets">
-                <li>Ho farem des de la ment? Segurament. Però també cultivarem, de mica mica, l'expressar-nos des de la matriu.</li>
-                <li>Traspassarem els tabús per començar a parlar obertament del que les nostres matrius també ens demanen que nombrem: la nostra sang menstrual, els nostres òrgans femenins, la nostra energia sexual.</li>
-                <li>Us compartiré de manera molt senzilla i pràctica recursos (provinents de la saviesa i medicina natural i ancestral) perquè pugueu anar introduint en l'autocura i la prevenció de la vostra salut femenina.</li>
-                <li>Podràs nodrir la teva matriu compartint i escoltant altres dones.</li>
-              </ul>
-            </div>
-            <div className="soft-img soft-img-vertical">
-              <img src="/matrius/assets/ritual-nou.png" alt="Dona en un entorn natural practicant escolta corporal" />
-            </div>
-          </div>
-        </section>
 
-        <section className="cream" id="per-a-qui">
+        {/* QUÈ ÉS */}
+        <section>
           <div className="wrap">
             <div className="section-title">
-              <span className="eyebrow">Per a qui és</span>
-              <h2>És per a tu si...</h2>
+              <h2>Què és Matrius en Cercle?</h2>
             </div>
-            {/* Top 2 cards */}
-            <div className="split" style={{ marginTop: "1.5rem" }}>
-              <div className="mini"><strong>Vols cuidar-te amb recursos naturals.</strong><p>Et ressona el cuidar-te de manera natural i vols recursos per acompanyar-te.</p></div>
-              <div className="mini"><strong>Tens compromís amb tu mateixa.</strong><p>Vols millorar i mantenir la teva salut femenina.</p></div>
+            <p>Un acompanyament grupal i online de cinc mesos per recuperar i cultivar la relació amb la teva matriu, integrar recursos naturals que t&apos;ajudin a cuidar-la amb més consciència, confiança i autonomia.</p>
+            <p style={{ marginTop: ".8rem" }}>Un espai per aprendre, compartir i caminar juntes.</p>
+            <p style={{ marginTop: ".8rem" }}>Perquè quan les dones ens reunim amb la intenció de cuidar-nos, escoltar-nos i recordar la nostra saviesa, alguna cosa es transforma.</p>
+            <div style={{ marginTop: "1.8rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                Vull formar part del cercle
+              </a>
             </div>
-            {/* Middle: image left + 2 cards right */}
-            <div className="pq-mid">
-              <div className="soft-img">
-                <img src="/matrius/assets/herbes.jpg" alt="Mans preparant herbes en un cistell" />
+
+            <div className="destacat">
+              <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)" }}>
+                Més enllà dels recursos: el poder del cercle
+              </p>
+              <p>Durant molts anys les dones hem compartit coneixements, remeis, experiències i saviesa en comunitat.</p>
+              <p>El cercle recupera aquest espai.</p>
+              <p>Un lloc on no només rebem informació, sinó on podem compartir el nostre propi procés, sentir-nos sostingudes i recordar que no caminem soles.</p>
+              <p style={{ marginTop: "1rem" }}>Quan les dones ens ajuntem amb la intenció de cuidar-nos, alguna cosa passa.</p>
+              <p style={{ marginTop: ".35rem" }}>Ens escoltem.</p>
+              <p style={{ marginTop: ".35rem" }}>Ens reconeixem.</p>
+              <p style={{ marginTop: ".35rem" }}>Ens nodrim.</p>
+              <p style={{ marginTop: ".8rem" }}>I aquesta experiència compartida també forma part de la medicina del cercle.</p>
+              <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                No és només un espai per aprendre sobre salut femenina.<br />
+                És un espai per caminar aquest procés al costat d&apos;altres dones,<br />
+                recordant juntes la saviesa que habita en cada una de nosaltres.
+              </p>
+              <div style={{ textAlign: "center", marginTop: "1.8rem" }}>
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                  Vull formar part de Matrius en Cercle
+                </a>
               </div>
-              <div className="pq-cards">
-                <div className="mini"><strong>Et ressonen les medicines que han sostingut les dones en diferents cultures d'arreu del món</strong><p>Quan sents a parlar de medicina natural —vapors vaginals, cataplasmes, òvuls vaginals, desparasitació amb plantes…—, el teu cos et fa saber que &ldquo;sí&rdquo;.</p></div>
-                <div className="mini"><strong>Vols recursos pràctics d'autocura.</strong><p>Et ressona introduir recursos senzills i pràctics en l'autocura i la prevenció de la teva salut femenina, provinents de la saviesa i medicina natural i ancestral.</p></div>
-              </div>
-            </div>
-            {/* Bottom 2 cards */}
-            <div className="split" style={{ marginTop: "1.1rem" }}>
-              <div className="mini"><strong>Vols escoltar el teu cos.</strong><p>Et fan soroll els missatges ràpids sobre salut i sexualitat femenines.</p></div>
-              <div className="mini"><strong>Vols compartir-te amb honestedat amb tu</strong><p>Tens ganes d'escoltar altres dones i parlar dels temes que ens cuiden des d'un lloc diferent al que probablement sents al teu voltant.</p></div>
             </div>
           </div>
         </section>
 
-        <section id="inclou">
-          <div className="wrap">
-            <div className="section-title">
-              <span className="eyebrow">Què inclou</span>
-              <h2>Un recorregut mensual, en directe, gravació i materials complementaris</h2>
-            </div>
-            <div className="include-grid">
-              <article className="card include">
-                <div>
-                  <span>1</span>
-                  <h3>Una sessió online en directe cada mes</h3>
-                  <p>Totes les sessions quedaran gravades fins al dia de la propera sessió, per si no pots assistir al directe.</p>
-                </div>
-              </article>
-              <article className="card include">
-                <div>
-                  <span>2</span>
-                  <h3>Contingut extra cada trimestre</h3>
-                  <p>Rebràs contingut de valor sobre salut femenina, sexualitat, climateri, ciclicitat, preparats herbals, alquímies o moviment corporal.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="dates">
-          <div className="wrap details-stack single-detail">
-            <article className="card detail-card">
-              <span className="eyebrow">Dates a recordar</span>
-              <h3>Ens trobem un dimecres al mes</h3>
-              <p>Ens trobem l'últim dimecres de cada mes, de <strong>17.45 a 19.15 h</strong>.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="inversio" className="cream">
-          <div className="wrap details-stack single-detail">
-            <article className="pricing-card">
-              <span className="eyebrow">Inversió</span>
-              <ul className="bullets" style={{ margin: "1.4rem 0 0" }}>
-                <li>Una sessió mensual cada mes en directe</li>
-                <li>Contingut de valor al final de cada trimestre</li>
-                <li>20% descompte per al Retir d&apos;1 dia de l&apos;octubre</li>
-              </ul>
-              <p className="price-number" style={{ textAlign: "left", marginTop: "1.4rem" }}>38€/mes</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="gavina">
-          <div className="wrap bio">
-            <div className="soft-img">
-              <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de Gavina" />
-            </div>
-            <div className="card text-card">
-              <div className="section-title">
-                <span className="eyebrow">Qui acompanya</span>
-              </div>
-              <p className="lead">Soc la Gavina, acompanyant de dones que tenen ganes de cuidar la seva salut femenina ginecològica aplicant rutines bàsiques d'autocura i pautes de prevenció reals i naturals, lluny de fàrmacs i intervencions quirúrgiques.</p>
-              <p className="lead" style={{ marginTop: "1.2rem" }}>Uns recursos que són les bases de la salut femenina i que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d'arreu del món.</p>
-              <p style={{ marginTop: "1.8rem" }}><a className="btn btn-primary" href={WA_URL} target="_blank" rel="noopener noreferrer">Consulta places per WhatsApp</a></p>
-            </div>
-          </div>
-        </section>
-
-        <section className="testimonials" id="testimonis">
-          <div className="wrap">
-            <div className="section-title">
-              <span className="eyebrow">Testimonis</span>
-              <h2>Les dones que han passat pels cercles diuen...</h2>
-            </div>
-            <TestimonialCarousel />
-          </div>
-        </section>
-
-        <section id="places" className="cream">
-          <div className="wrap price-block">
-            <div>
-              <span className="eyebrow">Places limitades</span>
-              <h2>Per tal de cuidar el grup i a cada una.</h2>
-            </div>
-            <div>
-              <p><a className="btn btn-primary" href={WA_URL} target="_blank" rel="noopener noreferrer">Consulta disponibilitat per WhatsApp</a></p>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer>
         <div className="wrap">
-          Matrius en Cercle · Espai online entre dones
+          Matrius en Cercle · Acompanyament grupal online · Gavina Freixa Rius
         </div>
       </footer>
     </div>
