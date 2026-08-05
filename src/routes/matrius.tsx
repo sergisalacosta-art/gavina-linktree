@@ -167,6 +167,7 @@ const css = `
   .mp .cta-block{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(160,115,90,.22);}
   .mp .cta-block h2{color:#4a2e22; margin-bottom:1rem;}
   .mp .cta-block p{color:#5d3c2c;}
+  .mp .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32' preserveAspectRatio='none'%3E%3Cpath d='M6,9 C28,4 65,10 105,6 C142,2 178,8 195,7 C199,11 198,20 193,23 C158,28 115,23 75,25 C40,27 11,23 4,21 C1,18 2,13 6,9 Z' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-size:100% 100%; padding:0.12em 0.4em;}
 
   .mp footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
   .mp .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
@@ -191,9 +192,6 @@ const css = `
 `;
 
 const testimonialsData = [
-  { text: "Anar al Cercle de Dones és meravellós. Són moltes coses positives per mi. És com anar a la meva illa de la calma i de la pau. És un espai d'autocura total. Un espai on estic pensant només en mi i en les meves companyes. Un espai on puc trobar aquestes mirades còmplices i amoroses de les dones que formen part del cercle amb mi i de la Gavina, que acompanya amb aquesta saviesa tan encertada, que sap acompanyar sense dirigir i això és important perquè em sento acompanyada i escoltada. Un espai on em sento molt sostinguda i on també tinc l'oportunitat de sostenir. M'encanta.", name: "Carolina A." },
-  { text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.", name: "Alba C." },
-  { text: "Gràcies, Gavina, per iniciar-me en aquest camí cap al coneixement de mi mateixa; ara puc mirar els meus fills amb uns altres ulls. Gràcies també per acompanyar-me en l'autoconeixement, per permetre sentir tot el que em passa, incloses les emocions més difícils, i ensenyar-me a escoltar-me, ara soc capaç de reconèixer amb més facilitat les meves emocions, i també les dels altres. He après que la maternitat necessita de saber-nos escoltar per poder escoltar els altres i veure'ls de veritat. També gràcies per la tribu i la companyia, el camí és més fàcil amb les mares del cercle.", name: "Queralt S." },
   { text: "La Gavina em transmet molta confiança cap a una mirada més connectada amb la natura i la meva intuïció femenina. Sento que gran part dels missatges cap als canvis, el cos i la salut es miren molt des de la por i una visió molt medicalitzada. Ancestralment les dones s'acompanyaven entre elles, des de la seva saviesa i coneixements. Sento molta curiositat per provar l'acompanyament amb una dona sensible i empàtica com ella. Tenir a la Gavina és tot un regal!", name: "Brenda" },
   { text: "Feia temps que tenia problemes menstruals, amenorrea, sagnats intermenstruals i ja m'havien visitat diferents professionals (endocrina ginecòlegs, metges i fins i tot nutricionista sense gaire èxit). Vaig decidir començar amb la Gavina perquè volia provar una altra mirada, buscar l'arrel del problema des d'una perspectiva més natural i entenent el llenguatge del meu cos. La Gavina em va ensenyar a mirar-me com mai, a posar-me al centre i escoltar el meu cos. A donar-li descans i la pausa que necessitava per tenir energia suficient per ovular. També gràcies als seus coneixements, de manera paral·lela, vaig poder obtenir més respostes dels metges. Em van trobar un càncer a l'úter, que no m'haguessin diagnosticat tan a temps si ella no m'hagués assessorat. La Gavina em va ajudar moltíssim a decidir el meu tractament amb tota la informació. Tan de bo hagués trobat una mirada com la de la Gavina anys enrere.", name: "Lorena" },
   { text: "En els espais que la Gavina organitza, ho fa amb molt mimo i cura, cada detall en l'arribada i durant les diferents activitats. La seva escolta, la seva entrega, el respecte pels diferents ritmes aporta escolta, tacte, carinyo en el seu acompanyament. Recordo que tant les meditacions per connectar amb l'úter com el moviment corporal en grup per mi va ser molt alliberador. La Gavina és d'aquestes dones amb una sensibilitat, un sosté i una fortalesa que ajuden a transitar els moviments emocionals que emergeixen. Gràcies, gràcies, gràcies, Gavina!!", name: "Montse P." },
@@ -589,16 +587,15 @@ function MatriusPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <p style={{ margin: 0, color: "#4a2e22", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', lineHeight: 1.75, fontWeight: 700 }}>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
                 Si sents que ha arribat el moment de deixar de caminar sola<br />
-                i regalar-te un espai on aprendre, compartir i habitar la teva matriu<br />
-                al costat d&apos;altres dones...
-              </p>
-              <div style={{ marginTop: "1.8rem" }}>
-                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                i regalar-te <span className="em-sub">un espai on aprendre, compartir i habitar la teva matriu al costat d&apos;altres dones</span>...
+              </h2>
+              <p style={{ marginTop: "1.8rem" }}>
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   Vull formar part de Matrius en Cercle
                 </a>
-              </div>
+              </p>
             </div>
           </div>
         </section>
