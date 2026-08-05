@@ -350,7 +350,7 @@ function MatriusPage() {
               <p style={{ marginTop: ".8rem" }}>I aquesta experiència compartida també forma part de la medicina del cercle.</p>
               <div style={{ margin: "2rem 0 1.6rem", borderRadius: "1.2rem", overflow: "hidden" }}>
                 <img
-                  src="/matrius/assets/haseya-dones.jpg"
+                  src="/matrius/assets/haseya%20dones.jpg"
                   alt="Cercle de dones"
                   style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: "480px", objectPosition: "center" }}
                 />
@@ -420,7 +420,7 @@ function MatriusPage() {
             </ul>
             <div style={{ marginTop: "2rem", borderRadius: "1.2rem", overflow: "hidden" }}>
               <img
-                src="/matrius/assets/surita-copalera.jpg"
+                src="/matrius/assets/surita%20copalera.jpg"
                 alt="Surita copalera"
                 style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: "480px", objectPosition: "center top" }}
               />
@@ -488,7 +488,7 @@ function MatriusPage() {
               {/* Photo */}
               <div className="qui-photo" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
                 <img
-                  src="/matrius/assets/gavina-riu.jpg"
+                  src="/matrius/assets/gavina%20riu.jpeg"
                   alt="La Gavina"
                   style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center top" }}
                 />
@@ -588,9 +588,11 @@ function MatriusPage() {
           <div className="wrap">
             <div className="cta-block">
               <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
-                Si sents que ha arribat el moment de deixar de caminar sola<br />
-                i regalar-te <span className="em-sub">un espai on aprendre, compartir i habitar la teva matriu al costat d&apos;altres dones</span>...
+                Si sents que ha arribat el moment de deixar de caminar sola...
               </h2>
+              <p style={{ marginTop: "1.4rem", fontSize: "clamp(1.1rem, 2.4vw, 1.7rem)", fontFamily: 'Georgia, "Times New Roman", serif', fontWeight: 700, lineHeight: 1.4, color: "#4a2e22" }}>
+                Et convido a regalar-te <span className="em-sub">un espai on aprendre, compartir i habitar la teva matriu al costat d&apos;altres dones</span>.
+              </p>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   Vull formar part de Matrius en Cercle
