@@ -57,9 +57,9 @@ const css = `
   }
   .sv .hero-sub{
     font-family:Georgia,"Times New Roman",serif;
-    color:rgba(255,255,255,.88);
-    font-size:clamp(1.05rem, 2.2vw, 1.55rem);
-    letter-spacing:.04em;
+    color:rgba(255,255,255,.92);
+    font-size:clamp(0.95rem, 2.5vw, 2rem);
+    letter-spacing:.03em;
     line-height:1.4;
     margin:0 0 1.2rem;
     font-weight:400;
@@ -118,6 +118,9 @@ const css = `
 
   /* PRICE */
   .sv .price-number{font-family:Georgia,"Times New Roman",serif; color:var(--terra); font-size:clamp(2.5rem, 6vw, 4.5rem); font-weight:900; line-height:1; margin:1.4rem 0 .4rem;}
+
+  /* EM-SUB highlight */
+  .sv .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32' preserveAspectRatio='none'%3E%3Cpath d='M6,9 C28,4 65,10 105,6 C142,2 178,8 195,7 C199,11 198,20 193,23 C158,28 115,23 75,25 C40,27 11,23 4,21 C1,18 2,13 6,9 Z' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-size:100% 100%; padding:0.12em 0.4em;}
 
   /* BIO */
   .sv .bio-side{display:grid; grid-template-columns:1fr clamp(200px,35%,380px); gap:clamp(2rem,4vw,4rem); align-items:start;}
@@ -229,7 +232,8 @@ function SessioPage() {
         <section>
           <div className="wrap">
             <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              T&apos;ajudo a comprendre què pot estar expressant el teu cos i a trobar quin camí pot tenir més sentit per a tu.
+              T&apos;ajudo a comprendre què pot estar expressant el teu cos<br />
+              i a trobar quin camí pot tenir més sentit per a tu.
             </p>
             <p style={{ marginTop: "1.4rem" }}>
               Potser fa temps que convius amb un desequilibri ginecològic, un símptoma que es repeteix o una sensació que alguna cosa no està en equilibri.
@@ -240,7 +244,7 @@ function SessioPage() {
             <p style={{ marginTop: "1rem" }}>
               En aquesta sessió posarem llum al teu cas.
             </p>
-            <p style={{ marginTop: "1rem" }}>
+            <p style={{ marginTop: "1rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
               Un espai per escoltar la teva història, comprendre què pot estar expressant el teu cos i oferir-te una orientació personalitzada perquè puguis prendre decisions amb més claredat.
             </p>
             <p style={{ marginTop: "2rem", textAlign: "center" }}>
@@ -343,7 +347,8 @@ function SessioPage() {
               <h2>Què t&apos;emportaràs?</h2>
             </div>
             <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Quan entenem millor el que estem vivint, també podem començar a decidir amb més calma i més confiança.
+              Quan entenem millor el que estem vivint,<br />
+              també podem començar a decidir amb més calma i més confiança.
             </p>
             <p style={{ marginTop: "1.4rem" }}>Després de la sessió tindràs:</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", display: "grid", gap: ".9rem" }}>
@@ -466,10 +471,13 @@ function SessioPage() {
                 Estàs preparada per fer el primer pas?
               </h2>
               <p style={{ marginTop: "1.4rem", color: "#4a2e22", lineHeight: 1.65 }}>
-                Si sents que ha arribat el moment de mirar la teva salut femenina des d&apos;un lloc més conscient, aquesta sessió pot ser un bon començament.
+                Si sents que <span className="em-sub">ha arribat el moment de mirar la teva salut femenina</span> des d&apos;un lloc més conscient,<br />
+                aquesta sessió pot ser un bon començament.
               </p>
-              <p style={{ marginTop: ".8rem", color: "#4a2e22", lineHeight: 1.65 }}>
-                Un espai per escoltar la teva història, ordenar el que estàs vivint i valorar juntes quin camí pot tenir més sentit per a tu.
+              <p style={{ marginTop: ".8rem", color: "#4a2e22", lineHeight: 1.65, fontWeight: 700, textAlign: "center" }}>
+                Un espai per escoltar la teva història,<br />
+                ordenar el que estàs vivint<br />
+                i valorar juntes quin camí pot tenir més sentit per a tu.
               </p>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
