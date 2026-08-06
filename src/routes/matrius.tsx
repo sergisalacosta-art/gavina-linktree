@@ -495,9 +495,9 @@ function MatriusPage() {
               {/* Photo */}
               <div className="qui-photo" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
                 <img
-                  src="/matrius/assets/gavina%20riu.jpeg"
+                  src="/matrius/assets/gavinariu3prop.jpg"
                   alt="La Gavina"
-                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center 10%" }}
+                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center top" }}
                 />
               </div>
             </div>

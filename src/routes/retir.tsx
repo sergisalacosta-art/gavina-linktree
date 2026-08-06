@@ -522,7 +522,7 @@ function RetirPage() {
                 <p className="lead" style={{ marginTop: ".8rem" }}>Amb els anys he anat integrant diferents mirades i recursos que han donat forma a la meva manera d&apos;acompanyar: Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals.</p>
               </div>
               <div className="soft-img">
-                <img src="/matrius/assets/gavina%20riu2.jpeg" alt="Retrat de la Gavina" loading="lazy" style={{ transform: "scale(1.8)", transformOrigin: "50% 30%" }} />
+                <img src="/matrius/assets/gavinariu2prop.jpg" alt="Retrat de la Gavina" loading="lazy" style={{ objectPosition: "center 20%" }} />
               </div>
             </div>
             <p className="lead" style={{ marginTop: "1.8rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Però sobretot, aquest camí m&apos;ha ensenyat que <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu</span>.</p>
