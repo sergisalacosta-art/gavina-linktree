@@ -404,11 +404,11 @@ function MatriusPage() {
               <h2>Com serà el procés: els camins que recorrerem</h2>
             </div>
             <div className="proces-grid">
-              <div className="proces-photo" style={{ borderRadius: "1.2rem", overflow: "hidden", height: "100%" }}>
+              <div className="proces-photo" style={{ borderRadius: "1.2rem", overflow: "hidden", display: "flex", flexDirection: "column" }}>
                 <img
                   src="/matrius/assets/surita%20copalera.jpg"
                   alt="Surita copalera"
-                  style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", objectPosition: "center top" }}
+                  style={{ width: "100%", flex: 1, minHeight: 0, display: "block", objectFit: "cover", objectPosition: "center top" }}
                 />
               </div>
               <div>
@@ -497,7 +497,7 @@ function MatriusPage() {
                 <img
                   src="/matrius/assets/gavina%20riu.jpeg"
                   alt="La Gavina"
-                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center top", transform: "scale(1.45)", transformOrigin: "50% 22%" }}
+                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center 10%" }}
                 />
               </div>
             </div>
