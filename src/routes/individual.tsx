@@ -142,7 +142,7 @@ const css = `
 
   /* GRIDS */
   .ip .qui-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
-  .ip .mes-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
+  .ip .mes-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:stretch;}
   .ip .camins-grid{display:grid; grid-template-columns:clamp(200px,32%,380px) 1fr; gap:clamp(2rem,4vw,4rem); align-items:start;}
 
   .ip footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
@@ -376,12 +376,12 @@ function IndividualPage() {
                 <p style={{ marginTop: ".2rem" }}>Amb la teva sexualitat.</p>
                 <p style={{ marginTop: ".2rem" }}>Amb la teva naturalesa.</p>
               </div>
-              <div className="mes-photo soft-img" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
+              <div className="mes-photo" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)", height: "100%", display: "flex", flexDirection: "column" }}>
                 <img
                   src="/matrius/assets/gavinasuri.jpg"
                   alt="La Gavina a la natura"
                   loading="lazy"
-                  style={{ width: "100%", display: "block" }}
+                  style={{ width: "100%", flex: 1, minHeight: 0, display: "block", objectFit: "cover", objectPosition: "center top" }}
                 />
               </div>
             </div>
@@ -431,25 +431,15 @@ function IndividualPage() {
               <h2>Els camins que recorrerem per habitar la teva matriu</h2>
             </div>
             <div className="camins-grid">
-              {/* Photo + text below on the left */}
               <div className="camins-photo">
                 <div style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
                   <img
-                    src="/individual/calendula.jpg"
-                    alt="Medicina natural"
+                    src="/matrius/assets/mansmatriu.jpg"
+                    alt="Mans sobre la matriu"
                     loading="lazy"
-                    style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "4/3" }}
+                    style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4" }}
                   />
                 </div>
-                <p style={{ marginTop: "1.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
-                  Cada un d&apos;aquests camins és una porta d&apos;entrada.
-                </p>
-                <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-                  A través d&apos;ells, aniràs recuperant...
-                </p>
-                <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-                  ...una relació més conscient amb la teva matriu i amb tu mateixa.
-                </p>
               </div>
               {/* Text + list on the right */}
               <div>
@@ -469,6 +459,15 @@ function IndividualPage() {
                 </ul>
               </div>
             </div>
+            <p style={{ marginTop: "1.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+              Cada un d&apos;aquests camins és una porta d&apos;entrada.
+            </p>
+            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              A través d&apos;ells, aniràs recuperant...
+            </p>
+            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              ...una relació més conscient amb la teva matriu i amb tu mateixa.
+            </p>
           </div>
         </section>
 
@@ -627,7 +626,8 @@ function IndividualPage() {
             <div className="cta-block">
               <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
                 Si aquest camí ha ressonat amb tu<br />
-                i sents que <span className="em-sub">ha arribat el moment de començar a habitar la teva matriu</span>,<br />
+                i sents que ha arribat el moment de<br />
+                <span className="em-sub">començar a habitar la teva matriu</span>,<br />
                 serà un plaer acompanyar-te.
               </h2>
               <p style={{ marginTop: "1.8rem" }}>
