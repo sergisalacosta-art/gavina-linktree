@@ -335,26 +335,27 @@ function SessioPage() {
                 <p style={{ marginTop: "1.4rem", fontWeight: 700, color: "#6b5347" }}>
                   Durada: 1h15 aproximadament.
                 </p>
-                <p style={{ marginTop: "1rem" }}>
-                  A partir d&apos;aquesta mirada global, et compartiré la meva comprensió del teu cas i una proposta orientativa sobre els camins que podrien ajudar-te.
-                </p>
-
-                {/* I DESPRÉS DE LA SESSIÓ? */}
-                <div className="destacat" style={{ marginTop: "2.4rem" }}>
-                  <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", textTransform: "uppercase", letterSpacing: ".04em" }}>
-                    I després de la sessió?
-                  </p>
-                  <p>
-                    Si després de la sessió totes dues sentim que té sentit continuar aquest camí, aquesta sessió serà el punt de partida per iniciar l&apos;acompanyament individualitzat.
-                  </p>
-                  <p>
-                    A partir del que hàgim observat, podré proposar-te un camí adaptat a tu, al teu moment vital i a les necessitats del teu cos.
-                  </p>
-                  <p>
-                    I si considero que aquest no és el procés més adequat per a tu, també t&apos;ho diré amb honestedat.
-                  </p>
-                </div>
               </div>
+            </div>
+
+            <p style={{ marginTop: "1.8rem" }}>
+              A partir d&apos;aquesta mirada global, et compartiré la meva comprensió del teu cas i una proposta orientativa sobre els camins que podrien ajudar-te.
+            </p>
+
+            {/* I DESPRÉS DE LA SESSIÓ? */}
+            <div className="destacat" style={{ marginTop: "1.6rem" }}>
+              <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", textTransform: "uppercase", letterSpacing: ".04em" }}>
+                I després de la sessió?
+              </p>
+              <p>
+                Si després de la sessió totes dues sentim que té sentit continuar aquest camí, aquesta sessió serà el punt de partida per iniciar l&apos;acompanyament individualitzat.
+              </p>
+              <p>
+                A partir del que hàgim observat, podré proposar-te un camí adaptat a tu, al teu moment vital i a les necessitats del teu cos.
+              </p>
+              <p>
+                I si considero que aquest no és el procés més adequat per a tu, també t&apos;ho diré amb honestedat.
+              </p>
             </div>
           </div>
         </section>
