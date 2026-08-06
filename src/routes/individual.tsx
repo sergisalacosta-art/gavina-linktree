@@ -9,455 +9,147 @@ export const Route = createFileRoute("/individual")({
 });
 
 const css = `
-  .ai {
-    --terra: #8a4b34;
-    --terra-fosc: #5d3428;
-    --crema: #faf5ef;
-    --crema-2: #f4ebe0;
-    --text: #2a1f17;
-    --muted: #6b5347;
-    --blanc: #fffdf8;
-    --rosa: #d8a797;
-    --max: 1100px;
+  .ip{
+    --terra:#8a4b34;
+    --terra-fosc:#5d3428;
+    --mel:#e5b66d;
+    --blanc:#fffdf8;
+    --max:1160px;
   }
-  .ai * { box-sizing: border-box; margin: 0; padding: 0; }
-  .ai {
-    font-family: Inter, system-ui, -apple-system, sans-serif;
-    color: var(--text);
-    background: var(--crema);
-    line-height: 1.65;
-    font-size: 16px;
-    overflow-x: hidden;
-    min-height: 100vh;
+  .ip *{box-sizing:border-box}
+  .ip{
+    color:#6b5347;
+    background:var(--blanc);
+    font-family:Georgia,"Times New Roman",serif;
+    line-height:1.55;
+    font-size:17px;
+    overflow-x:hidden;
+    min-height:100vh;
+    position:relative;
   }
-  .ai a { color: inherit; text-decoration: none; }
-  .ai img { max-width: 100%; display: block; }
+  .ip img{max-width:100%;display:block}
+  .ip a{color:inherit;text-decoration:none}
 
-  /* Back link */
-  .ai .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: .4rem;
-    font-size: .85rem;
-    font-style: italic;
-    color: var(--terra);
-    padding: 1.5rem 1.5rem 0;
-    transition: color .2s;
-    position: relative;
-    z-index: 1;
+  /* HERO */
+  .ip .hero{
+    min-height:86vh;
+    position:relative;
+    display:grid;
+    align-items:end;
+    background:
+      linear-gradient(90deg, rgba(45,36,27,.65), rgba(45,36,27,.10) 50%, rgba(45,36,27,.40)),
+      url("/individual/hero.jpg") center center / cover no-repeat,
+      linear-gradient(135deg, #5d3428 0%, #8a4b34 60%, #c5a595 100%);
+    color:white;
+    isolation:isolate;
+    z-index:1;
   }
-  .ai .back-link:hover { color: var(--terra-fosc); }
-
-  /* Section heading */
-  .ai .s-heading {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.7rem, 4vw, 3.4rem);
-    color: var(--terra);
-    font-weight: 700;
-    line-height: 1.1;
-    text-wrap: balance;
-    margin-bottom: 1.6rem;
+  .ip .hero:after{
+    content:"";
+    position:absolute;
+    inset:auto 0 0 0;
+    height:45%;
+    background:linear-gradient(180deg, transparent, rgba(36,29,23,.52));
+    z-index:-1;
   }
-
-  /* Intro */
-  .ai .intro { background: var(--blanc); text-align: center; padding: 2.5rem 1.5rem 3rem; position: relative; z-index: 1; }
-  .ai .intro-title {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    color: var(--terra-fosc);
-    max-width: 620px;
-    margin: 0 auto .6rem;
-    line-height: 1.25;
+  .ip .hero-inner{
+    width:min(var(--max), calc(100% - 40px));
+    margin:0 auto;
+    padding:7rem 0 5.5rem;
+    position:relative;
+    z-index:1;
   }
-  .ai .intro-title em { font-style: normal; color: var(--terra); }
-  .ai .intro-link {
-    font-size: .9rem;
-    color: var(--terra);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    margin-bottom: 2rem;
-    display: inline-block;
-  }
-  .ai .intro-link:hover { color: var(--terra-fosc); }
-  .ai .video-wrap {
-    max-width: 680px;
-    margin: 0 auto 2.5rem;
-    border-radius: 1.2rem;
-    overflow: hidden;
-    box-shadow: 0 8px 32px -12px rgba(90,40,20,.18);
-    background: #1a0e0a;
-  }
-  .ai .video-wrap iframe { display: block; width: 100%; aspect-ratio: 16/9; border: none; }
-  .ai .hero-tag {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2.2rem, 6vw, 5.5rem);
-    color: var(--terra);
-    line-height: 1.06;
-    letter-spacing: .045em;
-    text-transform: uppercase;
-    text-wrap: balance;
-    max-width: 980px;
-    margin: 0 auto;
-  }
-  .ai .hero-tag span {
-    display: block;
-    font-size: inherit;
-    color: var(--terra);
-    text-transform: uppercase;
-    letter-spacing: inherit;
-  }
-  .ai .hero-sub { max-width: 660px; margin: 1.4rem auto 0; font-size: clamp(1.05rem, 2vw, 1.35rem); color: var(--muted); }
-  .ai .hero-sub strong { color: var(--terra-fosc); font-weight: 700; }
-  .ai .hero-hint { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); font-style: italic; }
-
-  /* Per a qui */
-  .ai .per-qui { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
-  .ai .per-qui-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-  }
-  @media (max-width: 720px) { .ai .per-qui-inner { grid-template-columns: 1fr; } }
-  .ai .per-qui-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-  .ai .per-qui-list li {
-    padding-left: 1.3rem;
-    position: relative;
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    color: var(--muted);
-    line-height: 1.6;
-  }
-  .ai .per-qui-list li::before {
-    content: "·";
-    position: absolute;
-    left: 0;
-    color: var(--terra);
-    font-size: 1.5rem;
-    line-height: .9;
-  }
-  .ai .per-qui-list li strong { color: var(--text); font-weight: 600; }
-  .ai .wa-card {
-    background: var(--terra);
-    border-radius: 1.2rem;
-    padding: 2rem 1.8rem;
-    color: #fff;
-    text-align: center;
-  }
-  .ai .wa-card p { font-size: clamp(1.08rem, 2vw, 1.28rem); line-height: 1.55; margin-bottom: 1.4rem; opacity: .93; }
-  .ai .wa-card strong { font-weight: 700; }
-  .ai .wa-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: .6rem;
-    background: #fff;
-    color: var(--terra);
-    font-weight: 700;
-    font-size: .95rem;
-    border-radius: 999px;
-    padding: .7rem 1.5rem;
-    transition: transform .2s, box-shadow .2s;
-    box-shadow: 0 4px 14px rgba(0,0,0,.12);
-  }
-  .ai .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
-
-  /* Fases */
-  .ai .fases { background: var(--crema); padding: 4rem 1.5rem; position: relative; z-index: 10000; }
-  .ai .fases-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 3.5rem;
-    align-items: center;
-  }
-  @media (max-width: 720px) {
-    .ai .fases-inner { grid-template-columns: 1fr; }
-    .ai .fases-img { order: -1; }
-  }
-  .ai .fases-intro {
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    color: var(--muted);
-    margin-bottom: 1.8rem;
-    line-height: 1.55;
-  }
-  .ai .fases-intro strong { color: var(--terra-fosc); }
-  .ai .fase-item {
-    margin-bottom: 1.4rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--rosa);
-  }
-  .ai .fase-item h4 {
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    font-weight: 700;
-    color: var(--terra);
-    margin-bottom: .6rem;
-  }
-  .ai .fase-item ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .3rem; }
-  .ai .fase-item ul li {
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    color: var(--muted);
-    padding-left: 1rem;
-    position: relative;
-    line-height: 1.5;
-  }
-  .ai .fase-item ul li::before { content: "–"; position: absolute; left: 0; color: var(--rosa); }
-  .ai .fase-note {
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    color: var(--muted);
-    margin-top: .6rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--rosa);
-    line-height: 1.5;
-  }
-  .ai .fases-img img {
-    width: 100%;
-    border-radius: 1.4rem;
-    object-fit: cover;
-    object-position: center;
-    aspect-ratio: 3/4;
-    box-shadow: 0 10px 40px -15px rgba(90,40,20,.2);
+  .ip h1{
+    font-family:Georgia,"Times New Roman",serif;
+    color:#e1bda6;
+    font-size:clamp(1rem, 4.5vw, 5rem);
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    line-height:1.06;
+    font-weight:700;
+    margin:0;
+    text-shadow:0 8px 30px rgba(0,0,0,.22);
   }
 
-  /* Inclou — single column */
-  .ai .inclou { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
-  .ai .inclou-inner { max-width: var(--max); margin: 0 auto; }
-  .ai .inclou-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.7rem, 4vw, 3.4rem);
-    color: var(--terra);
-    font-weight: 700;
-    line-height: 1.1;
-    text-wrap: balance;
-    text-align: center;
-    margin-bottom: 2.5rem;
+  /* BUTTONS */
+  .ip .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    padding:.88rem 1.8rem;
+    text-decoration:none;
+    font-weight:700;
+    font-family:Georgia,"Times New Roman",serif;
+    letter-spacing:.01em;
+    border:1px solid transparent;
+    transition:transform .18s ease, background .18s ease;
+    gap:.55rem;
   }
-  .ai .inclou-col { width: 100%; }
-  .ai .inclou-col + .inclou-col { margin-top: 3.5rem; }
-  .ai .inclou-col h4 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.7rem, 4vw, 3.4rem);
-    font-style: normal;
-    color: var(--terra);
-    font-weight: 700;
-    line-height: 1.1;
-    text-wrap: balance;
-    margin-bottom: 1.4rem;
-  }
-  .ai .inclou-col ul { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
-  .ai .inclou-col ul li {
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    color: var(--muted);
-    padding-left: 1.3rem;
-    position: relative;
-    line-height: 1.55;
-  }
-  .ai .inclou-col ul.si li::before { content: "✓"; position: absolute; left: 0; color: var(--terra); }
-  .ai .inclou-col ul.no li::before { content: "✗"; position: absolute; left: 0; color: #b04b3a; }
-  .ai .nota { font-size: clamp(1.08rem, 2vw, 1.28rem); font-style: italic; color: var(--muted); margin-top: .25rem; }
-  .ai .destacat { font-size: .85rem; font-weight: 700; color: var(--terra-fosc); margin-top: .25rem; }
-  .ai .inclou-sep { height: 1px; background: rgba(138,75,52,.2); margin: 2.5rem 0; }
+  .ip .btn:hover{transform:translateY(-2px)}
+  .ip .btn-primary{background:#fff; color:#4a2e22}
+  .ip .btn-terra{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); color:#4a2e22; font-size:clamp(1.15rem,2.2vw,1.45rem); padding:1.1rem 2.6rem; box-shadow:0 0 30px rgba(197,162,142,.48), 0 4px 18px rgba(160,118,95,.22); letter-spacing:.1em;}
 
-  /* FAQ accordion */
-  .ai .faq { background: var(--blanc); padding: 4rem 1.5rem; position: relative; z-index: 1; }
-  .ai .faq-inner { max-width: var(--max); margin: 0 auto; }
-  .ai .faq-list { border-top: 1px solid rgba(138,75,52,.15); }
-  .ai .faq-item { border-bottom: 1px solid rgba(138,75,52,.15); }
-  .ai .faq-btn {
-    width: 100%;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1.3rem 0;
-    text-align: left;
-    font-family: inherit;
-    color: var(--terra-fosc);
-    font-weight: 700;
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    line-height: 1.4;
-  }
-  .ai .faq-btn:hover { color: var(--terra); }
-  .ai .faq-arrow {
-    flex-shrink: 0;
-    font-size: .75rem;
-    color: var(--terra);
-    margin-top: .15rem;
-    transition: transform .25s;
-  }
-  .ai .faq-arrow.open { transform: rotate(180deg); }
-  .ai .faq-body {
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    color: var(--muted);
-    line-height: 1.7;
-    padding-bottom: 1.4rem;
-  }
-  .ai .faq-body strong { color: var(--text); font-weight: 600; }
+  /* LAYOUT */
+  .ip section{padding:clamp(2.8rem, 5vw, 5rem) 0; position:relative; z-index:1;}
+  .ip .wrap{width:min(var(--max), calc(100% - 40px)); margin:0 auto;}
+  .ip .cream{background:linear-gradient(180deg, rgba(244,234,215,.55), rgba(255,253,248,.9))}
 
-  /* Testimonials carousel */
-  .ai .testi { background: var(--crema); padding: 4rem 1.5rem; position: relative; z-index: 10000; }
-  .ai .testi-inner { max-width: var(--max); margin: 0 auto; }
-  .ai .testi-carousel {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-  }
-  .ai .testi-track { flex: 1; overflow: hidden; }
-  .ai .testi-card {
-    background: var(--blanc);
-    border-radius: 1.2rem;
-    padding: 2rem 2.2rem;
-    box-shadow: 0 4px 20px -8px rgba(90,40,20,.1);
-  }
-  .ai .testi-card p {
-    font-size: clamp(1.08rem, 2vw, 1.28rem);
-    color: var(--muted);
-    line-height: 1.7;
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-  .ai .testi-card cite { font-style: normal; font-weight: 700; font-size: .88rem; color: var(--terra); }
-  .ai .testi-arrow {
-    flex-shrink: 0;
-    width: 2.6rem;
-    height: 2.6rem;
-    border-radius: 50%;
-    border: none;
-    background: var(--terra);
-    color: #fff;
-    font-size: 1.5rem;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background .2s, transform .15s;
-  }
-  .ai .testi-arrow:hover { background: var(--terra-fosc); transform: scale(1.08); }
-  .ai .testi-dots {
-    display: flex;
-    justify-content: center;
-    gap: .55rem;
-    margin-top: 1.4rem;
-  }
-  .ai .testi-dot {
-    width: .5rem;
-    height: .5rem;
-    border-radius: 50%;
-    background: var(--rosa);
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: background .2s, transform .2s;
-  }
-  .ai .testi-dot.active { background: var(--terra); transform: scale(1.3); }
+  /* TYPOGRAPHY */
+  .ip .section-title{display:flex; flex-direction:column; gap:.65rem; margin-bottom:2rem;}
+  .ip .section-title h2{padding-bottom:.55rem; border-bottom:1.5px solid var(--terra); margin-bottom:0;}
+  .ip h2{font-family:Georgia,"Times New Roman",serif; font-size:clamp(1.7rem, 4vw, 3.4rem); color:var(--terra); text-wrap:balance; font-weight:700; line-height:1.06; margin:0 0 1rem;}
+  .ip h3{font-size:clamp(1.1rem, 2vw, 1.55rem); color:var(--terra-fosc); margin-bottom:.7rem; font-family:Georgia,"Times New Roman",serif; font-weight:700;}
+  .ip p{margin:.75rem 0 0; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
+  .ip p:first-child{margin-top:0}
+  .ip strong{font-weight:800; color:#6b5347}
 
-  /* Sobre */
-  .ai .sobre { background: var(--crema-2); padding: 4rem 1.5rem; position: relative; z-index: 1; }
-  .ai .sobre-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-  }
-  @media (max-width: 720px) {
-    .ai .sobre-inner { flex-direction: column; }
-    .ai .sobre-img { order: -1; }
-  }
-  .ai .sobre-img {
-    flex: 0 0 auto;
-    width: clamp(220px, 32%, 360px);
-    aspect-ratio: 3/4;
-    overflow: hidden;
-    border-radius: 1.2rem;
-    box-shadow: 0 8px 28px -10px rgba(90,40,20,.2);
-  }
-  .ai .sobre-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-  }
-  .ai .sobre-text p { font-size: clamp(1.08rem, 2vw, 1.28rem); color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
-  .ai .sobre-text strong { color: var(--terra-fosc); font-weight: 600; }
+  .ip .soft-img{border-radius:1.7rem; overflow:hidden; box-shadow:0 26px 70px rgba(55,40,25,.16);}
+  .ip .soft-img img{width:100%; object-fit:cover; aspect-ratio:3/4; object-position:center top;}
 
-  /* CTA */
-  .ai .cta-final {
-    background: var(--terra);
-    padding: 4.5rem 1.5rem;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-  }
-  .ai .cta-final h2 {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    line-height: 1.2;
-    margin-bottom: 2rem;
-    font-style: italic;
-  }
-  .ai .cta-wa {
-    display: inline-flex;
-    align-items: center;
-    gap: .7rem;
-    background: #fff;
-    color: var(--terra);
-    font-weight: 700;
-    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
-    border-radius: 999px;
-    padding: 1rem 2rem;
-    box-shadow: 0 6px 24px rgba(0,0,0,.15);
-    transition: transform .2s, box-shadow .2s;
-  }
-  .ai .cta-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.2); }
+  /* DESTACAT */
+  .ip .destacat{background:linear-gradient(135deg,#fceae3,#fef5f1); border-left:4px solid var(--terra); border-radius:1rem; padding:clamp(1.2rem,3vw,2rem); font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:var(--terra-fosc); line-height:1.6; font-family:Georgia,"Times New Roman",serif;}
+  .ip .destacat p{color:var(--terra-fosc); font-size:inherit; line-height:inherit; font-family:inherit; margin-top:.6rem;}
+  .ip .destacat p:first-child{margin-top:0;}
 
-  .ai footer {
-    background: var(--terra-fosc);
-    padding: 1.5rem;
-    text-align: center;
-    font-size: .75rem;
-    color: rgba(255,255,255,.7);
-    position: relative;
-    z-index: 1;
+  /* TESTIMONIALS */
+  .ip .testi-carousel{display:flex; align-items:center; gap:1.2rem;}
+  .ip .testi-track{flex:1; overflow:hidden;}
+  .ip .testi-card{background:#fffdf8; border-radius:1.7rem; padding:2rem 2.2rem; box-shadow:0 4px 20px -8px rgba(90,40,20,.1); border:1px solid rgba(138,75,52,.1);}
+  .ip .testi-card p{font-size:clamp(1.15rem, 2.2vw, 1.4rem); color:#6b5347; line-height:1.72; margin-bottom:1rem; font-family:Georgia,"Times New Roman",serif;}
+  .ip .testi-card cite{font-style:normal; font-weight:800; font-size:.88rem; color:var(--terra);}
+  .ip .testi-arrow{flex-shrink:0; width:2.6rem; height:2.6rem; border-radius:50%; border:none; background:var(--terra); color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, transform .15s;}
+  .ip .testi-arrow:hover{background:var(--terra-fosc); transform:scale(1.08);}
+  .ip .testi-dots{display:flex; justify-content:center; gap:.55rem; margin-top:1.4rem;}
+  .ip .testi-dot{width:.5rem; height:.5rem; border-radius:50%; background:var(--mel); border:none; cursor:pointer; padding:0; transition:background .2s, transform .2s;}
+  .ip .testi-dot.active{background:var(--terra); transform:scale(1.3);}
+
+  /* CTA BLOCK */
+  .ip .cta-block{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(160,115,90,.22);}
+
+  /* GRIDS */
+  .ip .qui-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
+  .ip .mes-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
+  .ip .camins-grid{display:grid; grid-template-columns:clamp(200px,32%,380px) 1fr; gap:clamp(2rem,4vw,4rem); align-items:start;}
+
+  .ip footer{padding:3rem 0; background:#2d241d; color:rgba(255,255,255,.78); text-align:center; font-size:.94rem;}
+  .ip .back-link{display:inline-flex; align-items:center; gap:.4rem; font-size:.88rem; color:var(--terra); padding:1.5rem 1.5rem 0; background:none; border:none; cursor:pointer; transition:color .2s; position:relative; z-index:1;}
+  .ip .back-link:hover{color:var(--terra-fosc);}
+
+  @media(max-width:900px){
+    .ip .hero{min-height:74vh}
+    .ip .qui-grid,.ip .mes-grid{grid-template-columns:1fr}
+    .ip .mes-photo{order:1; margin-top:1.4rem}
+    .ip .camins-grid{grid-template-columns:1fr}
+    .ip .camins-photo{order:-1; margin-bottom:1rem}
+  }
+  @media(max-width:560px){
+    .ip{font-size:16px}
+    .ip .hero-inner,.ip .wrap{width:min(100% - 28px, var(--max))}
+    .ip section{padding:2.4rem 0}
+    .ip .btn{width:100%}
   }
 `;
-
-const faqItems = [
-  {
-    q: "Segueixo una dieta vegetariana, em pots acompanyar?",
-    a: "L'acompanyament que ofereixo està basat en una alimentació fisiològica i regenerativa, és a dir, basada en la nutrició real que necessiten les cèl·lules i que ha permès el desenvolupament i l'evolució de l'espècie humana. Basada en l'observació dels nutrients que han format part de l'alimentació de tantes cultures ancestrals d'arreu del món. Els desequilibris que viuen avui moltes dones venen en gran part d'una manca de nutrició real. Sabem que les dietes vegetariana i vegana tenen una incidència desfavorable en la salut hormonal de la dona. Si vols saber-ne els motius i estàs oberta a implementar canvis a favor de la teva salut, et puc acompanyar.",
-  },
-  {
-    q: "He tingut una pèrdua gestacional, i em sento molt desconnectada de la meva matriu.",
-    a: "Aquest és un cas massa habitual avui i que acostuma a estar relacionat amb una vida molt activa, el no permetre's el descans real. T'acompanyaré a revisar rutines que t'ajudaran en aquests moments, així com a revisar la teva alimentació perquè el teu cos recuperi els nutrients, una desparasitació amb plantes adequades per tu i també un protocol de vapors per netejar el teu úter. I també et recomanaria el ritual de la Cerrada. Tot això, pas a pas.",
-  },
-  {
-    q: "No sento desig sexual i tampoc plaer en la penetració. Tinc 45 anys.",
-    a: "La desconnexió del plaer està relacionada amb la desconnexió de la vida. És molt important anar revisant tots els àmbits de la nostra vida. Cosa innegociable, si no ho has fet abans, en els primers anys de Climateri. La sexualitat es ressignifica i agafa nous matisos. Estàs vivint la vida que realment vols viure? I, paral·lelament, t'acompanyaré posant èmfasi en l'alimentació que no pot faltar i les rutines que cal implementar, així com els massatges de matriu i la introducció del treball físic i energètic específic per a aquesta preciosa etapa.",
-  },
-  {
-    q: "Com són els tractaments que apliques?",
-    a: "En primer lloc, no soc metge ni ginecòloga, per tant no et recomanaré ni hormones sintètiques, ni intervencions quirúrgiques ni fàrmacs. I t'explicaré el per què, perquè puguis decidir des de la informació i no sota pressió. Tot el que he après i aplico ve de tradicions de Llatinoamèrica. Els tractaments estan basats en la medicina natural i ancestral; això vol dir que les bases que us ensenyo i recomano són: una alimentació regenerativa; unes rutines que no hauríem d'haver perdut mai i que segons la situació i el cas de cada dona intentem adaptar perquè sigui fàcil i sostenible en el temps (és important el compromís amb una mateixa); desparasitació amb plantes, un altre recurs de prevenció que cal recuperar i mantenir; moviment pelvicuterí bàsic i treball específic per a dones a partir dels 40; massatge de matriu i òrgans, massatge amb rebozos i ritual la Cerrada.",
-  },
-  {
-    q: "En principi no tinc cap desequilibri ginecològic però sento la necessitat de connectar amb la meva matriu i amb la meva feminitat.",
-    a: "Cuidar-nos com a dones té a veure en com ens nodrim en tots els sentits: i ens podem nodrir de moltes maneres (que sovint no són com ens han ensenyat; i ja ens n'anem adonant, anem despertant…) i a totes ens agraden coses diferents, però hi han unes bases que ens donen autonomia i que ens mantenen en salut si ens comprometem amb nosaltres. Són aquells recursos/medicines que han sostingut les dones en tantes cultures ancestrals. Bàsiques, senzilles, sostenibles. Això és el que us ensenyo en els acompanyaments.",
-  },
-  {
-    q: "Em pots garantir que el meu desequilibri s'haurà resolt en 3-4 mesos?",
-    a: "Cada procés és únic i el teu estat després de 3-4 mesos dependrà de molts factors, entre els quals, el teu compromís amb tu. El meu compromís és acompanyar-te a restaurar i mantenir la teva salut. Et guiaré pas a pas perquè integris bé les bases i juntes anirem valorant el teu procés per introduir les eines més adequades per tu perquè vagis recuperant teva salut i sigui sostenible en el temps. En cap cas et puc garantir que obtindràs els resultats que busques amb el tractament.",
-  },
-  {
-    q: "Com puc saber si em podries acompanyar en el meu cas?",
-    a: "Escriu-me un WhatsApp i valorem juntes si aquest acompanyament s'adapta al que necessites.",
-  },
-];
 
 const testimonials = [
   {
@@ -465,11 +157,11 @@ const testimonials = [
     name: "Lorena",
   },
   {
-    text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important",
+    text: "Visualitzo la Gavina com una sàvia xamana, a la qual acudir i confiar. Trobar dones tan potents com ella, amb aquesta mirada reivindicativa i amorosa, m'encanta i em connecta amb allò que per mi és important.",
     name: "Alba",
   },
   {
-    text: "El Massatge Ritual Matriu amb la Gavina va ser molt màgic. Des del primer moment em vaig sentir acompanyada. Un acompanyament dolç, present, conscient, tant el dia del ritual com en la revisió prèvia, on em vaig qüestionar coses molt necessàries i sobretot m'ha permès connectar amb la meva matriu",
+    text: "El Massatge Ritual Matriu amb la Gavina va ser molt màgic. Des del primer moment em vaig sentir acompanyada. Un acompanyament dolç, present, conscient, tant el dia del ritual com en la revisió prèvia, on em vaig qüestionar coses molt necessàries i sobretot m'ha permès connectar amb la meva matriu.",
     name: "Raquel",
   },
   {
@@ -482,42 +174,12 @@ const testimonials = [
   },
 ];
 
-function WaIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden style={{ width: "1.2em", height: "1.2em", flexShrink: 0 }}>
-      <path d="M19.05 4.91A10 10 0 0 0 12 2a10 10 0 0 0-8.66 15l-1.3 4.74 4.86-1.27A10 10 0 1 0 19.05 4.91Zm-7.05 15.4a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.88.75.77-2.81-.2-.31A8.31 8.31 0 1 1 20.3 12a8.34 8.34 0 0 1-8.3 8.31Zm4.55-6.22c-.25-.13-1.48-.73-1.71-.81s-.4-.13-.56.13-.65.81-.79.97-.29.18-.54.06a6.78 6.78 0 0 1-2-1.23 7.56 7.56 0 0 1-1.4-1.74c-.14-.25 0-.38.11-.51s.25-.29.37-.43a1.62 1.62 0 0 0 .25-.41.46.46 0 0 0 0-.44c-.06-.13-.56-1.34-.76-1.83s-.4-.42-.56-.43h-.48a.93.93 0 0 0-.67.31 2.81 2.81 0 0 0-.88 2.1 4.91 4.91 0 0 0 1 2.59 11.16 11.16 0 0 0 4.27 3.77 14.43 14.43 0 0 0 1.42.52 3.43 3.43 0 0 0 1.57.1 2.58 2.58 0 0 0 1.69-1.19 2.1 2.1 0 0 0 .14-1.19c-.06-.1-.22-.16-.47-.28Z" />
-    </svg>
-  );
-}
-
-function FaqAccordion() {
-  const [open, setOpen] = useState<number | null>(null);
-  return (
-    <div className="faq-list">
-      {faqItems.map((item, i) => (
-        <div className="faq-item" key={i}>
-          <button
-            className="faq-btn"
-            onClick={() => setOpen(open === i ? null : i)}
-            aria-expanded={open === i}
-          >
-            <span>{item.q}</span>
-            <span className={`faq-arrow${open === i ? " open" : ""}`}>▼</span>
-          </button>
-          {open === i && <p className="faq-body">{item.a}</p>}
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function TestimonialCarousel() {
   const [idx, setIdx] = useState(0);
   const n = testimonials.length;
   const prev = () => setIdx(i => (i - 1 + n) % n);
   const next = () => setIdx(i => (i + 1) % n);
   const { text, name } = testimonials[idx];
-
   return (
     <div>
       <div className="testi-carousel">
@@ -532,12 +194,7 @@ function TestimonialCarousel() {
       </div>
       <div className="testi-dots">
         {testimonials.map((_, i) => (
-          <button
-            key={i}
-            className={`testi-dot${i === idx ? " active" : ""}`}
-            onClick={() => setIdx(i)}
-            aria-label={`Testimoni ${i + 1}`}
-          />
+          <button key={i} className={`testi-dot${i === idx ? " active" : ""}`} onClick={() => setIdx(i)} aria-label={`Testimoni ${i + 1}`} />
         ))}
       </div>
     </div>
@@ -546,171 +203,317 @@ function TestimonialCarousel() {
 
 function IndividualPage() {
   return (
-    <div className="ai">
+    <div className="ip">
       <style dangerouslySetInnerHTML={{ __html: css }} />
-
       <div
         aria-hidden
         style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 9999,
-          pointerEvents: "none",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none",
+          display: "flex", alignItems: "center", justifyContent: "center",
           maskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
           WebkitMaskImage: "radial-gradient(ellipse at center, black 55%, transparent 80%)",
         }}
       >
-        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
+        <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.1 }} />
       </div>
 
       <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
 
-      {/* Intro */}
-      <section className="intro">
-        <p className="hero-tag">
-          Acompanyament
-          <span>Individual</span>
-        </p>
-        <p className="hero-sub">
-          T&apos;acompanyo <strong>durant 4 mesos</strong> perquè integris bé les bases per millorar i mantenir la teva salut femenina.
-        </p>
-      </section>
+      {/* HERO */}
+      <header className="hero">
+        <div className="hero-inner">
+          <h1>Pla Personalitzat</h1>
+        </div>
+      </header>
 
-      {/* Fases */}
-      <section className="fases">
-        <div className="fases-inner">
-          <div>
-            <h2 className="s-heading">Què farem</h2>
-            <p className="fases-intro">
-              Primer de tot, farem una <strong>sessió online (1h30min)</strong> per revisar el teu cas en la teva realitat quotidiana. I tot seguit, aniràs integrant, mes a mes, cada una de les fases:
+      <main>
+
+        {/* INTRO BLOCK */}
+        <section>
+          <div className="wrap">
+            <p style={{ marginTop: 0 }}>T&apos;acompanyo a habitar la teva matriu.</p>
+            <p style={{ marginTop: "1rem" }}>Potser has arribat fins aquí buscant respostes a un desequilibri ginecològic.</p>
+            <p style={{ marginTop: "1rem" }}>Aquest procés parteix d&apos;aquí, però et convida a anar més enllà dels símptomes: a recuperar la relació amb la teva matriu.</p>
+            <p style={{ marginTop: "1.8rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              Perquè, quan aquesta relació es transforma, també recuperes la confiança en la saviesa que hi habita, en el teu cos i en la capacitat que tens de cuidar la teva salut.
             </p>
-            <div className="fase-item">
-              <h4>✅ 1a fase · Mes 1 · Alimentació Regenerativa i Rutines</h4>
-              <ul>
-                <li>Accés vídeo sessió Alimentació</li>
-                <li>Resum guia Rutines Bàsiques</li>
-                <li>Àudio &ldquo;La nostra Ciclicitat&rdquo;</li>
-                <li>Àudio meditació &ldquo;Connecta amb la teva matriu&rdquo;</li>
-              </ul>
-            </div>
-            <div className="fase-item">
-              <h4>✅ 2a fase · Mes 2 · Desparasitació amb Plantes</h4>
-              <ul>
-                <li>Accés vídeo sessió Desparasitació amb Plantes</li>
-                <li>Resum guia Desparasitació amb Plantes</li>
-                <li>Protocol individualitzat amb plantes</li>
-                <li>Accés vídeo Automassatge Pits</li>
-                <li>Guia resum Autocura Pits</li>
-                <li>Accés vídeo exercicis Moviment &ldquo;Pèlvic Uterí&rdquo;</li>
-              </ul>
-            </div>
-            <div className="fase-item">
-              <h4>✅ 3a fase · Mes 3 · Protocol fitoginecologia</h4>
-              <ul>
-                <li>Accés vídeo sessió Vaporitzacions</li>
-                <li>Resum Guia Vaporitzacions</li>
-                <li>Proposta protocol amb vapors o altres eines de fitoginecologia per acabar d&apos;abordar el cas</li>
-              </ul>
-            </div>
-            <p className="fase-note">✅ <strong>Mes 4.</strong> Es continuaran aplicant les 3 fases</p>
-            <p className="fase-note" style={{ marginTop: ".5rem" }}>✅ <strong>Última setmana del Mes 4:</strong> Sessió online 1h30min. Revisió i valoració</p>
+            <p style={{ marginTop: "1.8rem", textAlign: "center", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "#6b5347", lineHeight: 1.9 }}>
+              Un camí de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>VERITAT</strong>.<br />
+              Un camí de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>SALUT</strong>.<br />
+              Un camí de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>SOBIRANIA</strong>.
+            </p>
+            <p style={{ marginTop: "2rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                Vull començar el meu procés
+              </a>
+            </p>
           </div>
-          <div className="fases-img">
-            <img src="/individual/calendula.jpg" alt="Mà amb flors de calèndula" loading="lazy" />
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Per a qui */}
-      <section className="per-qui">
-        <div className="per-qui-inner">
-          <div>
-            <h2 className="s-heading">Per a qui és</h2>
-            <ul className="per-qui-list">
-              <li>Tens <strong>dolors menstruals, cicles irregulars, sagnats abundants, amenorrea, infertilitat…</strong> i no vols prendre hormones.</li>
-              <li>Tens un <strong>mioma, un pòlip o un quiste</strong>, l&apos;única opció que et donen és passar per quiròfan, i vols una opció respectuosa amb el teu cos.</li>
-              <li>Estàs en els teus <strong>primers anys de climateri</strong> i vols optar per recursos naturals per acompanyar-te en aquesta nova etapa.</li>
-              <li>Vols aprendre a <strong>mantenir-te en salut femenina</strong> coneguent i aplicant en tu medicina natural ancestral, com la <strong>desparasitació amb plantes</strong> o els <strong>vapors pelvicovaginals</strong>.</li>
-              <li>Vols <strong>autogestionar la teva salut femenina</strong> amb els recursos naturals que han sostingut tantíssimes dones en diferents tradicions.</li>
-              <li>Vols tenir recursos per acompanyar <strong>la teva filla</strong> en la seva salut cíclica femenina, i en la teva pròpia.</li>
+        {/* QUÈ ÉS */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Què és?</h2>
+            </div>
+            <p style={{ marginTop: 0 }}>Aquest acompanyament és un procés personalitzat per començar a habitar la teva matriu.</p>
+            <p style={{ marginTop: "1rem" }}>Potser hi arribes buscant alleujar un desequilibri ginecològic. Però aquest és un camí que et convida a anar més enllà dels símptomes: a comprendre què et vol explicar el teu cos i a reconstruir la relació amb la teva matriu.</p>
+            <p style={{ marginTop: "1rem" }}>Els recursos que anirem incorporant no són la finalitat del procés. Són les portes d&apos;entrada perquè aquesta relació es pugui transformar.</p>
+            <p style={{ marginTop: "1rem" }}>Cada dona, cada història i cada matriu són úniques. Per això, cada procés també ho és.</p>
+            <p style={{ marginTop: "1.8rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                Vull començar el meu procés
+              </a>
+            </p>
+
+            {/* Destacat + foto */}
+            <div className="mes-grid" style={{ marginTop: "3rem" }}>
+              <div className="destacat">
+                <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)" }}>
+                  Més enllà dels símptomes
+                </p>
+                <p>Els símptomes són importants, però no són l&apos;única cosa important.</p>
+                <p>El dolor menstrual, un mioma, la sequedat vaginal, l&apos;absència de menstruació… no són només un desequilibri que cal atendre. També poden ser una invitació a aturar-nos i escoltar què ens està mostrant el cos.</p>
+                <p>Per això, en aquest acompanyament no busquem únicament atenuar o eliminar un símptoma. Busquem comprendre què pot estar contribuint a aquest desequilibri i crear les condicions perquè el teu cos pugui recuperar, tant com sigui possible, el seu propi equilibri.</p>
+                <p>Per mi, habitar la matriu és recuperar una relació que moltes dones hem anat perdent:</p>
+                <p style={{ marginTop: ".4rem" }}>Una relació amb el teu cos.</p>
+                <p style={{ marginTop: ".2rem" }}>Amb la teva pelvis.</p>
+                <p style={{ marginTop: ".2rem" }}>Amb la teva sexualitat.</p>
+                <p style={{ marginTop: ".2rem" }}>Amb la teva naturalesa.</p>
+              </div>
+              <div className="mes-photo soft-img" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
+                <img
+                  src="/matrius/assets/gavinasuri.jpg"
+                  alt="La Gavina a la natura"
+                  loading="lazy"
+                  style={{ width: "100%", display: "block" }}
+                />
+              </div>
+            </div>
+
+            <p style={{ marginTop: "2rem" }}>Els recursos que t&apos;acompanyaré a incorporar són diferents camins per cultivar aquesta relació.</p>
+            <p style={{ marginTop: "1.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              Perquè quan tornem a escoltar el cos i a confiar en la seva saviesa, també transformem la manera com vivim la nostra salut.
+            </p>
+            <p style={{ marginTop: ".8rem", textAlign: "center", fontWeight: 700, color: "#6b5347", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+              I, sobretot, recuperem una cosa essencial: la confiança en nosaltres mateixes.
+            </p>
+            <p style={{ marginTop: "1.4rem" }}>
+              Aquest és, per mi, el veritable sentit d&apos;habitar la matriu: habitar-te a tu.
+            </p>
+          </div>
+        </section>
+
+        {/* PER A QUI ÉS */}
+        <section>
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Per a qui és</h2>
+            </div>
+            <p style={{ marginTop: 0 }}>Aquest acompanyament és per a tu si...</p>
+            <ul style={{ listStyle: "none", padding: 0, margin: "1.2rem 0 0", display: "grid", gap: ".9rem" }}>
+              {[
+                "Tens dolors menstruals, cicles irregulars, sagnats abundants, amenorrea, infertilitat… i no vols prendre hormones.",
+                "Sents que t'has desconnectat del teu cos i vols tornar a escoltar-lo.",
+                "Tens un mioma, un pòlip o un quist, i l'única opció que t'han ofert és passar per quiròfan, però busques una mirada més respectuosa amb el teu cos.",
+                "Estàs en els teus primers anys de climateri i vols recursos naturals per acompanyar-te en aquesta nova etapa.",
+                "Vols deixar de viure pendent dels símptomes i començar a comprendre què t'estan dient.",
+                "Vols cuidar i autogestionar la teva salut femenina des de les bases que han sostingut les dones en moltes tradicions al llarg del temps.",
+              ].map((item) => (
+                <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                  <span style={{ flexShrink: 0, color: "var(--terra)", fontWeight: 700 }}>✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="wa-card">
-            <p>Reserva la teva <strong>videotrucada gratuïta de 30 min</strong>,<br />enviant-me un WhatsApp.<br />Valorem juntes el teu cas. Sense compromís.</p>
-            <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="wa-btn">
-              <WaIcon /> Contacta&apos;m
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Inclou / No inclou — single column */}
-      <section className="inclou">
-        <div className="inclou-inner">
-          <div className="inclou-col">
-            <h4>Inclou</h4>
-            <ul className="si">
-              <li>2 sessions online amb mi: la primera (de valoració i revisió del teu cas) i l&apos;última (de valoració, revisió i tancament de procés).</li>
-              <li>4 vídeos explicatius: alimentació fisiològica, desparasitació amb plantes, vaporitzacions, automassatge pits i exercicis Moviment Pèlvic Uterí.</li>
-              <li>5 guies resum (Rutines, Alimentació Fisiològica, Desparasitació amb Plantes, Vaporitzacions i Autocura Pits)</li>
-              <li>Àudio &ldquo;La nostra Ciclicitat&rdquo; + Àudio meditació &ldquo;Connecta amb la teva matriu&rdquo;</li>
-              <li>Seguiment amb resolució de dubtes directa via WhatsApp o correu durant els 4 mesos.</li>
+        {/* ELS CAMINS */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Els camins que recorrerem per habitar la teva matriu</h2>
+            </div>
+            <div className="camins-grid">
+              {/* Photo + text below on the left */}
+              <div className="camins-photo">
+                <div style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
+                  <img
+                    src="/individual/calendula.jpg"
+                    alt="Medicina natural"
+                    loading="lazy"
+                    style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "4/3" }}
+                  />
+                </div>
+                <p style={{ marginTop: "1.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                  Cada un d&apos;aquests camins és una porta d&apos;entrada.
+                </p>
+                <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+                  A través d&apos;ells, aniràs recuperant...
+                </p>
+                <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+                  ...una relació més conscient amb la teva matriu i amb tu mateixa.
+                </p>
+              </div>
+              {/* Text + list on the right */}
+              <div>
+                <p style={{ marginTop: 0 }}>Durant el procés anirem incorporant aquells camins que més ressonin amb tu i amb el moment vital que estàs vivint:</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: "1.4rem 0 0", display: "grid", gap: "1.2rem" }}>
+                  {[
+                    { emoji: "🌿", text: "Nodrir el teu cos. Alimentació regenerativa i rutines que donen vitalitat a les teves cèl·lules." },
+                    { emoji: "🌿", text: "Reconnectar amb els ritmes de la natura. Plantes, desparasitació i recursos de fitoginecologia per acompanyar els processos del teu cos." },
+                    { emoji: "🌿", text: "Despertar la teva pelvis i la teva veu. Moviment pelvicuterí, respiració i veu per tornar al cos, sentir-lo i expressar-te des d'un lloc més profund." },
+                    { emoji: "🌿", text: "Reconèixer la teva naturalesa cíclica. Consciència corporal, sexualitat i ciclicitat per connectar amb el teu plaer." },
+                  ].map(({ emoji, text }) => (
+                    <li key={text} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                      <span style={{ flexShrink: 0 }}>{emoji}</span>
+                      <span>{text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* COM SERÀ EL TEU PROCÉS */}
+        <section>
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Com serà el teu procés</h2>
+            </div>
+            <p style={{ marginTop: 0 }}>Aquest és un procés personalitzat, creat a partir de la teva història, del teu moment vital i del que el teu cos està expressant avui.</p>
+            <p style={{ marginTop: "1rem" }}>Començarem amb una primera sessió online de revisió i valoració (1h30), on escoltarem què està passant, què necessites i quins aspectes poden estar demanant més atenció.</p>
+            <p style={{ marginTop: "1rem" }}>A partir d&apos;aquí, anirem construint juntes un camí adaptat a tu.</p>
+            <p style={{ marginTop: "1rem" }}>Durant l&apos;acompanyament anirem incorporant petites pautes i recursos que puguis integrar en el teu dia a dia, respectant els teus ritmes i la teva realitat.</p>
+            <p style={{ marginTop: "1rem" }}>No es tracta de fer molts canvis de cop ni de seguir una fórmula concreta.</p>
+            <p style={{ marginTop: "1rem" }}>Es tracta d&apos;anar trobant, a poc a poc, allò que té més sentit per a tu i per al moment que estàs vivint.</p>
+            <p style={{ marginTop: "1rem" }}>Perquè habitar la matriu és un procés: una nova manera de relacionar-te amb tu mateixa.</p>
+          </div>
+        </section>
+
+        {/* IMAGINA'T */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Imagina&apos;t d&apos;aquí a uns mesos...</h2>
+            </div>
+            <p style={{ marginTop: 0 }}>Potser el veritable canvi no és només resoldre un símptoma.</p>
+            <p style={{ marginTop: ".6rem" }}>Potser és recuperar una relació amb la teva matriu.</p>
+            <p style={{ marginTop: "1.4rem", fontWeight: 700, color: "#6b5347" }}>Després d&apos;aquest procés...</p>
+            <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", display: "grid", gap: "1rem" }}>
+              {[
+                "Comprendràs millor el llenguatge del teu cos i aprendràs a escoltar què et vol comunicar.",
+                "Tindràs recursos senzills per cuidar la teva salut femenina d'una manera més conscient i adaptada al teu moment vital.",
+                "Coneixeràs millor els teus ritmes i les teves necessitats, i podràs prendre decisions amb més confiança.",
+                "Sentiràs que el teu cos deixa de ser un lloc al qual només escoltes quan apareix un símptoma, i es converteix en un espai de connexió, presència i escolta en el teu dia a dia.",
+                "Aniràs recuperant, pas a pas, la confiança en la saviesa que ja habita en la teva matriu i en la teva capacitat de cuidar-te.",
+              ].map((item) => (
+                <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                  <span style={{ flexShrink: 0 }}>🌿</span>
+                  <span>{item}</span>
+                </li>
+              ))}
             </ul>
-            <p className="nota" style={{ marginTop: "1.2rem" }}>L&apos;accés als vídeos només durant els 4 mesos de l&apos;acompanyament. Els pdf i els àudios te&apos;ls podràs baixar</p>
+            <p style={{ marginTop: "2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              Aquest és el camí d&apos;habitar la matriu:
+            </p>
+            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              tornar a tu, recuperar la relació amb la teva matriu i amb el teu cos
+            </p>
+            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              i caminar la teva salut des d&apos;un lloc més conscient i més teu.
+            </p>
+            <p style={{ marginTop: "2rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                Vull començar el meu procés
+              </a>
+            </p>
           </div>
-          <div className="inclou-col">
-            <h4>No inclou</h4>
-            <ul className="no">
-              <li>Els massatges (matriu, òrgans, articulacions)</li>
-              <li>La garantia que el teu desequilibri es resolgui en el temps que dura l&apos;acompanyament</li>
-            </ul>
+        </section>
+
+        {/* LES DONES DIUEN */}
+        <section>
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Les dones diuen...</h2>
+            </div>
+            <TestimonialCarousel />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Sobre la Gavina */}
-      <section className="sobre">
-        <div className="sobre-inner">
-          <div className="sobre-img">
-            <img src="/matrius/assets/gavina-nova.jpg" alt="La Gavina" loading="lazy" />
+        {/* QUI T'ACOMPANYA */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Qui t&apos;acompanya</h2>
+            </div>
+            <div className="qui-grid">
+              <div>
+                <p style={{ marginTop: 0 }}>El meu gran despertar va començar fa tretze anys, quan vaig ser mare per primera vegada.</p>
+                <p style={{ marginTop: "1rem" }}>La maternitat em va portar a mirar-me profundament i a revisar la relació amb mi mateixa, amb la meva feminitat, la meva sexualitat i la meva matriu. Va ser l&apos;inici d&apos;un camí de recerca, transformació i retorn al meu cos que encara avui continuo recorrent.</p>
+                <p style={{ marginTop: "1rem" }}>Durant aquests anys he anat explorant i aprofundint en diferents mirades que han donat forma a la meva manera d&apos;acompanyar: Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals.</p>
+                <p style={{ marginTop: "1rem" }}>Però el més important que he après no ha vingut només de les formacions, sinó del meu propi camí.</p>
+              </div>
+              <div className="soft-img" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
+                <img
+                  src="/matrius/assets/gavinariu3prop.jpg"
+                  alt="La Gavina"
+                  loading="lazy"
+                  style={{ objectPosition: "center top" }}
+                />
+              </div>
+            </div>
+
+            <p style={{ marginTop: "2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              He après que el cos sempre ens està parlant i que, quan aprenem a escoltar-lo, recuperem una relació més profunda amb nosaltres mateixes.
+            </p>
+            <p style={{ marginTop: "1.4rem" }}>
+              Aquesta és <strong style={{ color: "#6b5347" }}>la mirada des d&apos;on avui t&apos;acompanyo</strong>: no per donar-te receptes, sinó per oferir-te eines i camins perquè puguis comprendre el teu cos,{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                prendre un paper actiu en la cura de la teva salut i reconnectar amb la saviesa que habita en la teva matriu.
+              </span>
+            </p>
+            <p style={{ marginTop: "1.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              Per mi, habitar la matriu és tornar a tu.
+            </p>
           </div>
-          <div className="sobre-text">
-            <h2 className="s-heading">Qui acompanya</h2>
-            <p>Soc la Gavina, acompanyant de dones que tenen ganes de fer-se càrrec de la seva salut femenina des de <strong>les bases que han sostingut, i sostenen, les dones en diferents tradicions mil·lenàries d&apos;arreu del món.</strong></p>
-            <p>T&apos;acompanyo a prevenir i tractar els desequilibris ginecològics que estiguis tenint a partir de les <strong>rutines i pràctiques ancestrals que ens mantenen en salut i que ens ajuden a restaurar-la.</strong></p>
+        </section>
+
+        {/* INVERSIÓ */}
+        <section>
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Inversió</h2>
+            </div>
+            <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              Cada dona, cada història i cada matriu són úniques. Per això, cada procés també ho és.
+            </p>
+            <p style={{ marginTop: "1.6rem" }}>
+              Després de la primera sessió de valoració, et faré una proposta d&apos;acompanyament personalitzada, pensada per al moment vital que estàs vivint i per al camí que tingui més sentit per a tu.
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              En aquell moment també t&apos;explicaré la durada orientativa del procés, la inversió i resoldré tots els dubtes que puguis tenir perquè puguis decidir amb calma si aquest és el teu moment.
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              Sense cap compromís.
+            </p>
+            <p style={{ marginTop: "2rem", textAlign: "center" }}>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
+                Vull començar el meu procés
+              </a>
+            </p>
           </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <div className="wrap">
+          Pla Personalitzat · Acompanyament individual · Gavina Freixa Rius
         </div>
-      </section>
-
-      {/* Testimonials carousel */}
-      <section className="testi">
-        <div className="testi-inner">
-          <h2 className="s-heading">Algunes dones diuen...</h2>
-          <TestimonialCarousel />
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="faq">
-        <div className="faq-inner">
-          <h2 className="s-heading">Preguntes freqüents</h2>
-          <FaqAccordion />
-        </div>
-      </section>
-
-      {/* CTA final */}
-      <section className="cta-final">
-        <h2>Estàs preparada<br />per iniciar<br />aquest camí?</h2>
-        <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="cta-wa">
-          <WaIcon />
-          Reserva videotrucada gratuïta
-        </a>
-      </section>
-
-      <footer>Gavina Freixa Rius · Salut Cíclica Femenina</footer>
+      </footer>
     </div>
   );
 }
