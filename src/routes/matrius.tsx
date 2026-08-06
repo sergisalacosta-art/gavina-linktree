@@ -174,7 +174,7 @@ const css = `
   .mp .back-link:hover{color:var(--terra-fosc);}
 
   .mp .qui-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
-  .mp .proces-grid{display:grid; grid-template-columns:clamp(200px,35%,380px) 1fr; gap:clamp(1.5rem,3vw,3rem); align-items:start;}
+  .mp .proces-grid{display:grid; grid-template-columns:clamp(200px,35%,380px) 1fr; gap:clamp(1.5rem,3vw,3rem); align-items:stretch;}
 
   @media(max-width:900px){
     .mp .hero{min-height:74vh}
@@ -404,11 +404,11 @@ function MatriusPage() {
               <h2>Com serà el procés: els camins que recorrerem</h2>
             </div>
             <div className="proces-grid">
-              <div className="proces-photo" style={{ borderRadius: "1.2rem", overflow: "hidden" }}>
+              <div className="proces-photo" style={{ borderRadius: "1.2rem", overflow: "hidden", height: "100%" }}>
                 <img
                   src="/matrius/assets/surita%20copalera.jpg"
                   alt="Surita copalera"
-                  style={{ width: "100%", display: "block", objectFit: "cover", objectPosition: "center top" }}
+                  style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", objectPosition: "center top" }}
                 />
               </div>
               <div>
@@ -497,7 +497,7 @@ function MatriusPage() {
                 <img
                   src="/matrius/assets/gavina%20riu.jpeg"
                   alt="La Gavina"
-                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center top" }}
+                  style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center top", transform: "scale(1.45)", transformOrigin: "50% 22%" }}
                 />
               </div>
             </div>

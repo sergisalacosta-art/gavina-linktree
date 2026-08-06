@@ -166,9 +166,9 @@ const css = `
 
   /* TIMELINE */
   .rt .timeline{display:grid; gap:0; margin-top:1.8rem;}
-  .rt .timeline-item{display:grid; grid-template-columns:10rem 1fr; gap:1.2rem; padding:1.2rem 0; border-top:1px solid rgba(138,75,52,.12);}
+  .rt .timeline-item{display:grid; grid-template-columns:12rem 1fr; gap:1.2rem; padding:1.2rem 0; border-top:1px solid rgba(138,75,52,.12);}
   .rt .timeline-item:last-child{border-bottom:1px solid rgba(138,75,52,.12);}
-  .rt .timeline-time{font-weight:700; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); padding-top:.15rem; line-height:1.3; font-family:Georgia,"Times New Roman",serif;}
+  .rt .timeline-time{font-weight:700; color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); padding-top:.15rem; line-height:1.3; font-family:Georgia,"Times New Roman",serif; white-space:nowrap;}
   .rt .timeline-desc{color:#6b5347; font-size:clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.6; margin:0; font-family:Georgia,"Times New Roman",serif;}
   .rt .pre-event{background:linear-gradient(135deg, #fceae3, #fef5f1); border-left:4px solid var(--terra); border-radius:1.4rem; padding:clamp(1.4rem,3vw,2.4rem); margin-top:1.8rem;}
   .rt .pre-event h3{margin-bottom:1rem; color:var(--terra-fosc);}
@@ -220,7 +220,7 @@ const css = `
     .rt .grid-2,.rt .bio{grid-template-columns:1fr}
     .rt .grid-3{grid-template-columns:1fr 1fr}
     .rt .grid-2-img{grid-template-columns:1fr}
-    .rt .timeline-item{grid-template-columns:5.5rem 1fr}
+    .rt .timeline-item{grid-template-columns:9rem 1fr}
   }
   @media(max-width:560px){
     .rt{font-size:16px}
@@ -522,7 +522,7 @@ function RetirPage() {
                 <p className="lead" style={{ marginTop: ".8rem" }}>Amb els anys he anat integrant diferents mirades i recursos que han donat forma a la meva manera d&apos;acompanyar: Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals.</p>
               </div>
               <div className="soft-img">
-                <img src="/matrius/assets/gavina%20riu2.jpeg" alt="Retrat de la Gavina" loading="lazy" />
+                <img src="/matrius/assets/gavina%20riu2.jpeg" alt="Retrat de la Gavina" loading="lazy" style={{ transform: "scale(1.45)", transformOrigin: "50% 22%" }} />
               </div>
             </div>
             <p className="lead" style={{ marginTop: "1.8rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Però sobretot, aquest camí m&apos;ha ensenyat que <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu</span>.</p>
@@ -549,7 +549,7 @@ function RetirPage() {
               <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset", objectPosition: "center top" }} />
             </div>
             <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
-              Aquest retir és una invitació a reconnectar amb la saviesa que habita en la teva matriu.
+              Aquest retir és una invitació a<br />reconnectar amb la saviesa que habita en la teva matriu.
             </p>
           </div>
         </section>
