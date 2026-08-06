@@ -61,7 +61,7 @@ const css = `
     font-size:clamp(0.95rem, 2.5vw, 2rem);
     letter-spacing:.03em;
     line-height:1.4;
-    margin:0 0 1.2rem;
+    margin:.9rem 0 0;
     font-weight:400;
   }
   .sv h1{
@@ -122,7 +122,8 @@ const css = `
   /* EM-SUB highlight */
   .sv .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32' preserveAspectRatio='none'%3E%3Cpath d='M6,9 C28,4 65,10 105,6 C142,2 178,8 195,7 C199,11 198,20 193,23 C158,28 115,23 75,25 C40,27 11,23 4,21 C1,18 2,13 6,9 Z' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-size:100% 100%; padding:0.12em 0.4em;}
 
-  /* BIO */
+  /* GRIDS */
+  .sv .farem-grid{display:grid; grid-template-columns:clamp(200px,35%,400px) 1fr; gap:clamp(2rem,4vw,4rem); align-items:start;}
   .sv .bio-side{display:grid; grid-template-columns:1fr clamp(200px,35%,380px); gap:clamp(2rem,4vw,4rem); align-items:start;}
 
   /* CTA BLOCK */
@@ -146,6 +147,8 @@ const css = `
 
   @media(max-width:900px){
     .sv .hero{min-height:68vh}
+    .sv .farem-grid{grid-template-columns:1fr}
+    .sv .farem-photo{order:-1; margin-bottom:1rem}
     .sv .bio-side{grid-template-columns:1fr}
     .sv .bio-photo{order:-1; margin-bottom:1rem}
   }
@@ -221,8 +224,8 @@ function SessioPage() {
       {/* HERO */}
       <header className="hero">
         <div className="hero-inner">
-          <p className="hero-sub">El primer pas per posar llum al teu cas.</p>
           <h1>Sessió Online de Valoració i Orientació Personalitzada</h1>
+          <p className="hero-sub">El primer pas per posar llum al teu cas.</p>
         </div>
       </header>
 
@@ -292,50 +295,66 @@ function SessioPage() {
             <div className="section-title">
               <h2>Què farem en aquesta sessió?</h2>
             </div>
-            <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Una mirada global per començar a orientar el teu camí.
-            </p>
-            <p style={{ marginTop: "1.2rem", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
-              Abans de buscar respostes, necessitem ordenar el que estem vivint.
-            </p>
-            <p style={{ marginTop: ".3rem", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
-              Aquesta sessió és un espai per fer-ho juntes.
-            </p>
-            <p style={{ marginTop: "1.4rem" }}>Durant la sessió revisarem:</p>
-            <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", display: "grid", gap: ".9rem" }}>
-              {[
-                "La teva història personal i ginecològica.",
-                "Els símptomes o desequilibris que estàs vivint actualment.",
-                "Els hàbits, rutines i factors que poden estar influint en el teu estat actual.",
-                "La possible relació entre diferents aspectes del teu cos, la teva ciclicitat i el teu moment vital.",
-              ].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
-                  <span style={{ flexShrink: 0 }}>🌿</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p style={{ marginTop: "1.4rem", fontWeight: 700, color: "#6b5347" }}>
-              Durada: 1h15 aproximadament.
-            </p>
-            <p style={{ marginTop: "1rem" }}>
-              A partir d&apos;aquesta mirada global, et compartiré la meva comprensió del teu cas i una proposta orientativa sobre els camins que podrien ajudar-te.
-            </p>
+            <div className="farem-grid">
+              {/* Photo left */}
+              <div className="farem-photo">
+                <div style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
+                  <img
+                    src="/matrius/assets/gavinacama.jpg"
+                    alt="La Gavina a la natura"
+                    loading="lazy"
+                    style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4" }}
+                  />
+                </div>
+              </div>
+              {/* Content right */}
+              <div>
+                <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+                  Una mirada global per començar a orientar el teu camí.
+                </p>
+                <p style={{ marginTop: "1.2rem", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                  Abans de buscar respostes, necessitem ordenar el que estem vivint.
+                </p>
+                <p style={{ marginTop: ".3rem", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+                  Aquesta sessió és un espai per fer-ho juntes.
+                </p>
+                <p style={{ marginTop: "1.4rem" }}>Durant la sessió revisarem:</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", display: "grid", gap: ".9rem" }}>
+                  {[
+                    "La teva història personal i ginecològica.",
+                    "Els símptomes o desequilibris que estàs vivint actualment.",
+                    "Els hàbits, rutines i factors que poden estar influint en el teu estat actual.",
+                    "La possible relació entre diferents aspectes del teu cos, la teva ciclicitat i el teu moment vital.",
+                  ].map((item) => (
+                    <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                      <span style={{ flexShrink: 0 }}>🌿</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p style={{ marginTop: "1.4rem", fontWeight: 700, color: "#6b5347" }}>
+                  Durada: 1h15 aproximadament.
+                </p>
+                <p style={{ marginTop: "1rem" }}>
+                  A partir d&apos;aquesta mirada global, et compartiré la meva comprensió del teu cas i una proposta orientativa sobre els camins que podrien ajudar-te.
+                </p>
 
-            {/* I DESPRÉS DE LA SESSIÓ? */}
-            <div className="destacat" style={{ marginTop: "2.4rem" }}>
-              <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", textTransform: "uppercase", letterSpacing: ".04em" }}>
-                I després de la sessió?
-              </p>
-              <p>
-                Si després de la sessió totes dues sentim que té sentit continuar aquest camí, aquesta sessió serà el punt de partida per iniciar l&apos;acompanyament individualitzat.
-              </p>
-              <p>
-                A partir del que hàgim observat, podré proposar-te un camí adaptat a tu, al teu moment vital i a les necessitats del teu cos.
-              </p>
-              <p>
-                I si considero que aquest no és el procés més adequat per a tu, també t&apos;ho diré amb honestedat.
-              </p>
+                {/* I DESPRÉS DE LA SESSIÓ? */}
+                <div className="destacat" style={{ marginTop: "2.4rem" }}>
+                  <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)", textTransform: "uppercase", letterSpacing: ".04em" }}>
+                    I després de la sessió?
+                  </p>
+                  <p>
+                    Si després de la sessió totes dues sentim que té sentit continuar aquest camí, aquesta sessió serà el punt de partida per iniciar l&apos;acompanyament individualitzat.
+                  </p>
+                  <p>
+                    A partir del que hàgim observat, podré proposar-te un camí adaptat a tu, al teu moment vital i a les necessitats del teu cos.
+                  </p>
+                  <p>
+                    I si considero que aquest no és el procés més adequat per a tu, també t&apos;ho diré amb honestedat.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -467,7 +486,7 @@ function SessioPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22", textTransform: "uppercase" }}>
+              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
                 Estàs preparada per fer el primer pas?
               </h2>
               <p style={{ marginTop: "1.4rem", color: "#4a2e22", lineHeight: 1.65 }}>
