@@ -174,6 +174,7 @@ const css = `
   .mp .back-link:hover{color:var(--terra-fosc);}
 
   .mp .qui-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
+  .mp .proces-grid{display:grid; grid-template-columns:clamp(200px,35%,380px) 1fr; gap:clamp(1.5rem,3vw,3rem); align-items:start;}
 
   @media(max-width:900px){
     .mp .hero{min-height:74vh}
@@ -181,6 +182,8 @@ const css = `
     .mp .format-grid{grid-template-columns:repeat(2,1fr)}
     .mp .qui-grid{grid-template-columns:1fr}
     .mp .qui-photo{order:-1; margin-bottom:1rem}
+    .mp .proces-grid{grid-template-columns:1fr}
+    .mp .proces-photo{order:-1; margin-bottom:1rem}
   }
   @media(max-width:560px){
     .mp{font-size:16px}
@@ -334,11 +337,11 @@ function MatriusPage() {
             </div>
             <p>Un acompanyament grupal i online de cinc mesos per recuperar i cultivar la relació amb la teva matriu, integrar recursos naturals que t&apos;ajudin a cuidar-la amb més consciència, confiança i autonomia.</p>
             <p style={{ marginTop: ".8rem" }}>Un espai per aprendre, compartir i caminar juntes.</p>
-            <p style={{ marginTop: "1.2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Perquè quan les dones ens reunim amb la intenció de cuidar-nos, escoltar-nos i recordar la nostra saviesa, alguna cosa es transforma.</p>
+            <p style={{ marginTop: "1.2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Perquè quan les dones ens reunim amb la intenció de cuidar-nos,<br />escoltar-nos i recordar la nostra saviesa, alguna cosa es transforma.</p>
 
             <div className="destacat">
               <p style={{ fontWeight: 700, color: "var(--terra)", margin: 0, fontSize: "clamp(1.2rem, 2.3vw, 1.5rem)" }}>
-                Més enllà dels recursos: el poder del cercle
+                Més enllà dels recursos: EL PODER DEL CERCLE
               </p>
               <p>Durant molts anys les dones hem compartit coneixements, remeis, experiències i saviesa en comunitat.</p>
               <p>El cercle recupera aquest espai.</p>
@@ -355,10 +358,10 @@ function MatriusPage() {
                   style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: "480px", objectPosition: "center" }}
                 />
               </div>
-              <p style={{ marginTop: "0", textAlign: "center", color: "var(--terra)", fontWeight: 700, textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
+              <p style={{ marginTop: "0", textAlign: "center", color: "var(--terra)", fontWeight: 700 }}>
                 No és només un espai per aprendre sobre salut femenina.<br />
-                És un espai per caminar aquest procés al costat d&apos;altres dones,<br />
-                recordant juntes la saviesa que habita en cada una de nosaltres.
+                És un espai per <span className="em-sub">CAMINAR</span> aquest procés <span className="em-sub">AL COSTAT D&apos;ALTRES DONES</span>,<br />
+                <span className="em-sub">RECORDANT juntes</span> la <span className="em-sub">saviesa</span> que habita en cada una de nosaltres.
               </p>
             </div>
           </div>
@@ -400,30 +403,34 @@ function MatriusPage() {
             <div className="section-title">
               <h2>Com serà el procés: els camins que recorrerem</h2>
             </div>
-            <p>Durant cinc mesos recorrerem diferents camins que t&apos;ajudaran a cultivar aquesta nova relació amb la teva matriu:</p>
-            <ul style={{ listStyle: "none", padding: 0, margin: "1.4rem 0 0", display: "grid", gap: "1.2rem" }}>
-              {[
-                { title: "Mes 1 · Nodrir el teu cos", desc: "Alimentació regenerativa, rutines bàsiques, ciclicitat i una primera aproximació a la teva matriu." },
-                { title: "Mes 2 · Reconnectar amb els ritmes de la natura", desc: "Desparasitar, depurar i comprendre el paper de les plantes en el sosteniment de la salut femenina." },
-                { title: "Mes 3 · Endinsar-nos en la fitoginecologia", desc: "Aprendre recursos ancestrals amb plantes per acompanyar els processos del cos femení." },
-                { title: "Mes 4 · Conèixer el teu cos femení", desc: "Comprendre els òrgans femenins i la relació entre les diferents parts del teu cos." },
-                { title: "Mes 5 · Despertar la pelvis i la matriu", desc: "Moviment pelvicuterí acompanyat de la respiració i la veu per començar a alliberar memòries." },
-              ].map(({ title, desc }) => (
-                <li key={title} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
-                  <span style={{ flexShrink: 0, marginTop: ".1em" }}>🌿</span>
-                  <div>
-                    <p style={{ fontWeight: 700, margin: 0, color: "#6b5347" }}>{title}</p>
-                    <p style={{ marginTop: ".3rem" }}>{desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <div style={{ marginTop: "2rem", borderRadius: "1.2rem", overflow: "hidden" }}>
-              <img
-                src="/matrius/assets/surita%20copalera.jpg"
-                alt="Surita copalera"
-                style={{ width: "100%", display: "block", objectFit: "cover", maxHeight: "480px", objectPosition: "center top" }}
-              />
+            <div className="proces-grid">
+              <div className="proces-photo" style={{ borderRadius: "1.2rem", overflow: "hidden" }}>
+                <img
+                  src="/matrius/assets/surita%20copalera.jpg"
+                  alt="Surita copalera"
+                  style={{ width: "100%", display: "block", objectFit: "cover", objectPosition: "center top" }}
+                />
+              </div>
+              <div>
+                <p style={{ marginTop: 0 }}>Durant cinc mesos recorrerem diferents camins que t&apos;ajudaran a cultivar aquesta nova relació amb la teva matriu:</p>
+                <ul style={{ listStyle: "none", padding: 0, margin: "1.4rem 0 0", display: "grid", gap: "1.2rem" }}>
+                  {[
+                    { title: "Mes 1 · Nodrir el teu cos", desc: "Alimentació regenerativa, rutines bàsiques, ciclicitat i una primera aproximació a la teva matriu." },
+                    { title: "Mes 2 · Reconnectar amb els ritmes de la natura", desc: "Desparasitar, depurar i comprendre el paper de les plantes en el sosteniment de la salut femenina." },
+                    { title: "Mes 3 · Endinsar-nos en la fitoginecologia", desc: "Aprendre recursos ancestrals amb plantes per acompanyar els processos del cos femení." },
+                    { title: "Mes 4 · Conèixer el teu cos femení", desc: "Comprendre els òrgans femenins i la relació entre les diferents parts del teu cos." },
+                    { title: "Mes 5 · Despertar la pelvis i la matriu", desc: "Moviment pelvicuterí acompanyat de la respiració i la veu per començar a alliberar memòries." },
+                  ].map(({ title, desc }) => (
+                    <li key={title} style={{ display: "flex", alignItems: "flex-start", gap: ".7rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
+                      <span style={{ flexShrink: 0, marginTop: ".1em" }}>🌿</span>
+                      <div>
+                        <p style={{ fontWeight: 700, margin: 0, color: "#6b5347" }}>{title}</p>
+                        <p style={{ marginTop: ".3rem" }}>{desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>

@@ -522,13 +522,14 @@ function RetirPage() {
                 <p className="lead" style={{ marginTop: ".8rem" }}>Amb els anys he anat integrant diferents mirades i recursos que han donat forma a la meva manera d&apos;acompanyar: Teràpia Gestalt, Ginecologia Natural i Ancestral, Ciclicitat i Sexualitat Alquímica Femenina, Alimentació Regenerativa, Fitoginecologia, Moviment Pèlvic i altres recursos naturals.</p>
               </div>
               <div className="soft-img">
-                <img src="/matrius/assets/gavina-nova.jpg" alt="Retrat de la Gavina" loading="lazy" />
+                <img src="/matrius/assets/gavina%20riu2.jpeg" alt="Retrat de la Gavina" loading="lazy" />
               </div>
             </div>
             <p className="lead" style={{ marginTop: "1.8rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Però sobretot, aquest camí m&apos;ha ensenyat que <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>la salut femenina no es transforma només incorporant eines, sinó recuperant la relació amb el nostre cos i amb la saviesa que ja habita en la nostra matriu</span>.</p>
-            <p className="lead" style={{ marginTop: "1.8rem", fontWeight: 700 }}>Crec profundament que hi ha processos que necessiten ser viscuts en companyia d&apos;altres dones. Perquè quan ens trobem, compartim i ens sostenim, alguna cosa profunda es transforma. No és el mateix caminar soles que habitar un espai on altres dones també estan escoltant-se, recordant-se i reconnectant amb elles mateixes.</p>
-            <p className="lead" style={{ marginTop: "1.2rem", fontWeight: 700 }}>Amb aquesta experiència t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu. Un espai intern des d&apos;on poder escoltar-te, prendre decisions més alineades amb tu i caminar amb més claredat i confiança.</p>
-            <p className="lead" style={{ marginTop: "1.2rem", fontWeight: 700 }}>Aquest és el sentit d&apos;aquest retir: crear un espai segur i sostingut on puguis parar, sentir i recordar la saviesa que ja habita en tu.</p>
+            <p className="lead" style={{ marginTop: "1.8rem" }}>Crec profundament que hi ha processos que necessiten ser viscuts en companyia d&apos;altres dones. Perquè quan ens trobem, compartim i ens sostenim, alguna cosa profunda es transforma.</p>
+            <p className="lead" style={{ marginTop: "1.2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>No és el mateix caminar soles que habitar un espai on altres dones també estan escoltant-se, recordant-se i reconnectant amb elles mateixes.</p>
+            <p className="lead" style={{ marginTop: "1.2rem" }}>Amb aquesta experiència <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>t&apos;acompanyo a reconnectar amb el teu centre de poder: la teva matriu</span>. Un espai intern des d&apos;on poder escoltar-te, prendre decisions més alineades amb tu i caminar amb més claredat i confiança.</p>
+            <p className="lead" style={{ marginTop: "1.2rem" }}>Aquest és <strong style={{ color: "#6b5347" }}>el sentit d&apos;aquest retir</strong>: crear un espai segur i sostingut on puguis <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>parar, sentir i recordar la saviesa que ja habita en tu.</span></p>
           </div>
         </section>
 
@@ -548,8 +549,7 @@ function RetirPage() {
               <img src="/retir/assets/retir3.jpg" alt="Dones abraçades en cercle" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "unset", objectPosition: "center top" }} />
             </div>
             <p style={{ marginTop: "1.4rem", textAlign: "center", color: "var(--terra)", fontWeight: 700, fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
-              Aquest retir és una invitació a reconnectar amb una saviesa que ja habita en tu.<br />
-              És un dia per reconnectar amb la saviesa que habita en la teva matriu.
+              Aquest retir és una invitació a reconnectar amb la saviesa que habita en la teva matriu.
             </p>
           </div>
         </section>
