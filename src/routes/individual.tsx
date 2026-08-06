@@ -127,6 +127,19 @@ const css = `
   /* CTA BLOCK */
   .ip .cta-block{background:linear-gradient(135deg,#e1bda6 0%,#c5a595 100%); border-radius:2rem; padding:clamp(2rem,4vw,3.2rem); text-align:center; box-shadow:0 30px 80px rgba(160,115,90,.22);}
 
+  /* FAQ */
+  .ip .faq{display:grid; gap:.7rem; margin-top:1.6rem;}
+  .ip .faq-item{border:1px solid rgba(138,75,52,.15); border-radius:1.2rem; overflow:hidden; background:#fffdf8;}
+  .ip .faq-item summary{list-style:none; cursor:pointer; padding:1.15rem 1.4rem; font-weight:700; font-size:clamp(1.15rem,2.2vw,1.4rem); color:#6b5347; font-family:Georgia,"Times New Roman",serif; display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none;}
+  .ip .faq-item summary::-webkit-details-marker{display:none;}
+  .ip .faq-item summary::after{content:"+"; font-size:1.4rem; font-weight:400; color:var(--terra); flex-shrink:0; transition:transform .2s;}
+  .ip .faq-item[open] summary::after{transform:rotate(45deg);}
+  .ip .faq-item[open] summary{border-bottom:1px solid rgba(138,75,52,.1);}
+  .ip .faq-body{padding:1.1rem 1.4rem 1.3rem; color:#6b5347; font-size:clamp(1.15rem,2.2vw,1.4rem); line-height:1.65; font-family:Georgia,"Times New Roman",serif;}
+  .ip .faq-body p{margin:.6rem 0 0; color:#6b5347; font-size:inherit; line-height:inherit; font-family:inherit;}
+  .ip .faq-body p:first-child{margin-top:0;}
+  .ip .em-sub{display:inline; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32' preserveAspectRatio='none'%3E%3Cpath d='M6,9 C28,4 65,10 105,6 C142,2 178,8 195,7 C199,11 198,20 193,23 C158,28 115,23 75,25 C40,27 11,23 4,21 C1,18 2,13 6,9 Z' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-size:100% 100%; padding:0.12em 0.4em;}
+
   /* GRIDS */
   .ip .qui-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
   .ip .mes-grid{display:grid; grid-template-columns:1fr clamp(200px,32%,360px); gap:clamp(2rem,4vw,4rem); align-items:start;}
@@ -171,6 +184,88 @@ const testimonials = [
   {
     text: "La Gavina em transmet molta confiança cap a una mirada més connectada amb la natura i la meva intuïció femenina. Sento que gran part dels missatges cap als canvis, el cos i la salut es miren molt des de la por i una visió molt medicalitzada. Ancestralment les dones s'acompanyaven entre elles, des de la seva saviesa i coneixements. Sento molta curiositat per provar l'acompanyament amb una dona sensible i empàtica com ella. Tenir a la Gavina és tot un regal!",
     name: "Brenda",
+  },
+];
+
+const faqData = [
+  {
+    q: "Com puc saber si aquest acompanyament és per a mi?",
+    a: [
+      "Parlarem del teu cas, del moment vital que estàs vivint i valorarem juntes si aquest acompanyament és el que necessites ara mateix.",
+      "Si sento que un altre camí et pot ajudar més en aquest moment, també t'ho diré amb tota honestedat.",
+    ],
+  },
+  {
+    q: "I si no sé per on començar?",
+    a: [
+      "No cal que arribis sabent què necessites.",
+      "Començarem escoltant el teu cas, el moment vital que estàs vivint i què t'ha portat fins aquí.",
+      "A partir d'aquí, definirem juntes el camí que tingui més sentit per a tu.",
+    ],
+  },
+  {
+    q: "En principi no tinc cap desequilibri ginecològic, però sento la necessitat de reconnectar amb la meva matriu i amb la meva feminitat.",
+    a: [
+      "Sí. Aquest acompanyament també és per a tu.",
+      "No cal esperar que aparegui un desequilibri per començar a cuidar la teva salut femenina.",
+      "Si sents el desig de reconnectar amb el teu cos, comprendre millor la teva ciclicitat i incorporar recursos naturals que t'ajudin a cuidar-te d'una manera més conscient, aquest procés també pot ser un bon camí per a tu.",
+    ],
+  },
+  {
+    q: "És necessari aplicar tots els recursos que proposes?",
+    a: [
+      "Els recursos que anirem descobrint són portes d'entrada per començar a construir una nova relació amb el teu cos i amb la teva matriu.",
+      "Ara bé, perquè el procés sigui realment transformador, és important que puguis anar incorporant, de manera progressiva, allò que anem treballant. Això ens permetrà observar com respon el teu cos i anar ajustant el procés segons el que necessitis.",
+    ],
+  },
+  {
+    q: "I si no tinc temps per incorporar tots aquests recursos?",
+    a: [
+      "No es tracta de fer més coses.",
+      "Buscarem aquells recursos que puguin integrar-se de manera realista en el teu dia a dia perquè cuidar-te sigui una cosa sostenible, no una exigència més.",
+    ],
+  },
+  {
+    q: "Quant dura l'acompanyament?",
+    a: [
+      "No hi ha una durada igual per a totes les dones.",
+      "Cada procés és diferent perquè cada història, cada cos i cada moment vital també ho són.",
+      "Després de la primera sessió et faré una proposta personalitzada i, a partir d'aquí, anirem valorant juntes l'evolució del procés.",
+    ],
+  },
+  {
+    q: "Necessito tenir coneixements previs sobre salut femenina o recursos naturals?",
+    a: [
+      "No.",
+      "Aquest acompanyament s'adapta al teu punt de partida.",
+      "No importa si és la primera vegada que t'apropes a aquesta mirada o si fa anys que t'interessa la salut femenina. El procés s'adaptarà al teu punt de partida.",
+    ],
+  },
+  {
+    q: "He viscut una pèrdua gestacional i em sento molt desconnectada de la meva matriu.",
+    a: [
+      "Cada dona viu una pèrdua d'una manera diferent.",
+      "Si sents que és el teu moment, t'acompanyaré amb molta delicadesa a recuperar la relació amb el teu cos i la teva matriu, respectant el teu ritme.",
+      "I valorarem juntes quins recursos poden sostenir millor el teu moment present.",
+    ],
+  },
+  {
+    q: "No sento desig sexual o ja no gaudeixo de la penetració. Aquest acompanyament és per a mi?",
+    a: [
+      "Sí, pot ser-ho.",
+      "La sexualitat canvia al llarg de la vida i, especialment, durant etapes com el climateri.",
+      "En aquest procés no ens centrarem només en la sexualitat. També observarem com estàs vivint la resta de dimensions de la teva vida, perquè tot està relacionat.",
+      "A partir d'aquí, anirem incorporant aquells recursos que puguin ajudar-te a recuperar, de mica en mica, una relació més conscient amb el teu cos, el teu plaer i la teva sexualitat.",
+    ],
+  },
+  {
+    q: "Em pots garantir que el meu desequilibri es resoldrà en 3 o 4 mesos?",
+    a: [
+      "No.",
+      "Cada cos, cada història i cada procés són únics.",
+      "El meu compromís és acompanyar-te perquè puguis comprendre millor què t'està explicant el teu cos, incorporar recursos adaptats a tu i crear les condicions perquè recuperi, tant com sigui possible, el seu equilibri.",
+      "Els resultats dependran de molts factors, però també del compromís que puguis assumir amb el teu propi procés.",
+    ],
   },
 ];
 
@@ -504,6 +599,43 @@ function IndividualPage() {
                 Vull començar el meu procés
               </a>
             </p>
+          </div>
+        </section>
+
+        {/* PREGUNTES FREQÜENTS */}
+        <section className="cream">
+          <div className="wrap">
+            <div className="section-title">
+              <h2>Preguntes freqüents</h2>
+            </div>
+            <div className="faq">
+              {faqData.map(({ q, a }) => (
+                <details key={q} className="faq-item">
+                  <summary>{q}</summary>
+                  <div className="faq-body">
+                    {a.map((para, i) => <p key={i}>{para}</p>)}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA FINAL */}
+        <section>
+          <div className="wrap">
+            <div className="cta-block">
+              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
+                Si aquest camí ha ressonat amb tu<br />
+                i sents que <span className="em-sub">ha arribat el moment de començar a habitar la teva matriu</span>,<br />
+                serà un plaer acompanyar-te.
+              </h2>
+              <p style={{ marginTop: "1.8rem" }}>
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  Vull començar el meu procés
+                </a>
+              </p>
+            </div>
           </div>
         </section>
 
