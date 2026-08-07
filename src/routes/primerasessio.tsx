@@ -162,6 +162,12 @@ const css = `
 
 const faqData = [
   {
+    q: "Quin tipus de diagnòstic farem en aquesta sessió?",
+    a: [
+      "És un diagnòstic des de la mirada terapèutica i integrativa de la salut femenina. No és un diagnòstic mèdic, sinó una valoració del teu cas des d'una mirada global, tenint en compte la teva història, els símptomes, els teus hàbits, la teva ciclicitat i el teu moment vital.",
+    ],
+  },
+  {
     q: "Necessito tenir un diagnòstic o saber exactament què em passa?",
     a: [
       "No.",
@@ -224,7 +230,7 @@ function SessioPage() {
       {/* HERO */}
       <header className="hero">
         <div className="hero-inner">
-          <h1>Sessió Online de Valoració i Orientació Personalitzada</h1>
+          <h1>Sessió Diagnòstica</h1>
           <p className="hero-sub">El primer pas per posar llum al teu cas.</p>
         </div>
       </header>
@@ -300,7 +306,7 @@ function SessioPage() {
               <div className="farem-photo">
                 <div style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
                   <img
-                    src="/matrius/assets/gavinacama.jpg"
+                    src="/matrius/assets/gavinacama.jpeg"
                     alt="La Gavina a la natura"
                     loading="lazy"
                     style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4" }}

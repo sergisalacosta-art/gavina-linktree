@@ -424,6 +424,7 @@ function IndividualPage() {
                 "Estàs en els teus primers anys de climateri i vols recursos naturals per acompanyar-te en aquesta nova etapa.",
                 "Vols deixar de viure pendent dels símptomes i començar a comprendre què t'estan dient.",
                 "Vols cuidar i autogestionar la teva salut femenina des de les bases que han sostingut les dones en moltes tradicions al llarg del temps.",
+                "La teva filla està patint dolors menstruals (Dismenorrea) o Síndrome Premenstrual i la vols acompanyar de manera natural i des de l'arrel",
               ].map((item) => (
                 <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
                   <span style={{ flexShrink: 0, color: "var(--terra)", fontWeight: 700 }}>✔</span>

@@ -22,6 +22,14 @@ type LinkCard = {
 
 const links: LinkCard[] = [
   {
+    title: "Comunitat Privada",
+    subtitle: "Accedeix a contingut de profundització",
+    subtitle2: "Demana l'accés gratuït",
+    href: "https://wa.me/34616351534",
+    external: true,
+    variant: "coral",
+  },
+  {
     title: "Recurs gratuït",
     subtitle: "\u201cCom restaurar i mantenir la salut femenina ginecològica\u201d",
     subtitle2: "Vídeo · 30 minuts",
@@ -30,15 +38,9 @@ const links: LinkCard[] = [
     featured: true,
   },
   {
-    title: "Matrius en Cercle",
-    subtitle: "De novembre 2026 a abril 2027",
-    href: "/matrius",
-    variant: "brown",
-  },
-  {
-    title: "Retir «Cures de Matriu»",
-    subtitle: "Retir d'1 dia · Dissabte 17 octubre",
-    href: "/retir",
+    title: "Sessió Diagnòstica",
+    subtitle: "Dolors menstruals i/o Síndrome Premenstrual",
+    href: "/primerasessio",
     variant: "coral",
   },
   {
@@ -48,22 +50,21 @@ const links: LinkCard[] = [
     variant: "brown",
   },
   {
-    title: "Sessió Online de Valoració i Orientació Personalitzada",
-    subtitle: "Dolors menstruals i/o Síndrome Premenstrual",
-    href: "/primerasessio",
+    title: "Retir «Cures de Matriu»",
+    subtitle: "Retir d'1 dia · Dissabte 17 octubre",
+    href: "/retir",
     variant: "coral",
+  },
+  {
+    title: "Matrius en Cercle",
+    subtitle: "Acompanyament grupal",
+    href: "/matrius",
+    variant: "brown",
   },
   {
     title: "Xerrades per a AFAs, ajuntaments i d'altres",
     href: "/xerrades",
     variant: "brown",
-  },
-  {
-    title: "Uneix-te gratuïtament a la meva Comunitat privada",
-    subtitle: "on comparteixo informació de primícia. Contacta'm per obtenir-ne l'enllaç.",
-    href: "https://wa.me/34616351534",
-    external: true,
-    variant: "coral",
   },
   {
     title: "Contacta'm",
@@ -145,6 +146,7 @@ function Index() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background font-serif text-foreground">
+      <style>{`.preview-intro-grid{display:grid;grid-template-columns:clamp(260px,36%,430px) 1fr;gap:clamp(2rem,5vw,5rem);align-items:start}@media(max-width:640px){.preview-intro-grid{grid-template-columns:1fr}}`}</style>
       {/* Watermark layer */}
       <div
         aria-hidden
@@ -174,14 +176,7 @@ function Index() {
 
         {/* INTRO */}
         <section className="mx-auto max-w-7xl px-4 sm:px-8 pt-6 pb-12 sm:pt-10 sm:pb-16">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "clamp(260px, 36%, 430px) 1fr",
-              gap: "clamp(2rem, 5vw, 5rem)",
-              alignItems: "start",
-            }}
-          >
+          <div className="preview-intro-grid">
             {/* Photo */}
             <div className="overflow-hidden rounded-2xl" style={{ boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
               <img
