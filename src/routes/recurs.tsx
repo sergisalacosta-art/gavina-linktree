@@ -64,22 +64,21 @@ function RecursPage() {
             <ProposalCard
               img={handsImg}
               alt="Mà sostenint una flor de calèndula"
-              title="Acompanyament Individual"
+              title="Pla Personalitzat"
               href="/individual"
             />
             <ProposalCard
               img={focdonesImg}
               alt="Cercle de dones abraçades en un bosc"
               title="Matrius en Cercle"
-              subtitle="Espai grupal mensual (online)"
+              subtitle="Acompanyament Grupal (novembre 2026 - abril 2027)"
               href="/matrius"
             />
             <ProposalCard
               img={curesImg}
               alt="Cures de matriu, cercle de dones a l’aire lliure"
               title="Cures de Matriu"
-              subtitle="Retir d’1 dia · Octubre 2026"
-              note="Informació disponible ben aviat"
+              subtitle="Retir d’1 dia · 17 octubre"
               imgPosition="center 35%"
             />
           </div>

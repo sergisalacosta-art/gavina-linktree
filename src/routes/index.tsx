@@ -39,13 +39,11 @@ const links: LinkCard[] = [
   },
   {
     title: "Sessió Diagnòstica",
-    subtitle: "Dolors menstruals i/o Síndrome Premenstrual",
     href: "/primerasessio",
     variant: "coral",
   },
   {
     title: "Pla Personalitzat",
-    subtitle: "Sessions personalitzades, 1 a 1",
     href: "/individual",
     variant: "brown",
   },
@@ -57,7 +55,7 @@ const links: LinkCard[] = [
   },
   {
     title: "Matrius en Cercle",
-    subtitle: "Acompanyament grupal",
+    subtitle: "Acompanyament grupal (novembre 2026 - abril 2027)",
     href: "/matrius",
     variant: "brown",
   },
