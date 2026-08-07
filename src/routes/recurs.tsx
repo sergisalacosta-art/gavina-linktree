@@ -57,10 +57,17 @@ function RecursPage() {
         {/* Tres propostes */}
         <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
           <p className="text-center font-serif text-2xl text-primary md:text-3xl">
-            T’acompanyo amb aquestes tres propostes:
+            T’acompanyo en aquests 4 formats:
           </p>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <ProposalCard
+              img="/matrius/assets/gavinacama.jpeg"
+              alt="La Gavina a la natura"
+              title="Sessió Diagnòstica"
+              href="/primerasessio"
+              imgPosition="center top"
+            />
             <ProposalCard
               img={handsImg}
               alt="Mà sostenint una flor de calèndula"
@@ -155,7 +162,7 @@ function ProposalCard({
 
   if (href) {
     return (
-      <Link to={href as "/matrius" | "/individual"} className="group block">
+      <Link to={href as "/matrius" | "/individual" | "/primerasessio"} className="group block">
         {inner}
       </Link>
     );
