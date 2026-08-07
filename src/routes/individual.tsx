@@ -488,12 +488,15 @@ function IndividualPage() {
               <h2>Com serà el teu procés</h2>
             </div>
             <p style={{ marginTop: 0 }}>Aquest és un procés personalitzat, creat a partir de la teva història, del teu moment vital i del que el teu cos està expressant avui.</p>
-            <p style={{ marginTop: "1rem" }}>Començarem amb una primera sessió online de revisió i valoració (1h30), on escoltarem què està passant, què necessites i quins aspectes poden estar demanant més atenció.</p>
+            <p style={{ marginTop: "1rem" }}>Començarem amb una primera sessió online de revisió i valoració (1h15), on escoltarem què està passant, què necessites i quins aspectes poden estar demanant més atenció.</p>
             <p style={{ marginTop: "1rem" }}>A partir d&apos;aquí, anirem construint juntes un camí adaptat a tu.</p>
             <p style={{ marginTop: "1rem" }}>Durant l&apos;acompanyament anirem incorporant petites pautes i recursos que puguis integrar en el teu dia a dia, respectant els teus ritmes i la teva realitat.</p>
             <p style={{ marginTop: "1rem" }}>No es tracta de fer molts canvis de cop ni de seguir una fórmula concreta.</p>
             <p style={{ marginTop: "1rem" }}>Es tracta d&apos;anar trobant, a poc a poc, allò que té més sentit per a tu i per al moment que estàs vivint.</p>
-            <p style={{ marginTop: "1rem" }}>Perquè habitar la matriu és un procés: una nova manera de relacionar-te amb tu mateixa.</p>
+            <p style={{ marginTop: "1rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
+              Perquè habitar la matriu és un procés:<br />
+              una nova manera de relacionar-te amb tu mateixa.
+            </p>
           </div>
         </section>
 
@@ -503,8 +506,8 @@ function IndividualPage() {
             <div className="section-title">
               <h2>Imagina&apos;t d&apos;aquí a uns mesos...</h2>
             </div>
-            <p style={{ marginTop: 0 }}>Potser el veritable canvi no és només resoldre un símptoma.</p>
-            <p style={{ marginTop: ".6rem" }}>Potser és recuperar una relació amb la teva matriu.</p>
+            <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Potser el veritable canvi no és només resoldre un símptoma.</p>
+            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Potser és recuperar una relació amb la teva matriu.</p>
             <p style={{ marginTop: "1.4rem", fontWeight: 700, color: "#6b5347" }}>Després d&apos;aquest procés...</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", display: "grid", gap: "1rem" }}>
               {[

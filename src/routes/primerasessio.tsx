@@ -490,8 +490,8 @@ function SessioPage() {
               <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
                 Estàs preparada per fer el primer pas?
               </h2>
-              <p style={{ marginTop: "1.4rem", color: "#4a2e22", lineHeight: 1.65 }}>
-                Si sents que <span className="em-sub">ha arribat el moment de mirar la teva salut femenina</span> des d&apos;un lloc més conscient,<br />
+              <p style={{ marginTop: "1.4rem", color: "#4a2e22", lineHeight: 1.65, fontWeight: 700 }}>
+                Si sents que <span className="em-sub">ha arribat el moment de mirar la teva salut femenina</span> <span className="em-sub">des d&apos;un lloc més conscient</span>,<br />
                 aquesta sessió pot ser un bon començament.
               </p>
               <p style={{ marginTop: ".8rem", color: "#4a2e22", lineHeight: 1.65, fontWeight: 700, textAlign: "center" }}>
