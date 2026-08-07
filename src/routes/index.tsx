@@ -30,27 +30,27 @@ const links: LinkCard[] = [
     featured: true,
   },
   {
-    title: "Matrius en cercle",
-    subtitle: "Espai grupal mensual (online)",
+    title: "Matrius en Cercle",
+    subtitle: "De novembre 2026 a abril 2027",
     href: "/matrius",
     variant: "brown",
   },
   {
-    title: "Cures de matriu",
+    title: "Retir «Habita la teva Matriu»",
     subtitle: "Retir d'1 dia · Dissabte 17 octubre",
     href: "/retir",
     variant: "coral",
   },
   {
-    title: "Acompanyament individual",
+    title: "Pla Personalitzat",
     subtitle: "Sessions personalitzades, 1 a 1",
     href: "/individual",
     variant: "brown",
   },
   {
-    title: "Acompanyament mare i filla",
+    title: "Sessió Online de Valoració i Orientació Personalitzada",
     subtitle: "Dolors menstruals i/o Síndrome Premenstrual",
-    href: "/mare-filla",
+    href: "/primerasessio",
     variant: "coral",
   },
   {
@@ -251,7 +251,7 @@ function Index() {
             <p style={{ margin: 0 }}>Per mi, aquest és el veritable sentit d&apos;habitar la matriu.</p>
             <p style={{ margin: 0 }}>I és des d&apos;aquest lloc que avui puc acompanyar-te.</p>
             <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, textAlign: "center", marginTop: ".8rem" }}>
-              Aquestes són les diferents maneres com podem recórrer aquest camí juntes.
+              Aquestes són les diferents maneres com podem recórrer aquest camí juntes:
             </p>
           </div>
         </section>
@@ -286,7 +286,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
       ? "bg-[#8e6e60] text-[#f4ebe0]"
       : "bg-[#d8a797] text-[#2a1f17]";
 
-  const titleSize = featured ? "text-xl sm:text-2xl" : "text-lg sm:text-xl";
+  const titleSize = featured ? "text-xl sm:text-2xl" : "";
   const padding = featured ? "px-8 py-7 sm:py-9" : "px-8 py-5 sm:py-6";
 
   const baseClass = `block rounded-full text-center font-serif shadow-sm ${bg} ${padding}`;
@@ -295,7 +295,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
 
   const inner = (
     <>
-      <div className={`flex items-center justify-center gap-2 font-medium tracking-[0.18em] ${titleSize}`}>
+      <div className={`flex items-center justify-center gap-2 font-medium tracking-[0.18em] ${titleSize}`} style={!featured ? { fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)" } : undefined}>
         {icon && <MessageCircle className="h-5 w-5" />}
         <span>{title}</span>
       </div>
@@ -331,7 +331,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
 
   if (href) {
     return (
-      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades" | "/mare-filla" | "/retir"} className={activeClass}>
+      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades" | "/primerasessio" | "/retir"} className={activeClass}>
         {inner}
       </Link>
     );

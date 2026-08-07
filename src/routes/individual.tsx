@@ -70,6 +70,15 @@ const css = `
     margin:0;
     text-shadow:0 8px 30px rgba(0,0,0,.22);
   }
+  .ip .hero-sub{
+    font-family:Georgia,"Times New Roman",serif;
+    color:rgba(255,255,255,.92);
+    font-size:clamp(0.95rem, 2.5vw, 2rem);
+    letter-spacing:.03em;
+    line-height:1.4;
+    margin:.9rem 0 0;
+    font-weight:400;
+  }
 
   /* BUTTONS */
   .ip .btn{
@@ -318,6 +327,7 @@ function IndividualPage() {
       <header className="hero">
         <div className="hero-inner">
           <h1>Pla Personalitzat</h1>
+          <p className="hero-sub">Per a dones que volen recuperar la relació amb la seva matriu i cuidar la seva salut femenina amb consciència, recursos naturals i autonomia.</p>
         </div>
       </header>
 

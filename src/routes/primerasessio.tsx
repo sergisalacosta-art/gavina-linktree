@@ -3,7 +3,7 @@ import logoImage from "@/assets/gavina-logo.png";
 
 const WA_URL = "https://wa.me/34616351534";
 
-export const Route = createFileRoute("/mare-filla")({
+export const Route = createFileRoute("/primerasessio")({
   component: SessioPage,
 });
 
