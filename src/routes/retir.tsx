@@ -313,7 +313,7 @@ function RetirPage() {
       {/* HERO */}
       <header className="hero">
         <div className="hero-inner">
-          <h1>HABITA LA TEVA MATRIU</h1>
+          <h1>CURES DE MATRIU</h1>
           <p className="hero-sub">Retir de reconnexió, presència<br />i cures ancestrals</p>
           <p className="hero-date">Dissabte 17 octubre</p>
           <p className="hero-date">Les Franqueses del Vallès</p>
