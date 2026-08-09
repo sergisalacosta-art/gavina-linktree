@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import handsImg from "@/assets/acompanyament.jpg";
 import focdonesImg from "@/assets/matrius-cercle.jpg";
 import curesImg from "@/assets/cures-matriu.jpg";
 import logoImage from "@/assets/gavina-logo.png";
@@ -62,15 +61,14 @@ function RecursPage() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <ProposalCard
-              img="/matrius/assets/gavinacama.jpeg"
-              alt="La Gavina a la natura"
+              img="/matrius/assets/gavinacaminant.png"
+              alt="La Gavina caminant"
               title="Sessió Diagnòstica"
               href="/primerasessio"
-              imgPosition="center top"
             />
             <ProposalCard
-              img={handsImg}
-              alt="Mà sostenint una flor de calèndula"
+              img="/matrius/assets/gavinacopalera.png"
+              alt="La Gavina amb una copalera"
               title="Pla Personalitzat"
               href="/individual"
             />
