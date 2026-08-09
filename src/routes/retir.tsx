@@ -40,7 +40,7 @@ const css = `
     display:grid;
     align-items:start;
     background:
-      linear-gradient(90deg, rgba(80,42,16,.38), rgba(150,95,35,.04) 55%, rgba(60,32,10,.18)),
+      linear-gradient(90deg, rgba(20,45,15,.22), rgba(30,55,15,.03) 55%, rgba(15,40,12,.14)),
       url("/retir/assets/retir%201.jpg") 20% top / cover no-repeat;
     color:white;
     isolation:isolate;
@@ -51,7 +51,7 @@ const css = `
     position:absolute;
     inset:0;
     z-index:0;
-    background:rgba(220,160,60,.12);
+    background:rgba(60,120,40,.07);
     mix-blend-mode:overlay;
     pointer-events:none;
   }
@@ -433,7 +433,7 @@ function RetirPage() {
                 <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/haseya2.jpg" alt="Haseya" loading="lazy" style={{ objectPosition: "center 30%" }} />
+                <img src="/retir/assets/haseya2.jpg" alt="Haseya" loading="lazy" style={{ objectPosition: "center 30%", filter: "brightness(1.1) saturate(1.2) hue-rotate(20deg)" }} />
               </div>
             </div>
           </div>

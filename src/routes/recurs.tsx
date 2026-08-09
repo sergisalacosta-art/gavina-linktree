@@ -85,6 +85,8 @@ function RecursPage() {
               title="Cures de Matriu"
               subtitle="Retir d’1 dia · 17 octubre"
               imgPosition="center 35%"
+              imgFilter="brightness(1.1) saturate(1.2) hue-rotate(20deg)"
+              href="/retir"
             />
           </div>
         </section>
@@ -113,7 +115,7 @@ function RecursPage() {
 }
 
 function ProposalCard({
-  img, alt, title, subtitle, note, href, imgPosition, external,
+  img, alt, title, subtitle, note, href, imgPosition, imgFilter, external,
 }: {
   img: string;
   alt: string;
@@ -122,6 +124,7 @@ function ProposalCard({
   note?: string;
   href?: string;
   imgPosition?: string;
+  imgFilter?: string;
   external?: boolean;
 }) {
   const isClickable = !!href;
@@ -134,7 +137,7 @@ function ProposalCard({
             alt={alt}
             loading="lazy"
             className={`h-full w-full object-cover transition-transform duration-500${isClickable ? " group-hover:scale-[1.03]" : ""}`}
-            style={{ objectPosition: imgPosition ?? "center" }}
+            style={{ objectPosition: imgPosition ?? "center", filter: imgFilter }}
           />
         </div>
       </div>
@@ -160,7 +163,7 @@ function ProposalCard({
 
   if (href) {
     return (
-      <Link to={href as "/matrius" | "/individual" | "/primerasessio"} className="group block">
+      <Link to={href as "/matrius" | "/individual" | "/primerasessio" | "/retir"} className="group block">
         {inner}
       </Link>
     );
