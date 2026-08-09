@@ -38,7 +38,7 @@ const css = `
     align-items:end;
     background:
       linear-gradient(90deg, rgba(45,36,27,.65), rgba(45,36,27,.10) 50%, rgba(45,36,27,.40)),
-      url("/individual/hero.jpg") center center / cover no-repeat,
+      url("/individual/gavinacopalera.jpg") center center / cover no-repeat,
       linear-gradient(135deg, #5d3428 0%, #8a4b34 60%, #c5a595 100%);
     color:white;
     isolation:isolate;

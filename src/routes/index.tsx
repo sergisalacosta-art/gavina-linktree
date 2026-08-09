@@ -34,7 +34,7 @@ const links: LinkCard[] = [
     subtitle: "\u201cCom restaurar i mantenir la salut femenina ginecològica\u201d",
     subtitle2: "Vídeo · 30 minuts",
     href: "/recurs",
-    variant: "coral",
+    variant: "brown",
     featured: true,
   },
   {
@@ -62,7 +62,7 @@ const links: LinkCard[] = [
   {
     title: "Xerrades per a AFAs, ajuntaments i d'altres",
     href: "/xerrades",
-    variant: "brown",
+    variant: "coral",
   },
   {
     title: "Contacta'm",
