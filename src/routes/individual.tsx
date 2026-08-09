@@ -36,26 +36,20 @@ const css = `
     position:relative;
     display:grid;
     align-items:end;
-    background:linear-gradient(135deg, #5d3428 0%, #8a4b34 60%, #c5a595 100%);
+    background:
+      linear-gradient(90deg, rgba(45,36,27,.55), rgba(45,36,27,.08) 50%, rgba(45,36,27,.35)),
+      url("/matrius/assets/gavinacopaleraH.png") center center / cover no-repeat,
+      linear-gradient(135deg, #5d3428 0%, #8a4b34 60%, #c5a595 100%);
     color:white;
     isolation:isolate;
     z-index:1;
-    overflow:hidden;
-  }
-  .ip .hero-photo{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    object-position:center center;
-    display:block;
   }
   .ip .hero:after{
     content:"";
     position:absolute;
-    inset:0;
-    background:linear-gradient(180deg, rgba(36,29,23,.25) 0%, transparent 40%, rgba(36,29,23,.55) 100%);
+    inset:auto 0 0 0;
+    height:45%;
+    background:linear-gradient(180deg, transparent, rgba(36,29,23,.52));
     z-index:-1;
   }
   .ip .hero-inner{
@@ -331,7 +325,6 @@ function IndividualPage() {
 
       {/* HERO */}
       <header className="hero">
-        <img src="/matrius/assets/gavinacopalera.png" alt="" aria-hidden className="hero-photo" />
         <div className="hero-inner">
           <h1>Pla Personalitzat</h1>
           <p className="hero-sub">Per a dones que volen recuperar la relació amb la seva matriu i cuidar la seva salut femenina amb consciència, recursos naturals i autonomia.</p>
