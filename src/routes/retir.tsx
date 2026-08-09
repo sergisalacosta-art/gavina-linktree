@@ -39,9 +39,7 @@ const css = `
     position:relative;
     display:grid;
     align-items:start;
-    background:
-      linear-gradient(90deg, rgba(20,45,15,.22), rgba(30,55,15,.03) 55%, rgba(15,40,12,.14)),
-      url("/retir/assets/retir%201.jpg") 20% top / cover no-repeat;
+    background:linear-gradient(135deg,#1a3010 0%,#2a4018 100%);
     color:white;
     isolation:isolate;
     z-index:1;
@@ -50,18 +48,20 @@ const css = `
     content:"";
     position:absolute;
     inset:0;
-    z-index:0;
-    background:rgba(60,120,40,.07);
-    mix-blend-mode:overlay;
+    z-index:-2;
+    background:url("/retir/assets/retir%201.jpg") 20% top / cover no-repeat;
+    filter:brightness(1.05) saturate(1.9) hue-rotate(15deg);
     pointer-events:none;
   }
   .rt .hero:after{
     content:"";
     position:absolute;
-    inset:auto 0 0 0;
-    height:40%;
-    background:linear-gradient(180deg, transparent, rgba(70,35,10,.32));
+    inset:0;
     z-index:-1;
+    background:
+      linear-gradient(90deg, rgba(15,50,10,.20), rgba(20,60,10,.02) 55%, rgba(10,45,8,.14)),
+      linear-gradient(180deg, transparent 60%, rgba(40,20,5,.35));
+    pointer-events:none;
   }
   .rt .hero-inner{
     width:min(var(--max), calc(100% - 40px));
@@ -433,7 +433,7 @@ function RetirPage() {
                 <img src="/retir/assets/casa1.jpg" alt="Exterior de l'espai" loading="lazy" />
               </div>
               <div className="soft-img soft-img-h">
-                <img src="/retir/assets/haseya2.jpg" alt="Haseya" loading="lazy" style={{ objectPosition: "center 30%", filter: "brightness(1.1) saturate(1.2) hue-rotate(20deg)" }} />
+                <img src="/retir/assets/haseya2.jpg" alt="Haseya" loading="lazy" style={{ objectPosition: "center 30%", filter: "brightness(1.05) saturate(1.9) hue-rotate(15deg)" }} />
               </div>
             </div>
           </div>

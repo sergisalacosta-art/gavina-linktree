@@ -85,7 +85,7 @@ function RecursPage() {
               title="Cures de Matriu"
               subtitle="Retir d’1 dia · 17 octubre"
               imgPosition="center 35%"
-              imgFilter="brightness(1.1) saturate(1.2) hue-rotate(20deg)"
+              imgFilter="brightness(1.05) saturate(1.9) hue-rotate(15deg)"
               href="/retir"
             />
           </div>
