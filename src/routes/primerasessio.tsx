@@ -35,13 +35,20 @@ const css = `
     position:relative;
     display:grid;
     align-items:end;
-    background:
-      linear-gradient(180deg, rgba(36,29,23,.45) 0%, rgba(36,29,23,.15) 50%, rgba(36,29,23,.55) 100%),
-      url("/matrius/assets/gavinacaminant.png") center center / cover no-repeat,
-      linear-gradient(135deg,#5d3428 0%,#8a4b34 55%,#c5a595 100%);
+    background:linear-gradient(135deg,#5d3428 0%,#8a4b34 55%,#c5a595 100%);
     color:white;
     isolation:isolate;
     z-index:1;
+    overflow:hidden;
+  }
+  .sv .hero-photo{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center center;
+    display:block;
   }
   .sv .hero:after{
     content:"";
@@ -232,6 +239,7 @@ function SessioPage() {
 
       {/* HERO */}
       <header className="hero">
+        <img src="/matrius/assets/gavinacaminant.png" alt="" aria-hidden className="hero-photo" />
         <div className="hero-inner">
           <h1>Sessió Diagnòstica</h1>
           <p className="hero-sub">El primer pas per posar llum al teu cas.</p>
