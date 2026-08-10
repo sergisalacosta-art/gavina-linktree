@@ -203,7 +203,7 @@ function Index() {
                   "Recuperar la sobirania sobre el teu cos, la teva sexualitat i el teu plaer.",
                 ].map((item) => (
                   <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347" }}>
-                    <span style={{ color: "#c89684", fontWeight: 700, flexShrink: 0, marginTop: ".15em" }}>✦</span>
+                    <span style={{ color: "#c89684", fontWeight: 700, flexShrink: 0, marginTop: ".15em" }}>·</span>
                     <span>{item}</span>
                   </li>
                 ))}
