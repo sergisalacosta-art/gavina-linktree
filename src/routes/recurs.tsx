@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import focdonesImg from "@/assets/matrius-cercle.jpg";
 import curesImg from "@/assets/cures-matriu.jpg";
 import logoImage from "@/assets/gavina-logo.png";
 
@@ -67,14 +66,14 @@ function RecursPage() {
               href="/primerasessio"
             />
             <ProposalCard
-              img="/matrius/assets/gavinacopalera.png"
-              alt="La Gavina amb una copalera"
+              img="/matrius/assets/gavinacapcopalera.png"
+              alt="La Gavina amb una copalera al bosc"
               title="Pla Personalitzat"
               href="/individual"
             />
             <ProposalCard
-              img={focdonesImg}
-              alt="Cercle de dones abraçades en un bosc"
+              img="/matrius/assets/haseya%20dones.jpg"
+              alt="Cercle de dones"
               title="Matrius en Cercle"
               subtitle="Acompanyament Grupal (novembre 2026 - abril 2027)"
               href="/matrius"
@@ -85,7 +84,7 @@ function RecursPage() {
               title="Cures de Matriu"
               subtitle="Retir d’1 dia · 17 octubre"
               imgPosition="center 35%"
-              imgFilter="brightness(1.05) saturate(1.9) hue-rotate(15deg)"
+              imgFilter="brightness(0.9) saturate(1.3) hue-rotate(20deg)"
               href="/retir"
             />
           </div>

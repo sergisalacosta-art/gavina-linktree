@@ -196,7 +196,7 @@ function Index() {
 
             <div>
               <p style={{ fontWeight: 700, color: "#6b5347", margin: 0, fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif' }}>Un camí per recordar-te que pots...</p>
-              <ul style={{ listStyle: "none", padding: 0, margin: ".75rem auto 0", display: "grid", gap: ".55rem", maxWidth: "520px", textAlign: "left" }}>
+              <ul style={{ listStyle: "none", padding: 0, margin: ".75rem auto 0", display: "grid", gap: ".55rem", textAlign: "left" }}>
                 {[
                   "Viure en coherència amb la dona que ets avui.",
                   "Cuidar la teva salut femenina i cultivar la prevenció.",

@@ -38,7 +38,7 @@ const css = `
     align-items:end;
     background:
       linear-gradient(90deg, rgba(45,36,27,.55), rgba(45,36,27,.08) 50%, rgba(45,36,27,.35)),
-      url("/matrius/assets/gavinacopaleraH.png") center center / cover no-repeat,
+      url("/matrius/assets/capcopaleragemini.png") center center / cover no-repeat,
       linear-gradient(135deg, #5d3428 0%, #8a4b34 60%, #c5a595 100%);
     color:white;
     isolation:isolate;
