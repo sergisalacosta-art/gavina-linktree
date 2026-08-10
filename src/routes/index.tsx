@@ -174,60 +174,48 @@ function Index() {
 
         {/* INTRO */}
         <section className="mx-auto max-w-7xl px-4 sm:px-8 pt-6 pb-12 sm:pt-10 sm:pb-16">
-          <div className="preview-intro-grid">
-            {/* Photo */}
-            <div className="overflow-hidden rounded-2xl" style={{ boxShadow: "0 16px 50px rgba(107,83,71,.18)" }}>
-              <img
-                src="/gavina%20planta.jpg"
-                alt="La Gavina"
-                style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "3/4", objectPosition: "center top" }}
-              />
+          <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gap: "1.4rem", textAlign: "center", fontSize: "clamp(1rem, 1.7vw, 1.15rem)", lineHeight: 1.7, color: "#2b2925" }}>
+            <h2 className="font-serif" style={{ fontSize: "clamp(1.45rem, 3vw, 2rem)", color: "#6b5347", fontWeight: 700, lineHeight: 1.25, margin: 0 }}>
+              Soc la Gavina i...
+            </h2>
+
+            <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
+              Reconec la{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>SAVIESA</span>
+              {" "}i el{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>PODER</span>
+              <br />que habiten en la matriu de cada dona.
+            </p>
+
+            <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
+              T&apos;acompanyo a{" "}
+              <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>
+                HABITAR LA TEVA MATRIU
+              </span>.
+            </p>
+
+            <div>
+              <p style={{ fontWeight: 700, color: "#6b5347", margin: 0, fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif' }}>Un camí per recordar-te que pots...</p>
+              <ul style={{ listStyle: "none", padding: 0, margin: ".75rem auto 0", display: "grid", gap: ".55rem", maxWidth: "520px", textAlign: "left" }}>
+                {[
+                  "Viure en coherència amb la dona que ets avui.",
+                  "Cuidar la teva salut femenina i cultivar la prevenció.",
+                  "Recuperar la sobirania sobre el teu cos, la teva sexualitat i el teu plaer.",
+                ].map((item) => (
+                  <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347" }}>
+                    <span style={{ color: "#c89684", fontWeight: 700, flexShrink: 0, marginTop: ".15em" }}>✦</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* Text content */}
-            <div style={{ display: "grid", gap: "1.4rem", fontSize: "clamp(1rem, 1.7vw, 1.15rem)", lineHeight: 1.7, color: "#2b2925" }}>
-              <h2 className="font-serif" style={{ fontSize: "clamp(1.45rem, 3vw, 2rem)", color: "#6b5347", fontWeight: 700, lineHeight: 1.25, margin: 0 }}>
-                Soc la Gavina i...
-              </h2>
-
-              <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
-                Reconec la{" "}
-                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>SAVIESA</span>
-                {" "}i el{" "}
-                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>PODER</span>
-                <br />que habiten en la matriu de cada dona.
-              </p>
-
-              <p className="font-serif" style={{ fontSize: "clamp(1.15rem, 2.2vw, 1.5rem)", color: "#8a4b34", fontWeight: 700, margin: 0 }}>
-                T&apos;acompanyo a{" "}
-                <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "3px", textUnderlineOffset: "6px" }}>
-                  HABITAR LA TEVA MATRIU
-                </span>.
-              </p>
-
-              <div>
-                <p style={{ fontWeight: 700, color: "#6b5347", margin: 0, fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif' }}>Un camí per recordar-te que pots...</p>
-                <ul style={{ listStyle: "none", padding: 0, margin: ".75rem 0 0", display: "grid", gap: ".55rem" }}>
-                  {[
-                    "Viure en coherència amb la dona que ets avui.",
-                    "Cuidar la teva salut femenina i cultivar la prevenció.",
-                    "Recuperar la sobirania sobre el teu cos, la teva sexualitat i el teu plaer.",
-                  ].map((item) => (
-                    <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347" }}>
-                      <span style={{ color: "#c89684", fontWeight: 700, flexShrink: 0, marginTop: ".15em" }}>✦</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div style={{ display: "grid", gap: ".35rem" }}>
-                {[["Un camí de ", "VERITAT"], ["Un camí de ", "SALUT"], ["Un camí de ", "SOBIRANIA"]].map(([pre, word]) => (
-                  <p key={word} className="font-serif" style={{ fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
-                    {pre}<span style={{ background: "#8a4b34", color: "white", padding: ".08em .45em", borderRadius: ".3rem" }}>{word}</span>.
-                  </p>
-                ))}
-              </div>
+            <div style={{ display: "grid", gap: ".35rem" }}>
+              {[["Un camí de ", "VERITAT"], ["Un camí de ", "SALUT"], ["Un camí de ", "SOBIRANIA"]].map(([pre, word]) => (
+                <p key={word} className="font-serif" style={{ fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)", color: "#6b5347", fontWeight: 700, margin: 0 }}>
+                  {pre}<span style={{ background: "#8a4b34", color: "white", padding: ".08em .45em", borderRadius: ".3rem" }}>{word}</span>.
+                </p>
+              ))}
             </div>
           </div>
 
