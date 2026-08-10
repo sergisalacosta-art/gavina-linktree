@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
-import heroImage from "@/assets/gavina-hero.jpg";
 import logoImage from "@/assets/gavina-logo.png";
 
 export const Route = createFileRoute("/")({
@@ -75,73 +74,6 @@ const links: LinkCard[] = [
 ];
 
 function Index() {
-  const isPreview = typeof window !== "undefined" && window.location.search.includes("preview");
-
-  if (!isPreview) {
-    return (
-      <main className="relative min-h-screen bg-background font-serif text-foreground">
-        <div className="relative z-10">
-          {/* HERO */}
-          <section className="relative w-full">
-            <img
-              src={heroImage}
-              alt="Cercle de dones sota un arbre"
-              className="block w-full h-auto"
-              style={{
-                maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-                WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-              }}
-            />
-            <h1 className="sr-only">La Gavina — Salut femenina ginecològica</h1>
-          </section>
-
-          {/* MISSATGE DE MANTENIMENT */}
-          <section
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              padding: "clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 3rem)",
-              textAlign: "center",
-            }}
-          >
-            <img src={logoImage} alt="" style={{ width: "3.5rem", height: "3.5rem", objectFit: "contain", opacity: 0.7, marginBottom: "2rem" }} />
-            <p
-              className="font-serif"
-              style={{
-                fontSize: "clamp(1.2rem, 3vw, 1.75rem)",
-                color: "#6b5347",
-                lineHeight: 1.65,
-                maxWidth: "600px",
-                fontStyle: "italic",
-              }}
-            >
-              Estic actualitzant els serveis per oferir la meva més polida versió avui. Tingueu paciència. Al llarg de l&apos;agost podreu consultar-ho tot&nbsp;;)
-            </p>
-            <p
-              className="font-serif"
-              style={{
-                fontSize: "clamp(1rem, 2.2vw, 1.3rem)",
-                color: "#6b5347",
-                lineHeight: 1.7,
-                maxWidth: "600px",
-                marginTop: "1.8rem",
-              }}
-            >
-              Per a qualsevol consulta, mentrestant, em podeu contactar al<br />
-              <a href="tel:+34616351534" style={{ fontWeight: 700, color: "#8a4b34", textDecoration: "none" }}>616 351 534</a>.<br />
-              Bon agost!
-            </p>
-            <div style={{ marginTop: "2.5rem", height: "1px", width: "80px", background: "rgba(200,150,132,.45)" }} />
-            <p style={{ marginTop: "1.5rem", fontSize: ".9rem", color: "#a08070", letterSpacing: ".05em" }}>
-              Gavina Freixa Rius · Salut Cíclica Femenina
-            </p>
-          </section>
-        </div>
-      </main>
-    );
-  }
-
   return (
     <main className="relative min-h-screen overflow-hidden bg-background font-serif text-foreground">
       <style>{`.preview-intro-grid{display:grid;grid-template-columns:clamp(260px,36%,430px) 1fr;gap:clamp(2rem,5vw,5rem);align-items:start}@media(max-width:640px){.preview-intro-grid{grid-template-columns:1fr}}`}</style>
