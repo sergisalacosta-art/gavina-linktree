@@ -40,7 +40,7 @@ const css = `
     align-items:end;
     background:
       linear-gradient(90deg, rgba(45,36,27,.50), rgba(45,36,27,.08) 44%, rgba(45,36,27,.32)),
-      url("/matrius/assets/hero-new.png") center center / cover no-repeat;
+      url("/matrius/assets/gavina-hero.jpg") center center / cover no-repeat;
     color:white;
     isolation:isolate;
     z-index:1;

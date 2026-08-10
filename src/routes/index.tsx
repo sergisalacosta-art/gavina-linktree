@@ -161,8 +161,8 @@ function Index() {
         {/* HERO full-bleed */}
         <section className="relative w-full">
           <img
-            src={heroImage}
-            alt="Cercle de dones sota un arbre"
+            src="/matrius/assets/gavinaartemisa.png"
+            alt="La Gavina a la natura amb artemisa"
             className="block w-full h-auto"
             style={{
               maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
