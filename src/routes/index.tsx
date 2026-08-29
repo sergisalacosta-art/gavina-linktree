@@ -42,13 +42,14 @@ const links: LinkCard[] = [
     variant: "coral",
   },
   {
-    title: "Pla Personalitzat",
+    title: "Acompanyament Individual",
     href: "/individual",
     variant: "brown",
   },
   {
     title: "Retir «Cures de Matriu»",
     subtitle: "Retir d'1 dia · Dissabte 17 octubre",
+    note: "INSCRIPCIONS OBERTES",
     href: "/retir",
     variant: "coral",
   },
@@ -223,7 +224,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
         </div>
       )}
       {note && (
-        <div className="mt-1 text-xs font-bold not-italic tracking-[0.05em] opacity-90 sm:text-sm">
+        <div className="mt-1 text-xs font-bold not-italic tracking-[0.05em] opacity-90 sm:text-sm" style={{ textDecoration: "underline" }}>
           {note}
         </div>
       )}

@@ -326,7 +326,7 @@ function IndividualPage() {
       {/* HERO */}
       <header className="hero">
         <div className="hero-inner">
-          <h1>Pla Personalitzat</h1>
+          <h1>ACOMPANYAMENT INDIVIDUAL</h1>
           <p className="hero-sub">Per a dones que volen recuperar la relació amb la seva matriu i cuidar la seva salut femenina amb consciència, recursos naturals i autonomia.</p>
         </div>
       </header>
