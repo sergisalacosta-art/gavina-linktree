@@ -224,7 +224,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
         </div>
       )}
       {note && (
-        <div className="mt-1 text-xs font-bold not-italic tracking-[0.05em] opacity-90 sm:text-sm" style={{ textDecoration: "underline" }}>
+        <div className="mt-1 text-base font-bold not-italic tracking-[0.05em] opacity-90 sm:text-lg" style={{ textDecoration: "underline" }}>
           {note}
         </div>
       )}
