@@ -472,7 +472,7 @@ function RetirPage() {
               </div>
               <div className="timeline-item">
                 <span className="timeline-time">15.30 – 19.00h</span>
-                <p className="timeline-desc">Massatges matriu i vapors pelvicovaginals. Compartirs i tancament.</p>
+                <p className="timeline-desc">Massatges d&apos;alliberació. Compartirs i tancament.</p>
               </div>
             </div>
 
