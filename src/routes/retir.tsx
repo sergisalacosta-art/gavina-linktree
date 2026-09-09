@@ -497,7 +497,7 @@ function RetirPage() {
               <p className="price-number">120€</p>
               <p style={{ fontWeight: 700, color: "var(--terra-fosc)", marginTop: "1.4rem" }}>Inclou:</p>
               <ul className="bullets" style={{ marginTop: ".8rem" }}>
-                <li>La sessió d&apos;1h30min online uns dies previs al retir: &ldquo;Òrgans femenins i els 5 imprescindibles per cuidar la nostra matriu&rdquo;</li>
+                <li>La sessió d&apos;1h30min online uns dies previs al retir</li>
                 <li>El meu acompanyament en el retir</li>
                 <li>La sessió en directe d&apos;octubre (dimecres 28, de 17.45 a 19.15 h) a Matrius en Cercle per continuar profunditzant en la dona que ets avui</li>
               </ul>
