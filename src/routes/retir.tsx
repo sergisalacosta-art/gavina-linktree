@@ -449,9 +449,7 @@ function RetirPage() {
             <div className="pre-event">
               <p style={{ margin: 0, fontWeight: 700, color: "var(--terra-fosc)" }}>Una setmana abans del retir, hi haurà una sessió online on:</p>
               <ul className="bullets">
-                <li>Ubicarem i nombrarem els nostres òrgans femenins</li>
-                <li>Repassarem els 5 imprescindibles per cuidar la nostra matriu i mantenir-nos en salut</li>
-                <li>Ens presentarem i ens prepararem per a l&apos;experiència presencial</li>
+                <li>Ens presentarem i ens prepararem per a l&apos;experiència presencial amb una proposta de vapors pelvicovaginals per anar preparant la matriu, des de casa, els dies previs al retir.</li>
               </ul>
             </div>
 
