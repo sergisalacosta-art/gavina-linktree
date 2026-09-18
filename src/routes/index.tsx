@@ -29,9 +29,7 @@ const links: LinkCard[] = [
     variant: "coral",
   },
   {
-    title: "Recurs gratuït",
-    subtitle: "\u201cCom restaurar i mantenir la salut femenina ginecològica\u201d",
-    subtitle2: "Vídeo · 30 minuts",
+    title: "RECURSOS GRATUÏTS",
     href: "/recurs",
     variant: "brown",
     featured: true,
