@@ -30,7 +30,7 @@ const links: LinkCard[] = [
   },
   {
     title: "RECURSOS GRATUÏTS",
-    href: "/recurs",
+    href: "/recursos",
     variant: "brown",
     featured: true,
   },
@@ -243,7 +243,7 @@ function LinkButton({ title, subtitle, subtitle2, note, href, external, disabled
 
   if (href) {
     return (
-      <Link to={href as "/" | "/recurs" | "/matrius" | "/cures" | "/individual" | "/xerrades" | "/primerasessio" | "/retir"} className={activeClass}>
+      <Link to={href as "/" | "/recurs" | "/recursos" | "/matrius" | "/cures" | "/individual" | "/xerrades" | "/primerasessio" | "/retir"} className={activeClass}>
         {inner}
       </Link>
     );
