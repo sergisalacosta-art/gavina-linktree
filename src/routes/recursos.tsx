@@ -29,7 +29,7 @@ function RecursosPage() {
           ← Tornar
         </button>
 
-        <div className="mx-auto max-w-3xl px-6 pt-8 pb-16">
+        <div className="mx-auto max-w-5xl px-6 pt-8 pb-16">
           <h1 className="text-center font-serif text-3xl text-primary mb-10 md:text-4xl">
             Recursos gratuïts
           </h1>
