@@ -29,28 +29,17 @@ function RecursPage() {
         >
           ← Tornar
         </button>
-        {/* Recursos gratuïts */}
-        <div className="mx-auto max-w-3xl px-6 pt-8 pb-12">
-          <h1 className="text-center font-serif text-3xl text-primary mb-10 md:text-4xl">Recursos gratuïts</h1>
-          <div className="grid gap-10 sm:grid-cols-2">
-            {[
-              { img: "/matrius/assets/bases-salut.jpg", alt: "Bases Salut Femenina" },
-              { img: "/matrius/assets/xerrada-hm.jpg",  alt: "Xerrada Hormones i Menstruació" },
-            ].map(({ img, alt }) => (
-              <div key={alt} className="flex flex-col items-center gap-5">
-                <div className="w-full overflow-hidden rounded-[2.5rem] shadow-soft">
-                  <img src={img} alt={alt} className="w-full h-auto block" />
-                </div>
-                <a
-                  href={WA_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-serif font-semibold text-primary-foreground shadow-soft transition hover:-translate-y-0.5 hover:brightness-105"
-                >
-                  Demana el teu accés
-                </a>
-              </div>
-            ))}
+        <div className="mx-auto max-w-5xl px-6 pt-6 pb-12">
+          <div className="overflow-hidden rounded-3xl bg-[oklch(0.22_0.03_40)] shadow-soft">
+            <div className="relative aspect-video w-full">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/LD8hKvfE7hU?rel=0"
+                title="Recurs gratuït"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
 
