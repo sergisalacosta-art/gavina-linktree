@@ -447,7 +447,7 @@ function RetirPage() {
             </div>
 
             <div className="pre-event">
-              <p style={{ margin: 0, fontWeight: 700, color: "var(--terra-fosc)" }}>Una setmana abans del retir, hi haurà una sessió online on:</p>
+              <p style={{ margin: 0, fontWeight: 700, color: "var(--terra-fosc)" }}>Uns dies abans del retir, obrirem un grup de WhatsApp on :</p>
               <ul className="bullets">
                 <li>Ens presentarem i ens prepararem per a l&apos;experiència presencial amb una proposta de vapors pelvicovaginals per anar preparant la matriu, des de casa, els dies previs al retir.</li>
               </ul>
