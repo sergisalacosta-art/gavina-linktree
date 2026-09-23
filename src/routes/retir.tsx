@@ -322,6 +322,21 @@ function RetirPage() {
 
       <main>
         {/* DE QUÈ VA */}
+        {/* Video short */}
+        <div style={{ display: "flex", justifyContent: "center", padding: "2.5rem 1.5rem 0" }}>
+          <div style={{ width: "min(340px, 90vw)", borderRadius: "1.5rem", overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,.18)" }}>
+            <div style={{ position: "relative", paddingBottom: "177.78%", height: 0 }}>
+              <iframe
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+                src="https://www.youtube.com/embed/Q6tzDBTntx4?rel=0"
+                title="Retir Cures de Matriu"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+
         <section>
           <div className="wrap">
             <div className="section-title">
