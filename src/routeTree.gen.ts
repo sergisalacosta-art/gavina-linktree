@@ -9,20 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as RecursRouteImport } from './routes/recurs'
 import { Route as XerradesRouteImport } from './routes/xerrades'
 import { Route as RetirRouteImport } from './routes/retir'
-import { Route as MareFillaRouteImport } from './routes/mare-filla'
+import { Route as RecursosRouteImport } from './routes/recursos'
+import { Route as RecursBasesRouteImport } from './routes/recurs-bases'
+import { Route as RecursRouteImport } from './routes/recurs'
+import { Route as PrimerasessioRouteImport } from './routes/primerasessio'
 import { Route as MatriusRouteImport } from './routes/matrius'
 import { Route as IndividualRouteImport } from './routes/individual'
 import { Route as CuresRouteImport } from './routes/cures'
 import { Route as IndexRouteImport } from './routes/index'
 
-const RecursRoute = RecursRouteImport.update({
-  id: '/recurs',
-  path: '/recurs',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const XerradesRoute = XerradesRouteImport.update({
   id: '/xerrades',
   path: '/xerrades',
@@ -33,9 +30,24 @@ const RetirRoute = RetirRouteImport.update({
   path: '/retir',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MareFillaRoute = MareFillaRouteImport.update({
-  id: '/mare-filla',
-  path: '/mare-filla',
+const RecursosRoute = RecursosRouteImport.update({
+  id: '/recursos',
+  path: '/recursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursBasesRoute = RecursBasesRouteImport.update({
+  id: '/recurs-bases',
+  path: '/recurs-bases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursRoute = RecursRouteImport.update({
+  id: '/recurs',
+  path: '/recurs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrimerasessioRoute = PrimerasessioRouteImport.update({
+  id: '/primerasessio',
+  path: '/primerasessio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MatriusRoute = MatriusRouteImport.update({
@@ -63,9 +75,11 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cures': typeof CuresRoute
   '/individual': typeof IndividualRoute
-  '/mare-filla': typeof MareFillaRoute
   '/matrius': typeof MatriusRoute
+  '/primerasessio': typeof PrimerasessioRoute
   '/recurs': typeof RecursRoute
+  '/recurs-bases': typeof RecursBasesRoute
+  '/recursos': typeof RecursosRoute
   '/retir': typeof RetirRoute
   '/xerrades': typeof XerradesRoute
 }
@@ -73,9 +87,11 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cures': typeof CuresRoute
   '/individual': typeof IndividualRoute
-  '/mare-filla': typeof MareFillaRoute
   '/matrius': typeof MatriusRoute
+  '/primerasessio': typeof PrimerasessioRoute
   '/recurs': typeof RecursRoute
+  '/recurs-bases': typeof RecursBasesRoute
+  '/recursos': typeof RecursosRoute
   '/retir': typeof RetirRoute
   '/xerrades': typeof XerradesRoute
 }
@@ -84,40 +100,68 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cures': typeof CuresRoute
   '/individual': typeof IndividualRoute
-  '/mare-filla': typeof MareFillaRoute
   '/matrius': typeof MatriusRoute
+  '/primerasessio': typeof PrimerasessioRoute
   '/recurs': typeof RecursRoute
+  '/recurs-bases': typeof RecursBasesRoute
+  '/recursos': typeof RecursosRoute
   '/retir': typeof RetirRoute
   '/xerrades': typeof XerradesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cures' | '/individual' | '/mare-filla' | '/matrius' | '/recurs' | '/retir' | '/xerrades'
+  fullPaths:
+    | '/'
+    | '/cures'
+    | '/individual'
+    | '/matrius'
+    | '/primerasessio'
+    | '/recurs'
+    | '/recurs-bases'
+    | '/recursos'
+    | '/retir'
+    | '/xerrades'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cures' | '/individual' | '/mare-filla' | '/matrius' | '/recurs' | '/retir' | '/xerrades'
-  id: '__root__' | '/' | '/cures' | '/individual' | '/mare-filla' | '/matrius' | '/recurs' | '/retir' | '/xerrades'
+  to:
+    | '/'
+    | '/cures'
+    | '/individual'
+    | '/matrius'
+    | '/primerasessio'
+    | '/recurs'
+    | '/recurs-bases'
+    | '/recursos'
+    | '/retir'
+    | '/xerrades'
+  id:
+    | '__root__'
+    | '/'
+    | '/cures'
+    | '/individual'
+    | '/matrius'
+    | '/primerasessio'
+    | '/recurs'
+    | '/recurs-bases'
+    | '/recursos'
+    | '/retir'
+    | '/xerrades'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CuresRoute: typeof CuresRoute
   IndividualRoute: typeof IndividualRoute
-  MareFillaRoute: typeof MareFillaRoute
   MatriusRoute: typeof MatriusRoute
+  PrimerasessioRoute: typeof PrimerasessioRoute
   RecursRoute: typeof RecursRoute
+  RecursBasesRoute: typeof RecursBasesRoute
+  RecursosRoute: typeof RecursosRoute
   RetirRoute: typeof RetirRoute
   XerradesRoute: typeof XerradesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/recurs': {
-      id: '/recurs'
-      path: '/recurs'
-      fullPath: '/recurs'
-      preLoaderRoute: typeof RecursRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/xerrades': {
       id: '/xerrades'
       path: '/xerrades'
@@ -125,11 +169,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof XerradesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mare-filla': {
-      id: '/mare-filla'
-      path: '/mare-filla'
-      fullPath: '/mare-filla'
-      preLoaderRoute: typeof MareFillaRouteImport
+    '/retir': {
+      id: '/retir'
+      path: '/retir'
+      fullPath: '/retir'
+      preLoaderRoute: typeof RetirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos': {
+      id: '/recursos'
+      path: '/recursos'
+      fullPath: '/recursos'
+      preLoaderRoute: typeof RecursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recurs-bases': {
+      id: '/recurs-bases'
+      path: '/recurs-bases'
+      fullPath: '/recurs-bases'
+      preLoaderRoute: typeof RecursBasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recurs': {
+      id: '/recurs'
+      path: '/recurs'
+      fullPath: '/recurs'
+      preLoaderRoute: typeof RecursRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/primerasessio': {
+      id: '/primerasessio'
+      path: '/primerasessio'
+      fullPath: '/primerasessio'
+      preLoaderRoute: typeof PrimerasessioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/matrius': {
@@ -153,13 +225,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CuresRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/retir': {
-      id: '/retir'
-      path: '/retir'
-      fullPath: '/retir'
-      preLoaderRoute: typeof RetirRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -174,9 +239,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CuresRoute: CuresRoute,
   IndividualRoute: IndividualRoute,
-  MareFillaRoute: MareFillaRoute,
   MatriusRoute: MatriusRoute,
+  PrimerasessioRoute: PrimerasessioRoute,
   RecursRoute: RecursRoute,
+  RecursBasesRoute: RecursBasesRoute,
+  RecursosRoute: RecursosRoute,
   RetirRoute: RetirRoute,
   XerradesRoute: XerradesRoute,
 }

@@ -1,5 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Outlet, Link, createRootRouteWithContext } from "@tanstack/react-router";
+import { Outlet, Link, createRootRouteWithContext, useRouterState } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import { setupReveal } from "@/lib/motion";
 
 function NotFoundComponent() {
   return (
@@ -30,9 +32,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    return setupReveal(ref.current);
+  }, [pathname]);
+
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div aria-hidden className="scroll-progress" />
+      <div key={pathname} ref={ref} className="page-enter">
+        <Outlet />
+      </div>
     </QueryClientProvider>
   );
 }
