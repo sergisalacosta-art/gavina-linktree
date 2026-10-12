@@ -316,7 +316,6 @@ function MatriusPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
-      <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
 
       {/* HERO */}
       <header className="hero">
@@ -611,11 +610,6 @@ function MatriusPage() {
 
       </main>
 
-      <footer>
-        <div className="wrap">
-          Matrius en Cercle · Acompanyament grupal online · Gavina Freixa Rius
-        </div>
-      </footer>
     </div>
   );
 }

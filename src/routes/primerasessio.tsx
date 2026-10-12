@@ -228,7 +228,6 @@ function SessioPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.1 }} />
       </div>
 
-      <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
 
       {/* HERO */}
       <header className="hero">
@@ -519,11 +518,6 @@ function SessioPage() {
 
       </main>
 
-      <footer>
-        <div className="wrap">
-          Sessió Online de Valoració · Orientació Personalitzada · Gavina Freixa Rius
-        </div>
-      </footer>
     </div>
   );
 }

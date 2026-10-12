@@ -22,12 +22,6 @@ function RecursosPage() {
       </div>
 
       <div className="relative z-10">
-        <button
-          onClick={() => window.history.back()}
-          className="inline-flex items-center gap-1.5 px-6 pt-6 pb-0 text-sm italic text-[#8e6e60] hover:text-[#6b5347] transition-colors bg-transparent border-0 cursor-pointer"
-        >
-          ← Tornar
-        </button>
 
         <div className="mx-auto max-w-5xl px-6 pt-8 pb-16">
           <h1 className="text-center font-serif text-3xl text-primary mb-10 md:text-4xl">
@@ -55,9 +49,6 @@ function RecursosPage() {
           </div>
         </div>
 
-        <footer className="bg-primary py-6 text-center text-xs text-white">
-          Gavina Freixa Rius · Salut Cíclica Femenina
-        </footer>
       </div>
     </main>
   );

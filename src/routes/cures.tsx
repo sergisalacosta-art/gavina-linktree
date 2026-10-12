@@ -219,7 +219,6 @@ function CuresPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.12 }} />
       </div>
 
-      <button onClick={() => window.history.back()} className="retreat-back">← Tornar</button>
 
       <header className="retreat-hero">
         <div className="retreat-hero-inner">
@@ -352,9 +351,6 @@ function CuresPage() {
         </section>
       </main>
 
-      <footer className="retreat-footer">
-        <div className="retreat-shell">Cures de Matriu · Retir d'1 dia</div>
-      </footer>
     </div>
   );
 }

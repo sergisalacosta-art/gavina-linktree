@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as XerradesRouteImport } from './routes/xerrades'
+import { Route as SobreMiRouteImport } from './routes/sobre-mi'
 import { Route as RetirRouteImport } from './routes/retir'
 import { Route as RecursosRouteImport } from './routes/recursos'
 import { Route as RecursBasesRouteImport } from './routes/recurs-bases'
@@ -23,6 +24,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const XerradesRoute = XerradesRouteImport.update({
   id: '/xerrades',
   path: '/xerrades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreMiRoute = SobreMiRouteImport.update({
+  id: '/sobre-mi',
+  path: '/sobre-mi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RetirRoute = RetirRouteImport.update({
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/recurs-bases': typeof RecursBasesRoute
   '/recursos': typeof RecursosRoute
   '/retir': typeof RetirRoute
+  '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
 }
 export interface FileRoutesByTo {
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/recurs-bases': typeof RecursBasesRoute
   '/recursos': typeof RecursosRoute
   '/retir': typeof RetirRoute
+  '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
 }
 export interface FileRoutesById {
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/recurs-bases': typeof RecursBasesRoute
   '/recursos': typeof RecursosRoute
   '/retir': typeof RetirRoute
+  '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
 }
 export interface FileRouteTypes {
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/recurs-bases'
     | '/recursos'
     | '/retir'
+    | '/sobre-mi'
     | '/xerrades'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/recurs-bases'
     | '/recursos'
     | '/retir'
+    | '/sobre-mi'
     | '/xerrades'
   id:
     | '__root__'
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/recurs-bases'
     | '/recursos'
     | '/retir'
+    | '/sobre-mi'
     | '/xerrades'
   fileRoutesById: FileRoutesById
 }
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   RecursBasesRoute: typeof RecursBasesRoute
   RecursosRoute: typeof RecursosRoute
   RetirRoute: typeof RetirRoute
+  SobreMiRoute: typeof SobreMiRoute
   XerradesRoute: typeof XerradesRoute
 }
 
@@ -167,6 +180,13 @@ declare module '@tanstack/react-router' {
       path: '/xerrades'
       fullPath: '/xerrades'
       preLoaderRoute: typeof XerradesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre-mi': {
+      id: '/sobre-mi'
+      path: '/sobre-mi'
+      fullPath: '/sobre-mi'
+      preLoaderRoute: typeof SobreMiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/retir': {
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   RecursBasesRoute: RecursBasesRoute,
   RecursosRoute: RecursosRoute,
   RetirRoute: RetirRoute,
+  SobreMiRoute: SobreMiRoute,
   XerradesRoute: XerradesRoute,
 }
 export const routeTree = rootRouteImport

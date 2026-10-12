@@ -308,7 +308,6 @@ function RetirPage() {
         <img src={logoImage} alt="" style={{ width: "90vw", maxWidth: "1300px", opacity: 0.1 }} />
       </div>
 
-      <button onClick={() => window.history.back()} className="back-link">← Tornar</button>
 
       {/* HERO */}
       <header className="hero">
@@ -676,11 +675,6 @@ function RetirPage() {
         </section>
       </main>
 
-      <footer>
-        <div className="wrap">
-          Cures de Matriu · Retir d&apos;un dia · Gavina Freixa Rius
-        </div>
-      </footer>
     </div>
   );
 }

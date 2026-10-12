@@ -184,65 +184,45 @@
   transform: none;
 }
 
-/* Thin progress bar at the top while scrolling (browsers with scroll timelines) */
-.scroll-progress { display: none; }
-@supports (animation-timeline: scroll()) {
-  .scroll-progress {
-    display: block;
-    position: fixed;
-    inset: 0 0 auto 0;
-    height: 3px;
-    z-index: 100;
-    background: var(--clay);
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: scroll-progress linear both;
-    animation-timeline: scroll(root);
-    pointer-events: none;
-  }
+/* Site header / footer links */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0.85rem;
+  font-size: 1.02rem;
+  color: #6b5347;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
 }
-@keyframes scroll-progress {
-  to { transform: scaleX(1); }
-}
-
-/* Home hero */
-.home-hero-img {
-  animation: hero-zoom 18s ease-out both;
-}
-@keyframes hero-zoom {
-  from { transform: scale(1.12); }
-  to { transform: scale(1); }
-}
-.hero-in {
-  animation: hero-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-@keyframes hero-in {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: none; }
-}
-.scroll-cue {
-  transform: translateX(-50%);
-  animation: scroll-cue 2.2s ease-in-out infinite;
-}
-@keyframes scroll-cue {
-  0%, 100% { transform: translate(-50%, 0); opacity: 0.85; }
-  50% { transform: translate(-50%, 8px); opacity: 0.5; }
-}
-
-/* Soft light sweep across home cards on hover */
-.home-card::after {
+.nav-link::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.18) 50%, transparent 70%);
-  transform: translateX(-100%);
-  transition: transform 0.8s ease;
-  pointer-events: none;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--clay);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
-.home-card:hover::after { transform: translateX(100%); }
+.nav-link:hover,
+.nav-link.is-active { color: #8a4b34; }
+.nav-link:hover::after,
+.nav-link.is-active::after { transform: scaleX(1); }
+
+.footer-link {
+  opacity: 0.88;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+.footer-link:hover { opacity: 1; color: #fff; }
+
+/* Image zoom on card hover */
+.zoom-img { transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.group:hover .zoom-img { transform: scale(1.06); }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-enter, .home-hero-img, .hero-in, .scroll-cue { animation: none; }
+  .page-enter { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .home-card::after { display: none; }
+  .zoom-img { transition: none; }
 }

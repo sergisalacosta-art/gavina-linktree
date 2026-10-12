@@ -2,6 +2,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Outlet, Link, createRootRouteWithContext, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { setupReveal } from "@/lib/motion";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
 
 function NotFoundComponent() {
   return (
@@ -42,10 +44,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div aria-hidden className="scroll-progress" />
+      <SiteHeader />
       <div key={pathname} ref={ref} className="page-enter">
         <Outlet />
       </div>
+      <SiteFooter />
     </QueryClientProvider>
   );
 }
