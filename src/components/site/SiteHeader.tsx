@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
-import { Link, useRouterState } from "@tanstack/react-router";
+import { useRouterState } from "@tanstack/react-router";
+import { AppLink as Link } from "./AppLink";
 import { ChevronDown, Menu, MessageCircle, X } from "lucide-react";
 import logoImage from "@/assets/gavina-logo.png";
-import { nav, WA_URL } from "./nav";
+import { getNav, ui, WA_URL } from "./nav";
+import { langFromPath, pages, switchLangPath, type Lang } from "@/lib/i18n";
 
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const lang = langFromPath(pathname);
+  const t = ui[lang];
+  const nav = getNav(lang);
+  const homePath = pages.home[lang];
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,7 +32,7 @@ export function SiteHeader() {
   }, [open]);
 
   const isActive = (to: string, children?: { to: string }[]) =>
-    to === "/" ? pathname === "/" : pathname === to || !!children?.some((c) => c.to === pathname);
+    to === homePath ? pathname === homePath || pathname === `${homePath}/` : pathname === to || !!children?.some((c) => c.to === pathname);
 
   return (
     <header
@@ -38,17 +44,17 @@ export function SiteHeader() {
             : "border-transparent bg-[#f4ebe0]"
       }`}
     >
-      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:h-[84px]">
-        <Link to="/" className="flex min-w-0 items-center gap-3" aria-label="Gavina Freixa Rius · Inici">
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-4 sm:gap-6 sm:px-8 lg:h-[84px]">
+        <Link to={homePath} className="flex min-w-0 items-center gap-3" aria-label={`Gavina Freixa Rius · ${t.home}`}>
           <img src={logoImage} alt="" className="h-11 w-11 shrink-0 object-contain lg:h-12 lg:w-12" />
           <span className="flex min-w-0 flex-col leading-tight">
-            <span className="truncate text-lg font-semibold text-[#6b5347] lg:text-xl">Gavina Freixa Rius</span>
-            <span className="truncate text-[0.68rem] uppercase tracking-[0.22em] text-[#8e6e60] lg:text-xs">Salut Cíclica Femenina</span>
+            <span className="truncate text-[0.98rem] font-semibold text-[#6b5347] sm:text-lg lg:text-xl">Gavina Freixa Rius</span>
+            <span className="truncate text-[0.6rem] uppercase tracking-[0.16em] sm:text-[0.68rem] sm:tracking-[0.22em] text-[#8e6e60] lg:text-xs">{t.tagline}</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Menú principal">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label={t.mainMenu}>
           {nav.map((item) =>
             item.children ? (
               <div key={item.label} className="group relative">
@@ -88,20 +94,24 @@ export function SiteHeader() {
             className="ml-3 inline-flex items-center gap-2 rounded-full bg-[#8e6e60] px-5 py-2.5 text-[0.98rem] tracking-[0.04em] text-[#f4ebe0] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#6b5347] hover:shadow-md"
           >
             <MessageCircle className="h-4 w-4" />
-            Contacta&apos;m
+            {t.contact}
           </a>
+          <LangSwitch pathname={pathname} lang={lang} className="ml-4" />
         </nav>
 
         {/* Mobile toggle */}
+        <div className="flex items-center gap-2 lg:hidden">
+        <LangSwitch pathname={pathname} lang={lang} />
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
           className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[#6b5347] transition-colors hover:bg-[#ece0d2] lg:hidden"
-          aria-label={open ? "Tanca el menú" : "Obre el menú"}
+          aria-label={open ? t.closeMenu : t.openMenu}
           aria-expanded={open}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
+        </div>
       </div>
 
       {/* Mobile panel */}
@@ -110,7 +120,7 @@ export function SiteHeader() {
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-3 opacity-0"
         }`}
       >
-        <nav className="flex flex-col" aria-label="Menú mòbil">
+        <nav className="flex flex-col" aria-label={t.mainMenu}>
           {nav.map((item) =>
             item.children ? (
               <div key={item.label} className="border-b border-[#d8c4b3]/70 py-4">
@@ -140,9 +150,38 @@ export function SiteHeader() {
           className="mt-8 flex items-center justify-center gap-2 rounded-full bg-[#8e6e60] px-6 py-4 text-lg tracking-[0.04em] text-[#f4ebe0]"
         >
           <MessageCircle className="h-5 w-5" />
-          Contacta&apos;m per WhatsApp
+          {t.contactWa}
         </a>
       </div>
     </header>
+  );
+}
+
+function LangSwitch({ pathname, lang, className = "" }: { pathname: string; lang: Lang; className?: string }) {
+  const options: { code: Lang; label: string; name: string }[] = [
+    { code: "ca", label: "CAT", name: "Català" },
+    { code: "es", label: "ES", name: "Español" },
+  ];
+  return (
+    <div className={`flex items-center rounded-full border border-[#d8c4b3] p-0.5 text-xs tracking-[0.12em] ${className}`} aria-label={ui[lang].language}>
+      {options.map((o) =>
+        o.code === lang ? (
+          <span key={o.code} aria-current="true" className="rounded-full bg-[#6b5347] px-2.5 py-1 text-[#f4ebe0]">
+            {o.label}
+          </span>
+        ) : (
+          <a
+            key={o.code}
+            href={switchLangPath(pathname, o.code)}
+            hrefLang={o.code}
+            lang={o.code}
+            title={o.name}
+            className="rounded-full px-2.5 py-1 text-[#6b5347] transition-colors hover:bg-[#ece0d2]"
+          >
+            {o.label}
+          </a>
+        ),
+      )}
+    </div>
   );
 }

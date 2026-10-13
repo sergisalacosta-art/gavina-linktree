@@ -1,3 +1,8 @@
 {
+  "redirects": [
+    { "source": "/primerasessio", "destination": "/sessio-diagnostica", "permanent": true },
+    { "source": "/individual", "destination": "/acompanyament-individual", "permanent": true },
+    { "source": "/recursos", "destination": "/recursos-gratuits", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

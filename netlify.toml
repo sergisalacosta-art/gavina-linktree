@@ -2,6 +2,22 @@
   command = "npm run build"
   publish = "dist"
 
+# Old URLs → new SEO-friendly URLs
+[[redirects]]
+  from = "/primerasessio"
+  to = "/sessio-diagnostica"
+  status = 301
+
+[[redirects]]
+  from = "/individual"
+  to = "/acompanyament-individual"
+  status = 301
+
+[[redirects]]
+  from = "/recursos"
+  to = "/recursos-gratuits"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

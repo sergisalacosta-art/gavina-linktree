@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as XerradesRouteImport } from './routes/xerrades'
 import { Route as SobreMiRouteImport } from './routes/sobre-mi'
+import { Route as SessioDiagnosticaRouteImport } from './routes/sessio-diagnostica'
 import { Route as RetirRouteImport } from './routes/retir'
+import { Route as RecursosGratuitsRouteImport } from './routes/recursos-gratuits'
 import { Route as RecursosRouteImport } from './routes/recursos'
 import { Route as RecursBasesRouteImport } from './routes/recurs-bases'
 import { Route as RecursRouteImport } from './routes/recurs'
@@ -19,7 +21,14 @@ import { Route as PrimerasessioRouteImport } from './routes/primerasessio'
 import { Route as MatriusRouteImport } from './routes/matrius'
 import { Route as IndividualRouteImport } from './routes/individual'
 import { Route as CuresRouteImport } from './routes/cures'
+import { Route as AcompanyamentIndividualRouteImport } from './routes/acompanyament-individual'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EsIndexRouteImport } from './routes/es/index'
+import { Route as EsSobreMiRouteImport } from './routes/es/sobre-mi'
+import { Route as EsSesionDiagnosticaRouteImport } from './routes/es/sesion-diagnostica'
+import { Route as EsRecursosGratuitosRouteImport } from './routes/es/recursos-gratuitos'
+import { Route as EsCharlasRouteImport } from './routes/es/charlas'
+import { Route as EsAcompanamientoIndividualRouteImport } from './routes/es/acompanamiento-individual'
 
 const XerradesRoute = XerradesRouteImport.update({
   id: '/xerrades',
@@ -31,9 +40,19 @@ const SobreMiRoute = SobreMiRouteImport.update({
   path: '/sobre-mi',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SessioDiagnosticaRoute = SessioDiagnosticaRouteImport.update({
+  id: '/sessio-diagnostica',
+  path: '/sessio-diagnostica',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RetirRoute = RetirRouteImport.update({
   id: '/retir',
   path: '/retir',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosGratuitsRoute = RecursosGratuitsRouteImport.update({
+  id: '/recursos-gratuits',
+  path: '/recursos-gratuits',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RecursosRoute = RecursosRouteImport.update({
@@ -71,14 +90,51 @@ const CuresRoute = CuresRouteImport.update({
   path: '/cures',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcompanyamentIndividualRoute = AcompanyamentIndividualRouteImport.update({
+  id: '/acompanyament-individual',
+  path: '/acompanyament-individual',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EsIndexRoute = EsIndexRouteImport.update({
+  id: '/es/',
+  path: '/es/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsSobreMiRoute = EsSobreMiRouteImport.update({
+  id: '/es/sobre-mi',
+  path: '/es/sobre-mi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsSesionDiagnosticaRoute = EsSesionDiagnosticaRouteImport.update({
+  id: '/es/sesion-diagnostica',
+  path: '/es/sesion-diagnostica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsRecursosGratuitosRoute = EsRecursosGratuitosRouteImport.update({
+  id: '/es/recursos-gratuitos',
+  path: '/es/recursos-gratuitos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsCharlasRoute = EsCharlasRouteImport.update({
+  id: '/es/charlas',
+  path: '/es/charlas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsAcompanamientoIndividualRoute =
+  EsAcompanamientoIndividualRouteImport.update({
+    id: '/es/acompanamiento-individual',
+    path: '/es/acompanamiento-individual',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acompanyament-individual': typeof AcompanyamentIndividualRoute
   '/cures': typeof CuresRoute
   '/individual': typeof IndividualRoute
   '/matrius': typeof MatriusRoute
@@ -86,12 +142,21 @@ export interface FileRoutesByFullPath {
   '/recurs': typeof RecursRoute
   '/recurs-bases': typeof RecursBasesRoute
   '/recursos': typeof RecursosRoute
+  '/recursos-gratuits': typeof RecursosGratuitsRoute
   '/retir': typeof RetirRoute
+  '/sessio-diagnostica': typeof SessioDiagnosticaRoute
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
+  '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
+  '/es/charlas': typeof EsCharlasRoute
+  '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
+  '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
+  '/es/sobre-mi': typeof EsSobreMiRoute
+  '/es/': typeof EsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acompanyament-individual': typeof AcompanyamentIndividualRoute
   '/cures': typeof CuresRoute
   '/individual': typeof IndividualRoute
   '/matrius': typeof MatriusRoute
@@ -99,13 +164,22 @@ export interface FileRoutesByTo {
   '/recurs': typeof RecursRoute
   '/recurs-bases': typeof RecursBasesRoute
   '/recursos': typeof RecursosRoute
+  '/recursos-gratuits': typeof RecursosGratuitsRoute
   '/retir': typeof RetirRoute
+  '/sessio-diagnostica': typeof SessioDiagnosticaRoute
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
+  '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
+  '/es/charlas': typeof EsCharlasRoute
+  '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
+  '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
+  '/es/sobre-mi': typeof EsSobreMiRoute
+  '/es': typeof EsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acompanyament-individual': typeof AcompanyamentIndividualRoute
   '/cures': typeof CuresRoute
   '/individual': typeof IndividualRoute
   '/matrius': typeof MatriusRoute
@@ -113,14 +187,23 @@ export interface FileRoutesById {
   '/recurs': typeof RecursRoute
   '/recurs-bases': typeof RecursBasesRoute
   '/recursos': typeof RecursosRoute
+  '/recursos-gratuits': typeof RecursosGratuitsRoute
   '/retir': typeof RetirRoute
+  '/sessio-diagnostica': typeof SessioDiagnosticaRoute
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
+  '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
+  '/es/charlas': typeof EsCharlasRoute
+  '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
+  '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
+  '/es/sobre-mi': typeof EsSobreMiRoute
+  '/es/': typeof EsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/acompanyament-individual'
     | '/cures'
     | '/individual'
     | '/matrius'
@@ -128,12 +211,21 @@ export interface FileRouteTypes {
     | '/recurs'
     | '/recurs-bases'
     | '/recursos'
+    | '/recursos-gratuits'
     | '/retir'
+    | '/sessio-diagnostica'
     | '/sobre-mi'
     | '/xerrades'
+    | '/es/acompanamiento-individual'
+    | '/es/charlas'
+    | '/es/recursos-gratuitos'
+    | '/es/sesion-diagnostica'
+    | '/es/sobre-mi'
+    | '/es/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/acompanyament-individual'
     | '/cures'
     | '/individual'
     | '/matrius'
@@ -141,12 +233,21 @@ export interface FileRouteTypes {
     | '/recurs'
     | '/recurs-bases'
     | '/recursos'
+    | '/recursos-gratuits'
     | '/retir'
+    | '/sessio-diagnostica'
     | '/sobre-mi'
     | '/xerrades'
+    | '/es/acompanamiento-individual'
+    | '/es/charlas'
+    | '/es/recursos-gratuitos'
+    | '/es/sesion-diagnostica'
+    | '/es/sobre-mi'
+    | '/es'
   id:
     | '__root__'
     | '/'
+    | '/acompanyament-individual'
     | '/cures'
     | '/individual'
     | '/matrius'
@@ -154,13 +255,22 @@ export interface FileRouteTypes {
     | '/recurs'
     | '/recurs-bases'
     | '/recursos'
+    | '/recursos-gratuits'
     | '/retir'
+    | '/sessio-diagnostica'
     | '/sobre-mi'
     | '/xerrades'
+    | '/es/acompanamiento-individual'
+    | '/es/charlas'
+    | '/es/recursos-gratuitos'
+    | '/es/sesion-diagnostica'
+    | '/es/sobre-mi'
+    | '/es/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcompanyamentIndividualRoute: typeof AcompanyamentIndividualRoute
   CuresRoute: typeof CuresRoute
   IndividualRoute: typeof IndividualRoute
   MatriusRoute: typeof MatriusRoute
@@ -168,9 +278,17 @@ export interface RootRouteChildren {
   RecursRoute: typeof RecursRoute
   RecursBasesRoute: typeof RecursBasesRoute
   RecursosRoute: typeof RecursosRoute
+  RecursosGratuitsRoute: typeof RecursosGratuitsRoute
   RetirRoute: typeof RetirRoute
+  SessioDiagnosticaRoute: typeof SessioDiagnosticaRoute
   SobreMiRoute: typeof SobreMiRoute
   XerradesRoute: typeof XerradesRoute
+  EsAcompanamientoIndividualRoute: typeof EsAcompanamientoIndividualRoute
+  EsCharlasRoute: typeof EsCharlasRoute
+  EsRecursosGratuitosRoute: typeof EsRecursosGratuitosRoute
+  EsSesionDiagnosticaRoute: typeof EsSesionDiagnosticaRoute
+  EsSobreMiRoute: typeof EsSobreMiRoute
+  EsIndexRoute: typeof EsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -189,11 +307,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreMiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sessio-diagnostica': {
+      id: '/sessio-diagnostica'
+      path: '/sessio-diagnostica'
+      fullPath: '/sessio-diagnostica'
+      preLoaderRoute: typeof SessioDiagnosticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/retir': {
       id: '/retir'
       path: '/retir'
       fullPath: '/retir'
       preLoaderRoute: typeof RetirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos-gratuits': {
+      id: '/recursos-gratuits'
+      path: '/recursos-gratuits'
+      fullPath: '/recursos-gratuits'
+      preLoaderRoute: typeof RecursosGratuitsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/recursos': {
@@ -245,6 +377,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CuresRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acompanyament-individual': {
+      id: '/acompanyament-individual'
+      path: '/acompanyament-individual'
+      fullPath: '/acompanyament-individual'
+      preLoaderRoute: typeof AcompanyamentIndividualRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -252,11 +391,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/es/': {
+      id: '/es/'
+      path: '/es'
+      fullPath: '/es/'
+      preLoaderRoute: typeof EsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/sobre-mi': {
+      id: '/es/sobre-mi'
+      path: '/es/sobre-mi'
+      fullPath: '/es/sobre-mi'
+      preLoaderRoute: typeof EsSobreMiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/sesion-diagnostica': {
+      id: '/es/sesion-diagnostica'
+      path: '/es/sesion-diagnostica'
+      fullPath: '/es/sesion-diagnostica'
+      preLoaderRoute: typeof EsSesionDiagnosticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/recursos-gratuitos': {
+      id: '/es/recursos-gratuitos'
+      path: '/es/recursos-gratuitos'
+      fullPath: '/es/recursos-gratuitos'
+      preLoaderRoute: typeof EsRecursosGratuitosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/charlas': {
+      id: '/es/charlas'
+      path: '/es/charlas'
+      fullPath: '/es/charlas'
+      preLoaderRoute: typeof EsCharlasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/acompanamiento-individual': {
+      id: '/es/acompanamiento-individual'
+      path: '/es/acompanamiento-individual'
+      fullPath: '/es/acompanamiento-individual'
+      preLoaderRoute: typeof EsAcompanamientoIndividualRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcompanyamentIndividualRoute: AcompanyamentIndividualRoute,
   CuresRoute: CuresRoute,
   IndividualRoute: IndividualRoute,
   MatriusRoute: MatriusRoute,
@@ -264,9 +446,17 @@ const rootRouteChildren: RootRouteChildren = {
   RecursRoute: RecursRoute,
   RecursBasesRoute: RecursBasesRoute,
   RecursosRoute: RecursosRoute,
+  RecursosGratuitsRoute: RecursosGratuitsRoute,
   RetirRoute: RetirRoute,
+  SessioDiagnosticaRoute: SessioDiagnosticaRoute,
   SobreMiRoute: SobreMiRoute,
   XerradesRoute: XerradesRoute,
+  EsAcompanamientoIndividualRoute: EsAcompanamientoIndividualRoute,
+  EsCharlasRoute: EsCharlasRoute,
+  EsRecursosGratuitosRoute: EsRecursosGratuitosRoute,
+  EsSesionDiagnosticaRoute: EsSesionDiagnosticaRoute,
+  EsSobreMiRoute: EsSobreMiRoute,
+  EsIndexRoute: EsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
