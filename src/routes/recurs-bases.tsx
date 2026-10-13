@@ -43,7 +43,7 @@ function RecursBasesPage() {
             T'acompanyo en aquests 4 formats:
           </p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
             <ProposalCard
               img="/matrius/assets/gavinacaminant.png"
               alt="La Gavina caminant"
@@ -56,6 +56,7 @@ function RecursBasesPage() {
               title="Pla Personalitzat"
               href="/individual"
             />
+            {/* Amagat de moment:
             <ProposalCard
               img="/matrius/assets/haseya%20dones.jpg"
               alt="Cercle de dones"
@@ -63,6 +64,8 @@ function RecursBasesPage() {
               subtitle="Acompanyament Grupal (novembre 2026 - abril 2027)"
               href="/matrius"
             />
+            */}
+            {/* Amagat de moment:
             <ProposalCard
               img={curesImg}
               alt="Cures de matriu, cercle de dones a l'aire lliure"
@@ -72,6 +75,7 @@ function RecursBasesPage() {
               imgFilter="brightness(0.9) saturate(1.3) hue-rotate(20deg)"
               href="/retir"
             />
+            */}
           </div>
         </section>
 

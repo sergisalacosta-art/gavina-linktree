@@ -22,12 +22,18 @@ const camins = [
   { word: "SOBIRANIA", text: "Recuperar la sobirania sobre el teu cos, la teva sexualitat i el teu plaer." },
 ];
 
-const serveis: { title: string; text?: string; img: string; to: InternalPath; tag?: string }[] = [
+// hidden: true amaga el servei de la portada (la pàgina continua existint per URL).
+const allServeis: { title: string; text?: string; img: string; to: InternalPath; tag?: string; hidden?: boolean }[] = [
   { title: "Sessió Diagnòstica", img: "/web/sessio.jpg", to: "/primerasessio" },
   { title: "Acompanyament Individual", img: "/web/individual.jpg", to: "/individual" },
-  { title: "Matrius en Cercle", text: "Acompanyament grupal (novembre 2026 - abril 2027)", img: "/web/matrius.jpg", to: "/matrius" },
-  { title: "Retir «Cures de Matriu»", text: "Retir d'1 dia · Dissabte 17 octubre", img: "/web/retir.jpg", to: "/retir", tag: "Inscripcions obertes" },
+  { title: "Matrius en Cercle", text: "Acompanyament grupal (novembre 2026 - abril 2027)", img: "/web/matrius.jpg", to: "/matrius", hidden: true },
+  { title: "Retir «Cures de Matriu»", text: "Retir d'1 dia · Dissabte 17 octubre", img: "/web/retir.jpg", to: "/retir", tag: "Inscripcions obertes", hidden: true },
 ];
+
+const serveis = allServeis.filter((s) => !s.hidden);
+
+// Posa-ho a true per tornar a mostrar el bloc destacat del retir a la portada.
+const SHOW_RETIR = false;
 
 function Eyebrow({ children, light }: { children: React.ReactNode; light?: boolean }) {
   return (
@@ -157,7 +163,7 @@ function Index() {
               Aquestes són les diferents maneres com podem recórrer aquest camí juntes
             </h2>
           </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-2">
             {serveis.map((s, i) => (
               <Link
                 key={s.to}
@@ -189,6 +195,7 @@ function Index() {
       </section>
 
       {/* RETIR DESTACAT */}
+      {SHOW_RETIR && (
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <div data-reveal className="relative overflow-hidden rounded-[2.5rem] bg-[#8e6e60] text-[#f4ebe0] shadow-[0_30px_60px_-30px_rgba(42,31,23,.6)]">
@@ -220,6 +227,7 @@ function Index() {
           </div>
         </div>
       </section>
+      )}
 
       {/* MÉS CAMINS */}
       <section className="pb-20 md:pb-28">
