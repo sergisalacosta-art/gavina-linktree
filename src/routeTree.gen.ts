@@ -20,6 +20,7 @@ import { Route as RecursRouteImport } from './routes/recurs'
 import { Route as PrimerasessioRouteImport } from './routes/primerasessio'
 import { Route as MatriusRouteImport } from './routes/matrius'
 import { Route as IndividualRouteImport } from './routes/individual'
+import { Route as HomeRouteImport } from './routes/home'
 import { Route as CuresRouteImport } from './routes/cures'
 import { Route as AcompanyamentIndividualRouteImport } from './routes/acompanyament-individual'
 import { Route as IndexRouteImport } from './routes/index'
@@ -85,6 +86,11 @@ const IndividualRoute = IndividualRouteImport.update({
   path: '/individual',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CuresRoute = CuresRouteImport.update({
   id: '/cures',
   path: '/cures',
@@ -136,6 +142,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/acompanyament-individual': typeof AcompanyamentIndividualRoute
   '/cures': typeof CuresRoute
+  '/home': typeof HomeRoute
   '/individual': typeof IndividualRoute
   '/matrius': typeof MatriusRoute
   '/primerasessio': typeof PrimerasessioRoute
@@ -158,6 +165,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/acompanyament-individual': typeof AcompanyamentIndividualRoute
   '/cures': typeof CuresRoute
+  '/home': typeof HomeRoute
   '/individual': typeof IndividualRoute
   '/matrius': typeof MatriusRoute
   '/primerasessio': typeof PrimerasessioRoute
@@ -181,6 +189,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/acompanyament-individual': typeof AcompanyamentIndividualRoute
   '/cures': typeof CuresRoute
+  '/home': typeof HomeRoute
   '/individual': typeof IndividualRoute
   '/matrius': typeof MatriusRoute
   '/primerasessio': typeof PrimerasessioRoute
@@ -205,6 +214,7 @@ export interface FileRouteTypes {
     | '/'
     | '/acompanyament-individual'
     | '/cures'
+    | '/home'
     | '/individual'
     | '/matrius'
     | '/primerasessio'
@@ -227,6 +237,7 @@ export interface FileRouteTypes {
     | '/'
     | '/acompanyament-individual'
     | '/cures'
+    | '/home'
     | '/individual'
     | '/matrius'
     | '/primerasessio'
@@ -249,6 +260,7 @@ export interface FileRouteTypes {
     | '/'
     | '/acompanyament-individual'
     | '/cures'
+    | '/home'
     | '/individual'
     | '/matrius'
     | '/primerasessio'
@@ -272,6 +284,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcompanyamentIndividualRoute: typeof AcompanyamentIndividualRoute
   CuresRoute: typeof CuresRoute
+  HomeRoute: typeof HomeRoute
   IndividualRoute: typeof IndividualRoute
   MatriusRoute: typeof MatriusRoute
   PrimerasessioRoute: typeof PrimerasessioRoute
@@ -370,6 +383,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndividualRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cures': {
       id: '/cures'
       path: '/cures'
@@ -440,6 +460,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcompanyamentIndividualRoute: AcompanyamentIndividualRoute,
   CuresRoute: CuresRoute,
+  HomeRoute: HomeRoute,
   IndividualRoute: IndividualRoute,
   MatriusRoute: MatriusRoute,
   PrimerasessioRoute: PrimerasessioRoute,
