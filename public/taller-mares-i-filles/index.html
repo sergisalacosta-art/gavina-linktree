@@ -78,8 +78,9 @@
       display: flex; gap: 12px; align-items: flex-start;
       background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px;
     }
+    .facts li.wide { grid-column: 1 / -1; }
     .facts svg { flex-shrink: 0; width: 26px; height: 26px; color: var(--ochre); margin-top: 2px; }
-    .facts b { display: block; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--burgundy); font-weight: 600; }
+    .facts b { display: block; font-size: .95rem; letter-spacing: .14em; margin-bottom: 2px; text-transform: uppercase; color: var(--burgundy); font-weight: 600; }
     .facts span { font-size: .95rem; line-height: 1.4; }
 
     .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -114,12 +115,6 @@
     h2.title { font-family: var(--serif); color: var(--burgundy); font-size: clamp(1.9rem, 3.6vw, 2.6rem); line-height: 1.1; margin: 0 0 22px; font-weight: 700; }
     .lead { font-size: 1.08rem; }
 
-    .intro-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 40px; align-items: center; }
-    .quote {
-      font-family: var(--serif); font-style: italic; color: var(--burgundy-soft); font-size: 1.55rem; line-height: 1.3;
-      position: relative; padding: 26px 26px 26px 30px; border-left: 3px solid var(--rose); background: rgba(255,255,255,.45); border-radius: 0 22px 22px 0;
-    }
-    .quote::after { content: "♡"; display: block; font-style: normal; color: var(--rose); font-size: 1.3rem; margin-top: 8px; }
 
     .objectives { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; }
     .objectives li {
@@ -147,7 +142,7 @@
     .card ul { margin: 6px 0 0; padding-left: 18px; }
 
     .facilitator { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: center; }
-    .facilitator img { width: 220px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 120px 120px 26px 26px; box-shadow: 0 24px 50px -28px rgba(74,58,51,.6); }
+    .facilitator img { width: 220px; aspect-ratio: 1; object-fit: cover; object-position: center 20%; border-radius: 50%; box-shadow: 0 24px 50px -28px rgba(74,58,51,.6); }
     .facilitator h3 { font-family: var(--serif); font-size: 2rem; color: var(--burgundy); margin: 0; font-weight: 700; }
     .facilitator .role { color: var(--muted); margin: 2px 0 14px; }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 14px; }
@@ -168,7 +163,7 @@
     .divider::before, .divider::after { content: ""; width: 70px; height: 1px; background: currentColor; opacity: .6; }
 
     @media (max-width: 900px) {
-      .hero .wrap, .intro-grid, .facilitator { grid-template-columns: 1fr; }
+      .hero .wrap, .facilitator { grid-template-columns: 1fr; }
       .hero .wrap { gap: 16px; }
       .hero-art { order: -1; max-width: 520px; margin: 0 auto; }
       .facilitator img { width: 180px; margin: 0 auto; }
@@ -216,10 +211,10 @@
           <p class="tagline">Aprendre a viure la ciclicitat juntes, per créixer amb més confiança, llibertat i consciència.</p>
 
           <ul class="facts">
-            <li><svg><use href="#i-people"/></svg><div><b>Per a qui</b><span>Nenes de 8 a 13 anys i la seva mare o persona referent que menstruï</span></div></li>
+            <li class="wide"><svg><use href="#i-people"/></svg><div><b>Per a qui</b><span>Nenes de 8 a 13 anys i la seva mare o persona referent que menstruï</span></div></li>
             <li><svg><use href="#i-clock"/></svg><div><b>Durada</b><span>2 hores i mitja</span></div></li>
-            <li><svg><use href="#i-heart"/></svg><div><b>Format</b><span>Vivencial: paraula, moviment, dansa, música i creativitat</span></div></li>
             <li><svg><use href="#i-coins"/></svg><div><b>Inversió</b><span>260 € + 21% IVA + desplaçament</span></div></li>
+            <li class="wide"><svg><use href="#i-heart"/></svg><div><b>Metodologia</b><span>Informació, dinàmiques participatives, explicacions clares, moviment conscient, dansa, música, creativitat i relaxació. Una proposta vivencial i adaptada a l'edat dels participants.</span></div></li>
           </ul>
         </div>
 
@@ -237,15 +232,14 @@
 
     <!-- PRESENTACIÓ -->
     <section class="block">
-      <div class="wrap intro-grid">
+      <div class="narrow">
         <div>
           <p class="kicker">Presentació del taller</p>
-          <h2 class="title">Molt més que un canvi físic</h2>
+          <h2 class="title">La menstruació no és un problema, és una porta d'entrada a la nostra saviesa femenina.</h2>
           <p class="lead">L'arribada de la primera menstruació és l'inici d'una nova etapa en la vida d'una nena: una porta d'entrada al coneixement de la seva naturalesa cíclica i una oportunitat per començar a construir una relació conscient, amorosa i lliure de prejudicis amb el seu cos.</p>
           <p>Aquest taller proposa un espai compartit entre mares i filles per descobrir què és la menstruació, comprendre el cicle menstrual i apropar-nos a les seves diferents fases des d'una mirada respectuosa, amorosa i empoderada.</p>
           <p>A través de la paraula, el moviment conscient, la dansa, la música, la creativitat i la relaxació, explorarem la ciclicitat femenina d'una manera vivencial, afavorint el coneixement del cos, l'escolta interna i el vincle entre mares i filles. També obrirem una finestra a les diferents maneres com s'ha viscut i s'ha acompanyat la menstruació al llarg de les generacions i en altres cultures i tradicions.</p>
         </div>
-        <blockquote class="quote">La menstruació no és un problema, és una porta cap a la nostra saviesa interior.</blockquote>
       </div>
     </section>
 
@@ -273,8 +267,8 @@
         <h2 class="title">El recorregut del taller</h2>
         <ol class="steps">
           <li><span class="n" style="background:var(--ochre)">1</span><div><h3>La menarquia i la menstruació</h3><p>Què és? Què passa al nostre cos? Com es viu en altres cultures i tradicions?</p></div></li>
-          <li><span class="n" style="background:var(--rose)">2</span><div><h3>Narratives generacionals</h3><p>Què hem après? Desmuntem mites. Trenquem el tabú i la desinformació.</p></div></li>
-          <li><span class="n" style="background:#a979ad">3</span><div><h3>Coneixem la nostra anatomia femenina</h3><p>Descobrim els òrgans i les estructures que formen part del nostre cos.</p></div></li>
+          <li><span class="n" style="background:var(--rose)">2</span><div><h3>Narratives generacionals</h3><p>Discursos heretats. Desmuntem mites. Trencant el tabú i parlant de la desinformació.</p></div></li>
+          <li><span class="n" style="background:#a979ad">3</span><div><h3>Coneixem la nostra anatomia femenina</h3><p>Descobrint els nostres òrgans interns i externs.</p></div></li>
           <li><span class="n" style="background:var(--olive)">4</span><div><h3>Les quatre fases del cicle menstrual ovulatori</h3><p>Comprensió dels canvis físics i emocionals de cada fase.</p>
             <div class="phases">
               <span style="background:rgba(233,191,104,.45)">Preovulatòria</span>
@@ -286,19 +280,6 @@
       </div>
     </section>
 
-    <!-- A QUI / METODOLOGIA -->
-    <section class="block tint">
-      <div class="wrap two">
-        <div class="card">
-          <h3>A qui s'adreça</h3>
-          <p>A nenes de 8 a 13 anys i a les seves mares o a una persona referent que menstruï.</p>
-        </div>
-        <div class="card">
-          <h3>Metodologia</h3>
-          <p>Informació, dinàmiques participatives, explicacions clares, moviment conscient, dansa, música, creativitat i relaxació. Una proposta vivencial i adaptada a l'edat de les participants.</p>
-        </div>
-      </div>
-    </section>
 
     <!-- FACILITADORA -->
     <section class="block">
@@ -316,7 +297,6 @@
             <li>Ginecologia Natural i Ancestral</li>
             <li>Herbolària</li>
           </ul>
-          <p><a href="https://gavinafreixarius.com/sobre-mi" style="color:var(--burgundy)">Coneix més sobre mi →</a></p>
         </div>
       </div>
     </section>
