@@ -32,14 +32,14 @@ export function getNav(lang: Lang): NavItem[] {
         { label: "Inicio", to: pages.home.es },
         { label: "Sobre mí", to: pages.sobreMi.es },
         { label: "Acompañamientos", to: pages.individual.es, children: acompanyaments },
-        { label: "Charlas", to: pages.xerrades.es },
+        { label: "Charlas y talleres", to: pages.xerrades.es },
         { label: "Recursos gratuitos", to: pages.recursos.es },
       ]
     : [
         { label: "Inici", to: pages.home.ca },
         { label: "Sobre mi", to: pages.sobreMi.ca },
         { label: "Acompanyaments", to: pages.individual.ca, children: acompanyaments },
-        { label: "Xerrades", to: pages.xerrades.ca },
+        { label: "Xerrades i tallers", to: pages.xerrades.ca },
         { label: "Recursos gratuïts", to: pages.recursos.ca },
       ];
 }

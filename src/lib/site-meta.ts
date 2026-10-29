@@ -12,6 +12,7 @@ export const pages = {
   sessio: { ca: "/sessio-diagnostica", es: "/es/sesion-diagnostica" },
   individual: { ca: "/acompanyament-individual", es: "/es/acompanamiento-individual" },
   xerrades: { ca: "/xerrades", es: "/es/charlas" },
+  menstruar: { ca: "/xerrades/menstruar-sense-dolor", es: "/es/charlas/menstruar-sin-dolor" },
   recursos: { ca: "/recursos-gratuits", es: "/es/recursos-gratuitos" },
   matrius: { ca: "/matrius", es: null },
   retir: { ca: "/retir", es: null },
@@ -49,8 +50,12 @@ export const seo: Record<PageKey, Partial<Record<Lang, Seo>>> = {
     es: { title: `Acompañamiento Individual en salud femenina | ${BRAND}`, description: "Proceso personalizado para cuidar tu salud femenina con recursos naturales: dolor menstrual, ciclos irregulares, miomas, climaterio y más." },
   },
   xerrades: {
-    ca: { title: `Xerrades «Menstruar sense dolor» per a AFAs i ajuntaments | ${BRAND}`, description: "Xerrades per a famílies i dones sobre dolor menstrual, senyals d'alerta i recursos naturals d'autocura i prevenció." },
-    es: { title: `Charlas «Menstruar sin dolor» para AFAs y ayuntamientos | ${BRAND}`, description: "Charlas para familias y mujeres sobre dolor menstrual, señales de alerta y recursos naturales de autocuidado y prevención." },
+    ca: { title: `Xerrades i tallers de salut femenina | ${BRAND}`, description: "Xerrades i tallers per a famílies, mares i filles sobre la menstruació, el dolor menstrual i la naturalesa cíclica femenina." },
+    es: { title: `Charlas y talleres de salud femenina | ${BRAND}`, description: "Charlas y talleres para familias, madres e hijas sobre la menstruación, el dolor menstrual y la naturaleza cíclica femenina." },
+  },
+  menstruar: {
+    ca: { title: `Xerrada «Menstruar sense dolor» per a famílies | ${BRAND}`, description: "Xerrada per a famílies i dones sobre dolor menstrual, senyals d'alerta i recursos naturals d'autocura i prevenció. Per a AFAs, ajuntaments i entitats." },
+    es: { title: `Charla «Menstruar sin dolor» para familias | ${BRAND}`, description: "Charla para familias y mujeres sobre dolor menstrual, señales de alerta y recursos naturales de autocuidado y prevención. Para AFAs, ayuntamientos y entidades." },
   },
   recursos: {
     ca: { title: `Recursos gratuïts de salut femenina | ${BRAND}`, description: "Xerrades gratuïtes per començar a cuidar la teva salut femenina ginecològica i habitar la teva matriu." },

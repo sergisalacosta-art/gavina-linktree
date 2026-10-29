@@ -25,11 +25,13 @@ import { Route as CuresRouteImport } from './routes/cures'
 import { Route as AcompanyamentIndividualRouteImport } from './routes/acompanyament-individual'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EsIndexRouteImport } from './routes/es/index'
+import { Route as XerradesMenstruarSenseDolorRouteImport } from './routes/xerrades_.menstruar-sense-dolor'
 import { Route as EsSobreMiRouteImport } from './routes/es/sobre-mi'
 import { Route as EsSesionDiagnosticaRouteImport } from './routes/es/sesion-diagnostica'
 import { Route as EsRecursosGratuitosRouteImport } from './routes/es/recursos-gratuitos'
 import { Route as EsCharlasRouteImport } from './routes/es/charlas'
 import { Route as EsAcompanamientoIndividualRouteImport } from './routes/es/acompanamiento-individual'
+import { Route as EsCharlasMenstruarSinDolorRouteImport } from './routes/es/charlas_.menstruar-sin-dolor'
 
 const XerradesRoute = XerradesRouteImport.update({
   id: '/xerrades',
@@ -111,6 +113,12 @@ const EsIndexRoute = EsIndexRouteImport.update({
   path: '/es/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const XerradesMenstruarSenseDolorRoute =
+  XerradesMenstruarSenseDolorRouteImport.update({
+    id: '/xerrades_/menstruar-sense-dolor',
+    path: '/xerrades/menstruar-sense-dolor',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const EsSobreMiRoute = EsSobreMiRouteImport.update({
   id: '/es/sobre-mi',
   path: '/es/sobre-mi',
@@ -137,6 +145,12 @@ const EsAcompanamientoIndividualRoute =
     path: '/es/acompanamiento-individual',
     getParentRoute: () => rootRouteImport,
   } as any)
+const EsCharlasMenstruarSinDolorRoute =
+  EsCharlasMenstruarSinDolorRouteImport.update({
+    id: '/es/charlas_/menstruar-sin-dolor',
+    path: '/es/charlas/menstruar-sin-dolor',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -159,7 +173,9 @@ export interface FileRoutesByFullPath {
   '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
   '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
   '/es/sobre-mi': typeof EsSobreMiRoute
+  '/xerrades/menstruar-sense-dolor': typeof XerradesMenstruarSenseDolorRoute
   '/es/': typeof EsIndexRoute
+  '/es/charlas/menstruar-sin-dolor': typeof EsCharlasMenstruarSinDolorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -182,7 +198,9 @@ export interface FileRoutesByTo {
   '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
   '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
   '/es/sobre-mi': typeof EsSobreMiRoute
+  '/xerrades/menstruar-sense-dolor': typeof XerradesMenstruarSenseDolorRoute
   '/es': typeof EsIndexRoute
+  '/es/charlas/menstruar-sin-dolor': typeof EsCharlasMenstruarSinDolorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -206,7 +224,9 @@ export interface FileRoutesById {
   '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
   '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
   '/es/sobre-mi': typeof EsSobreMiRoute
+  '/xerrades_/menstruar-sense-dolor': typeof XerradesMenstruarSenseDolorRoute
   '/es/': typeof EsIndexRoute
+  '/es/charlas_/menstruar-sin-dolor': typeof EsCharlasMenstruarSinDolorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -231,7 +251,9 @@ export interface FileRouteTypes {
     | '/es/recursos-gratuitos'
     | '/es/sesion-diagnostica'
     | '/es/sobre-mi'
+    | '/xerrades/menstruar-sense-dolor'
     | '/es/'
+    | '/es/charlas/menstruar-sin-dolor'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -254,7 +276,9 @@ export interface FileRouteTypes {
     | '/es/recursos-gratuitos'
     | '/es/sesion-diagnostica'
     | '/es/sobre-mi'
+    | '/xerrades/menstruar-sense-dolor'
     | '/es'
+    | '/es/charlas/menstruar-sin-dolor'
   id:
     | '__root__'
     | '/'
@@ -277,7 +301,9 @@ export interface FileRouteTypes {
     | '/es/recursos-gratuitos'
     | '/es/sesion-diagnostica'
     | '/es/sobre-mi'
+    | '/xerrades_/menstruar-sense-dolor'
     | '/es/'
+    | '/es/charlas_/menstruar-sin-dolor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -301,7 +327,9 @@ export interface RootRouteChildren {
   EsRecursosGratuitosRoute: typeof EsRecursosGratuitosRoute
   EsSesionDiagnosticaRoute: typeof EsSesionDiagnosticaRoute
   EsSobreMiRoute: typeof EsSobreMiRoute
+  XerradesMenstruarSenseDolorRoute: typeof XerradesMenstruarSenseDolorRoute
   EsIndexRoute: typeof EsIndexRoute
+  EsCharlasMenstruarSinDolorRoute: typeof EsCharlasMenstruarSinDolorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -418,6 +446,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/xerrades_/menstruar-sense-dolor': {
+      id: '/xerrades_/menstruar-sense-dolor'
+      path: '/xerrades/menstruar-sense-dolor'
+      fullPath: '/xerrades/menstruar-sense-dolor'
+      preLoaderRoute: typeof XerradesMenstruarSenseDolorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/es/sobre-mi': {
       id: '/es/sobre-mi'
       path: '/es/sobre-mi'
@@ -453,6 +488,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsAcompanamientoIndividualRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/es/charlas_/menstruar-sin-dolor': {
+      id: '/es/charlas_/menstruar-sin-dolor'
+      path: '/es/charlas/menstruar-sin-dolor'
+      fullPath: '/es/charlas/menstruar-sin-dolor'
+      preLoaderRoute: typeof EsCharlasMenstruarSinDolorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -477,7 +519,9 @@ const rootRouteChildren: RootRouteChildren = {
   EsRecursosGratuitosRoute: EsRecursosGratuitosRoute,
   EsSesionDiagnosticaRoute: EsSesionDiagnosticaRoute,
   EsSobreMiRoute: EsSobreMiRoute,
+  XerradesMenstruarSenseDolorRoute: XerradesMenstruarSenseDolorRoute,
   EsIndexRoute: EsIndexRoute,
+  EsCharlasMenstruarSinDolorRoute: EsCharlasMenstruarSinDolorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

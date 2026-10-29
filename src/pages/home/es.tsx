@@ -1,6 +1,7 @@
 import { AppLink as Link } from "@/components/site/AppLink";
 import { ArrowRight, CalendarDays, MapPin, MessageCircle } from "lucide-react";
 import logoImage from "@/assets/gavina-logo.png";
+import { BookIcon, CircleIcon, SproutIcon } from "@/components/site/icons";
 import { WA_URL } from "@/components/site/nav";
 import { pages } from "@/lib/i18n";
 
@@ -175,14 +176,16 @@ export function Index() {
       <section className="pb-20 md:pb-28">
         <div className="mx-auto grid max-w-6xl gap-6 px-6 sm:px-8 md:grid-cols-3">
           {[
-            { title: "Recursos gratuitos", text: "Charlas para empezar a cuidar tu salud femenina.", img: "/web/recursos.jpg", to: pages.recursos.es },
-            { title: "Comunidad Privada", text: "Accede a contenido de profundización. Pide el acceso gratuito.", img: "/web/comunitat.jpg", href: WA_URL },
-            { title: "Charlas", text: "Para AFAs, ayuntamientos y otras entidades.", img: "/web/xerrades.jpg", to: pages.xerrades.es },
+            { title: "Recursos gratuitos", text: "Charlas para empezar a cuidar tu salud femenina.", Icon: BookIcon, tint: "#f1d9cf", to: pages.recursos.es },
+            { title: "Comunidad Privada", text: "Accede a contenido de profundización. Pide el acceso gratuito.", Icon: SproutIcon, tint: "#e6e2cf", href: WA_URL },
+            { title: "Charlas y talleres", text: "Para AFAs, ayuntamientos y otras entidades.", Icon: CircleIcon, tint: "#ecdae4", to: pages.xerrades.es },
           ].map((c, i) => {
             const inner = (
               <>
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img src={c.img} alt="" loading="lazy" className="zoom-img h-full w-full object-cover" />
+                <div className="flex aspect-[16/10] items-center justify-center" style={{ background: c.tint }}>
+                  <span className="flex h-28 w-28 items-center justify-center rounded-full bg-[#faf5ef]/70 text-[#8a4b34] transition-transform duration-500 group-hover:scale-105">
+                    <c.Icon className="h-16 w-16" />
+                  </span>
                 </div>
                 <div className="p-6">
                   <h3 className="font-serif text-xl font-semibold text-[#6b5347]">{c.title}</h3>

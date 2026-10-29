@@ -42,7 +42,7 @@ export function SiteFooter() {
           <h3 className="mb-5 text-xs uppercase tracking-[0.22em] text-[#d8a797]">{t.footerExplore}</h3>
           <ul className="space-y-3">
             <li><Link to={pages.sobreMi[lang]} className="footer-link">{lang === "es" ? "Sobre mí" : "Sobre mi"}</Link></li>
-            <li><Link to={pages.xerrades[lang]} className="footer-link">{lang === "es" ? "Charlas" : "Xerrades"}</Link></li>
+            <li><Link to={pages.xerrades[lang]} className="footer-link">{lang === "es" ? "Charlas y talleres" : "Xerrades i tallers"}</Link></li>
             <li><Link to={pages.recursos[lang]} className="footer-link">{lang === "es" ? "Recursos gratuitos" : "Recursos gratuïts"}</Link></li>
             <li><a href={WA_URL} target="_blank" rel="noopener noreferrer" className="footer-link">{t.community}</a></li>
           </ul>

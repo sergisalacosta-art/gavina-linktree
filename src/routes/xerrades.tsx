@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { XerradesPage } from "@/pages/xerrades/ca";
+import { XerradesHubCa } from "@/pages/xerrades/hub";
 
 export const Route = createFileRoute("/xerrades")({
-  component: XerradesPage,
+  component: XerradesHubCa,
 });
