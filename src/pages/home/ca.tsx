@@ -74,16 +74,7 @@ export function Index() {
 
       {/* SOBRE MI */}
       <section className="py-20 md:py-28">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 sm:px-8 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
-          <div data-reveal className="relative mx-auto w-[75%] max-w-[400px] md:w-full">
-            <div aria-hidden className="absolute inset-0 translate-x-4 translate-y-4 rounded-[2.5rem] border-2 border-[#c89684]/60" />
-            <img
-              src="/web/retrat.jpg"
-              alt="Retrat de la Gavina somrient"
-              loading="lazy"
-              className="relative aspect-[4/5] w-full rounded-[2.5rem] object-cover shadow-[0_30px_60px_-30px_rgba(42,31,23,.55)]"
-            />
-          </div>
+        <div className="mx-auto max-w-3xl px-6 text-center sm:px-8">
           <div style={{ fontFamily: georgia, color: "#6b5347", fontSize: "clamp(1.05rem, 1.8vw, 1.2rem)", lineHeight: 1.75 }}>
             <Eyebrow>Sobre mi</Eyebrow>
             <h2 data-reveal className="font-serif font-semibold" style={{ fontSize: "clamp(1.7rem, 3.4vw, 2.5rem)", lineHeight: 1.2 }}>
