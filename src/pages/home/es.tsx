@@ -6,18 +6,6 @@ import { pages } from "@/lib/i18n";
 
 const georgia = 'Georgia, "Times New Roman", serif';
 
-const underline = {
-  textDecoration: "underline",
-  textDecorationColor: "#c89684",
-  textDecorationThickness: "3px",
-  textUnderlineOffset: "6px",
-} as const;
-
-const camins = [
-  { word: "VERDAD", text: "Vivir en coherencia con la mujer que eres hoy." },
-  { word: "SALUD", text: "Cuidar tu salud femenina y cultivar la prevención." },
-  { word: "SOBERANÍA", text: "Recuperar la soberanía sobre tu cuerpo, tu sexualidad y tu placer." },
-];
 
 // hidden: true oculta el servicio de la portada (la página sigue existiendo por URL).
 const allServeis: { title: string; text?: string; img: string; to: string; tag?: string; hidden?: boolean }[] = [
@@ -49,10 +37,10 @@ export function Index() {
           <div className="order-2 md:order-1">
             <Eyebrow>Salud Cíclica Femenina</Eyebrow>
             <h1 data-reveal className="font-serif font-semibold leading-[1.15] text-[#6b5347]" style={{ fontSize: "clamp(2rem, 4.4vw, 3.4rem)" }}>
-              Reconozco la <span style={underline}>sabiduría</span> y el <span style={underline}>poder</span> que habitan en la matriz de cada mujer.
+              Una nueva manera de entender el bienestar de las mujeres.
             </h1>
-            <p data-reveal className="mt-6 text-[#8a4b34]" style={{ fontFamily: georgia, fontSize: "clamp(1.2rem, 2.2vw, 1.55rem)", fontWeight: 700 }}>
-              Te acompaño a habitar tu matriz.
+            <p data-reveal className="mt-6 max-w-xl text-[#6b5347]" style={{ fontFamily: georgia, fontSize: "clamp(1.1rem, 1.9vw, 1.3rem)", lineHeight: 1.7 }}>
+              Te acompaño a aprender a vivir conectada a tu naturaleza cíclica incorporando los autocuidados femeninos naturales y ancestrales a tu vida cotidiana, para vivir en coherencia con la mujer que eres hoy.
             </p>
             <div data-reveal className="mt-9 flex flex-wrap gap-3">
               <a
@@ -80,40 +68,6 @@ export function Index() {
               className="relative aspect-[3/4] w-full object-cover shadow-[0_30px_60px_-30px_rgba(42,31,23,.55)]"
               style={{ borderRadius: "50% 50% 2.5rem 2.5rem / 37.5% 37.5% 2.5rem 2.5rem" }}
             />
-            <span className="absolute -bottom-5 -left-3 inline-flex h-20 w-20 items-center justify-center rounded-full bg-[#f4ebe0] shadow-lg sm:h-24 sm:w-24">
-              <img src={logoImage} alt="" className="h-14 w-14 object-contain sm:h-16 sm:w-16" />
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* UN CAMÍ */}
-      <section className="bg-[#ece0d2]/60 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <Eyebrow>Habitar la matriz</Eyebrow>
-            <h2 data-reveal className="font-serif font-semibold text-[#6b5347]" style={{ fontSize: "clamp(1.7rem, 3.4vw, 2.5rem)" }}>
-              Un camino para recordarte que puedes...
-            </h2>
-          </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {camins.map((c, i) => (
-              <article
-                key={c.word}
-                data-reveal
-                style={{ ["--reveal-delay" as string]: `${i * 120}ms` }}
-                className="rounded-[2rem] bg-[#faf5ef] p-8 text-center shadow-[0_10px_40px_-24px_rgba(107,83,71,.45)] md:p-10"
-              >
-                <img src={logoImage} alt="" className="mx-auto h-10 w-10 object-contain opacity-80" />
-                <p className="mt-5 text-sm text-[#6b5347]">Un camino de</p>
-                <p className="mt-2">
-                  <span className="inline-block rounded-full bg-[#8a4b34] px-4 py-1 text-lg font-bold tracking-[0.08em] text-white">{c.word}</span>
-                </p>
-                <p className="mt-5 text-[#6b5347]" style={{ fontFamily: georgia, fontSize: "1.15rem", lineHeight: 1.6 }}>
-                  {c.text}
-                </p>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -263,11 +217,7 @@ export function Index() {
       {/* CTA FINAL */}
       <section className="border-t border-[#d8c4b3]/70 py-20 text-center md:py-24">
         <div className="mx-auto max-w-2xl px-6">
-          <img data-reveal src={logoImage} alt="" className="mx-auto h-14 w-14 object-contain" />
-          <h2 data-reveal className="mt-6 font-serif font-semibold text-[#6b5347]" style={{ fontSize: "clamp(1.7rem, 3.4vw, 2.5rem)" }}>
-            Un camino de verdad, de salud y de soberanía
-          </h2>
-          <p data-reveal className="mt-4 text-lg text-[#6b5347]" style={{ fontFamily: georgia }}>
+          <p data-reveal className="text-lg text-[#6b5347]" style={{ fontFamily: georgia }}>
             Si tienes dudas sobre qué acompañamiento es para ti, escríbeme y hablamos.
           </p>
           <a

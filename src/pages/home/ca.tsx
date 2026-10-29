@@ -6,18 +6,6 @@ import { pages } from "@/lib/i18n";
 
 const georgia = 'Georgia, "Times New Roman", serif';
 
-const underline = {
-  textDecoration: "underline",
-  textDecorationColor: "#c89684",
-  textDecorationThickness: "3px",
-  textUnderlineOffset: "6px",
-} as const;
-
-const camins = [
-  { word: "VERITAT", text: "Viure en coherència amb la dona que ets avui." },
-  { word: "SALUT", text: "Cuidar la teva salut femenina i cultivar la prevenció." },
-  { word: "SOBIRANIA", text: "Recuperar la sobirania sobre el teu cos, la teva sexualitat i el teu plaer." },
-];
 
 // hidden: true amaga el servei de la portada (la pàgina continua existint per URL).
 const allServeis: { title: string; text?: string; img: string; to: string; tag?: string; hidden?: boolean }[] = [
@@ -49,10 +37,10 @@ export function Index() {
           <div className="order-2 md:order-1">
             <Eyebrow>Salut Cíclica Femenina</Eyebrow>
             <h1 data-reveal className="font-serif font-semibold leading-[1.15] text-[#6b5347]" style={{ fontSize: "clamp(2rem, 4.4vw, 3.4rem)" }}>
-              Reconec la <span style={underline}>saviesa</span> i el <span style={underline}>poder</span> que habiten en la matriu de cada dona.
+              Una nova manera d&apos;entendre el benestar de les dones.
             </h1>
-            <p data-reveal className="mt-6 text-[#8a4b34]" style={{ fontFamily: georgia, fontSize: "clamp(1.2rem, 2.2vw, 1.55rem)", fontWeight: 700 }}>
-              T&apos;acompanyo a habitar la teva matriu.
+            <p data-reveal className="mt-6 max-w-xl text-[#6b5347]" style={{ fontFamily: georgia, fontSize: "clamp(1.1rem, 1.9vw, 1.3rem)", lineHeight: 1.7 }}>
+              T&apos;acompanyo a aprendre a viure connectada a la teva naturalesa cíclica incorporant les autocures femenines naturals i ancestrals a la teva vida quotidiana, per viure en coherència amb la dona que ets avui.
             </p>
             <div data-reveal className="mt-9 flex flex-wrap gap-3">
               <a
@@ -80,40 +68,6 @@ export function Index() {
               className="relative aspect-[3/4] w-full object-cover shadow-[0_30px_60px_-30px_rgba(42,31,23,.55)]"
               style={{ borderRadius: "50% 50% 2.5rem 2.5rem / 37.5% 37.5% 2.5rem 2.5rem" }}
             />
-            <span className="absolute -bottom-5 -left-3 inline-flex h-20 w-20 items-center justify-center rounded-full bg-[#f4ebe0] shadow-lg sm:h-24 sm:w-24">
-              <img src={logoImage} alt="" className="h-14 w-14 object-contain sm:h-16 sm:w-16" />
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* UN CAMÍ */}
-      <section className="bg-[#ece0d2]/60 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <Eyebrow>Habitar la matriu</Eyebrow>
-            <h2 data-reveal className="font-serif font-semibold text-[#6b5347]" style={{ fontSize: "clamp(1.7rem, 3.4vw, 2.5rem)" }}>
-              Un camí per recordar-te que pots...
-            </h2>
-          </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {camins.map((c, i) => (
-              <article
-                key={c.word}
-                data-reveal
-                style={{ ["--reveal-delay" as string]: `${i * 120}ms` }}
-                className="rounded-[2rem] bg-[#faf5ef] p-8 text-center shadow-[0_10px_40px_-24px_rgba(107,83,71,.45)] md:p-10"
-              >
-                <img src={logoImage} alt="" className="mx-auto h-10 w-10 object-contain opacity-80" />
-                <p className="mt-5 text-sm text-[#6b5347]">Un camí de</p>
-                <p className="mt-2">
-                  <span className="inline-block rounded-full bg-[#8a4b34] px-4 py-1 text-lg font-bold tracking-[0.08em] text-white">{c.word}</span>
-                </p>
-                <p className="mt-5 text-[#6b5347]" style={{ fontFamily: georgia, fontSize: "1.15rem", lineHeight: 1.6 }}>
-                  {c.text}
-                </p>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -263,11 +217,7 @@ export function Index() {
       {/* CTA FINAL */}
       <section className="border-t border-[#d8c4b3]/70 py-20 text-center md:py-24">
         <div className="mx-auto max-w-2xl px-6">
-          <img data-reveal src={logoImage} alt="" className="mx-auto h-14 w-14 object-contain" />
-          <h2 data-reveal className="mt-6 font-serif font-semibold text-[#6b5347]" style={{ fontSize: "clamp(1.7rem, 3.4vw, 2.5rem)" }}>
-            Un camí de veritat, de salut i de sobirania
-          </h2>
-          <p data-reveal className="mt-4 text-lg text-[#6b5347]" style={{ fontFamily: georgia }}>
+          <p data-reveal className="text-lg text-[#6b5347]" style={{ fontFamily: georgia }}>
             Si tens dubtes sobre quin acompanyament és per a tu, escriu-me i en parlem.
           </p>
           <a
