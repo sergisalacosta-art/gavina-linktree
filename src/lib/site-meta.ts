@@ -2,7 +2,7 @@
 
 export type Lang = "ca" | "es";
 
-export const SITE_URL = "https://gavinafreixarius.com";
+export const SITE_URL = "https://www.gavinafreixarius.com";
 
 // Each page and its URL in every language. Catalan lives at the root, Spanish under /es.
 // Pages with es: null only exist in Catalan (switching language sends you to the Spanish home).
