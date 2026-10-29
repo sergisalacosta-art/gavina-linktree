@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La menstruació: un camí per descobrir la nostra naturalesa cíclica · Taller per a mares i filles</title>
+  <meta name="description" content="Taller vivencial per a nenes de 8 a 13 anys i les seves mares per acompanyar la primera menstruació i el cicle menstrual des d'una mirada amorosa i empoderada. Amb Gavina Freixa Rius." />
+  <!-- Pàgina per difondre amb l'enllaç: no s'indexa a Google -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Taller per a mares i filles · La menstruació: un camí per descobrir la nostra naturalesa cíclica" />
+  <meta property="og:description" content="Nenes de 8 a 13 anys i les seves mares · 2 h 30 · Taller vivencial amb Gavina Freixa Rius." />
+  <meta property="og:image" content="https://gavinafreixarius.com/taller-mares-i-filles/il-lustracio.jpg" />
+  <meta property="og:url" content="https://gavinafreixarius.com/taller-mares-i-filles" />
+  <link rel="icon" href="/taller-mares-i-filles/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f6ecdf;
+      --paper: #fbf6ef;
+      --burgundy: #7a1f2e;
+      --burgundy-soft: #9b3a46;
+      --ink: #4a3a33;
+      --muted: #7a675d;
+      --ochre: #c98a3e;
+      --rose: #d9938c;
+      --blush: #f1d3cb;
+      --lilac: #c9a6cf;
+      --olive: #8c8a63;
+      --gold: #e9bf68;
+      --line: rgba(122, 31, 46, 0.14);
+      --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .narrow { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+
+    /* ---------- Top bar ---------- */
+    .topbar { padding: 18px 0; }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand img { width: 40px; height: 40px; }
+    .brand b { display: block; font-family: var(--serif); font-size: 1.2rem; color: var(--burgundy); line-height: 1.1; font-weight: 700; }
+    .brand span { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+    .top-cta { font-size: .9rem; color: var(--burgundy); text-decoration: none; border-bottom: 1px solid currentColor; white-space: nowrap; }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 24px 0 56px; }
+    .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: .78rem; letter-spacing: .28em; text-transform: uppercase; color: var(--burgundy); font-weight: 600;
+    }
+    .eyebrow::after { content: ""; width: 48px; height: 1px; background: var(--ochre); }
+    h1 {
+      font-family: var(--serif); color: var(--burgundy); font-weight: 700;
+      font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1; margin: 18px 0 10px; letter-spacing: -.01em;
+    }
+    h1 small { display: block; font-size: .56em; font-weight: 600; line-height: 1.12; margin-top: 10px; color: var(--burgundy-soft); }
+    .tagline { font-family: var(--serif); font-style: italic; font-size: clamp(1.25rem, 2.2vw, 1.5rem); color: var(--burgundy-soft); line-height: 1.35; margin: 18px 0 28px; }
+
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 28px; padding: 0; list-style: none; }
+    .facts li {
+      display: flex; gap: 12px; align-items: flex-start;
+      background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px;
+    }
+    .facts svg { flex-shrink: 0; width: 26px; height: 26px; color: var(--ochre); margin-top: 2px; }
+    .facts b { display: block; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--burgundy); font-weight: 600; }
+    .facts span { font-size: .95rem; line-height: 1.4; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border-radius: 999px; padding: 14px 26px; font: 600 .98rem var(--sans); text-decoration: none;
+      border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--burgundy); color: #fff; box-shadow: 0 10px 26px -14px rgba(122,31,46,.8); }
+    .btn-primary:hover { background: #651826; }
+    .btn-ghost { border-color: rgba(122,31,46,.35); color: var(--burgundy); background: transparent; }
+    .btn-ghost:hover { background: rgba(122,31,46,.06); }
+    .btn svg { width: 18px; height: 18px; }
+
+    .hero-art { position: relative; }
+    .hero-art img {
+      width: 100%;
+      -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+              mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+    }
+
+    /* ---------- Contact form (quiet) ---------- */
+    .contact { padding: 0 0 64px; }
+    .contact-card {
+      display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px; align-items: start;
+      background: var(--paper); border: 1px solid var(--line); border-radius: 26px; padding: 28px 32px;
+    }
+    .contact-card h2 { font-family: var(--serif); font-size: 1.7rem; line-height: 1.15; color: var(--burgundy); margin: 0 0 8px; font-weight: 700; }
+    .contact-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .contact-card .direct { margin-top: 14px; font-size: .9rem; }
+    .contact-card .direct a { color: var(--burgundy); }
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    label { display: grid; gap: 4px; font-size: .78rem; color: var(--muted); letter-spacing: .02em; }
+    label.full { grid-column: 1 / -1; }
+    input, textarea {
+      font: inherit; font-size: .95rem; color: var(--ink);
+      border: 1px solid rgba(122,31,46,.18); border-radius: 12px; padding: 10px 12px; background: #fff; width: 100%;
+    }
+    input:focus, textarea:focus { outline: 2px solid rgba(201,138,62,.5); outline-offset: 1px; border-color: transparent; }
+    textarea { min-height: 76px; resize: vertical; }
+    .form-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+    .form-actions .btn { padding: 11px 22px; font-size: .92rem; }
+    .linklike { background: none; border: 0; padding: 0; font: inherit; font-size: .9rem; color: var(--burgundy); text-decoration: underline; cursor: pointer; }
+    .form-note { grid-column: 1 / -1; font-size: .78rem; color: var(--muted); margin: 0; }
+
+    /* ---------- More info ---------- */
+    .more { text-align: center; padding: 8px 0 24px; color: var(--muted); }
+    .more p { margin: 0; font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--burgundy-soft); }
+    .more svg { width: 22px; height: 22px; margin: 8px auto 0; color: var(--ochre); animation: bob 2.4s ease-in-out infinite; }
+    @keyframes bob { 50% { transform: translateY(6px); } }
+
+    section.block { padding: 56px 0; }
+    section.block.tint { background: linear-gradient(180deg, rgba(241,211,203,.35), rgba(246,236,223,0)); }
+    .kicker { font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--ochre); font-weight: 600; margin: 0 0 6px; }
+    h2.title { font-family: var(--serif); color: var(--burgundy); font-size: clamp(1.9rem, 3.6vw, 2.6rem); line-height: 1.1; margin: 0 0 22px; font-weight: 700; }
+    .lead { font-size: 1.08rem; }
+
+    .intro-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 40px; align-items: center; }
+    .quote {
+      font-family: var(--serif); font-style: italic; color: var(--burgundy-soft); font-size: 1.55rem; line-height: 1.3;
+      position: relative; padding: 26px 26px 26px 30px; border-left: 3px solid var(--rose); background: rgba(255,255,255,.45); border-radius: 0 22px 22px 0;
+    }
+    .quote::after { content: "♡"; display: block; font-style: normal; color: var(--rose); font-size: 1.3rem; margin-top: 8px; }
+
+    .objectives { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; }
+    .objectives li {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px 16px 50px; position: relative; font-size: .97rem; line-height: 1.5;
+    }
+    .objectives li::before {
+      content: ""; position: absolute; left: 18px; top: 18px; width: 20px; height: 20px;
+      background: var(--ochre);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21c0-6 2-11 8-15-1 7-3 11-8 15Zm0 0C11 15 8 12 3 11c1 5 4 8 9 10Z'/%3E%3C/svg%3E") center / contain no-repeat;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21c0-6 2-11 8-15-1 7-3 11-8 15Zm0 0C11 15 8 12 3 11c1 5 4 8 9 10Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
+
+    .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+    .steps li { display: grid; grid-template-columns: 52px 1fr; gap: 18px; align-items: start; background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px; }
+    .steps .n { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-family: var(--serif); font-size: 1.6rem; font-weight: 700; }
+    .steps h3 { margin: 2px 0 4px; font-family: var(--serif); font-size: 1.4rem; color: var(--burgundy); font-weight: 700; line-height: 1.2; }
+    .steps p { margin: 0; color: var(--muted); font-size: .97rem; }
+    .phases { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .phases span { font-size: .78rem; padding: 4px 10px; border-radius: 999px; color: var(--ink); }
+
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 24px 26px; }
+    .card h3 { margin: 0 0 8px; font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: var(--burgundy); font-weight: 600; }
+    .card p { margin: 0; }
+    .card ul { margin: 6px 0 0; padding-left: 18px; }
+
+    .facilitator { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: center; }
+    .facilitator img { width: 220px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 120px 120px 26px 26px; box-shadow: 0 24px 50px -28px rgba(74,58,51,.6); }
+    .facilitator h3 { font-family: var(--serif); font-size: 2rem; color: var(--burgundy); margin: 0; font-weight: 700; }
+    .facilitator .role { color: var(--muted); margin: 2px 0 14px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 14px; }
+    .chips li { font-size: .82rem; background: rgba(201,138,62,.12); color: var(--ink); border-radius: 999px; padding: 5px 12px; }
+
+    .closing { position: relative; padding: 72px 0 0; text-align: center; overflow: hidden; }
+    .closing .wash { display: inline-block; background: rgba(241,211,203,.75); border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%; padding: 34px 40px; }
+    .closing .wash p { margin: 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.3rem, 2.6vw, 1.7rem); color: var(--burgundy); line-height: 1.35; }
+    .closing .actions { justify-content: center; margin: 28px 0 8px; }
+    .closing .contact-line { color: var(--muted); font-size: .92rem; margin: 10px 0 0; }
+    .closing .contact-line a { color: var(--burgundy); }
+    .hills { display: block; width: 100%; height: 140px; margin-top: 40px; }
+    footer { background: #e9b9ad; color: var(--burgundy); text-align: center; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; padding: 0 20px 26px; margin-top: -2px; }
+    footer a { text-decoration: none; }
+
+    .sprig { width: 26px; height: 26px; color: var(--ochre); }
+    .divider { display: flex; align-items: center; justify-content: center; gap: 14px; color: var(--ochre); }
+    .divider::before, .divider::after { content: ""; width: 70px; height: 1px; background: currentColor; opacity: .6; }
+
+    @media (max-width: 900px) {
+      .hero .wrap, .contact-card, .intro-grid, .facilitator { grid-template-columns: 1fr; }
+      .hero .wrap { gap: 16px; }
+      .hero-art { order: -1; max-width: 520px; margin: 0 auto; }
+      .facilitator img { width: 180px; margin: 0 auto; }
+      .facilitator { text-align: center; }
+      .chips { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .facts { grid-template-columns: 1fr; }
+      form, .two { grid-template-columns: 1fr; }
+      .contact-card { padding: 22px 18px; }
+      .actions .btn { width: 100%; }
+      .top-cta { display: none; }
+      .closing .wash { padding: 26px 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .more svg { animation: none; } .btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <!-- Icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-sprig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M12 22V9m0 6c-3-.5-5-2.5-5.5-5.5 3 .3 5 2.3 5.5 5.5Zm0-3c3-.5 5-2.5 5.5-5.5-3 .3-5 2.3-5.5 5.5Zm0-3c-.2-2.8 1-4.8 0-7-1 2.2.2 4.2 0 7Z"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2.5 20c.6-3.6 2.8-5.5 5.5-5.5s4.9 1.9 5.5 5.5M13.5 20c.4-2.8 1.8-4.3 3.5-4.3s3.1 1.5 3.5 4.3"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10Z"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="6.5" rx="7" ry="2.8"/><path d="M5 6.5v4c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-4M5 10.5v4c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-4M5 14.5v3c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-3"/></g></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A10 10 0 0 0 3.34 17l-1.3 4.74 4.86-1.27A10 10 0 1 0 19.05 4.91Zm-7.05 15.4a8.27 8.27 0 0 1-4.22-1.16l-.3-.18-2.88.75.77-2.81-.2-.31A8.31 8.31 0 1 1 20.3 12a8.34 8.34 0 0 1-8.3 8.31Zm4.55-6.22c-.25-.13-1.48-.73-1.71-.81s-.4-.13-.56.13-.65.81-.79.97-.29.18-.54.06a6.78 6.78 0 0 1-2-1.23 7.56 7.56 0 0 1-1.4-1.74c-.14-.25 0-.38.11-.51s.25-.29.37-.43a1.62 1.62 0 0 0 .25-.41.46.46 0 0 0 0-.44c-.06-.13-.56-1.34-.76-1.83s-.4-.42-.56-.43h-.48a.93.93 0 0 0-.67.31 2.81 2.81 0 0 0-.88 2.1 4.91 4.91 0 0 0 1 2.59 11.16 11.16 0 0 0 4.27 3.77 14.43 14.43 0 0 0 1.42.52 3.43 3.43 0 0 0 1.57.1 2.58 2.58 0 0 0 1.69-1.19 2.1 2.1 0 0 0 .14-1.19c-.06-.1-.22-.16-.47-.28Z"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="https://gavinafreixarius.com/">
+        <img src="/taller-mares-i-filles/logo.png" alt="" />
+        <div><b>Gavina Freixa Rius</b><span>Salut Cíclica Femenina</span></div>
+      </a>
+      <a class="top-cta" href="#contacte">Demana informació</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: tot l'essencial d'un cop d'ull -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Taller per a mares i filles</p>
+          <h1>La menstruació:<small>un camí per descobrir la nostra naturalesa cíclica</small></h1>
+          <p class="tagline">Aprendre a viure la ciclicitat juntes, per créixer amb més confiança, llibertat i consciència.</p>
+
+          <ul class="facts">
+            <li><svg><use href="#i-people"/></svg><div><b>Per a qui</b><span>Nenes de 8 a 13 anys i la seva mare o persona referent que menstruï</span></div></li>
+            <li><svg><use href="#i-clock"/></svg><div><b>Durada</b><span>2 hores i mitja</span></div></li>
+            <li><svg><use href="#i-heart"/></svg><div><b>Format</b><span>Vivencial: paraula, moviment, dansa, música i creativitat</span></div></li>
+            <li><svg><use href="#i-coins"/></svg><div><b>Inversió</b><span>260 € + 21% IVA + desplaçament</span></div></li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#contacte">Demana informació</a>
+            <a class="btn btn-ghost" href="https://wa.me/34616351534?text=Hola%20Gavina!%20M'interessa%20el%20taller%20per%20a%20mares%20i%20filles%20sobre%20la%20menstruaci%C3%B3." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <img src="/taller-mares-i-filles/il-lustracio.jpg" width="1280" height="920" alt="Una mare i una filla assegudes a terra, una davant de l'altra, envoltades de les quatre fases del cicle menstrual: preovulatòria, ovulatòria, premenstrual i menstrual" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTE (discret, a dalt) -->
+    <section class="contact" id="contacte">
+      <div class="wrap">
+        <div class="contact-card">
+          <div>
+            <h2>Vols organitzar aquest taller?</h2>
+            <p>Escola, AFA, associació o grup de famílies: deixa'm les teves dades i et respondré per explicar-te com el podem fer.</p>
+            <p class="direct">O directament: <a href="tel:+34616351534">616 351 534</a> · <a href="mailto:gavina.salutciclica@gmail.com">gavina.salutciclica@gmail.com</a></p>
+          </div>
+          <form id="form" novalidate>
+            <label>Nom *<input name="nom" autocomplete="name" required /></label>
+            <label>Telèfon o correu *<input name="contacte" autocomplete="email" required /></label>
+            <label>Escola, AFA o entitat<input name="entitat" autocomplete="organization" /></label>
+            <label>Població<input name="poblacio" autocomplete="address-level2" /></label>
+            <label class="full">Missatge<textarea name="missatge" placeholder="Explica'm breument què t'agradaria (dates, nombre de famílies…)"></textarea></label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" data-via="whatsapp"><svg><use href="#i-wa"/></svg>Envia per WhatsApp</button>
+              <button class="linklike" type="submit" data-via="email">o envia-ho per correu</button>
+            </div>
+            <p class="form-note" id="form-note">S'obrirà WhatsApp o el teu correu amb el missatge ja escrit; només cal que l'enviïs.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="more">
+      <p>Vols saber-ne més?</p>
+      <svg><use href="#i-down"/></svg>
+    </div>
+
+    <!-- PRESENTACIÓ -->
+    <section class="block">
+      <div class="wrap intro-grid">
+        <div>
+          <p class="kicker">Presentació del taller</p>
+          <h2 class="title">Molt més que un canvi físic</h2>
+          <p class="lead">L'arribada de la primera menstruació és l'inici d'una nova etapa en la vida d'una nena: una porta d'entrada al coneixement de la seva naturalesa cíclica i una oportunitat per començar a construir una relació conscient, amorosa i lliure de prejudicis amb el seu cos.</p>
+          <p>Aquest taller proposa un espai compartit entre mares i filles per descobrir què és la menstruació, comprendre el cicle menstrual i apropar-nos a les seves diferents fases des d'una mirada respectuosa, amorosa i empoderada.</p>
+          <p>A través de la paraula, el moviment conscient, la dansa, la música, la creativitat i la relaxació, explorarem la ciclicitat femenina d'una manera vivencial, afavorint el coneixement del cos, l'escolta interna i el vincle entre mares i filles. També obrirem una finestra a les diferents maneres com s'ha viscut i s'ha acompanyat la menstruació al llarg de les generacions i en altres cultures i tradicions.</p>
+        </div>
+        <blockquote class="quote">La menstruació no és un problema, és una porta cap a la nostra saviesa interior.</blockquote>
+      </div>
+    </section>
+
+    <!-- OBJECTIUS -->
+    <section class="block tint">
+      <div class="wrap">
+        <p class="kicker">Objectius</p>
+        <h2 class="title">Què volem aconseguir juntes</h2>
+        <ul class="objectives">
+          <li>Oferir un espai de confiança on compartir dubtes, pors, emocions i vivències al voltant de la menstruació.</li>
+          <li>Transmetre calma, confiança i il·lusió davant l'arribada de la primera menstruació.</li>
+          <li>Afavorir la comprensió i l'acceptació de la naturalesa cíclica femenina, entenent el cicle menstrual com un procés de canvis físics i emocionals.</li>
+          <li>Explicar de manera clara i respectuosa l'anatomia femenina, la menstruació i les diferents fases del cicle.</li>
+          <li>Qüestionar els mites, els tabús i les falses creences transmeses generacionalment al voltant de la menstruació.</li>
+          <li>Fomentar una relació amb el cos basada en el respecte, l'escolta, la confiança i l'autocura.</li>
+          <li>Reforçar el vincle entre mare i filla, creant un espai per compartir, aprendre i acompanyar-se mútuament.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTINGUTS -->
+    <section class="block">
+      <div class="narrow">
+        <p class="kicker">Continguts i desenvolupament</p>
+        <h2 class="title">El recorregut del taller</h2>
+        <ol class="steps">
+          <li><span class="n" style="background:var(--ochre)">1</span><div><h3>La menarquia i la menstruació</h3><p>Què és? Què passa al nostre cos? Com es viu en altres cultures i tradicions?</p></div></li>
+          <li><span class="n" style="background:var(--rose)">2</span><div><h3>Narratives generacionals</h3><p>Què hem après? Desmuntem mites. Trenquem el tabú i la desinformació.</p></div></li>
+          <li><span class="n" style="background:#a979ad">3</span><div><h3>Coneixem la nostra anatomia femenina</h3><p>Descobrim els òrgans i les estructures que formen part del nostre cos.</p></div></li>
+          <li><span class="n" style="background:var(--olive)">4</span><div><h3>Les quatre fases del cicle menstrual ovulatori</h3><p>Comprensió dels canvis físics i emocionals de cada fase.</p>
+            <div class="phases">
+              <span style="background:rgba(233,191,104,.45)">Preovulatòria</span>
+              <span style="background:rgba(217,147,140,.45)">Ovulatòria</span>
+              <span style="background:rgba(201,166,207,.5)">Premenstrual</span>
+              <span style="background:rgba(155,58,70,.25)">Menstrual</span>
+            </div></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- A QUI / METODOLOGIA -->
+    <section class="block tint">
+      <div class="wrap two">
+        <div class="card">
+          <h3>A qui s'adreça</h3>
+          <p>A nenes de 8 a 13 anys i a les seves mares o a una persona referent que menstruï.</p>
+        </div>
+        <div class="card">
+          <h3>Metodologia</h3>
+          <p>Informació, dinàmiques participatives, explicacions clares, moviment conscient, dansa, música, creativitat i relaxació. Una proposta vivencial i adaptada a l'edat de les participants.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITADORA -->
+    <section class="block">
+      <div class="wrap facilitator">
+        <img src="/taller-mares-i-filles/gavina.jpg" alt="Retrat de Gavina Freixa Rius" />
+        <div>
+          <p class="kicker">Facilitadora</p>
+          <h3>Gavina Freixa Rius</h3>
+          <p class="role">Terapeuta en Salut Cíclica Femenina</p>
+          <ul class="chips">
+            <li>Criança Conscient</li>
+            <li>Educació Emocional</li>
+            <li>Teràpia Gestalt</li>
+            <li>Ciclicitat i Sexualitat Femenines</li>
+            <li>Ginecologia Natural i Ancestral</li>
+            <li>Herbolària</li>
+          </ul>
+          <p><a href="https://gavinafreixarius.com/sobre-mi" style="color:var(--burgundy)">Coneix més sobre mi →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TANCAMENT -->
+    <section class="closing">
+      <div class="narrow">
+        <div class="divider"><svg class="sprig"><use href="#i-sprig"/></svg></div>
+        <div class="wash" style="margin-top:22px">
+          <p>Un espai per parlar de la menstruació amb naturalitat, viure-la sense por i començar a descobrir la saviesa de la nostra naturalesa cíclica.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contacte">Demana informació</a>
+          <a class="btn btn-ghost" href="https://wa.me/34616351534?text=Hola%20Gavina!%20M'interessa%20el%20taller%20per%20a%20mares%20i%20filles%20sobre%20la%20menstruaci%C3%B3." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+        </div>
+        <p class="contact-line">Gavina Freixa Rius · <a href="tel:+34616351534">616 351 534</a> · <a href="mailto:gavina.salutciclica@gmail.com">gavina.salutciclica@gmail.com</a></p>
+      </div>
+      <svg class="hills" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 70C160 20 300 30 430 60s250 50 380 10 300-60 420-30 160 40 210 40V140H0Z" fill="#b9b08a" opacity=".55"/>
+        <path d="M0 95c140-40 280-45 420-15s260 45 400 10 290-45 410-20 170 35 210 30V140H0Z" fill="#e3a79c" opacity=".7"/>
+        <path d="M0 115c180-30 330-30 480-8s300 25 460 2 320-25 500 0V140H0Z" fill="#e9b9ad"/>
+      </svg>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://gavinafreixarius.com/">Un taller vivencial per acompanyar la primera menstruació i el cicle menstrual des d'una mirada amorosa i empoderada</a>
+  </footer>
+
+  <script>
+    // The form doesn't need a server: it opens WhatsApp or the mail app with the message already written.
+    (function () {
+      var form = document.getElementById("form");
+      var note = document.getElementById("form-note");
+      var via = "whatsapp";
+      form.querySelectorAll("button[type=submit]").forEach(function (b) {
+        b.addEventListener("click", function () { via = b.getAttribute("data-via"); });
+      });
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var d = new FormData(form);
+        var nom = (d.get("nom") || "").trim();
+        var contacte = (d.get("contacte") || "").trim();
+        if (!nom || !contacte) {
+          note.textContent = "Si us plau, escriu el teu nom i un telèfon o correu perquè et pugui respondre.";
+          note.style.color = "#7a1f2e";
+          (nom ? form.contacte : form.nom).focus();
+          return;
+        }
+        var lines = [
+          "Hola Gavina! M'interessa el taller per a mares i filles «La menstruació: un camí per descobrir la nostra naturalesa cíclica».",
+          "",
+          "Nom: " + nom,
+          "Contacte: " + contacte,
+        ];
+        var entitat = (d.get("entitat") || "").trim();
+        var poblacio = (d.get("poblacio") || "").trim();
+        var missatge = (d.get("missatge") || "").trim();
+        if (entitat) lines.push("Entitat: " + entitat);
+        if (poblacio) lines.push("Població: " + poblacio);
+        if (missatge) lines.push("", missatge);
+        var text = lines.join("\n");
+        var url = via === "email"
+          ? "mailto:gavina.salutciclica@gmail.com?subject=" + encodeURIComponent("Taller per a mares i filles") + "&body=" + encodeURIComponent(text)
+          : "https://wa.me/34616351534?text=" + encodeURIComponent(text);
+        note.style.color = "";
+        note.textContent = via === "email" ? "S'està obrint el teu correu amb el missatge preparat…" : "S'està obrint WhatsApp amb el missatge preparat…";
+        if (via === "email") window.location.href = url; else window.open(url, "_blank", "noopener");
+      });
+    })();
+  </script>
+</body>
+</html>

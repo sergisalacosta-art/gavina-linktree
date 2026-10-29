@@ -1,9 +1,45 @@
 {
   "redirects": [
-    { "source": "/primerasessio", "destination": "/sessio-diagnostica", "permanent": true },
-    { "source": "/individual", "destination": "/acompanyament-individual", "permanent": true },
-    { "source": "/recursos", "destination": "/recursos-gratuits", "permanent": true },
-    { "source": "/home", "destination": "/", "permanent": true }
+    {
+      "source": "/primerasessio",
+      "destination": "/sessio-diagnostica",
+      "permanent": true
+    },
+    {
+      "source": "/individual",
+      "destination": "/acompanyament-individual",
+      "permanent": true
+    },
+    {
+      "source": "/recursos",
+      "destination": "/recursos-gratuits",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/taller-mares-i-filles",
+      "destination": "/taller-mares-i-filles/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/taller-mares-i-filles(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
 }

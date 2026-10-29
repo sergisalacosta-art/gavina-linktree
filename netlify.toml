@@ -23,7 +23,18 @@
   to = "/"
   status = 301
 
+# Unlisted workshop page (shared by link only, not indexed)
+[[redirects]]
+  from = "/taller-mares-i-filles"
+  to = "/taller-mares-i-filles/index.html"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/taller-mares-i-filles/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
