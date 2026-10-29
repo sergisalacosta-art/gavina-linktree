@@ -57,10 +57,9 @@
     .brand img { width: 40px; height: 40px; }
     .brand b { display: block; font-family: var(--serif); font-size: 1.2rem; color: var(--burgundy); line-height: 1.1; font-weight: 700; }
     .brand span { font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
-    .top-cta { font-size: .9rem; color: var(--burgundy); text-decoration: none; border-bottom: 1px solid currentColor; white-space: nowrap; }
 
     /* ---------- Hero ---------- */
-    .hero { padding: 24px 0 56px; }
+    .hero { padding: 24px 0 40px; }
     .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 12px;
@@ -102,30 +101,6 @@
       -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
               mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
     }
-
-    /* ---------- Contact form (quiet) ---------- */
-    .contact { padding: 0 0 64px; }
-    .contact-card {
-      display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px; align-items: start;
-      background: var(--paper); border: 1px solid var(--line); border-radius: 26px; padding: 28px 32px;
-    }
-    .contact-card h2 { font-family: var(--serif); font-size: 1.7rem; line-height: 1.15; color: var(--burgundy); margin: 0 0 8px; font-weight: 700; }
-    .contact-card p { margin: 0; color: var(--muted); font-size: .95rem; }
-    .contact-card .direct { margin-top: 14px; font-size: .9rem; }
-    .contact-card .direct a { color: var(--burgundy); }
-    form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    label { display: grid; gap: 4px; font-size: .78rem; color: var(--muted); letter-spacing: .02em; }
-    label.full { grid-column: 1 / -1; }
-    input, textarea {
-      font: inherit; font-size: .95rem; color: var(--ink);
-      border: 1px solid rgba(122,31,46,.18); border-radius: 12px; padding: 10px 12px; background: #fff; width: 100%;
-    }
-    input:focus, textarea:focus { outline: 2px solid rgba(201,138,62,.5); outline-offset: 1px; border-color: transparent; }
-    textarea { min-height: 76px; resize: vertical; }
-    .form-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
-    .form-actions .btn { padding: 11px 22px; font-size: .92rem; }
-    .linklike { background: none; border: 0; padding: 0; font: inherit; font-size: .9rem; color: var(--burgundy); text-decoration: underline; cursor: pointer; }
-    .form-note { grid-column: 1 / -1; font-size: .78rem; color: var(--muted); margin: 0; }
 
     /* ---------- More info ---------- */
     .more { text-align: center; padding: 8px 0 24px; color: var(--muted); }
@@ -193,7 +168,7 @@
     .divider::before, .divider::after { content: ""; width: 70px; height: 1px; background: currentColor; opacity: .6; }
 
     @media (max-width: 900px) {
-      .hero .wrap, .contact-card, .intro-grid, .facilitator { grid-template-columns: 1fr; }
+      .hero .wrap, .intro-grid, .facilitator { grid-template-columns: 1fr; }
       .hero .wrap { gap: 16px; }
       .hero-art { order: -1; max-width: 520px; margin: 0 auto; }
       .facilitator img { width: 180px; margin: 0 auto; }
@@ -203,10 +178,8 @@
     @media (max-width: 600px) {
       body { font-size: 16px; }
       .facts { grid-template-columns: 1fr; }
-      form, .two { grid-template-columns: 1fr; }
-      .contact-card { padding: 22px 18px; }
+      .two { grid-template-columns: 1fr; }
       .actions .btn { width: 100%; }
-      .top-cta { display: none; }
       .closing .wash { padding: 26px 22px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .more svg { animation: none; } .btn { transition: none; } }
@@ -230,7 +203,6 @@
         <img src="/taller-mares-i-filles/logo.png" alt="" />
         <div><b>Gavina Freixa Rius</b><span>Salut Cíclica Femenina</span></div>
       </a>
-      <a class="top-cta" href="#contacte">Demana informació</a>
     </div>
   </header>
 
@@ -249,11 +221,6 @@
             <li><svg><use href="#i-heart"/></svg><div><b>Format</b><span>Vivencial: paraula, moviment, dansa, música i creativitat</span></div></li>
             <li><svg><use href="#i-coins"/></svg><div><b>Inversió</b><span>260 € + 21% IVA + desplaçament</span></div></li>
           </ul>
-
-          <div class="actions">
-            <a class="btn btn-primary" href="#contacte">Demana informació</a>
-            <a class="btn btn-ghost" href="https://wa.me/34616351534?text=Hola%20Gavina!%20M'interessa%20el%20taller%20per%20a%20mares%20i%20filles%20sobre%20la%20menstruaci%C3%B3." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
-          </div>
         </div>
 
         <div class="hero-art">
@@ -262,30 +229,6 @@
       </div>
     </section>
 
-    <!-- CONTACTE (discret, a dalt) -->
-    <section class="contact" id="contacte">
-      <div class="wrap">
-        <div class="contact-card">
-          <div>
-            <h2>Vols organitzar aquest taller?</h2>
-            <p>Escola, AFA, associació o grup de famílies: deixa'm les teves dades i et respondré per explicar-te com el podem fer.</p>
-            <p class="direct">O directament: <a href="tel:+34616351534">616 351 534</a> · <a href="mailto:gavina.salutciclica@gmail.com">gavina.salutciclica@gmail.com</a></p>
-          </div>
-          <form id="form" novalidate>
-            <label>Nom *<input name="nom" autocomplete="name" required /></label>
-            <label>Telèfon o correu *<input name="contacte" autocomplete="email" required /></label>
-            <label>Escola, AFA o entitat<input name="entitat" autocomplete="organization" /></label>
-            <label>Població<input name="poblacio" autocomplete="address-level2" /></label>
-            <label class="full">Missatge<textarea name="missatge" placeholder="Explica'm breument què t'agradaria (dates, nombre de famílies…)"></textarea></label>
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit" data-via="whatsapp"><svg><use href="#i-wa"/></svg>Envia per WhatsApp</button>
-              <button class="linklike" type="submit" data-via="email">o envia-ho per correu</button>
-            </div>
-            <p class="form-note" id="form-note">S'obrirà WhatsApp o el teu correu amb el missatge ja escrit; només cal que l'enviïs.</p>
-          </form>
-        </div>
-      </div>
-    </section>
 
     <div class="more">
       <p>Vols saber-ne més?</p>
@@ -386,7 +329,6 @@
           <p>Un espai per parlar de la menstruació amb naturalitat, viure-la sense por i començar a descobrir la saviesa de la nostra naturalesa cíclica.</p>
         </div>
         <div class="actions">
-          <a class="btn btn-primary" href="#contacte">Demana informació</a>
           <a class="btn btn-ghost" href="https://wa.me/34616351534?text=Hola%20Gavina!%20M'interessa%20el%20taller%20per%20a%20mares%20i%20filles%20sobre%20la%20menstruaci%C3%B3." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
         </div>
         <p class="contact-line">Gavina Freixa Rius · <a href="tel:+34616351534">616 351 534</a> · <a href="mailto:gavina.salutciclica@gmail.com">gavina.salutciclica@gmail.com</a></p>
@@ -403,47 +345,5 @@
     <a href="https://gavinafreixarius.com/">Un taller vivencial per acompanyar la primera menstruació i el cicle menstrual des d'una mirada amorosa i empoderada</a>
   </footer>
 
-  <script>
-    // The form doesn't need a server: it opens WhatsApp or the mail app with the message already written.
-    (function () {
-      var form = document.getElementById("form");
-      var note = document.getElementById("form-note");
-      var via = "whatsapp";
-      form.querySelectorAll("button[type=submit]").forEach(function (b) {
-        b.addEventListener("click", function () { via = b.getAttribute("data-via"); });
-      });
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var d = new FormData(form);
-        var nom = (d.get("nom") || "").trim();
-        var contacte = (d.get("contacte") || "").trim();
-        if (!nom || !contacte) {
-          note.textContent = "Si us plau, escriu el teu nom i un telèfon o correu perquè et pugui respondre.";
-          note.style.color = "#7a1f2e";
-          (nom ? form.contacte : form.nom).focus();
-          return;
-        }
-        var lines = [
-          "Hola Gavina! M'interessa el taller per a mares i filles «La menstruació: un camí per descobrir la nostra naturalesa cíclica».",
-          "",
-          "Nom: " + nom,
-          "Contacte: " + contacte,
-        ];
-        var entitat = (d.get("entitat") || "").trim();
-        var poblacio = (d.get("poblacio") || "").trim();
-        var missatge = (d.get("missatge") || "").trim();
-        if (entitat) lines.push("Entitat: " + entitat);
-        if (poblacio) lines.push("Població: " + poblacio);
-        if (missatge) lines.push("", missatge);
-        var text = lines.join("\n");
-        var url = via === "email"
-          ? "mailto:gavina.salutciclica@gmail.com?subject=" + encodeURIComponent("Taller per a mares i filles") + "&body=" + encodeURIComponent(text)
-          : "https://wa.me/34616351534?text=" + encodeURIComponent(text);
-        note.style.color = "";
-        note.textContent = via === "email" ? "S'està obrint el teu correu amb el missatge preparat…" : "S'està obrint WhatsApp amb el missatge preparat…";
-        if (via === "email") window.location.href = url; else window.open(url, "_blank", "noopener");
-      });
-    })();
-  </script>
 </body>
 </html>
