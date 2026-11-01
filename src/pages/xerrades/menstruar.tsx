@@ -154,8 +154,8 @@ export function MenstruarPage({ lang }: { lang: Lang }) {
           <h2 className="title">{t.objTitle}</h2>
           <p className="lead" style={{ maxWidth: 820, marginTop: 0, marginBottom: 22 }}>{t.objLead}</p>
           <ul className="objectives">
-            {t.items.map((it) => (
-              <li key={it}>{it}</li>
+            {t.items.map((it, i) => (
+              <li key={it} className={i === 3 ? "under-resources" : undefined}>{it}</li>
             ))}
           </ul>
           <div className="photos" style={{ marginTop: 28 }}>
