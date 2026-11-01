@@ -49,7 +49,7 @@ export function SiteHeader() {
           <img src={logoImage} alt="" className="h-11 w-11 shrink-0 object-contain lg:h-12 lg:w-12" />
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate text-[0.98rem] font-semibold text-[#6b5347] sm:text-lg lg:text-xl">Gavina Freixa Rius</span>
-            <span className="truncate text-[0.6rem] uppercase tracking-[0.16em] sm:text-[0.68rem] sm:tracking-[0.22em] text-[#8e6e60] lg:text-xs">{t.tagline}</span>
+            <span className="whitespace-normal text-[0.6rem] uppercase tracking-[0.16em] sm:text-[0.68rem] sm:tracking-[0.22em] text-[#8e6e60] lg:text-xs">{t.tagline}</span>
           </span>
         </Link>
 
