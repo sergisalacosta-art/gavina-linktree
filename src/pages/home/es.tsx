@@ -38,7 +38,7 @@ export function Index() {
           <div className="order-2 md:order-1">
             <Eyebrow>Salud Cíclica Femenina</Eyebrow>
             <h1 data-reveal className="font-serif font-semibold leading-[1.15] text-[#6b5347]" style={{ fontSize: "clamp(2rem, 4.4vw, 3.4rem)" }}>
-              Una nueva manera de entender el bienestar de las mujeres.
+              Una nueva manera de entender el bienestar de las mujeres
             </h1>
             <p data-reveal className="mt-6 max-w-xl text-[#6b5347]" style={{ fontFamily: georgia, fontSize: "clamp(1.1rem, 1.9vw, 1.3rem)", lineHeight: 1.7 }}>
               Te acompaño a aprender a vivir conectada a tu naturaleza cíclica incorporando los autocuidados femeninos naturales y ancestrales a tu vida cotidiana, para vivir en coherencia con la mujer que eres hoy.
