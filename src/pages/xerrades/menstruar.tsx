@@ -112,6 +112,7 @@ export function MenstruarPage({ lang }: { lang: Lang }) {
               <small>{t.subtitle}</small>
             </h1>
             <p className="tagline">{t.tagline}</p>
+            <p className="menstruar-notice">{t.notice}</p>
             <ul className="facts">
               {t.facts.map((f) => (
                 <li key={f.label} className={"wide" in f && f.wide ? "wide" : undefined}>
@@ -123,7 +124,6 @@ export function MenstruarPage({ lang }: { lang: Lang }) {
                 </li>
               ))}
             </ul>
-            <p className="notice">{t.notice}</p>
           </div>
           <div className="hero-art">
             <img src="/web/xerrada-hero.jpg" width={1400} height={764} alt={t.heroAlt} />

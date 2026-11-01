@@ -30,6 +30,7 @@ export const proposalCss = `
   .pp .facts b { display: block; font-size: .95rem; letter-spacing: .14em; margin-bottom: 2px; text-transform: uppercase; color: var(--burgundy); font-weight: 600; }
   .pp .facts span { font-size: .95rem; line-height: 1.45; }
   .pp .notice { margin: 14px 0 0; font-size: .85rem; color: var(--muted); font-style: italic; }
+  .pp .menstruar-notice { margin: -12px 0 20px; padding: 9px 13px; border-left: 3px solid var(--burgundy-soft); border-radius: 0 12px 12px 0; background: rgba(241,211,203,.52); color: var(--burgundy); font-size: .84rem; line-height: 1.45; }
 
   .pp .hero-art img { width: 100%; border-radius: 28px; box-shadow: 0 30px 60px -34px rgba(74,58,51,.55); }
 
