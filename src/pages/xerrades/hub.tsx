@@ -12,7 +12,7 @@ const content = {
     talk: {
       type: "Xerrada",
       title: "Menstruar sense dolor",
-      subtitle: "Acompanyar la salut femenina de la teva filla des de l'arrel",
+      subtitle: "Com acompanyar la teva filla en els seus primers anys de menstruació",
       text: "Detectant senyals d'alerta i aplicant recursos naturals d'autocura i prevenció.",
       chips: ["Per a famílies i dones", "Xerrada participativa"],
       alt: "Una mare i una filla caminant juntes per un prat florit",
@@ -34,7 +34,7 @@ const content = {
     talk: {
       type: "Charla",
       title: "Menstruar sin dolor",
-      subtitle: "Acompañar la salud femenina de tu hija desde la raíz",
+      subtitle: "Cómo acompañar a tu hija en sus primeros años de menstruación",
       text: "Detectando señales de alerta y aplicando recursos naturales de autocuidado y prevención.",
       chips: ["Para familias y mujeres", "Charla participativa"],
       alt: "Una madre y una hija caminando juntas por un prado florido",
