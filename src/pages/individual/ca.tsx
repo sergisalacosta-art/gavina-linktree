@@ -321,33 +321,11 @@ export function IndividualPage() {
       <header className="hero">
         <div className="hero-inner">
           <h1>ACOMPANYAMENT INDIVIDUAL</h1>
-          <p className="hero-sub">Per a dones que volen recuperar la relació amb la seva matriu i cuidar la seva salut femenina amb consciència, recursos naturals i autonomia.</p>
+          <p className="hero-sub">Aprèn a cuidar-te respectant la teva naturalesa cíclica i recupera l'equilibri dins teu.</p>
         </div>
       </header>
 
       <main>
-
-        {/* INTRO BLOCK */}
-        <section>
-          <div className="wrap">
-            <p style={{ marginTop: 0 }}>T&apos;acompanyo a habitar la teva matriu.</p>
-            <p style={{ marginTop: "1rem" }}>Potser has arribat fins aquí buscant respostes a un desequilibri ginecològic.</p>
-            <p style={{ marginTop: "1rem" }}>Aquest procés parteix d&apos;aquí, però et convida a anar més enllà dels símptomes: a recuperar la relació amb la teva matriu.</p>
-            <p style={{ marginTop: "1.8rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Perquè, quan aquesta relació es transforma, també recuperes la confiança en la saviesa que hi habita, en el teu cos i en la capacitat que tens de cuidar la teva salut.
-            </p>
-            <p style={{ marginTop: "1.8rem", textAlign: "center", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "#6b5347", lineHeight: 1.9 }}>
-              Un camí de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>VERITAT</strong>.<br />
-              Un camí de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>SALUT</strong>.<br />
-              Un camí de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>SOBIRANIA</strong>.
-            </p>
-            <p style={{ marginTop: "2rem", textAlign: "center" }}>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                Vull començar el meu procés
-              </a>
-            </p>
-          </div>
-        </section>
 
         {/* QUÈ ÉS */}
         <section className="cream">
@@ -355,9 +333,8 @@ export function IndividualPage() {
             <div className="section-title">
               <h2>Què és?</h2>
             </div>
-            <p style={{ marginTop: 0 }}>Aquest acompanyament és un procés personalitzat per començar a habitar la teva matriu.</p>
-            <p style={{ marginTop: "1rem" }}>Potser hi arribes buscant alleujar un desequilibri ginecològic. Però aquest és un camí que et convida a anar més enllà dels símptomes: a comprendre què et vol explicar el teu cos i a reconstruir la relació amb la teva matriu.</p>
-            <p style={{ marginTop: "1rem" }}>Els recursos que anirem incorporant no són la finalitat del procés. Són les portes d&apos;entrada perquè aquesta relació es pugui transformar.</p>
+            <p style={{ marginTop: 0 }}>Aquest acompanyament és un procés personalitzat que et convida a anar més enllà dels símptomes: a comprendre què t&apos;està dient el teu cos i a reconstruir la relació amb tu.</p>
+            <p style={{ marginTop: "1rem" }}>Els recursos que anirem incorporant són les portes d&apos;entrada perquè aquesta relació es pugui transformar.</p>
             <p style={{ marginTop: "1rem" }}>Cada dona, cada història i cada matriu són úniques. Per això, cada procés també ho és.</p>
             <p style={{ marginTop: "1.8rem", textAlign: "center" }}>
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
@@ -372,13 +349,13 @@ export function IndividualPage() {
                   Més enllà dels símptomes
                 </p>
                 <p>Els símptomes són importants, però no són l&apos;única cosa important.</p>
-                <p>El dolor menstrual, un mioma, la sequedat vaginal, l&apos;absència de menstruació… no són només un desequilibri que cal atendre. També poden ser una invitació a aturar-nos i escoltar què ens està mostrant el cos.</p>
+                <p>El dolor menstrual incapacitant, la irritabilitat i sensibilitat extrema en la fase premenstrual, l&apos;absència de menstruació, la irregularitat en el cicle, els sagnats abundants… no són només un desequilibri que cal atendre. També poden ser una invitació a aturar-nos i escoltar què ens està mostrant el cos.</p>
                 <p>Per això, en aquest acompanyament no busquem únicament atenuar o eliminar un símptoma. Busquem comprendre què pot estar contribuint a aquest desequilibri i crear les condicions perquè el teu cos pugui recuperar, tant com sigui possible, el seu propi equilibri.</p>
-                <p>Per mi, habitar la matriu és recuperar una relació que moltes dones hem anat perdent:</p>
-                <p style={{ marginTop: ".4rem" }}>Una relació amb el teu cos.</p>
-                <p style={{ marginTop: ".2rem" }}>Amb la teva pelvis.</p>
-                <p style={{ marginTop: ".2rem" }}>Amb la teva sexualitat.</p>
-                <p style={{ marginTop: ".2rem" }}>Amb la teva naturalesa.</p>
+                <p>T&apos;acompanyo a recuperar una relació amb tu.</p>
+                <p style={{ marginTop: ".4rem" }}>Amb el teu cos.</p>
+                <p style={{ marginTop: ".2rem" }}>Amb la teva matriu i la teva pelvis.</p>
+                <p style={{ marginTop: ".2rem" }}>Amb la teva menstruació.</p>
+                <p style={{ marginTop: ".2rem" }}>Amb la teva naturalesa cíclica.</p>
               </div>
               <div className="mes-photo" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)", height: "100%", display: "flex", flexDirection: "column" }}>
                 <img
@@ -397,9 +374,6 @@ export function IndividualPage() {
             <p style={{ marginTop: ".8rem", textAlign: "center", fontWeight: 700, color: "#6b5347", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
               I, sobretot, recuperem una cosa essencial: la confiança en nosaltres mateixes.
             </p>
-            <p style={{ marginTop: "1.4rem" }}>
-              Aquest és, per mi, el veritable sentit d&apos;habitar la matriu: habitar-te a tu.
-            </p>
           </div>
         </section>
 
@@ -407,17 +381,14 @@ export function IndividualPage() {
         <section>
           <div className="wrap">
             <div className="section-title">
-              <h2>Per a qui és</h2>
+              <h2>Per a qui és?</h2>
             </div>
-            <p style={{ marginTop: 0 }}>Aquest acompanyament és per a tu si...</p>
+            <p style={{ marginTop: 0 }}>Aquesta sessió és per a tu si:</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1.2rem 0 0", display: "grid", gap: ".9rem" }}>
               {[
-                "Tens dolors menstruals, cicles irregulars, sagnats abundants, amenorrea, infertilitat… i no vols prendre hormones.",
-                "Sents que t'has desconnectat del teu cos i vols tornar a escoltar-lo.",
-                "Tens un mioma, un pòlip o un quist, i l'única opció que t'han ofert és passar per quiròfan, però busques una mirada més respectuosa amb el teu cos.",
-                "Estàs en els teus primers anys de climateri i vols recursos naturals per acompanyar-te en aquesta nova etapa.",
-                "Vols deixar de viure pendent dels símptomes i començar a comprendre què t'estan dient.",
-                "Vols cuidar i autogestionar la teva salut femenina des de les bases que han sostingut les dones en moltes tradicions al llarg del temps.",
+                "Tens dolor menstrual incapacitant (Dismenorrea), cicles irregulars, sagnats abundants, més de tres símptomes persistents en la teva fase premenstrual (Síndrome Premenstrual)",
+                "Sents que t'has desconnectat del teu cos, de la teva ciclicitat o de la teva matriu, i vols tornar a escoltar-te.",
+                "Vols cuidar la teva salut femenina incorporant recursos i sabers ancestrals que han sostingut les dones en tantes tradicions d'arreu del món.",
                 "La teva filla està patint dolors menstruals (Dismenorrea) o Síndrome Premenstrual i la vols acompanyar de manera natural i des de l'arrel",
               ].map((item) => (
                 <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>

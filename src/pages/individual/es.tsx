@@ -158,33 +158,11 @@ export function IndividualPage() {
       <header className="hero">
         <div className="hero-inner">
           <h1>ACOMPAÑAMIENTO INDIVIDUAL</h1>
-          <p className="hero-sub">Para mujeres que quieren recuperar la relación con su matriz y cuidar su salud femenina con conciencia, recursos naturales y autonomía.</p>
+          <p className="hero-sub">Aprende a cuidarte respetando tu naturaleza cíclica y recupera el equilibrio en tu interior.</p>
         </div>
       </header>
 
       <main>
-
-        {/* INTRO BLOCK */}
-        <section>
-          <div className="wrap">
-            <p style={{ marginTop: 0 }}>Te acompaño a habitar tu matriz.</p>
-            <p style={{ marginTop: "1rem" }}>Quizá has llegado hasta aquí buscando respuestas a un desequilibrio ginecológico.</p>
-            <p style={{ marginTop: "1rem" }}>Este proceso parte de aquí, pero te invita a ir más allá de los síntomas: a recuperar la relación con tu matriz.</p>
-            <p style={{ marginTop: "1.8rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Porque, cuando esta relación se transforma, también recuperas la confianza en la sabiduría que la habita, en tu cuerpo y en la capacidad que tienes de cuidar tu salud.
-            </p>
-            <p style={{ marginTop: "1.8rem", textAlign: "center", fontFamily: 'Georgia, "Times New Roman", serif', fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", color: "#6b5347", lineHeight: 1.9 }}>
-              Un camino de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>VERDAD</strong>.<br />
-              Un camino de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>SALUD</strong>.<br />
-              Un camino de <strong style={{ color: "#6b5347", textTransform: "uppercase" }}>SOBERANÍA</strong>.
-            </p>
-            <p style={{ marginTop: "2rem", textAlign: "center" }}>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                Quiero empezar mi proceso
-              </a>
-            </p>
-          </div>
-        </section>
 
         {/* QUÈ ÉS */}
         <section className="cream">
@@ -192,9 +170,8 @@ export function IndividualPage() {
             <div className="section-title">
               <h2>¿Qué es?</h2>
             </div>
-            <p style={{ marginTop: 0 }}>Este acompañamiento es un proceso personalizado para empezar a habitar tu matriz.</p>
-            <p style={{ marginTop: "1rem" }}>Quizá llegas buscando aliviar un desequilibrio ginecológico. Pero este es un camino que te invita a ir más allá de los síntomas: a comprender qué te quiere explicar tu cuerpo y a reconstruir la relación con tu matriz.</p>
-            <p style={{ marginTop: "1rem" }}>Los recursos que iremos incorporando no son la finalidad del proceso. Son las puertas de entrada para que esta relación se pueda transformar.</p>
+            <p style={{ marginTop: 0 }}>Este acompañamiento es un proceso personalizado que te invita a ir más allá de los síntomas: a comprender qué te está diciendo tu cuerpo y a reconstruir la relación contigo.</p>
+            <p style={{ marginTop: "1rem" }}>Los recursos que iremos incorporando son las puertas de entrada para que esta relación pueda transformarse.</p>
             <p style={{ marginTop: "1rem" }}>Cada mujer, cada historia y cada matriz son únicas. Por eso, cada proceso también lo es.</p>
             <p style={{ marginTop: "1.8rem", textAlign: "center" }}>
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
@@ -209,13 +186,13 @@ export function IndividualPage() {
                   Más allá de los síntomas
                 </p>
                 <p>Los síntomas son importantes, pero no son lo único importante.</p>
-                <p>El dolor menstrual, un mioma, la sequedad vaginal, la ausencia de menstruación… no son solo un desequilibrio que hay que atender. También pueden ser una invitación a detenernos y escuchar lo que nos está mostrando el cuerpo.</p>
+                <p>El dolor menstrual incapacitante, la irritabilidad y sensibilidad extremas en la fase premenstrual, la ausencia de menstruación, la irregularidad del ciclo, los sangrados abundantes… no son solo un desequilibrio que hay que atender. También pueden ser una invitación a detenernos y escuchar lo que nos está mostrando el cuerpo.</p>
                 <p>Por eso, en este acompañamiento no buscamos únicamente atenuar o eliminar un síntoma. Buscamos comprender qué puede estar contribuyendo a este desequilibrio y crear las condiciones para que tu cuerpo pueda recuperar, en la medida de lo posible, su propio equilibrio.</p>
-                <p>Para mí, habitar la matriz es recuperar una relación que muchas mujeres hemos ido perdiendo:</p>
-                <p style={{ marginTop: ".4rem" }}>Una relación con tu cuerpo.</p>
-                <p style={{ marginTop: ".2rem" }}>Con tu pelvis.</p>
-                <p style={{ marginTop: ".2rem" }}>Con tu sexualidad.</p>
-                <p style={{ marginTop: ".2rem" }}>Con tu naturaleza.</p>
+                <p>Te acompaño a recuperar una relación contigo.</p>
+                <p style={{ marginTop: ".4rem" }}>Con tu cuerpo.</p>
+                <p style={{ marginTop: ".2rem" }}>Con tu matriz y tu pelvis.</p>
+                <p style={{ marginTop: ".2rem" }}>Con tu menstruación.</p>
+                <p style={{ marginTop: ".2rem" }}>Con tu naturaleza cíclica.</p>
               </div>
               <div className="mes-photo" style={{ borderRadius: "1.7rem", overflow: "hidden", boxShadow: "0 16px 50px rgba(107,83,71,.18)", height: "100%", display: "flex", flexDirection: "column" }}>
                 <img
@@ -234,9 +211,6 @@ export function IndividualPage() {
             <p style={{ marginTop: ".8rem", textAlign: "center", fontWeight: 700, color: "#6b5347", textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
               Y, sobre todo, recuperamos algo esencial: la confianza en nosotras mismas.
             </p>
-            <p style={{ marginTop: "1.4rem" }}>
-              Este es, para mí, el verdadero sentido de habitar la matriz: habitarte a ti.
-            </p>
           </div>
         </section>
 
@@ -244,17 +218,14 @@ export function IndividualPage() {
         <section>
           <div className="wrap">
             <div className="section-title">
-              <h2>Para quién es</h2>
+              <h2>¿Para quién es?</h2>
             </div>
-            <p style={{ marginTop: 0 }}>Este acompañamiento es para ti si...</p>
+            <p style={{ marginTop: 0 }}>Esta sesión es para ti si:</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1.2rem 0 0", display: "grid", gap: ".9rem" }}>
               {[
-                "Tienes dolores menstruales, ciclos irregulares, sangrados abundantes, amenorrea, infertilidad… y no quieres tomar hormonas.",
-                "Sientes que te has desconectado de tu cuerpo y quieres volver a escucharlo.",
-                "Tienes un mioma, un pólipo o un quiste, y la única opción que te han ofrecido es pasar por quirófano, pero buscas una mirada más respetuosa con tu cuerpo.",
-                "Estás en tus primeros años de climaterio y quieres recursos naturales para acompañarte en esta nueva etapa.",
-                "Quieres dejar de vivir pendiente de los síntomas y empezar a comprender lo que te están diciendo.",
-                "Quieres cuidar y autogestionar tu salud femenina desde las bases que han sostenido a las mujeres en muchas tradiciones a lo largo del tiempo.",
+                "Tienes dolor menstrual incapacitante (dismenorrea), ciclos irregulares, sangrados abundantes, más de tres síntomas persistentes en tu fase premenstrual (síndrome premenstrual)",
+                "Sientes que te has desconectado de tu cuerpo, de tu ciclicidad o de tu matriz, y quieres volver a escucharte.",
+                "Quieres cuidar tu salud femenina incorporando recursos y saberes ancestrales que han sostenido a las mujeres en tantas tradiciones de todo el mundo.",
                 "Tu hija está sufriendo dolores menstruales (dismenorrea) o síndrome premenstrual y quieres acompañarla de manera natural y desde la raíz",
               ].map((item) => (
                 <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
