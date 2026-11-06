@@ -241,7 +241,7 @@ export function IndividualPage() {
         <section className="cream">
           <div className="wrap">
             <div className="section-title">
-              <h2>Los caminos que recorreremos para habitar tu matriz</h2>
+              <h2>Los caminos que recorreremos</h2>
             </div>
             <div className="camins-grid">
               <div className="camins-photo">
@@ -276,10 +276,10 @@ export function IndividualPage() {
               Cada uno de estos caminos es una puerta de entrada.
             </p>
             <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              A través de ellos, irás recuperando...
+              A través de ellos, irás integrando cómo cuidarte de verdad y recuperando...
             </p>
             <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              ...una relación más consciente con tu matriz y contigo misma.
+              ...una relación más consciente contigo misma.
             </p>
           </div>
         </section>
@@ -309,8 +309,6 @@ export function IndividualPage() {
             <div className="section-title">
               <h2>Imagínate dentro de unos meses...</h2>
             </div>
-            <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Quizá el verdadero cambio no es solo resolver un síntoma.</p>
-            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Quizá es recuperar una relación con tu matriz.</p>
             <p style={{ marginTop: "1.4rem", fontWeight: 700, color: "#6b5347" }}>Después de este proceso...</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", display: "grid", gap: "1rem" }}>
               {[
@@ -327,13 +325,7 @@ export function IndividualPage() {
               ))}
             </ul>
             <p style={{ marginTop: "2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Este es el camino de habitar la matriz:
-            </p>
-            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              volver a ti, recuperar la relación con tu matriz y con tu cuerpo
-            </p>
-            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              y caminar tu salud desde un lugar más consciente y más tuyo.
+              Este es el camino de volver a ti, de recuperar la relación con tu matriz y con tu ciclicidad
             </p>
             <p style={{ marginTop: "2rem", textAlign: "center" }}>
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
@@ -384,9 +376,6 @@ export function IndividualPage() {
               <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
                 tomar un papel activo en el cuidado de tu salud y reconectar con la sabiduría que habita en tu matriz.
               </span>
-            </p>
-            <p style={{ marginTop: "1.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Para mí, habitar la matriz es volver a ti.
             </p>
           </div>
         </section>
@@ -440,12 +429,6 @@ export function IndividualPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
-                Si este camino ha resonado contigo<br />
-                y sientes que ha llegado el momento de<br />
-                <span className="em-sub">empezar a habitar tu matriz</span>,<br />
-                será un placer acompañarte.
-              </h2>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   Quiero empezar mi proceso

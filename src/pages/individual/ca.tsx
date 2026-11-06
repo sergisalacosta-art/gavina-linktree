@@ -404,7 +404,7 @@ export function IndividualPage() {
         <section className="cream">
           <div className="wrap">
             <div className="section-title">
-              <h2>Els camins que recorrerem per habitar la teva matriu</h2>
+              <h2>Els camins que recorrerem</h2>
             </div>
             <div className="camins-grid">
               <div className="camins-photo">
@@ -439,10 +439,10 @@ export function IndividualPage() {
               Cada un d&apos;aquests camins és una porta d&apos;entrada.
             </p>
             <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              A través d&apos;ells, aniràs recuperant...
+              A través d&apos;ells, aniràs integrant com cuidar-te de debò i recuperant...
             </p>
             <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              ...una relació més conscient amb la teva matriu i amb tu mateixa.
+              ...una relació més conscient amb tu mateixa.
             </p>
           </div>
         </section>
@@ -472,8 +472,6 @@ export function IndividualPage() {
             <div className="section-title">
               <h2>Imagina&apos;t d&apos;aquí a uns mesos...</h2>
             </div>
-            <p style={{ marginTop: 0, textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Potser el veritable canvi no és només resoldre un símptoma.</p>
-            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>Potser és recuperar una relació amb la teva matriu.</p>
             <p style={{ marginTop: "1.4rem", fontWeight: 700, color: "#6b5347" }}>Després d&apos;aquest procés...</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1rem 0 0", display: "grid", gap: "1rem" }}>
               {[
@@ -490,13 +488,7 @@ export function IndividualPage() {
               ))}
             </ul>
             <p style={{ marginTop: "2rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Aquest és el camí d&apos;habitar la matriu:
-            </p>
-            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              tornar a tu, recuperar la relació amb la teva matriu i amb el teu cos
-            </p>
-            <p style={{ marginTop: ".5rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              i caminar la teva salut des d&apos;un lloc més conscient i més teu.
+              Aquest és el camí de tornar a tu, de recuperar la relació amb la teva matriu i amb la teva ciclicitat
             </p>
             <p style={{ marginTop: "2rem", textAlign: "center" }}>
               <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
@@ -547,9 +539,6 @@ export function IndividualPage() {
               <span style={{ textDecoration: "underline", textDecorationColor: "#c89684", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>
                 prendre un paper actiu en la cura de la teva salut i reconnectar amb la saviesa que habita en la teva matriu.
               </span>
-            </p>
-            <p style={{ marginTop: "1.4rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Per mi, habitar la matriu és tornar a tu.
             </p>
           </div>
         </section>
@@ -603,12 +592,6 @@ export function IndividualPage() {
         <section>
           <div className="wrap">
             <div className="cta-block">
-              <h2 style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.6rem)", lineHeight: 1.3, margin: 0, color: "#4a2e22" }}>
-                Si aquest camí ha ressonat amb tu<br />
-                i sents que ha arribat el moment de<br />
-                <span className="em-sub">començar a habitar la teva matriu</span>,<br />
-                serà un plaer acompanyar-te.
-              </h2>
               <p style={{ marginTop: "1.8rem" }}>
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                   Vull començar el meu procés
