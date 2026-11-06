@@ -241,23 +241,6 @@ export function SessioPage() {
               T&apos;ajudo a comprendre què pot estar expressant el teu cos<br />
               i a trobar quin camí pot tenir més sentit per a tu.
             </p>
-            <p style={{ marginTop: "1.4rem" }}>
-              Potser fa temps que convius amb un desequilibri ginecològic, un símptoma que es repeteix o una sensació que alguna cosa no està en equilibri.
-            </p>
-            <p style={{ marginTop: "1rem" }}>
-              Potser has buscat informació, has provat diferents opcions, però encara no tens clar d&apos;on pot venir el que estàs vivint ni què podries fer a partir d&apos;ara.
-            </p>
-            <p style={{ marginTop: "1rem" }}>
-              En aquesta sessió posarem llum al teu cas.
-            </p>
-            <p style={{ marginTop: "1rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Un espai per escoltar la teva història, comprendre què pot estar expressant el teu cos i oferir-te una orientació personalitzada perquè puguis prendre decisions amb més claredat.
-            </p>
-            <p style={{ marginTop: "2rem", textAlign: "center" }}>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                Vull reservar la meva sessió
-              </a>
-            </p>
           </div>
         </section>
 
@@ -270,13 +253,10 @@ export function SessioPage() {
             <p style={{ marginTop: 0 }}>Aquesta sessió és per a tu si:</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1.2rem 0 0", display: "grid", gap: ".9rem" }}>
               {[
-                "Tens un desequilibri ginecològic i vols una mirada integrativa per comprendre millor què pot estar passant al teu cos.",
-                "Tens símptomes com dolor menstrual, cicles irregulars, sagnats abundants, amenorrea, miomes, quists, dolor en les relacions o altres molèsties relacionades amb la salut femenina, i sents que necessites una mirada més global i respectuosa sobre el teu cas.",
-                "Vols valorar si un procés d'acompanyament personalitzat pot ser el següent pas per a tu.",
+                "Tens símptomes com dolor menstrual, cicles irregulars, sagnats abundants, més de tres símptomes persistents en la teva fase premenstrual.",
                 "Sents que t'has desconnectat del teu cos, de la teva ciclicitat o de la teva matriu, i vols tornar a escoltar-lo.",
                 "Estàs en els teus primers anys de climateri i vols comprendre millor aquesta nova etapa i trobar recursos naturals per acompanyar-te.",
                 "Vols cuidar i autogestionar la teva salut femenina des d'una mirada natural, recuperant recursos i sabers que han sostingut les dones en moltes tradicions al llarg del temps.",
-                "No saps per on començar i necessites una orientació personalitzada per saber quin podria ser el millor camí per a tu.",
               ].map((item) => (
                 <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
                   <span style={{ flexShrink: 0, color: "var(--terra)", fontWeight: 700 }}>✔</span>

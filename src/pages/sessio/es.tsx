@@ -87,23 +87,6 @@ export function SessioPage() {
               Te ayudo a comprender qué puede estar expresando tu cuerpo<br />
               y a encontrar qué camino puede tener más sentido para ti.
             </p>
-            <p style={{ marginTop: "1.4rem" }}>
-              Quizá hace tiempo que convives con un desequilibrio ginecológico, un síntoma que se repite o la sensación de que algo no está en equilibrio.
-            </p>
-            <p style={{ marginTop: "1rem" }}>
-              Quizá has buscado información, has probado diferentes opciones, pero todavía no tienes claro de dónde puede venir lo que estás viviendo ni qué podrías hacer a partir de ahora.
-            </p>
-            <p style={{ marginTop: "1rem" }}>
-              En esta sesión pondremos luz a tu caso.
-            </p>
-            <p style={{ marginTop: "1rem", textAlign: "center", fontWeight: 700, color: "#6b5347" }}>
-              Un espacio para escuchar tu historia, comprender qué puede estar expresando tu cuerpo y ofrecerte una orientación personalizada para que puedas tomar decisiones con más claridad.
-            </p>
-            <p style={{ marginTop: "2rem", textAlign: "center" }}>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-terra">
-                Quiero reservar mi sesión
-              </a>
-            </p>
           </div>
         </section>
 
@@ -116,13 +99,10 @@ export function SessioPage() {
             <p style={{ marginTop: 0 }}>Esta sesión es para ti si:</p>
             <ul style={{ listStyle: "none", padding: 0, margin: "1.2rem 0 0", display: "grid", gap: ".9rem" }}>
               {[
-                "Tienes un desequilibrio ginecológico y quieres una mirada integrativa para comprender mejor qué puede estar pasando en tu cuerpo.",
-                "Tienes síntomas como dolor menstrual, ciclos irregulares, sangrados abundantes, amenorrea, miomas, quistes, dolor en las relaciones u otras molestias relacionadas con la salud femenina, y sientes que necesitas una mirada más global y respetuosa sobre tu caso.",
-                "Quieres valorar si un proceso de acompañamiento personalizado puede ser el siguiente paso para ti.",
+                "Tienes síntomas como dolor menstrual, ciclos irregulares, sangrados abundantes, más de tres síntomas persistentes en tu fase premenstrual.",
                 "Sientes que te has desconectado de tu cuerpo, de tu ciclicidad o de tu matriz, y quieres volver a escucharlo.",
                 "Estás en tus primeros años de climaterio y quieres comprender mejor esta nueva etapa y encontrar recursos naturales para acompañarte.",
                 "Quieres cuidar y autogestionar tu salud femenina desde una mirada natural, recuperando recursos y saberes que han sostenido a las mujeres en muchas tradiciones a lo largo del tiempo.",
-                "No sabes por dónde empezar y necesitas una orientación personalizada para saber cuál podría ser el mejor camino para ti.",
               ].map((item) => (
                 <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: ".6rem", fontSize: "clamp(1.15rem, 2.2vw, 1.4rem)", fontFamily: 'Georgia, "Times New Roman", serif', color: "#6b5347", lineHeight: 1.6 }}>
                   <span style={{ flexShrink: 0, color: "var(--terra)", fontWeight: 700 }}>✔</span>
