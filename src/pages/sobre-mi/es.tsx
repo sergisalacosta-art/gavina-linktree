@@ -44,7 +44,6 @@ export function SobreMi() {
                 Esta es la mirada que sostiene todo lo que comparto.
               </blockquote>
               <p data-reveal>Los recursos que te ofrezco —alimentación regenerativa, plantas, fitoginecología, movimiento pélvico-uterino, conciencia sobre la sexualidad y conexión con la ciclicidad— no son la finalidad del camino. Son puertas de entrada para que puedas ir reconstruyendo, a tu ritmo, una relación más consciente con tu matriz y contigo misma.</p>
-              <p data-reveal>Para mí, este es el verdadero sentido de habitar la matriz.</p>
               <p data-reveal>Y es desde este lugar que hoy puedo acompañarte.</p>
             </div>
           </div>
