@@ -34,6 +34,7 @@ export function getNav(lang: Lang): NavItem[] {
         { label: "Acompañamientos", to: pages.individual.es, children: acompanyaments },
         { label: "Charlas y talleres", to: pages.xerrades.es },
         { label: "Recursos gratuitos", to: pages.recursos.es },
+        { label: "Blog", to: pages.blog.ca },
       ]
     : [
         { label: "Inici", to: pages.home.ca },
@@ -41,6 +42,7 @@ export function getNav(lang: Lang): NavItem[] {
         { label: "Acompanyaments", to: pages.individual.ca, children: acompanyaments },
         { label: "Xerrades i tallers", to: pages.xerrades.ca },
         { label: "Recursos gratuïts", to: pages.recursos.ca },
+        { label: "Blog", to: pages.blog.ca },
       ];
 }
 
