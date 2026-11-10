@@ -4,8 +4,8 @@ export const dismenorrea = {
   category: "Menstruació i salut menstrual",
   categories: ["Menstruació i salut menstrual", "Ciclicitat femenina", "Menarquia i adolescència"],
   date: "2026-11-10",
-  image: "https://commons.wikimedia.org/wiki/Special:FilePath/Woman_exploring_a_forest_(Unsplash).jpg",
-  imageAlt: "Dona caminant per un sender envoltat de vegetació i natura",
+  image: "/blog/dismenorrea-fotografia-triada.svg",
+  imageAlt: "Dona d’esquena amb vestit blanc de ratlles caminant per un sender amb vegetació",
   description: "Què és la dismenorrea, per què apareix el dolor menstrual i com acompanyar una filla des de l'escolta, la ciclicitat i l'autocura.",
   keywords: ["dismenorrea", "dolor menstrual", "dismenorrea primària", "dismenorrea secundària", "dolor menstrual en adolescents", "autocura menstrual"],
   sections: [

@@ -91,7 +91,7 @@ export function headTags(key: PageKey | null, lang: Lang, path: string): HeadTag
     { tag: "meta", id: "og:description", attrs: { property: "og:description", content: meta.description } },
     { tag: "meta", id: "og:url", attrs: { property: "og:url", content: url } },
     { tag: "meta", id: "og:locale", attrs: { property: "og:locale", content: lang === "es" ? "es_ES" : "ca_ES" } },
-    { tag: "meta", id: "og:image", attrs: { property: "og:image", content: key === "spmArticle" ? `${SITE_URL}/blog/fase-premenstrual-bosc.jpg` : `${SITE_URL}/web/hero.jpg` } },
+    { tag: "meta", id: "og:image", attrs: { property: "og:image", content: key === "spmArticle" ? `${SITE_URL}/blog/fase-premenstrual-riu.jpg` : `${SITE_URL}/web/hero.jpg` } },
   ];
   if (key) {
     const urls = pages[key];

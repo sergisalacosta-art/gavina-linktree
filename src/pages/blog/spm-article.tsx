@@ -13,7 +13,7 @@ export function SpmArticle() {
         <h1 className="text-4xl font-semibold leading-tight md:text-5xl">{spm.title}</h1>
         <p className="mt-5 text-sm">Gavina Freixa Rius · 10 de novembre de 2026</p>
       </header>
-      <figure className="mt-9"><img src={spm.image} alt={spm.imageAlt} className="aspect-[16/9] w-full rounded-2xl object-cover" /><figcaption className="mt-2 text-right text-xs text-[#8e6e60]">Fotografia: Alessio Lin · CC0</figcaption></figure>
+      <figure className="mt-9"><img src={spm.image} alt={spm.imageAlt} className="aspect-[16/9] w-full rounded-2xl object-cover" /><figcaption className="mt-2 text-right text-xs text-[#8e6e60]">Fotografia de l’arxiu personal de Gavina Freixa Rius</figcaption></figure>
       <div className="space-y-10 py-10 text-lg leading-[1.85]">
         {spm.sections.map((section,i)=><section key={i}>
           {"heading" in section && <h2 className="mb-6 text-3xl font-semibold leading-snug text-[#8a4b34]">{section.heading}</h2>}

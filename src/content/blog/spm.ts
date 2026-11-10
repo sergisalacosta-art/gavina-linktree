@@ -9,8 +9,8 @@ export const spm = {
     "Climateri i maduresa femenina"
   ],
   "date": "2026-11-10",
-  "image": "/blog/fase-premenstrual-bosc.jpg",
-  "imageAlt": "Camí cobert de fulles de tardor entre arbres i boira suau",
+  "image": "/blog/fase-premenstrual-riu.jpg",
+  "imageAlt": "Gavina vora un gorg, envoltada de roques i vegetació",
   "description": "La fase premenstrual no és el mateix que la síndrome premenstrual. Una mirada sobre la ciclicitat, els ritmes i les autocures naturals i ancestrals.",
   "sections": [
     {
