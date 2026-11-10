@@ -18,7 +18,7 @@ export function BlogIndex() {
       </nav>
       <div className="grid gap-8 md:grid-cols-2">
         {visible && <Link to="/blog/que-es-la-dismenorrea" className="group block overflow-hidden rounded-3xl border border-[#e4d6c9] bg-[#faf5ef] shadow-sm hover:shadow-lg">
-          <div className="h-52 bg-[#e9d9cb] p-10 flex items-center justify-center text-center text-[#8a4b34] text-2xl">Menstruació i salut menstrual</div>
+          <img src={dismenorrea.image} alt={dismenorrea.imageAlt} loading="lazy" className="h-52 w-full object-cover" />
           <div className="p-7"><p className="mb-3 text-xs uppercase tracking-[.16em] text-[#8a4b34]">{dismenorrea.category}</p><h2 className="text-2xl font-semibold group-hover:underline">{dismenorrea.title}</h2><p className="mt-3 text-base">{dismenorrea.description}</p><p className="mt-5 text-[#8a4b34]">Llegir l'article →</p></div>
         </Link>}
       </div>
