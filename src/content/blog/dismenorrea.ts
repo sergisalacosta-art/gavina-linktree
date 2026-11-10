@@ -2,6 +2,7 @@ export const dismenorrea = {
   slug: "que-es-la-dismenorrea",
   title: "Què és la dismenorrea? Quan la menstruació fa mal",
   category: "Menstruació i salut menstrual",
+  categories: ["Menstruació i salut menstrual", "Ciclicitat femenina", "Menarquia i adolescència"],
   date: "2026-11-10",
   description: "Què és la dismenorrea, per què apareix el dolor menstrual i com acompanyar una filla des de l'escolta, la ciclicitat i l'autocura.",
   keywords: ["dismenorrea", "dolor menstrual", "dismenorrea primària", "dismenorrea secundària", "dolor menstrual en adolescents", "autocura menstrual"],
