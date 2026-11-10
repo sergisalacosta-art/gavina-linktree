@@ -118,6 +118,6 @@ export function headTagsHtml(tags: HeadTag[]): string {
 /** Pages that exist in both languages (these go in the sitemap). */
 export function sitemapEntries(): { key: PageKey; urls: Partial<Record<Lang, string>> }[] {
   return (Object.keys(pages) as PageKey[])
-    .filter((k) => pages[k].ca && pages[k].es)
+    .filter((k) => pages[k].ca && !!seo[k].ca)
     .map((k) => ({ key: k, urls: { ca: pages[k].ca, es: pages[k].es ?? undefined } }));
 }
