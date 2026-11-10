@@ -44,7 +44,6 @@ export function SobreMi() {
                 Aquesta és la mirada que sosté tot el que comparteixo.
               </blockquote>
               <p data-reveal>Els recursos que t&apos;ofereixo —alimentació regenerativa, plantes, fitoginecologia, moviment pelvicuterí, consciència sobre la sexualitat i connexió amb la ciclicitat— no són la finalitat del camí. Són portes d&apos;entrada perquè puguis anar reconstruint, al teu ritme, una relació més conscient amb la teva matriu i amb tu mateixa.</p>
-              <p data-reveal>Per mi, aquest és el veritable sentit d&apos;habitar la matriu.</p>
               <p data-reveal>I és des d&apos;aquest lloc que avui puc acompanyar-te.</p>
             </div>
           </div>
