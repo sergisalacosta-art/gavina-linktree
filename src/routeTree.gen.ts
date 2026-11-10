@@ -9,93 +9,36 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as XerradesRouteImport } from './routes/xerrades'
-import { Route as SobreMiRouteImport } from './routes/sobre-mi'
-import { Route as SessioDiagnosticaRouteImport } from './routes/sessio-diagnostica'
-import { Route as RetirRouteImport } from './routes/retir'
-import { Route as RecursosGratuitsRouteImport } from './routes/recursos-gratuits'
-import { Route as RecursosRouteImport } from './routes/recursos'
-import { Route as RecursBasesRouteImport } from './routes/recurs-bases'
-import { Route as RecursRouteImport } from './routes/recurs'
-import { Route as PrimerasessioRouteImport } from './routes/primerasessio'
-import { Route as MatriusRouteImport } from './routes/matrius'
-import { Route as IndividualRouteImport } from './routes/individual'
-import { Route as HomeRouteImport } from './routes/home'
-import { Route as CuresRouteImport } from './routes/cures'
-import { Route as AcompanyamentIndividualRouteImport } from './routes/acompanyament-individual'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcompanyamentIndividualRouteImport } from './routes/acompanyament-individual'
+import { Route as CuresRouteImport } from './routes/cures'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as IndividualRouteImport } from './routes/individual'
+import { Route as MatriusRouteImport } from './routes/matrius'
+import { Route as PrimerasessioRouteImport } from './routes/primerasessio'
+import { Route as RecursRouteImport } from './routes/recurs'
+import { Route as RecursBasesRouteImport } from './routes/recurs-bases'
+import { Route as RecursosRouteImport } from './routes/recursos'
+import { Route as RecursosGratuitsRouteImport } from './routes/recursos-gratuits'
+import { Route as RetirRouteImport } from './routes/retir'
+import { Route as SessioDiagnosticaRouteImport } from './routes/sessio-diagnostica'
+import { Route as SobreMiRouteImport } from './routes/sobre-mi'
+import { Route as XerradesRouteImport } from './routes/xerrades'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogFasePremenstrualSindromePremenstrualRouteImport } from './routes/blog.fase-premenstrual-sindrome-premenstrual'
+import { Route as BlogQueEsLaDismenorreaRouteImport } from './routes/blog.que-es-la-dismenorrea'
 import { Route as EsIndexRouteImport } from './routes/es/index'
-import { Route as XerradesMenstruarSenseDolorRouteImport } from './routes/xerrades_.menstruar-sense-dolor'
-import { Route as EsSobreMiRouteImport } from './routes/es/sobre-mi'
-import { Route as EsSesionDiagnosticaRouteImport } from './routes/es/sesion-diagnostica'
-import { Route as EsRecursosGratuitosRouteImport } from './routes/es/recursos-gratuitos'
-import { Route as EsCharlasRouteImport } from './routes/es/charlas'
 import { Route as EsAcompanamientoIndividualRouteImport } from './routes/es/acompanamiento-individual'
+import { Route as EsCharlasRouteImport } from './routes/es/charlas'
+import { Route as EsRecursosGratuitosRouteImport } from './routes/es/recursos-gratuitos'
+import { Route as EsSesionDiagnosticaRouteImport } from './routes/es/sesion-diagnostica'
+import { Route as EsSobreMiRouteImport } from './routes/es/sobre-mi'
+import { Route as XerradesMenstruarSenseDolorRouteImport } from './routes/xerrades_.menstruar-sense-dolor'
 import { Route as EsCharlasMenstruarSinDolorRouteImport } from './routes/es/charlas_.menstruar-sin-dolor'
 
-const XerradesRoute = XerradesRouteImport.update({
-  id: '/xerrades',
-  path: '/xerrades',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SobreMiRoute = SobreMiRouteImport.update({
-  id: '/sobre-mi',
-  path: '/sobre-mi',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SessioDiagnosticaRoute = SessioDiagnosticaRouteImport.update({
-  id: '/sessio-diagnostica',
-  path: '/sessio-diagnostica',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RetirRoute = RetirRouteImport.update({
-  id: '/retir',
-  path: '/retir',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RecursosGratuitsRoute = RecursosGratuitsRouteImport.update({
-  id: '/recursos-gratuits',
-  path: '/recursos-gratuits',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RecursosRoute = RecursosRouteImport.update({
-  id: '/recursos',
-  path: '/recursos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RecursBasesRoute = RecursBasesRouteImport.update({
-  id: '/recurs-bases',
-  path: '/recurs-bases',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RecursRoute = RecursRouteImport.update({
-  id: '/recurs',
-  path: '/recurs',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrimerasessioRoute = PrimerasessioRouteImport.update({
-  id: '/primerasessio',
-  path: '/primerasessio',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MatriusRoute = MatriusRouteImport.update({
-  id: '/matrius',
-  path: '/matrius',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndividualRoute = IndividualRouteImport.update({
-  id: '/individual',
-  path: '/individual',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HomeRoute = HomeRouteImport.update({
-  id: '/home',
-  path: '/home',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CuresRoute = CuresRouteImport.update({
-  id: '/cures',
-  path: '/cures',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcompanyamentIndividualRoute = AcompanyamentIndividualRouteImport.update({
@@ -103,9 +46,85 @@ const AcompanyamentIndividualRoute = AcompanyamentIndividualRouteImport.update({
   path: '/acompanyament-individual',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CuresRoute = CuresRouteImport.update({
+  id: '/cures',
+  path: '/cures',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndividualRoute = IndividualRouteImport.update({
+  id: '/individual',
+  path: '/individual',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatriusRoute = MatriusRouteImport.update({
+  id: '/matrius',
+  path: '/matrius',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrimerasessioRoute = PrimerasessioRouteImport.update({
+  id: '/primerasessio',
+  path: '/primerasessio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursRoute = RecursRouteImport.update({
+  id: '/recurs',
+  path: '/recurs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursBasesRoute = RecursBasesRouteImport.update({
+  id: '/recurs-bases',
+  path: '/recurs-bases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosRoute = RecursosRouteImport.update({
+  id: '/recursos',
+  path: '/recursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosGratuitsRoute = RecursosGratuitsRouteImport.update({
+  id: '/recursos-gratuits',
+  path: '/recursos-gratuits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetirRoute = RetirRouteImport.update({
+  id: '/retir',
+  path: '/retir',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SessioDiagnosticaRoute = SessioDiagnosticaRouteImport.update({
+  id: '/sessio-diagnostica',
+  path: '/sessio-diagnostica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreMiRoute = SobreMiRouteImport.update({
+  id: '/sobre-mi',
+  path: '/sobre-mi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const XerradesRoute = XerradesRouteImport.update({
+  id: '/xerrades',
+  path: '/xerrades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogFasePremenstrualSindromePremenstrualRoute =
+  BlogFasePremenstrualSindromePremenstrualRouteImport.update({
+    id: '/blog/fase-premenstrual-sindrome-premenstrual',
+    path: '/blog/fase-premenstrual-sindrome-premenstrual',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogQueEsLaDismenorreaRoute = BlogQueEsLaDismenorreaRouteImport.update({
+  id: '/blog/que-es-la-dismenorrea',
+  path: '/blog/que-es-la-dismenorrea',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EsIndexRoute = EsIndexRouteImport.update({
@@ -113,20 +132,15 @@ const EsIndexRoute = EsIndexRouteImport.update({
   path: '/es/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const XerradesMenstruarSenseDolorRoute =
-  XerradesMenstruarSenseDolorRouteImport.update({
-    id: '/xerrades_/menstruar-sense-dolor',
-    path: '/xerrades/menstruar-sense-dolor',
+const EsAcompanamientoIndividualRoute =
+  EsAcompanamientoIndividualRouteImport.update({
+    id: '/es/acompanamiento-individual',
+    path: '/es/acompanamiento-individual',
     getParentRoute: () => rootRouteImport,
   } as any)
-const EsSobreMiRoute = EsSobreMiRouteImport.update({
-  id: '/es/sobre-mi',
-  path: '/es/sobre-mi',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsSesionDiagnosticaRoute = EsSesionDiagnosticaRouteImport.update({
-  id: '/es/sesion-diagnostica',
-  path: '/es/sesion-diagnostica',
+const EsCharlasRoute = EsCharlasRouteImport.update({
+  id: '/es/charlas',
+  path: '/es/charlas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EsRecursosGratuitosRoute = EsRecursosGratuitosRouteImport.update({
@@ -134,15 +148,20 @@ const EsRecursosGratuitosRoute = EsRecursosGratuitosRouteImport.update({
   path: '/es/recursos-gratuitos',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EsCharlasRoute = EsCharlasRouteImport.update({
-  id: '/es/charlas',
-  path: '/es/charlas',
+const EsSesionDiagnosticaRoute = EsSesionDiagnosticaRouteImport.update({
+  id: '/es/sesion-diagnostica',
+  path: '/es/sesion-diagnostica',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EsAcompanamientoIndividualRoute =
-  EsAcompanamientoIndividualRouteImport.update({
-    id: '/es/acompanamiento-individual',
-    path: '/es/acompanamiento-individual',
+const EsSobreMiRoute = EsSobreMiRouteImport.update({
+  id: '/es/sobre-mi',
+  path: '/es/sobre-mi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const XerradesMenstruarSenseDolorRoute =
+  XerradesMenstruarSenseDolorRouteImport.update({
+    id: '/xerrades_/menstruar-sense-dolor',
+    path: '/xerrades/menstruar-sense-dolor',
     getParentRoute: () => rootRouteImport,
   } as any)
 const EsCharlasMenstruarSinDolorRoute =
@@ -168,12 +187,15 @@ export interface FileRoutesByFullPath {
   '/sessio-diagnostica': typeof SessioDiagnosticaRoute
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
+  '/blog/fase-premenstrual-sindrome-premenstrual': typeof BlogFasePremenstrualSindromePremenstrualRoute
+  '/blog/que-es-la-dismenorrea': typeof BlogQueEsLaDismenorreaRoute
   '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
   '/es/charlas': typeof EsCharlasRoute
   '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
   '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
   '/es/sobre-mi': typeof EsSobreMiRoute
   '/xerrades/menstruar-sense-dolor': typeof XerradesMenstruarSenseDolorRoute
+  '/blog/': typeof BlogIndexRoute
   '/es/': typeof EsIndexRoute
   '/es/charlas/menstruar-sin-dolor': typeof EsCharlasMenstruarSinDolorRoute
 }
@@ -193,12 +215,15 @@ export interface FileRoutesByTo {
   '/sessio-diagnostica': typeof SessioDiagnosticaRoute
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
+  '/blog/fase-premenstrual-sindrome-premenstrual': typeof BlogFasePremenstrualSindromePremenstrualRoute
+  '/blog/que-es-la-dismenorrea': typeof BlogQueEsLaDismenorreaRoute
   '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
   '/es/charlas': typeof EsCharlasRoute
   '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
   '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
   '/es/sobre-mi': typeof EsSobreMiRoute
   '/xerrades/menstruar-sense-dolor': typeof XerradesMenstruarSenseDolorRoute
+  '/blog': typeof BlogIndexRoute
   '/es': typeof EsIndexRoute
   '/es/charlas/menstruar-sin-dolor': typeof EsCharlasMenstruarSinDolorRoute
 }
@@ -219,12 +244,15 @@ export interface FileRoutesById {
   '/sessio-diagnostica': typeof SessioDiagnosticaRoute
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
+  '/blog/fase-premenstrual-sindrome-premenstrual': typeof BlogFasePremenstrualSindromePremenstrualRoute
+  '/blog/que-es-la-dismenorrea': typeof BlogQueEsLaDismenorreaRoute
   '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
   '/es/charlas': typeof EsCharlasRoute
   '/es/recursos-gratuitos': typeof EsRecursosGratuitosRoute
   '/es/sesion-diagnostica': typeof EsSesionDiagnosticaRoute
   '/es/sobre-mi': typeof EsSobreMiRoute
   '/xerrades_/menstruar-sense-dolor': typeof XerradesMenstruarSenseDolorRoute
+  '/blog/': typeof BlogIndexRoute
   '/es/': typeof EsIndexRoute
   '/es/charlas_/menstruar-sin-dolor': typeof EsCharlasMenstruarSinDolorRoute
 }
@@ -246,12 +274,15 @@ export interface FileRouteTypes {
     | '/sessio-diagnostica'
     | '/sobre-mi'
     | '/xerrades'
+    | '/blog/fase-premenstrual-sindrome-premenstrual'
+    | '/blog/que-es-la-dismenorrea'
     | '/es/acompanamiento-individual'
     | '/es/charlas'
     | '/es/recursos-gratuitos'
     | '/es/sesion-diagnostica'
     | '/es/sobre-mi'
     | '/xerrades/menstruar-sense-dolor'
+    | '/blog/'
     | '/es/'
     | '/es/charlas/menstruar-sin-dolor'
   fileRoutesByTo: FileRoutesByTo
@@ -271,12 +302,15 @@ export interface FileRouteTypes {
     | '/sessio-diagnostica'
     | '/sobre-mi'
     | '/xerrades'
+    | '/blog/fase-premenstrual-sindrome-premenstrual'
+    | '/blog/que-es-la-dismenorrea'
     | '/es/acompanamiento-individual'
     | '/es/charlas'
     | '/es/recursos-gratuitos'
     | '/es/sesion-diagnostica'
     | '/es/sobre-mi'
     | '/xerrades/menstruar-sense-dolor'
+    | '/blog'
     | '/es'
     | '/es/charlas/menstruar-sin-dolor'
   id:
@@ -296,12 +330,15 @@ export interface FileRouteTypes {
     | '/sessio-diagnostica'
     | '/sobre-mi'
     | '/xerrades'
+    | '/blog/fase-premenstrual-sindrome-premenstrual'
+    | '/blog/que-es-la-dismenorrea'
     | '/es/acompanamiento-individual'
     | '/es/charlas'
     | '/es/recursos-gratuitos'
     | '/es/sesion-diagnostica'
     | '/es/sobre-mi'
     | '/xerrades_/menstruar-sense-dolor'
+    | '/blog/'
     | '/es/'
     | '/es/charlas_/menstruar-sin-dolor'
   fileRoutesById: FileRoutesById
@@ -322,107 +359,26 @@ export interface RootRouteChildren {
   SessioDiagnosticaRoute: typeof SessioDiagnosticaRoute
   SobreMiRoute: typeof SobreMiRoute
   XerradesRoute: typeof XerradesRoute
+  BlogFasePremenstrualSindromePremenstrualRoute: typeof BlogFasePremenstrualSindromePremenstrualRoute
+  BlogQueEsLaDismenorreaRoute: typeof BlogQueEsLaDismenorreaRoute
   EsAcompanamientoIndividualRoute: typeof EsAcompanamientoIndividualRoute
   EsCharlasRoute: typeof EsCharlasRoute
   EsRecursosGratuitosRoute: typeof EsRecursosGratuitosRoute
   EsSesionDiagnosticaRoute: typeof EsSesionDiagnosticaRoute
   EsSobreMiRoute: typeof EsSobreMiRoute
   XerradesMenstruarSenseDolorRoute: typeof XerradesMenstruarSenseDolorRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   EsIndexRoute: typeof EsIndexRoute
   EsCharlasMenstruarSinDolorRoute: typeof EsCharlasMenstruarSinDolorRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/xerrades': {
-      id: '/xerrades'
-      path: '/xerrades'
-      fullPath: '/xerrades'
-      preLoaderRoute: typeof XerradesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sobre-mi': {
-      id: '/sobre-mi'
-      path: '/sobre-mi'
-      fullPath: '/sobre-mi'
-      preLoaderRoute: typeof SobreMiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sessio-diagnostica': {
-      id: '/sessio-diagnostica'
-      path: '/sessio-diagnostica'
-      fullPath: '/sessio-diagnostica'
-      preLoaderRoute: typeof SessioDiagnosticaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/retir': {
-      id: '/retir'
-      path: '/retir'
-      fullPath: '/retir'
-      preLoaderRoute: typeof RetirRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recursos-gratuits': {
-      id: '/recursos-gratuits'
-      path: '/recursos-gratuits'
-      fullPath: '/recursos-gratuits'
-      preLoaderRoute: typeof RecursosGratuitsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recursos': {
-      id: '/recursos'
-      path: '/recursos'
-      fullPath: '/recursos'
-      preLoaderRoute: typeof RecursosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recurs-bases': {
-      id: '/recurs-bases'
-      path: '/recurs-bases'
-      fullPath: '/recurs-bases'
-      preLoaderRoute: typeof RecursBasesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recurs': {
-      id: '/recurs'
-      path: '/recurs'
-      fullPath: '/recurs'
-      preLoaderRoute: typeof RecursRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/primerasessio': {
-      id: '/primerasessio'
-      path: '/primerasessio'
-      fullPath: '/primerasessio'
-      preLoaderRoute: typeof PrimerasessioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/matrius': {
-      id: '/matrius'
-      path: '/matrius'
-      fullPath: '/matrius'
-      preLoaderRoute: typeof MatriusRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/individual': {
-      id: '/individual'
-      path: '/individual'
-      fullPath: '/individual'
-      preLoaderRoute: typeof IndividualRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/home': {
-      id: '/home'
-      path: '/home'
-      fullPath: '/home'
-      preLoaderRoute: typeof HomeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cures': {
-      id: '/cures'
-      path: '/cures'
-      fullPath: '/cures'
-      preLoaderRoute: typeof CuresRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/acompanyament-individual': {
@@ -432,11 +388,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AcompanyamentIndividualRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/cures': {
+      id: '/cures'
+      path: '/cures'
+      fullPath: '/cures'
+      preLoaderRoute: typeof CuresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/individual': {
+      id: '/individual'
+      path: '/individual'
+      fullPath: '/individual'
+      preLoaderRoute: typeof IndividualRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matrius': {
+      id: '/matrius'
+      path: '/matrius'
+      fullPath: '/matrius'
+      preLoaderRoute: typeof MatriusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/primerasessio': {
+      id: '/primerasessio'
+      path: '/primerasessio'
+      fullPath: '/primerasessio'
+      preLoaderRoute: typeof PrimerasessioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recurs': {
+      id: '/recurs'
+      path: '/recurs'
+      fullPath: '/recurs'
+      preLoaderRoute: typeof RecursRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recurs-bases': {
+      id: '/recurs-bases'
+      path: '/recurs-bases'
+      fullPath: '/recurs-bases'
+      preLoaderRoute: typeof RecursBasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos': {
+      id: '/recursos'
+      path: '/recursos'
+      fullPath: '/recursos'
+      preLoaderRoute: typeof RecursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos-gratuits': {
+      id: '/recursos-gratuits'
+      path: '/recursos-gratuits'
+      fullPath: '/recursos-gratuits'
+      preLoaderRoute: typeof RecursosGratuitsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retir': {
+      id: '/retir'
+      path: '/retir'
+      fullPath: '/retir'
+      preLoaderRoute: typeof RetirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sessio-diagnostica': {
+      id: '/sessio-diagnostica'
+      path: '/sessio-diagnostica'
+      fullPath: '/sessio-diagnostica'
+      preLoaderRoute: typeof SessioDiagnosticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre-mi': {
+      id: '/sobre-mi'
+      path: '/sobre-mi'
+      fullPath: '/sobre-mi'
+      preLoaderRoute: typeof SobreMiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/xerrades': {
+      id: '/xerrades'
+      path: '/xerrades'
+      fullPath: '/xerrades'
+      preLoaderRoute: typeof XerradesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/fase-premenstrual-sindrome-premenstrual': {
+      id: '/blog/fase-premenstrual-sindrome-premenstrual'
+      path: '/blog/fase-premenstrual-sindrome-premenstrual'
+      fullPath: '/blog/fase-premenstrual-sindrome-premenstrual'
+      preLoaderRoute: typeof BlogFasePremenstrualSindromePremenstrualRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/que-es-la-dismenorrea': {
+      id: '/blog/que-es-la-dismenorrea'
+      path: '/blog/que-es-la-dismenorrea'
+      fullPath: '/blog/que-es-la-dismenorrea'
+      preLoaderRoute: typeof BlogQueEsLaDismenorreaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/es/': {
@@ -446,32 +507,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/xerrades_/menstruar-sense-dolor': {
-      id: '/xerrades_/menstruar-sense-dolor'
-      path: '/xerrades/menstruar-sense-dolor'
-      fullPath: '/xerrades/menstruar-sense-dolor'
-      preLoaderRoute: typeof XerradesMenstruarSenseDolorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/es/sobre-mi': {
-      id: '/es/sobre-mi'
-      path: '/es/sobre-mi'
-      fullPath: '/es/sobre-mi'
-      preLoaderRoute: typeof EsSobreMiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/es/sesion-diagnostica': {
-      id: '/es/sesion-diagnostica'
-      path: '/es/sesion-diagnostica'
-      fullPath: '/es/sesion-diagnostica'
-      preLoaderRoute: typeof EsSesionDiagnosticaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/es/recursos-gratuitos': {
-      id: '/es/recursos-gratuitos'
-      path: '/es/recursos-gratuitos'
-      fullPath: '/es/recursos-gratuitos'
-      preLoaderRoute: typeof EsRecursosGratuitosRouteImport
+    '/es/acompanamiento-individual': {
+      id: '/es/acompanamiento-individual'
+      path: '/es/acompanamiento-individual'
+      fullPath: '/es/acompanamiento-individual'
+      preLoaderRoute: typeof EsAcompanamientoIndividualRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/es/charlas': {
@@ -481,11 +521,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsCharlasRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/es/acompanamiento-individual': {
-      id: '/es/acompanamiento-individual'
-      path: '/es/acompanamiento-individual'
-      fullPath: '/es/acompanamiento-individual'
-      preLoaderRoute: typeof EsAcompanamientoIndividualRouteImport
+    '/es/recursos-gratuitos': {
+      id: '/es/recursos-gratuitos'
+      path: '/es/recursos-gratuitos'
+      fullPath: '/es/recursos-gratuitos'
+      preLoaderRoute: typeof EsRecursosGratuitosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/sesion-diagnostica': {
+      id: '/es/sesion-diagnostica'
+      path: '/es/sesion-diagnostica'
+      fullPath: '/es/sesion-diagnostica'
+      preLoaderRoute: typeof EsSesionDiagnosticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/es/sobre-mi': {
+      id: '/es/sobre-mi'
+      path: '/es/sobre-mi'
+      fullPath: '/es/sobre-mi'
+      preLoaderRoute: typeof EsSobreMiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/xerrades_/menstruar-sense-dolor': {
+      id: '/xerrades_/menstruar-sense-dolor'
+      path: '/xerrades/menstruar-sense-dolor'
+      fullPath: '/xerrades/menstruar-sense-dolor'
+      preLoaderRoute: typeof XerradesMenstruarSenseDolorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/es/charlas_/menstruar-sin-dolor': {
@@ -514,12 +575,16 @@ const rootRouteChildren: RootRouteChildren = {
   SessioDiagnosticaRoute: SessioDiagnosticaRoute,
   SobreMiRoute: SobreMiRoute,
   XerradesRoute: XerradesRoute,
+  BlogFasePremenstrualSindromePremenstrualRoute:
+    BlogFasePremenstrualSindromePremenstrualRoute,
+  BlogQueEsLaDismenorreaRoute: BlogQueEsLaDismenorreaRoute,
   EsAcompanamientoIndividualRoute: EsAcompanamientoIndividualRoute,
   EsCharlasRoute: EsCharlasRoute,
   EsRecursosGratuitosRoute: EsRecursosGratuitosRoute,
   EsSesionDiagnosticaRoute: EsSesionDiagnosticaRoute,
   EsSobreMiRoute: EsSobreMiRoute,
   XerradesMenstruarSenseDolorRoute: XerradesMenstruarSenseDolorRoute,
+  BlogIndexRoute: BlogIndexRoute,
   EsIndexRoute: EsIndexRoute,
   EsCharlasMenstruarSinDolorRoute: EsCharlasMenstruarSinDolorRoute,
 }
