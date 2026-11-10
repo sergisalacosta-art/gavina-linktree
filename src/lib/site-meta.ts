@@ -14,6 +14,8 @@ export const pages = {
   xerrades: { ca: "/xerrades", es: "/es/charlas" },
   menstruar: { ca: "/xerrades/menstruar-sense-dolor", es: "/es/charlas/menstruar-sin-dolor" },
   recursos: { ca: "/recursos-gratuits", es: "/es/recursos-gratuitos" },
+  blog: { ca: "/blog", es: null },
+  dismenorreaArticle: { ca: "/blog/que-es-la-dismenorrea", es: null },
   matrius: { ca: "/matrius", es: null },
   retir: { ca: "/retir", es: null },
 } as const;
@@ -61,6 +63,8 @@ export const seo: Record<PageKey, Partial<Record<Lang, Seo>>> = {
     ca: { title: `Recursos gratuïts de salut femenina | ${BRAND}`, description: "Xerrades gratuïtes per començar a cuidar la teva salut femenina ginecològica i habitar la teva matriu." },
     es: { title: `Recursos gratuitos de salud femenina | ${BRAND}`, description: "Charlas gratuitas para empezar a cuidar tu salud femenina ginecológica y habitar tu matriz." },
   },
+  blog: { ca: { title: "Blog de salut cíclica femenina | Gavina Freixa Rius", description: "Articles sobre menstruació, dismenorrea, ciclicitat femenina i autocures naturals i ancestrals." } },
+  dismenorreaArticle: { ca: { title: "Què és la dismenorrea? Quan la menstruació fa mal | Gavina Freixa Rius", description: "Què és la dismenorrea, per què apareix el dolor menstrual i com acompanyar una filla des de l’escolta, la ciclicitat i l’autocura." } },
   matrius: {},
   retir: {},
 };
