@@ -26,6 +26,7 @@ import { Route as SobreMiRouteImport } from './routes/sobre-mi'
 import { Route as XerradesRouteImport } from './routes/xerrades'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogFasePremenstrualSindromePremenstrualRouteImport } from './routes/blog.fase-premenstrual-sindrome-premenstrual'
+import { Route as BlogLaTevaCiclicitatRouteImport } from './routes/blog.la-teva-ciclicitat'
 import { Route as BlogQueEsLaDismenorreaRouteImport } from './routes/blog.que-es-la-dismenorrea'
 import { Route as EsIndexRouteImport } from './routes/es/index'
 import { Route as EsAcompanamientoIndividualRouteImport } from './routes/es/acompanamiento-individual'
@@ -122,6 +123,11 @@ const BlogFasePremenstrualSindromePremenstrualRoute =
     path: '/blog/fase-premenstrual-sindrome-premenstrual',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogLaTevaCiclicitatRoute = BlogLaTevaCiclicitatRouteImport.update({
+  id: '/blog/la-teva-ciclicitat',
+  path: '/blog/la-teva-ciclicitat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogQueEsLaDismenorreaRoute = BlogQueEsLaDismenorreaRouteImport.update({
   id: '/blog/que-es-la-dismenorrea',
   path: '/blog/que-es-la-dismenorrea',
@@ -188,6 +194,7 @@ export interface FileRoutesByFullPath {
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
   '/blog/fase-premenstrual-sindrome-premenstrual': typeof BlogFasePremenstrualSindromePremenstrualRoute
+  '/blog/la-teva-ciclicitat': typeof BlogLaTevaCiclicitatRoute
   '/blog/que-es-la-dismenorrea': typeof BlogQueEsLaDismenorreaRoute
   '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
   '/es/charlas': typeof EsCharlasRoute
@@ -216,6 +223,7 @@ export interface FileRoutesByTo {
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
   '/blog/fase-premenstrual-sindrome-premenstrual': typeof BlogFasePremenstrualSindromePremenstrualRoute
+  '/blog/la-teva-ciclicitat': typeof BlogLaTevaCiclicitatRoute
   '/blog/que-es-la-dismenorrea': typeof BlogQueEsLaDismenorreaRoute
   '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
   '/es/charlas': typeof EsCharlasRoute
@@ -245,6 +253,7 @@ export interface FileRoutesById {
   '/sobre-mi': typeof SobreMiRoute
   '/xerrades': typeof XerradesRoute
   '/blog/fase-premenstrual-sindrome-premenstrual': typeof BlogFasePremenstrualSindromePremenstrualRoute
+  '/blog/la-teva-ciclicitat': typeof BlogLaTevaCiclicitatRoute
   '/blog/que-es-la-dismenorrea': typeof BlogQueEsLaDismenorreaRoute
   '/es/acompanamiento-individual': typeof EsAcompanamientoIndividualRoute
   '/es/charlas': typeof EsCharlasRoute
@@ -275,6 +284,7 @@ export interface FileRouteTypes {
     | '/sobre-mi'
     | '/xerrades'
     | '/blog/fase-premenstrual-sindrome-premenstrual'
+    | '/blog/la-teva-ciclicitat'
     | '/blog/que-es-la-dismenorrea'
     | '/es/acompanamiento-individual'
     | '/es/charlas'
@@ -303,6 +313,7 @@ export interface FileRouteTypes {
     | '/sobre-mi'
     | '/xerrades'
     | '/blog/fase-premenstrual-sindrome-premenstrual'
+    | '/blog/la-teva-ciclicitat'
     | '/blog/que-es-la-dismenorrea'
     | '/es/acompanamiento-individual'
     | '/es/charlas'
@@ -331,6 +342,7 @@ export interface FileRouteTypes {
     | '/sobre-mi'
     | '/xerrades'
     | '/blog/fase-premenstrual-sindrome-premenstrual'
+    | '/blog/la-teva-ciclicitat'
     | '/blog/que-es-la-dismenorrea'
     | '/es/acompanamiento-individual'
     | '/es/charlas'
@@ -360,6 +372,7 @@ export interface RootRouteChildren {
   SobreMiRoute: typeof SobreMiRoute
   XerradesRoute: typeof XerradesRoute
   BlogFasePremenstrualSindromePremenstrualRoute: typeof BlogFasePremenstrualSindromePremenstrualRoute
+  BlogLaTevaCiclicitatRoute: typeof BlogLaTevaCiclicitatRoute
   BlogQueEsLaDismenorreaRoute: typeof BlogQueEsLaDismenorreaRoute
   EsAcompanamientoIndividualRoute: typeof EsAcompanamientoIndividualRoute
   EsCharlasRoute: typeof EsCharlasRoute
@@ -493,6 +506,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogFasePremenstrualSindromePremenstrualRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/la-teva-ciclicitat': {
+      id: '/blog/la-teva-ciclicitat'
+      path: '/blog/la-teva-ciclicitat'
+      fullPath: '/blog/la-teva-ciclicitat'
+      preLoaderRoute: typeof BlogLaTevaCiclicitatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/que-es-la-dismenorrea': {
       id: '/blog/que-es-la-dismenorrea'
       path: '/blog/que-es-la-dismenorrea'
@@ -577,6 +597,7 @@ const rootRouteChildren: RootRouteChildren = {
   XerradesRoute: XerradesRoute,
   BlogFasePremenstrualSindromePremenstrualRoute:
     BlogFasePremenstrualSindromePremenstrualRoute,
+  BlogLaTevaCiclicitatRoute: BlogLaTevaCiclicitatRoute,
   BlogQueEsLaDismenorreaRoute: BlogQueEsLaDismenorreaRoute,
   EsAcompanamientoIndividualRoute: EsAcompanamientoIndividualRoute,
   EsCharlasRoute: EsCharlasRoute,

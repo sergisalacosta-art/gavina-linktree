@@ -16,6 +16,7 @@ export const pages = {
   recursos: { ca: "/recursos-gratuits", es: "/es/recursos-gratuitos" },
   blog: { ca: "/blog", es: null },
   dismenorreaArticle: { ca: "/blog/que-es-la-dismenorrea", es: null },
+  ciclicitatArticle: { ca: "/blog/la-teva-ciclicitat", es: null },
   spmArticle: { ca: "/blog/fase-premenstrual-sindrome-premenstrual", es: null },
   matrius: { ca: "/matrius", es: null },
   retir: { ca: "/retir", es: null },
@@ -67,6 +68,7 @@ export const seo: Record<PageKey, Partial<Record<Lang, Seo>>> = {
   blog: { ca: { title: "Blog de salut cíclica femenina | Gavina Freixa Rius", description: "Articles sobre menstruació, dismenorrea, ciclicitat femenina i autocures naturals i ancestrals." } },
   dismenorreaArticle: { ca: { title: "Què és la dismenorrea? Quan la menstruació fa mal | Gavina Freixa Rius", description: "Què és la dismenorrea, per què apareix el dolor menstrual i com acompanyar una filla des de l’escolta, la ciclicitat i l’autocura." } },
   spmArticle: { ca: { title: "La fase premenstrual no s’ha de patir | Gavina Freixa Rius", description: "La fase premenstrual no és el mateix que la síndrome premenstrual. Una mirada sobre la ciclicitat, els ritmes i les autocures naturals i ancestrals." } },
+  ciclicitatArticle: { ca: { title: "La teva ciclicitat va més enllà dels dies de menstruació | Gavina Freixa Rius", description: "Ets cíclica durant tot el mes. Una invitació a conèixer les quatre fases del cicle, amb un diagrama lunar i una meditació per escoltar-te." } },
   matrius: {},
   retir: {},
 };
@@ -91,7 +93,7 @@ export function headTags(key: PageKey | null, lang: Lang, path: string): HeadTag
     { tag: "meta", id: "og:description", attrs: { property: "og:description", content: meta.description } },
     { tag: "meta", id: "og:url", attrs: { property: "og:url", content: url } },
     { tag: "meta", id: "og:locale", attrs: { property: "og:locale", content: lang === "es" ? "es_ES" : "ca_ES" } },
-    { tag: "meta", id: "og:image", attrs: { property: "og:image", content: key === "spmArticle" ? `${SITE_URL}/blog/fase-premenstrual-riu.jpg` : `${SITE_URL}/web/hero.jpg` } },
+    { tag: "meta", id: "og:image", attrs: { property: "og:image", content: key === "ciclicitatArticle" ? `${SITE_URL}/blog/ciclicitat-lluna.jpg` : key === "spmArticle" ? `${SITE_URL}/blog/fase-premenstrual-riu.jpg` : `${SITE_URL}/web/hero.jpg` } },
   ];
   if (key) {
     const urls = pages[key];
